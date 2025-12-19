@@ -27,7 +27,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubtleHighlight from "@/components/SubtleHighlight";
-import FloatingParticles from "@/components/FloatingParticles";
+import HeroBackground from "@/components/HeroBackground";
 
 const Index = () => {
   const services = [
@@ -180,8 +180,7 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 lg:px-8 overflow-hidden">
-        <FloatingParticles />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+        <HeroBackground />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
