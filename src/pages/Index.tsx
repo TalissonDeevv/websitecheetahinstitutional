@@ -28,7 +28,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubtleHighlight from "@/components/SubtleHighlight";
 import HeroBackground from "@/components/HeroBackground";
-
+import AnimatedSection from "@/components/AnimatedSection";
 const Index = () => {
   const services = [
     {
@@ -233,85 +233,94 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-10 px-4 lg:px-8 border-y border-border/50">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-wrap justify-between gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="flex items-baseline gap-2">
-                <span className="text-2xl lg:text-3xl font-bold text-foreground">{stat.number}</span>
-                <span className="text-sm text-muted-foreground">{stat.label}</span>
-              </div>
-            ))}
-          </div>
+          <AnimatedSection>
+            <div className="flex flex-wrap justify-between gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="flex items-baseline gap-2">
+                  <span className="text-2xl lg:text-3xl font-bold text-foreground">{stat.number}</span>
+                  <span className="text-sm text-muted-foreground">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-16 px-4 lg:px-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-10">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-              Nossos <span className="text-primary">Serviços</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl">
-              Soluções tecnológicas completas para impulsionar seu negócio
-            </p>
-          </div>
+          <AnimatedSection>
+            <div className="mb-10">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                Nossos <span className="text-primary">Serviços</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl">
+                Soluções tecnológicas completas para impulsionar seu negócio
+              </p>
+            </div>
+          </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="group p-5 border border-border rounded-lg hover:border-muted-foreground/30 transition-colors bg-card"
-              >
-                <div className="mb-3">
-                  <service.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+              <AnimatedSection key={index} delay={index * 100}>
+                <div className="group p-5 border border-border rounded-lg hover:border-muted-foreground/30 transition-colors bg-card h-full">
+                  <div className="mb-3">
+                    <service.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-base font-semibold mb-2 text-foreground">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
                 </div>
-                <h3 className="text-base font-semibold mb-2 text-foreground">{service.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
           
-          <div className="mt-8">
-            <Link to="/servicos">
-              <Button 
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm font-medium"
-              >
-                Ver Todos os Serviços
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
+          <AnimatedSection delay={500}>
+            <div className="mt-8">
+              <Link to="/servicos">
+                <Button 
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm font-medium"
+                >
+                  Ver Todos os Serviços
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* How We Work Section */}
       <section className="py-16 px-4 lg:px-8 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-10">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-              Como <span className="text-primary">Trabalhamos</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl">
-              Processo estruturado para garantir qualidade e previsibilidade em cada projeto
-            </p>
-          </div>
+          <AnimatedSection>
+            <div className="mb-10">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                Como <span className="text-primary">Trabalhamos</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl">
+                Processo estruturado para garantir qualidade e previsibilidade em cada projeto
+              </p>
+            </div>
+          </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {processSteps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="p-5 bg-card border border-border rounded-lg h-full">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs font-bold text-primary/60">{step.step}</span>
-                    <step.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+              <AnimatedSection key={index} delay={index * 150}>
+                <div className="relative h-full">
+                  <div className="p-5 bg-card border border-border rounded-lg h-full">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-xs font-bold text-primary/60">{step.step}</span>
+                      <step.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="text-base font-semibold mb-2 text-foreground">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
-                  <h3 className="text-base font-semibold mb-2 text-foreground">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-border" />
+                  )}
                 </div>
-                {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-border" />
-                )}
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -320,24 +329,25 @@ const Index = () => {
       {/* Technologies Section */}
       <section className="py-16 px-4 lg:px-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-10">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-              Tecnologias e <span className="text-primary">Expertise</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl">
-              Stack moderna e ferramentas consolidadas para entregar soluções robustas
-            </p>
-          </div>
+          <AnimatedSection>
+            <div className="mb-10">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                Tecnologias e <span className="text-primary">Expertise</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl">
+                Stack moderna e ferramentas consolidadas para entregar soluções robustas
+              </p>
+            </div>
+          </AnimatedSection>
           
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
             {technologies.map((tech, index) => (
-              <div 
-                key={index} 
-                className="flex flex-col items-center gap-2 p-4 border border-border rounded-lg bg-card hover:border-muted-foreground/30 transition-colors"
-              >
-                <tech.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
-                <span className="text-xs text-muted-foreground text-center">{tech.name}</span>
-              </div>
+              <AnimatedSection key={index} delay={index * 50} animation="scale">
+                <div className="flex flex-col items-center gap-2 p-4 border border-border rounded-lg bg-card hover:border-muted-foreground/30 transition-colors">
+                  <tech.icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
+                  <span className="text-xs text-muted-foreground text-center">{tech.name}</span>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -346,68 +356,75 @@ const Index = () => {
       {/* Use Cases Section */}
       <section className="py-16 px-4 lg:px-8 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-10">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-              Casos de <span className="text-primary">Uso</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl">
-              Exemplos de como nossas soluções geram resultados reais para diferentes segmentos
-            </p>
-          </div>
+          <AnimatedSection>
+            <div className="mb-10">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                Casos de <span className="text-primary">Uso</span>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl">
+                Exemplos de como nossas soluções geram resultados reais para diferentes segmentos
+              </p>
+            </div>
+          </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-              <div 
-                key={index} 
-                className="p-6 bg-card border border-border rounded-lg"
-              >
-                <span className="text-xs font-medium text-primary mb-3 block">{useCase.category}</span>
-                <h3 className="text-lg font-semibold mb-2 text-foreground">{useCase.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{useCase.description}</p>
-                <div className="space-y-2">
-                  {useCase.results.map((result, rIndex) => (
-                    <div key={rIndex} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" strokeWidth={1.5} />
-                      <span className="text-xs text-muted-foreground">{result}</span>
-                    </div>
-                  ))}
+              <AnimatedSection key={index} delay={index * 150}>
+                <div className="p-6 bg-card border border-border rounded-lg h-full">
+                  <span className="text-xs font-medium text-primary mb-3 block">{useCase.category}</span>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">{useCase.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{useCase.description}</p>
+                  <div className="space-y-2">
+                    {useCase.results.map((result, rIndex) => (
+                      <div key={rIndex} className="flex items-start gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" strokeWidth={1.5} />
+                        <span className="text-xs text-muted-foreground">{result}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
           
-          <div className="mt-8">
-            <Link to="/portfolio">
-              <Button 
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm font-medium"
-              >
-                Ver Portfólio Completo
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
+          <AnimatedSection delay={450}>
+            <div className="mt-8">
+              <Link to="/portfolio">
+                <Button 
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm font-medium"
+                >
+                  Ver Portfólio Completo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
       <section className="py-16 px-4 lg:px-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-10">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-              Por que escolher a <span className="text-primary">Cheetah Network</span>?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl">
-              Diferenciais que fazem a diferença no resultado do seu projeto
-            </p>
-          </div>
+          <AnimatedSection>
+            <div className="mb-10">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                Por que escolher a <span className="text-primary">Cheetah Network</span>?
+              </h2>
+              <p className="text-muted-foreground max-w-2xl">
+                Diferenciais que fazem a diferença no resultado do seu projeto
+              </p>
+            </div>
+          </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((item, index) => (
-              <div key={index} className="p-5 border-l-2 border-primary bg-card/50">
-                <h3 className="text-base font-semibold mb-2 text-foreground">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-              </div>
+              <AnimatedSection key={index} delay={index * 100} animation="fade-left">
+                <div className="p-5 border-l-2 border-primary bg-card/50 h-full">
+                  <h3 className="text-base font-semibold mb-2 text-foreground">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -417,34 +434,38 @@ const Index = () => {
       <section className="py-16 px-4 lg:px-8 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-                Sobre a <span className="text-primary">Cheetah Network</span>
-              </h2>
-              <p className="text-muted-foreground mb-5 leading-relaxed">
-                Somos uma software house especializada em desenvolvimento de soluções tecnológicas sob medida. Nossa equipe combina expertise técnica com visão de negócio para entregar resultados que realmente impactam.
-              </p>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Com experiência em projetos de diferentes portes e segmentos, trabalhamos lado a lado com nossos clientes, desde a concepção até o suporte contínuo, garantindo que cada solução atenda às necessidades específicas do negócio.
-              </p>
-              <Link to="/sobre">
-                <Button 
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-5 py-2 text-sm font-medium"
-                >
-                  Conheça Nossa História
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <AnimatedSection animation="fade-right">
+              <div>
+                <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                  Sobre a <span className="text-primary">Cheetah Network</span>
+                </h2>
+                <p className="text-muted-foreground mb-5 leading-relaxed">
+                  Somos uma software house especializada em desenvolvimento de soluções tecnológicas sob medida. Nossa equipe combina expertise técnica com visão de negócio para entregar resultados que realmente impactam.
+                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Com experiência em projetos de diferentes portes e segmentos, trabalhamos lado a lado com nossos clientes, desde a concepção até o suporte contínuo, garantindo que cada solução atenda às necessidades específicas do negócio.
+                </p>
+                <Link to="/sobre">
+                  <Button 
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-5 py-2 text-sm font-medium"
+                  >
+                    Conheça Nossa História
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </AnimatedSection>
             
             <div className="grid grid-cols-2 gap-4">
               {values.map((value, index) => (
-                <div key={index} className="p-4 bg-card border border-border rounded-lg">
-                  <value.icon className="h-5 w-5 text-primary mb-3" strokeWidth={1.5} />
-                  <h3 className="text-sm font-semibold mb-1 text-foreground">{value.title}</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{value.description}</p>
-                </div>
+                <AnimatedSection key={index} delay={index * 100} animation="scale">
+                  <div className="p-4 bg-card border border-border rounded-lg h-full">
+                    <value.icon className="h-5 w-5 text-primary mb-3" strokeWidth={1.5} />
+                    <h3 className="text-sm font-semibold mb-1 text-foreground">{value.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{value.description}</p>
+                  </div>
+                </AnimatedSection>
               ))}
             </div>
           </div>
@@ -456,39 +477,41 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-              Vamos construir sua <span className="text-primary">próxima solução</span>?
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Entre em contato para discutir seu projeto. Nossa equipe está pronta para entender suas necessidades e propor a melhor abordagem técnica.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/orcamento">
-                <Button 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all"
+          <AnimatedSection animation="scale">
+            <div className="text-center max-w-2xl mx-auto">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                Vamos construir sua <span className="text-primary">próxima solução</span>?
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                Entre em contato para discutir seu projeto. Nossa equipe está pronta para entender suas necessidades e propor a melhor abordagem técnica.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/orcamento">
+                  <Button 
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all"
+                  >
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <a 
+                  href="https://wa.me/5511999999999" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                 >
-                  Solicitar Orçamento
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <a 
-                href="https://wa.me/5511999999999" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-foreground/20 text-foreground hover:bg-foreground/10 hover:border-foreground/30 px-8 py-3 text-base font-semibold transition-all"
-                >
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  Falar via WhatsApp
-                </Button>
-              </a>
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-foreground/20 text-foreground hover:bg-foreground/10 hover:border-foreground/30 px-8 py-3 text-base font-semibold transition-all"
+                  >
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Falar via WhatsApp
+                  </Button>
+                </a>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
