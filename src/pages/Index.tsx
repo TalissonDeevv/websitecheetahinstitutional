@@ -26,6 +26,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SubtleHighlight from "@/components/SubtleHighlight";
 
 const Index = () => {
   const services = [
@@ -194,10 +195,10 @@ const Index = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
               Desenvolvimento de{" "}
               <span className="text-primary relative">
-                software sob medida
+                <SubtleHighlight>software</SubtleHighlight> sob medida
                 <span className="absolute -inset-1 bg-primary/10 blur-2xl rounded-lg -z-10" />
               </span>{" "}
-              para negócios que exigem performance
+              para negócios que exigem <SubtleHighlight>performance</SubtleHighlight>
             </h1>
             
             <p className="text-lg lg:text-xl text-foreground/70 mb-10 max-w-3xl leading-relaxed">
