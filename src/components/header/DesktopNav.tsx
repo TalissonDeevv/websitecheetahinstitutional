@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, MessageCircle } from "lucide-react";
 import {
@@ -35,15 +34,15 @@ const DesktopNav = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+    <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
       {mainMenuItems.map((item) => (
         <Link
           key={item.path}
           to={item.path}
-          className={`text-sm font-medium transition-all duration-300 hover:text-[#0047ab] hover:scale-105 whitespace-nowrap ${
+          className={`text-sm font-medium transition-all duration-200 whitespace-nowrap ${
             isActive(item.path) 
-              ? "text-[#0047ab] border-b-2 border-[#0047ab]" 
-              : "text-white"
+              ? "text-[#0047ab]" 
+              : "text-gray-300 hover:text-white"
           }`}
         >
           {item.name}
@@ -51,17 +50,19 @@ const DesktopNav = () => {
       ))}
       
       <DropdownMenu>
-        <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-white hover:text-[#0047ab] transition-colors">
+        <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 outline-none">
           Mais
           <ChevronDown className="h-4 w-4" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="bg-black/95 border-[#0047ab]/20 z-[100] backdrop-blur-sm">
+        <DropdownMenuContent className="bg-black/95 border-gray-800 z-[100] backdrop-blur-sm">
           {moreMenuItems.map((item) => (
             <DropdownMenuItem key={item.path} asChild>
               <Link
                 to={item.path}
-                className={`w-full text-white hover:text-[#0047ab] hover:bg-[#0047ab]/10 transition-colors ${
-                  isActive(item.path) ? "text-[#0047ab] bg-[#0047ab]/10" : ""
+                className={`w-full transition-colors duration-200 ${
+                  isActive(item.path) 
+                    ? "text-[#0047ab] bg-[#0047ab]/10" 
+                    : "text-gray-300 hover:text-white hover:bg-white/5"
                 }`}
               >
                 {item.name}
@@ -75,7 +76,7 @@ const DesktopNav = () => {
         href="https://discord.gg/63qjkQwKmf"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 bg-[#5865F2]/10 hover:bg-[#5865F2]/20 border border-[#5865F2]/20 hover:border-[#5865F2] text-[#5865F2] hover:text-white px-2 xl:px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap"
+        className="flex items-center gap-2 text-gray-400 hover:text-[#5865F2] px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap"
       >
         <MessageCircle className="h-4 w-4" />
         <span className="hidden xl:inline">Discord</span>

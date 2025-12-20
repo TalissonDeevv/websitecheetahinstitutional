@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const QuickLinks = () => {
@@ -13,14 +12,14 @@ const QuickLinks = () => {
   ];
 
   return (
-    <div className="space-y-4">
-      <h3 className="text-white font-semibold text-base">Links Rápidos</h3>
-      <ul className="space-y-2">
+    <div className="space-y-5">
+      <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Links Rápidos</h3>
+      <ul className="space-y-3">
         {quickLinks.map((link) => (
           <li key={link.path}>
             <Link 
               to={link.path} 
-              className="text-gray-300 hover:text-[#0047ab] transition-colors text-sm hover:scale-105 transform duration-300 inline-block py-1 hover:bg-[#0047ab]/10 px-2 rounded"
+              className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
             >
               {link.name}
             </Link>

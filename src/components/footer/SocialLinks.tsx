@@ -1,4 +1,3 @@
-
 import { Youtube, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const SocialLinks = () => {
@@ -10,14 +9,14 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-4">
       {socialLinks.map((social, index) => (
         <a
           key={index}
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-[#0047ab] transition-colors hover:scale-110 transform duration-300 p-2 rounded-lg hover:bg-[#0047ab]/10"
+          className="text-gray-500 hover:text-white transition-colors duration-200"
           title={social.label}
         >
           <social.icon className="h-5 w-5" />
