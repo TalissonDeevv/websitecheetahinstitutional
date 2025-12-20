@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 interface Particle {
   x: number;
   y: number;
+  z: number; // depth for parallax
   size: number;
   speedX: number;
   speedY: number;
@@ -13,6 +14,7 @@ const HeroBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
   const particlesRef = useRef<Particle[]>([]);
+  const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -22,6 +24,14 @@ const HeroBackground = () => {
     if (!ctx) return;
 
     let time = 0;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      mouseRef.current = {
+        x: (e.clientX - rect.left) / rect.width - 0.5,
+        y: (e.clientY - rect.top) / rect.height - 0.5,
+      };
+    };
 
     const resizeCanvas = () => {
       canvas.width = canvas.offsetWidth * window.devicePixelRatio;
@@ -35,17 +45,24 @@ const HeroBackground = () => {
       const height = canvas.offsetHeight;
       particlesRef.current = [];
       
-      for (let i = 0; i < 50; i++) {
+      // Reduced particle count for elegance
+      for (let i = 0; i < 25; i++) {
+        const z = Math.random() * 0.8 + 0.2; // depth: 0.2 to 1.0
         particlesRef.current.push({
           x: Math.random() * width,
           y: Math.random() * height,
-          size: Math.random() * 3 + 1,
-          speedX: (Math.random() - 0.5) * 0.4,
-          speedY: (Math.random() - 0.5) * 0.4,
-          opacity: Math.random() * 0.4 + 0.1,
+          z,
+          size: (Math.random() * 2 + 0.5) * z, // size varies with depth
+          speedX: (Math.random() - 0.5) * 0.15 * z, // slower, depth-based
+          speedY: (Math.random() - 0.5) * 0.15 * z,
+          opacity: (Math.random() * 0.25 + 0.08) * z, // subtle opacity with depth
         });
       }
     };
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener("mousemove", handleMouseMove);
 
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
@@ -82,8 +99,12 @@ const HeroBackground = () => {
       const tertiaryY = height * 0.5 + Math.cos(time * 0.0003) * 20;
       drawGlow(tertiaryX, tertiaryY, 220, "rgb(139, 92, 246)", 0.08);
 
-      // Draw particles
+      // Draw particles with parallax effect
       particlesRef.current.forEach((particle) => {
+        // Apply subtle parallax based on mouse position and depth
+        const parallaxX = mouseRef.current.x * 30 * particle.z;
+        const parallaxY = mouseRef.current.y * 20 * particle.z;
+        
         particle.x += particle.speedX;
         particle.y += particle.speedY;
 
@@ -93,24 +114,26 @@ const HeroBackground = () => {
         if (particle.y < 0) particle.y = height;
         if (particle.y > height) particle.y = 0;
 
-        // Draw particle with glow
+        const drawX = particle.x + parallaxX;
+        const drawY = particle.y + parallaxY;
+
+        // Draw particle with soft glow
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         const gradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0,
-          particle.x, particle.y, particle.size * 3
+          drawX, drawY, 0,
+          drawX, drawY, particle.size * 4
         );
-        gradient.addColorStop(0, `rgba(139, 92, 246, ${particle.opacity})`);
-        gradient.addColorStop(0.5, `rgba(99, 102, 241, ${particle.opacity * 0.5})`);
+        gradient.addColorStop(0, `rgba(0, 71, 171, ${particle.opacity * 0.8})`);
+        gradient.addColorStop(0.4, `rgba(0, 71, 171, ${particle.opacity * 0.3})`);
         gradient.addColorStop(1, "transparent");
         ctx.fillStyle = gradient;
-        ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
+        ctx.arc(drawX, drawY, particle.size * 4, 0, Math.PI * 2);
         ctx.fill();
 
         // Core of particle
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity * 0.8})`;
+        ctx.arc(drawX, drawY, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity * 0.6})`;
         ctx.fill();
       });
 
@@ -122,6 +145,7 @@ const HeroBackground = () => {
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
+      window.removeEventListener("mousemove", handleMouseMove);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
