@@ -31,7 +31,7 @@ const Footer = () => {
               <img 
                 src={cheetahLogo} 
                 alt="Cheetah Network" 
-                className="h-8 w-auto"
+                className="h-10 sm:h-12 w-auto object-contain"
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
