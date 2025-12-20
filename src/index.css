@@ -247,6 +247,17 @@ All colors MUST be HSL.
   }
 }
 
+@keyframes softwareUnderline {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;

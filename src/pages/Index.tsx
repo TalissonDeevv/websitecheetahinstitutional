@@ -179,48 +179,72 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 lg:px-8 overflow-hidden">
+      <section className="relative pt-32 pb-24 px-4 lg:px-8 overflow-hidden">
         <HeroBackground />
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-3 mb-8 px-5 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary/90 backdrop-blur-sm">
+            {/* Tag with refined animation */}
+            <div 
+              className="inline-flex items-center gap-2.5 mb-10 px-4 py-1.5 bg-primary/8 border border-primary/15 rounded-full text-xs font-medium text-primary/80 backdrop-blur-sm animate-fade-in"
+              style={{ animationDelay: '100ms', animationFillMode: 'both' }}
+            >
               <span>Software</span>
-              <span className="w-1.5 h-1.5 bg-primary/60 rounded-full" />
+              <span className="w-1 h-1 bg-primary/50 rounded-full" />
               <span>Sistemas</span>
-              <span className="w-1.5 h-1.5 bg-primary/60 rounded-full" />
+              <span className="w-1 h-1 bg-primary/50 rounded-full" />
               <span>Plataformas Digitais</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
+            <h1 
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-[1.08] tracking-tight animate-fade-in"
+              style={{ animationDelay: '200ms', animationFillMode: 'both' }}
+            >
               Desenvolvimento de{" "}
-              <span className="text-primary relative">
-                <SubtleHighlight>software</SubtleHighlight> sob medida
-                <span className="absolute -inset-1 bg-primary/10 blur-2xl rounded-lg -z-10" />
+              <span className="relative inline-block">
+                <span className="text-primary relative">
+                  software
+                  <span 
+                    className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-primary/60 via-primary to-primary/60 rounded-full"
+                    style={{
+                      animation: 'softwareUnderline 1.5s ease-out 1s forwards',
+                      opacity: 0,
+                      transform: 'scaleX(0)',
+                      transformOrigin: 'left',
+                    }}
+                  />
+                </span>
+                <span className="absolute -inset-2 bg-primary/8 blur-3xl rounded-xl -z-10" />
               </span>{" "}
-              para negócios que exigem <SubtleHighlight>performance</SubtleHighlight>
+              sob medida para negócios que exigem <SubtleHighlight>performance</SubtleHighlight>
             </h1>
             
-            <p className="text-lg lg:text-xl text-foreground/70 mb-10 max-w-3xl leading-relaxed">
+            <p 
+              className="text-lg lg:text-xl text-foreground/65 mb-12 max-w-3xl leading-[1.7] animate-fade-in"
+              style={{ animationDelay: '350ms', animationFillMode: 'both' }}
+            >
               Criamos sistemas, aplicações e plataformas digitais escaláveis, combinando engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div 
+              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+              style={{ animationDelay: '500ms', animationFillMode: 'both' }}
+            >
               <Link to="/servicos">
                 <Button 
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all"
+                  className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
                 >
                   Conheça Nossos Serviços
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" />
                 </Button>
               </Link>
               <Link to="/contato">
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-foreground/20 text-foreground hover:bg-foreground/10 hover:border-foreground/30 px-8 py-3 text-base font-semibold transition-all"
+                  className="border border-foreground/15 text-foreground/90 hover:bg-foreground/5 hover:border-foreground/25 px-8 py-3 text-base font-semibold transition-all duration-300"
                 >
                   Fale com um Especialista
                 </Button>
