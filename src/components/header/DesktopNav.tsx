@@ -34,15 +34,15 @@ const DesktopNav = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+    <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
       {mainMenuItems.map((item) => (
         <Link
           key={item.path}
           to={item.path}
-          className={`text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+          className={`text-sm font-medium transition-colors duration-200 whitespace-nowrap ${
             isActive(item.path) 
               ? "text-[#0047ab]" 
-              : "text-gray-300 hover:text-white"
+              : "text-gray-400 hover:text-gray-200"
           }`}
         >
           {item.name}
@@ -50,9 +50,9 @@ const DesktopNav = () => {
       ))}
       
       <DropdownMenu>
-        <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 outline-none">
+        <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-gray-400 hover:text-gray-200 transition-colors duration-200 outline-none">
           Mais
-          <ChevronDown className="h-4 w-4" />
+          <ChevronDown className="h-3.5 w-3.5" />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="bg-black/95 border-gray-800 z-[100] backdrop-blur-sm">
           {moreMenuItems.map((item) => (
@@ -62,7 +62,7 @@ const DesktopNav = () => {
                 className={`w-full transition-colors duration-200 ${
                   isActive(item.path) 
                     ? "text-[#0047ab] bg-[#0047ab]/10" 
-                    : "text-gray-300 hover:text-white hover:bg-white/5"
+                    : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
                 }`}
               >
                 {item.name}
@@ -76,9 +76,9 @@ const DesktopNav = () => {
         href="https://discord.gg/63qjkQwKmf"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 text-gray-400 hover:text-[#5865F2] px-3 py-2 text-sm font-medium transition-all duration-200 whitespace-nowrap"
+        className="flex items-center gap-1.5 text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200 whitespace-nowrap ml-1"
       >
-        <MessageCircle className="h-4 w-4" />
+        <MessageCircle className="h-3.5 w-3.5" />
         <span className="hidden xl:inline">Discord</span>
       </a>
     </nav>

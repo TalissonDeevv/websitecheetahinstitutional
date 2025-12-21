@@ -3,11 +3,11 @@ import cheetahLogo from "@/assets/cheetah-logo.png";
 
 const Logo = () => {
   return (
-    <Link to="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
+    <Link to="/" className="flex items-center hover:opacity-85 transition-opacity duration-200">
       <img 
         src={cheetahLogo} 
         alt="Cheetah Network" 
-        className="h-10 sm:h-12 w-auto object-contain"
+        className="h-8 sm:h-9 max-h-9 w-auto object-contain"
       />
     </Link>
   );
