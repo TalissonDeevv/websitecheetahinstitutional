@@ -134,14 +134,15 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-28 pb-16 px-4">
+      <section className="pt-24 pb-12 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <p className="text-sm text-[#0047ab] uppercase tracking-widest mb-3 font-medium">Software House</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5">
             <span className="text-white">Sobre a </span>
             <span className="text-[#0047ab]">Cheetah Network</span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Conheça nossa história, valores e o que nos move a criar soluções tecnológicas excepcionais
+          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Desenvolvimento de software sob medida, com foco em qualidade, performance e resultados tangíveis para o seu negócio.
           </p>
         </div>
       </section>
@@ -149,21 +150,35 @@ const About = () => {
       {/* About Company */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="max-w-5xl mx-auto">
-            <Card className="bg-gray-900/50 border-[#0047ab]/20">
-              <CardContent className="p-8 md:p-12">
-                <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="bg-gray-900/30 border-gray-800/50">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">Quem Somos</h3>
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Somos uma software house especializada no desenvolvimento de sistemas, aplicações web, automações e integrações. Atuamos desde 2020 transformando desafios complexos em soluções digitais escaláveis.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-900/30 border-gray-800/50">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">O Que Fazemos</h3>
+                  <p className="text-gray-400 leading-relaxed text-sm">
+                    Desenvolvemos software personalizado: plataformas web, sistemas de gestão, bots, APIs e integrações. Nossa equipe entrega soluções que funcionam e geram valor real para os negócios dos nossos clientes.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <Card className="bg-gray-900/30 border-gray-800/50">
+              <CardContent className="p-6 md:p-8">
+                <h3 className="text-lg font-semibold text-white mb-4">Nossa Abordagem</h3>
+                <div className="space-y-4 text-gray-400 leading-relaxed text-sm">
                   <p>
-                    A Cheetah Network é uma empresa inovadora fundada com o compromisso de impulsionar o cenário digital por meio de soluções tecnológicas eficientes e personalizadas. Nosso foco é o desenvolvimento de websites, aplicações, sistemas e bots para plataformas como Discord e Telegram, oferecendo serviços de alta qualidade que atendem às demandas de empreendedores, comunidades e projetos independentes.
+                    Combinamos expertise técnica com entendimento profundo das necessidades de cada cliente. Trabalhamos de forma colaborativa, com comunicação transparente e entregas incrementais.
                   </p>
                   <p>
-                    Desde o início, nossa expertise foi consolidada na automação e no desenvolvimento de ferramentas digitais que otimizam processos e elevam a experiência online. Evoluindo constantemente, nos tornamos referência na criação de soluções inteligentes e adaptadas às necessidades específicas de cada cliente.
-                  </p>
-                  <p>
-                    Nossa equipe é composta por profissionais qualificados e apaixonados por tecnologia, comprometidos em entregar serviços inovadores que superem expectativas. Além disso, contamos com designers fixos na empresa, garantindo uma identidade visual forte e alinhada com nossa proposta.
-                  </p>
-                  <p>
-                    A Cheetah Solutions Network não apenas acompanha as tendências do mercado, mas também as redefine. Nosso compromisso é com a excelência, a inovação e a total satisfação dos clientes, trabalhando lado a lado para transformar ideias em soluções digitais impactantes.
+                    Cada projeto é tratado com a atenção e o rigor que merece. Não oferecemos soluções genéricas — desenvolvemos software que resolve problemas reais e se adapta à evolução do seu negócio.
                   </p>
                 </div>
               </CardContent>
@@ -175,35 +190,45 @@ const About = () => {
       {/* Mission and Vision */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <Card className="bg-gray-900/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="mb-6 flex justify-center">
-                  <div className="w-16 h-16 bg-[#0047ab]/10 rounded-full flex items-center justify-center border-2 border-[#0047ab]/30">
-                    <Target className="h-8 w-8 text-[#0047ab]" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Card className="bg-gray-900/30 border-gray-800/50">
+              <CardContent className="p-6">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-12 h-12 bg-[#0047ab]/10 rounded-lg flex items-center justify-center">
+                    <Target className="h-5 w-5 text-[#0047ab]" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white text-center">Nossa Missão</h3>
-                <p className="text-gray-300 leading-relaxed text-center">
-                  Transformar ideias em soluções tecnológicas inovadoras, 
-                  capacitando empresas a alcançarem seu máximo potencial através 
-                  da automação e desenvolvimento de sistemas personalizados.
+                <h3 className="text-base font-semibold mb-3 text-white text-center">Missão</h3>
+                <p className="text-gray-400 text-sm leading-relaxed text-center">
+                  Desenvolver software que resolve problemas reais, entregando valor mensurável para cada cliente.
                 </p>
               </CardContent>
             </Card>
             
-            <Card className="bg-gray-900/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="mb-6 flex justify-center">
-                  <div className="w-16 h-16 bg-[#0047ab]/10 rounded-full flex items-center justify-center border-2 border-[#0047ab]/30">
-                    <Award className="h-8 w-8 text-[#0047ab]" />
+            <Card className="bg-gray-900/30 border-gray-800/50">
+              <CardContent className="p-6">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-12 h-12 bg-[#0047ab]/10 rounded-lg flex items-center justify-center">
+                    <Award className="h-5 w-5 text-[#0047ab]" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white text-center">Nossa Visão</h3>
-                <p className="text-gray-300 leading-relaxed text-center">
-                  Ser reconhecida como a principal referência em soluções 
-                  tecnológicas personalizadas, sendo a primeira escolha de 
-                  empresas que buscam inovação e excelência técnica.
+                <h3 className="text-base font-semibold mb-3 text-white text-center">Visão</h3>
+                <p className="text-gray-400 text-sm leading-relaxed text-center">
+                  Ser referência em desenvolvimento de software personalizado, reconhecida pela qualidade técnica.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/30 border-gray-800/50">
+              <CardContent className="p-6">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-12 h-12 bg-[#0047ab]/10 rounded-lg flex items-center justify-center">
+                    <Code className="h-5 w-5 text-[#0047ab]" />
+                  </div>
+                </div>
+                <h3 className="text-base font-semibold mb-3 text-white text-center">Princípio</h3>
+                <p className="text-gray-400 text-sm leading-relaxed text-center">
+                  Código limpo, processos transparentes e compromisso com resultados concretos.
                 </p>
               </CardContent>
             </Card>
@@ -212,29 +237,27 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-20 px-4 bg-[#0047ab]/5">
+      <section className="py-16 px-4 bg-gray-900/20">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
               <span className="text-white">Nossos </span>
               <span className="text-[#0047ab]">Valores</span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Os princípios que guiam cada decisão e ação em nossa empresa
+            <p className="text-sm text-gray-400 max-w-xl mx-auto">
+              Os princípios que orientam nosso trabalho diário
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {values.map((value, index) => (
-              <Card key={index} className="bg-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300 hover:scale-105 text-center">
-                <CardContent className="p-6">
-                  <div className="mb-4 flex justify-center">
-                    <div className="w-12 h-12 bg-[#0047ab]/10 rounded-full flex items-center justify-center border border-[#0047ab]/30">
-                      <value.icon className="h-6 w-6 text-[#0047ab]" />
-                    </div>
+              <Card key={index} className="bg-gray-900/30 border-gray-800/50 text-center">
+                <CardContent className="p-5">
+                  <div className="mb-3 flex justify-center">
+                    <value.icon className="h-5 w-5 text-[#0047ab]" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-white">{value.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-sm font-semibold mb-2 text-white">{value.title}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -242,81 +265,22 @@ const About = () => {
         </div>
       </section>
 
-      {/* Por que o Guepardo Section */}
-      <section className="py-20 px-4">
+      {/* Números e Trajetória */}
+      <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            {/* Logo da Cheetah */}
-            <div className="mb-8 flex justify-center">
-              <div className="w-32 h-32 bg-[#0047ab]/10 rounded-full flex items-center justify-center border-4 border-[#0047ab]/30 hover:border-[#0047ab]/50 transition-all duration-300 p-4">
-                <img 
-                  src="/lovable-uploads/8ba6863f-f36c-468c-84c5-40394ed9618b.png" 
-                  alt="Cheetah Network Logo" 
-                  className="w-full h-full object-contain filter brightness-0 invert"
-                />
-              </div>
-            </div>
-            
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-white">Por que o </span>
-              <span className="text-[#0047ab]">Guepardo?</span>
-            </h2>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-gray-900/50 border-[#0047ab]/20">
-              <CardContent className="p-8">
-                <div className="space-y-6 text-gray-300 leading-relaxed">
-                  <p>
-                    O guepardo é conhecido como o animal mais rápido do mundo, atingindo velocidades impressionantes de até 120 km/h em curtos períodos. Sua agilidade, precisão e eficiência na caça o tornam um símbolo de destreza e foco. Além de ser um predador veloz, o guepardo também representa a capacidade de adaptação e resiliência, movendo-se com estratégia para garantir sua sobrevivência em ambientes desafiadores.
-                  </p>
-                  <p>
-                    A logo da Cheetah Network foi inspirada nesse ícone da natureza. Assim como o guepardo, nossa empresa se destaca pela rapidez e precisão na entrega de soluções digitais. Cada projeto é tratado com o mesmo foco e eficiência, garantindo que nossos clientes alcancem seus objetivos com agilidade e qualidade. O guepardo, em nossa marca, simboliza a velocidade com a qual ajudamos empresas a prosperarem no ambiente online, oferecendo suporte ágil, estratégias inovadoras e resultados excepcionais.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Cheetah em Números */}
-      <section className="py-20 px-4 bg-[#0047ab]/5">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
               <span className="text-white">Cheetah em </span>
               <span className="text-[#0047ab]">Números</span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Dados que demonstram nosso crescimento e impacto no mercado de tecnologia
-            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-16">
-            {numbers.map((item, index) => (
-              <Card key={index} className="bg-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300 hover:scale-105 text-center">
-                <CardContent className="p-6">
-                  <div className="text-3xl md:text-4xl font-bold text-[#0047ab] mb-2">{item.number}</div>
-                  <h3 className="text-lg font-bold mb-2 text-white">{item.label}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Achievements */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="bg-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300 text-center">
-                <CardContent className="p-6">
-                  <div className="mb-4 flex justify-center">
-                    <div className="w-12 h-12 bg-[#0047ab]/10 rounded-full flex items-center justify-center border border-[#0047ab]/30">
-                      <achievement.icon className="h-6 w-6 text-[#0047ab]" />
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-white">{achievement.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{achievement.description}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {numbers.slice(0, 4).map((item, index) => (
+              <Card key={index} className="bg-gray-900/30 border-gray-800/50 text-center">
+                <CardContent className="p-5">
+                  <div className="text-2xl font-bold text-[#0047ab] mb-1">{item.number}</div>
+                  <h3 className="text-xs font-medium text-white mb-1">{item.label}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -324,60 +288,50 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 px-4">
+      {/* Timeline compacta */}
+      <section className="py-16 px-4 bg-gray-900/20">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
               <span className="text-white">Nossa </span>
               <span className="text-[#0047ab]">Trajetória</span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              A evolução da Cheetah Network ao longo dos anos
-            </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#0047ab]/30"></div>
-              
+          <div className="max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {timeline.map((item, index) => (
-                <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-full max-w-md ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                    <Card className="bg-gray-900/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-                      <CardContent className="p-6">
-                        <div className="text-2xl font-bold text-[#0047ab] mb-2">{item.year}</div>
-                        <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                        <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#0047ab] rounded-full border-4 border-black"></div>
-                </div>
+                <Card key={index} className="bg-gray-900/30 border-gray-800/50">
+                  <CardContent className="p-4">
+                    <div className="text-lg font-bold text-[#0047ab] mb-1">{item.year}</div>
+                    <h3 className="text-sm font-medium text-white mb-1">{item.title}</h3>
+                    <p className="text-gray-500 text-xs">{item.description}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
         </div>
       </section>
 
+
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-[#0047ab]/5">
+      <section className="py-16 px-4">
         <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight">
-              Quer fazer parte da nossa <span className="text-[#0047ab]">história?</span>
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+              Vamos conversar sobre seu <span className="text-[#0047ab]">projeto?</span>
             </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Entre em contato conosco e descubra como podemos ajudar sua empresa 
-              a alcançar novos patamares com tecnologia de ponta
+            <p className="text-gray-400 text-sm mb-6">
+              Entre em contato para discutir como podemos ajudar sua empresa
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link to="/contato">
                 <Button 
                   size="lg" 
-                  className="bg-[#0047ab] hover:bg-[#0047ab]/90 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105"
+                  className="bg-[#0047ab] hover:bg-[#0047ab]/90 text-white px-6 py-3 font-medium rounded-lg"
                 >
-                  <MessageCircle className="mr-2 h-5 w-5" />
+                  <MessageCircle className="mr-2 h-4 w-4" />
                   Falar Conosco
                 </Button>
               </Link>
@@ -385,9 +339,9 @@ const About = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-[#0047ab] text-[#0047ab] hover:bg-[#0047ab] hover:text-white px-8 py-4 text-lg font-semibold rounded-xl"
+                  className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white px-6 py-3 font-medium rounded-lg"
                 >
-                  <Users className="mr-2 h-5 w-5" />
+                  <Users className="mr-2 h-4 w-4" />
                   Conhecer a Equipe
                 </Button>
               </Link>

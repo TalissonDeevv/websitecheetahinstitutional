@@ -123,14 +123,15 @@ const Team = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
+      <section className="pt-24 pb-12 px-4">
         <div className="container mx-auto text-center">
+          <p className="text-sm text-[#0047ab] uppercase tracking-widest mb-3 font-medium">Profissionais</p>
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-white">Nossa </span>
             <span className="text-[#0047ab]">Equipe</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Conheça os profissionais dedicados que fazem a Cheetah Network funcionar
+          <p className="text-base text-gray-400 max-w-xl mx-auto">
+            Profissionais qualificados comprometidos com a excelência técnica
           </p>
         </div>
       </section>
@@ -138,24 +139,18 @@ const Team = () => {
       {/* Executive Leadership */}
       <section className="py-12 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Liderança Executiva</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-semibold text-white mb-2">Liderança Executiva</h2>
+            <p className="text-sm text-gray-500">Direção estratégica e operacional</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {executiveLeadership.map((member, index) => (
-              <Card key={index} className="bg-gray-900/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="text-xl font-semibold mb-2">{member.name}</div>
-                  <div className="text-gray-300 mb-3">{member.role}</div>
-                  <div className="text-sm text-gray-400 mb-2">
-                    <Mail className="inline-block mr-1 h-4 w-4" /> 
-                    <a href={`mailto:${member.contact.email}`} className="hover:text-[#0047ab] transition-colors">
-                      {member.contact.email}
-                    </a>
-                  </div>
-                  <div className="text-sm text-gray-400 mb-2">
-                    <strong>Habilidades:</strong> {member.skills.join(", ")}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    <strong>Conquistas:</strong> {member.achievements.join(", ")}
+              <Card key={index} className="bg-gray-900/30 border-gray-800/50">
+                <CardContent className="p-5">
+                  <div className="text-base font-semibold text-white mb-1">{member.name}</div>
+                  <div className="text-xs text-[#0047ab] mb-3">{member.role}</div>
+                  <div className="text-xs text-gray-500 mb-2">
+                    <strong className="text-gray-400">Competências:</strong> {member.skills.join(", ")}
                   </div>
                 </CardContent>
               </Card>
@@ -165,26 +160,24 @@ const Team = () => {
       </section>
 
       {/* Development Team */}
-      <section className="py-12 px-4 bg-gray-900/50">
+      <section className="py-12 px-4 bg-gray-900/20">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Equipe de Desenvolvimento</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-semibold text-white mb-2">Equipe Técnica</h2>
+            <p className="text-sm text-gray-500">Desenvolvimento e engenharia</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {developmentTeam.map((member, index) => (
-              <Card key={index} className="bg-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="text-xl font-semibold mb-2">{member.name}</div>
-                  <div className="text-gray-300 mb-3">{member.role}</div>
-                  <div className="text-sm text-gray-400 mb-2">
-                    <Mail className="inline-block mr-1 h-4 w-4" /> 
-                    <a href={`mailto:${member.contact.email}`} className="hover:text-[#0047ab] transition-colors">
-                      {member.contact.email}
-                    </a>
-                  </div>
-                  <div className="text-sm text-gray-400 mb-2">
-                    <strong>Habilidades:</strong> {member.skills.join(", ")}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    <strong>Conquistas:</strong> {member.achievements.join(", ")}
+              <Card key={index} className="bg-gray-900/30 border-gray-800/50">
+                <CardContent className="p-5">
+                  <div className="text-base font-semibold text-white mb-1">{member.name}</div>
+                  <div className="text-xs text-[#0047ab] mb-3">{member.role}</div>
+                  <div className="flex flex-wrap gap-1">
+                    {member.skills.slice(0, 3).map((skill, i) => (
+                      <span key={i} className="text-xs bg-gray-800 text-gray-400 px-2 py-0.5 rounded">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -196,24 +189,22 @@ const Team = () => {
       {/* Support Team */}
       <section className="py-12 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Equipe de Suporte</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="text-center mb-8">
+            <h2 className="text-xl font-semibold text-white mb-2">Equipe de Suporte</h2>
+            <p className="text-sm text-gray-500">Atendimento e suporte técnico</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
             {supportTeam.map((member, index) => (
-              <Card key={index} className="bg-gray-900/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="text-xl font-semibold mb-2">{member.name}</div>
-                  <div className="text-gray-300 mb-3">{member.role}</div>
-                  <div className="text-sm text-gray-400 mb-2">
-                    <Mail className="inline-block mr-1 h-4 w-4" /> 
-                    <a href={`mailto:${member.contact.email}`} className="hover:text-[#0047ab] transition-colors">
-                      {member.contact.email}
-                    </a>
-                  </div>
-                  <div className="text-sm text-gray-400 mb-2">
-                    <strong>Habilidades:</strong> {member.skills.join(", ")}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    <strong>Conquistas:</strong> {member.achievements.join(", ")}
+              <Card key={index} className="bg-gray-900/30 border-gray-800/50">
+                <CardContent className="p-5">
+                  <div className="text-base font-semibold text-white mb-1">{member.name}</div>
+                  <div className="text-xs text-[#0047ab] mb-3">{member.role}</div>
+                  <div className="flex flex-wrap gap-1">
+                    {member.skills.slice(0, 2).map((skill, i) => (
+                      <span key={i} className="text-xs bg-gray-800 text-gray-400 px-2 py-0.5 rounded">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -222,38 +213,16 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Team Verification Badges */}
-      <section className="py-12 px-4 bg-gray-900/50">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Verificação da Equipe
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {verificationBadges.map((badge, index) => (
-              <Card key={index} className="bg-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300 text-center">
-                <CardContent className="p-6">
-                  <div className="bg-[#0047ab]/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-[#0047ab]/20">
-                    <badge.icon className="h-8 w-8 text-[#0047ab]" />
-                  </div>
-                  <div className="text-lg font-semibold text-white mb-2">{badge.label}</div>
-                  <div className="text-sm text-gray-300">{badge.description}</div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-16 px-4">
+      {/* CTA */}
+      <section className="py-12 px-4 bg-gray-900/20">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Interessado em fazer parte da nossa equipe?
+          <h2 className="text-xl font-semibold mb-3 text-white">
+            Interessado em fazer parte da equipe?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Estamos sempre à procura de talentos apaixonados para se juntarem à Cheetah Network.
+          <p className="text-sm text-gray-400 mb-5 max-w-md mx-auto">
+            Estamos sempre à procura de profissionais qualificados.
           </p>
-          <Button size="lg" className="bg-[#0047ab] hover:bg-[#0047ab]/80 text-white px-8 py-6 text-lg font-semibold rounded-lg">
+          <Button size="lg" className="bg-[#0047ab] hover:bg-[#0047ab]/90 text-white px-6 py-3 font-medium rounded-lg">
             Entre em contato
           </Button>
         </div>
