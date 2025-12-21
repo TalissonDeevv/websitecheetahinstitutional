@@ -9,8 +9,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm transition-all duration-300 safe-top">
-      <div className="container mx-auto px-4 py-4 sm:py-5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm transition-all duration-300 safe-top h-16 sm:h-[68px]">
+      <div className="container mx-auto px-4 h-full flex flex-col justify-center">
         <div className="flex items-center justify-between">
           <Logo />
           <DesktopNav />
