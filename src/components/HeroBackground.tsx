@@ -84,19 +84,19 @@ const HeroBackground = () => {
 
       ctx.clearRect(0, 0, width, height);
 
-      // Primary glow - centered
+      // Primary glow - moved lower to avoid navbar
       const primaryX = width * 0.5 + Math.sin(time * 0.0003) * 50;
-      const primaryY = height * 0.45 + Math.cos(time * 0.0002) * 30;
+      const primaryY = height * 0.55 + Math.cos(time * 0.0002) * 30;
       drawGlow(primaryX, primaryY, 350, "rgb(59, 130, 246)", 0.15);
 
-      // Secondary glow
+      // Secondary glow - moved lower
       const secondaryX = width * 0.65 + Math.cos(time * 0.0004) * 40;
-      const secondaryY = height * 0.35 + Math.sin(time * 0.0003) * 25;
+      const secondaryY = height * 0.48 + Math.sin(time * 0.0003) * 25;
       drawGlow(secondaryX, secondaryY, 280, "rgb(99, 102, 241)", 0.1);
 
-      // Tertiary glow
+      // Tertiary glow - moved lower
       const tertiaryX = width * 0.35 + Math.sin(time * 0.0002) * 40;
-      const tertiaryY = height * 0.5 + Math.cos(time * 0.0003) * 20;
+      const tertiaryY = height * 0.6 + Math.cos(time * 0.0003) * 20;
       drawGlow(tertiaryX, tertiaryY, 220, "rgb(139, 92, 246)", 0.08);
 
       // Draw particles with parallax effect
