@@ -13,20 +13,15 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
     { name: "Sobre", path: "/sobre" },
     { name: "Serviços", path: "/servicos" },
     { name: "Equipe", path: "/equipe" },
+    { name: "Blog", path: "/blog" },
     { name: "Contato", path: "/contato" },
     { name: "Orçamento", path: "/orcamento" },
   ];
 
   const moreMenuItems = [
     { name: "Início", path: "/" },
-    { name: "Atendefly", path: "/atendefly" },
-    { name: "Portfólio", path: "/portfolio" },
-    { name: "Projetos Públicos", path: "/projetos" },
-    { name: "Blog", path: "/blog" },
-    { name: "Cheetah Academy", path: "/academy" },
     { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
     { name: "FAQ", path: "/faq" },
-    { name: "Base de Conhecimento", path: "/conhecimento" },
     { name: "Sugestões", path: "/sugestoes" },
   ];
 
