@@ -1,348 +1,285 @@
-
-import { Users, Target, Award, Zap, Shield, Heart, TrendingUp, Globe, Code, Cpu, MessageCircle, CheckCircle } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Target, Code, Zap, Shield, Users, Heart, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const About = () => {
-  const values = [
-    {
-      icon: Zap,
-      title: "Agilidade",
-      description: "Entregamos soluções rápidas sem comprometer a qualidade"
-    },
-    {
-      icon: Shield,
-      title: "Confiabilidade",
-      description: "Segurança e estabilidade em todos os nossos projetos"
-    },
-    {
-      icon: Heart,
-      title: "Paixão",
-      description: "Amor pelo que fazemos reflete na qualidade das entregas"
-    },
-    {
-      icon: Users,
-      title: "Colaboração",
-      description: "Trabalhamos em equipe para alcançar os melhores resultados"
-    }
-  ];
-
-  const timeline = [
-    {
-      year: "2020",
-      title: "Fundação da Cheetah",
-      description: "Início das operações com foco em automação e bots"
-    },
-    {
-      year: "2021", 
-      title: "Expansão dos Serviços",
-      description: "Adição de desenvolvimento web e sistemas personalizados"
-    },
-    {
-      year: "2022",
-      title: "Marcos de Crescimento",
-      description: "50+ projetos entregues e consolidação no mercado"
-    },
-    {
-      year: "2023",
-      title: "Inovação Contínua", 
-      description: "Lançamento do Atendefly e novos produtos"
-    },
-    {
-      year: "2024",
-      title: "Liderança no Setor",
-      description: "100+ projetos e reconhecimento como referência"
-    },
-    {
-      year: "2025",
-      title: "Futuro Promissor",
-      description: "Expansão internacional e novas tecnologias"
-    }
-  ];
-
-  const numbers = [
-    {
-      number: "120+",
-      label: "Projetos Entregues",
-      description: "Soluções desenvolvidas e implementadas com sucesso"
-    },
-    {
-      number: "50+", 
-      label: "Clientes Atendidos",
-      description: "Empresas que confiam em nossas soluções"
-    },
-    {
-      number: "99.9%",
-      label: "Uptime Médio",
-      description: "Disponibilidade garantida em nossos sistemas"
-    },
-    {
-      number: "24/7",
-      label: "Suporte Técnico", 
-      description: "Atendimento disponível todos os dias"
-    },
-    {
-      number: "5+",
-      label: "Anos de Mercado",
-      description: "Experiência consolidada em tecnologia"
-    },
-    {
-      number: "11+",
-      label: "Especialistas",
-      description: "Profissionais qualificados em nossa equipe"
-    },
-    {
-      number: "15+",
-      label: "Tecnologias",
-      description: "Ferramentas e frameworks dominados"
-    },
-    {
-      number: "100%",
-      label: "Satisfação",
-      description: "Compromisso com a excelência em cada projeto"
-    }
-  ];
-
-  const achievements = [
-    {
-      icon: Award,
-      title: "Excelência em Desenvolvimento",
-      description: "Reconhecimento pela qualidade técnica de nossas soluções"
-    },
-    {
-      icon: TrendingUp,
-      title: "Crescimento Sustentável", 
-      description: "Expansão constante mantendo os padrões de qualidade"
-    },
-    {
-      icon: Globe,
-      title: "Impacto Global",
-      description: "Clientes satisfeitos em diferentes regiões e segmentos"
-    },
-    {
-      icon: CheckCircle,
-      title: "Projetos 100% Entregues",
-      description: "Histórico perfeito de conclusão de projetos no prazo"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4">
-        <div className="container mx-auto text-center">
-          <p className="text-sm text-[#0047ab] uppercase tracking-widest mb-3 font-medium">Software House</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5">
-            <span className="text-white">Sobre a </span>
-            <span className="text-[#0047ab]">Cheetah Network</span>
-          </h1>
-          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Desenvolvimento de software sob medida, com foco em qualidade, performance e resultados tangíveis para o seu negócio.
-          </p>
-        </div>
-      </section>
-
-      {/* About Company */}
-      <section className="py-16 px-4">
+      {/* Hero - Asymmetric */}
+      <section className="pt-28 pb-20 px-4">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="bg-gray-900/30 border-gray-800/50">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">Quem Somos</h3>
-                  <p className="text-gray-400 leading-relaxed text-sm">
-                    Somos uma software house especializada no desenvolvimento de sistemas, aplicações web, automações e integrações. Atuamos desde 2020 transformando desafios complexos em soluções digitais escaláveis.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-gray-900/30 border-gray-800/50">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">O Que Fazemos</h3>
-                  <p className="text-gray-400 leading-relaxed text-sm">
-                    Desenvolvemos software personalizado: plataformas web, sistemas de gestão, bots, APIs e integrações. Nossa equipe entrega soluções que funcionam e geram valor real para os negócios dos nossos clientes.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <Card className="bg-gray-900/30 border-gray-800/50">
-              <CardContent className="p-6 md:p-8">
-                <h3 className="text-lg font-semibold text-white mb-4">Nossa Abordagem</h3>
-                <div className="space-y-4 text-gray-400 leading-relaxed text-sm">
-                  <p>
-                    Combinamos expertise técnica com entendimento profundo das necessidades de cada cliente. Trabalhamos de forma colaborativa, com comunicação transparente e entregas incrementais.
-                  </p>
-                  <p>
-                    Cada projeto é tratado com a atenção e o rigor que merece. Não oferecemos soluções genéricas — desenvolvemos software que resolve problemas reais e se adapta à evolução do seu negócio.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission and Vision */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <Card className="bg-gray-900/30 border-gray-800/50">
-              <CardContent className="p-6">
-                <div className="mb-4 flex justify-center">
-                  <div className="w-12 h-12 bg-[#0047ab]/10 rounded-lg flex items-center justify-center">
-                    <Target className="h-5 w-5 text-[#0047ab]" />
-                  </div>
-                </div>
-                <h3 className="text-base font-semibold mb-3 text-white text-center">Missão</h3>
-                <p className="text-gray-400 text-sm leading-relaxed text-center">
-                  Desenvolver software que resolve problemas reais, entregando valor mensurável para cada cliente.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-gray-900/30 border-gray-800/50">
-              <CardContent className="p-6">
-                <div className="mb-4 flex justify-center">
-                  <div className="w-12 h-12 bg-[#0047ab]/10 rounded-lg flex items-center justify-center">
-                    <Award className="h-5 w-5 text-[#0047ab]" />
-                  </div>
-                </div>
-                <h3 className="text-base font-semibold mb-3 text-white text-center">Visão</h3>
-                <p className="text-gray-400 text-sm leading-relaxed text-center">
-                  Ser referência em desenvolvimento de software personalizado, reconhecida pela qualidade técnica.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900/30 border-gray-800/50">
-              <CardContent className="p-6">
-                <div className="mb-4 flex justify-center">
-                  <div className="w-12 h-12 bg-[#0047ab]/10 rounded-lg flex items-center justify-center">
-                    <Code className="h-5 w-5 text-[#0047ab]" />
-                  </div>
-                </div>
-                <h3 className="text-base font-semibold mb-3 text-white text-center">Princípio</h3>
-                <p className="text-gray-400 text-sm leading-relaxed text-center">
-                  Código limpo, processos transparentes e compromisso com resultados concretos.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-16 px-4 bg-gray-900/20">
-        <div className="container mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              <span className="text-white">Nossos </span>
-              <span className="text-[#0047ab]">Valores</span>
-            </h2>
-            <p className="text-sm text-gray-400 max-w-xl mx-auto">
-              Os princípios que orientam nosso trabalho diário
+          <div className="max-w-5xl">
+            <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
+              Software House desde 2020
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
+              Construímos software<br />
+              <span className="text-primary">que funciona.</span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+              Sem promessas vazias. Código limpo, entregas no prazo, 
+              e soluções que resolvem problemas reais.
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {values.map((value, index) => (
-              <Card key={index} className="bg-gray-900/30 border-gray-800/50 text-center">
-                <CardContent className="p-5">
-                  <div className="mb-3 flex justify-center">
-                    <value.icon className="h-5 w-5 text-[#0047ab]" />
+        </div>
+      </section>
+
+      {/* Quem Somos - Full width asymmetric */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+            {/* Left column - narrower */}
+            <div className="lg:col-span-4">
+              <div className="sticky top-32">
+                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                  Quem Somos
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
+                  Uma equipe técnica<br />
+                  que entende de negócio.
+                </h2>
+              </div>
+            </div>
+            
+            {/* Right column - wider, content heavy */}
+            <div className="lg:col-span-8">
+              <div className="space-y-8">
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  A Cheetah Network nasceu da frustração com o mercado de software brasileiro. 
+                  Projetos atrasados, código mal feito, comunicação inexistente. 
+                  Decidimos fazer diferente.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Desde 2020, desenvolvemos sistemas, aplicações web, automações e integrações 
+                  para empresas que precisam de tecnologia que funcione — não apenas que pareça bonita 
+                  em uma apresentação.
+                </p>
+                
+                <div className="pt-8 border-t border-border">
+                  <div className="grid sm:grid-cols-3 gap-8">
+                    <div>
+                      <span className="text-3xl font-bold text-primary">120+</span>
+                      <p className="text-sm text-muted-foreground mt-1">projetos entregues</p>
+                    </div>
+                    <div>
+                      <span className="text-3xl font-bold text-primary">5+</span>
+                      <p className="text-sm text-muted-foreground mt-1">anos de mercado</p>
+                    </div>
+                    <div>
+                      <span className="text-3xl font-bold text-primary">99.9%</span>
+                      <p className="text-sm text-muted-foreground mt-1">uptime médio</p>
+                    </div>
                   </div>
-                  <h3 className="text-sm font-semibold mb-2 text-white">{value.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Números e Trajetória */}
-      <section className="py-16 px-4">
+      {/* O que fazemos - Cards com variação */}
+      <section className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              <span className="text-white">Cheetah em </span>
-              <span className="text-[#0047ab]">Números</span>
+          <div className="max-w-xl mb-16">
+            <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              O que fazemos
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold mt-3">
+              Desenvolvimento sob medida,<br />
+              não templates genéricos.
             </h2>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {numbers.slice(0, 4).map((item, index) => (
-              <Card key={index} className="bg-gray-900/30 border-gray-800/50 text-center">
-                <CardContent className="p-5">
-                  <div className="text-2xl font-bold text-[#0047ab] mb-1">{item.number}</div>
-                  <h3 className="text-xs font-medium text-white mb-1">{item.label}</h3>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card maior - destaque */}
+            <div className="lg:col-span-2 bg-card border border-border rounded-xl p-8 md:p-10">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <Code className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Sistemas e Aplicações Web</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Plataformas completas, painéis administrativos, ERPs customizados. 
+                    Arquitetura escalável, código documentado, deploy automatizado.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2 mt-6">
+                <span className="text-xs bg-secondary px-3 py-1.5 rounded-full text-muted-foreground">React</span>
+                <span className="text-xs bg-secondary px-3 py-1.5 rounded-full text-muted-foreground">Node.js</span>
+                <span className="text-xs bg-secondary px-3 py-1.5 rounded-full text-muted-foreground">TypeScript</span>
+                <span className="text-xs bg-secondary px-3 py-1.5 rounded-full text-muted-foreground">PostgreSQL</span>
+              </div>
+            </div>
+            
+            {/* Card menor */}
+            <div className="bg-card border border-border rounded-xl p-8">
+              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                <Zap className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Automações</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Bots, integrações entre sistemas, workflows automatizados. 
+                Eliminamos trabalho manual repetitivo.
+              </p>
+            </div>
+            
+            {/* Card menor */}
+            <div className="bg-card border border-border rounded-xl p-8">
+              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                <Shield className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">APIs e Integrações</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Conectamos sistemas legados, ERPs, CRMs e qualquer ferramenta 
+                que sua operação precise usar.
+              </p>
+            </div>
+            
+            {/* Card maior - segundo destaque */}
+            <div className="lg:col-span-2 bg-card border border-border rounded-xl p-8 md:p-10">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                  <Target className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Consultoria Técnica</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Análise de arquitetura, code review, mentoria de equipes. 
+                    Ajudamos a corrigir o rumo antes que o projeto vire um problema.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Timeline compacta */}
-      <section className="py-16 px-4 bg-gray-900/20">
+      {/* Valores - Layout horizontal diferenciado */}
+      <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              <span className="text-white">Nossa </span>
-              <span className="text-[#0047ab]">Trajetória</span>
-            </h2>
+          <div className="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-20">
+            <div className="lg:w-1/3">
+              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                Como pensamos
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                Nossos princípios não são decorativos.
+              </h2>
+            </div>
+            
+            <div className="lg:w-2/3">
+              <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10">
+                <div className="border-l-2 border-primary/30 pl-6">
+                  <Zap className="h-5 w-5 text-primary mb-3" />
+                  <h3 className="font-semibold mb-2">Agilidade real</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Sprints curtos, comunicação constante, entregas frequentes. 
+                    Você acompanha o progresso, não fica esperando surpresas.
+                  </p>
+                </div>
+                
+                <div className="border-l-2 border-primary/30 pl-6">
+                  <Shield className="h-5 w-5 text-primary mb-3" />
+                  <h3 className="font-semibold mb-2">Código que dura</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Documentação, testes, arquitetura pensada. 
+                    Seu sistema não vai virar um pesadelo de manutenção.
+                  </p>
+                </div>
+                
+                <div className="border-l-2 border-primary/30 pl-6">
+                  <Heart className="h-5 w-5 text-primary mb-3" />
+                  <h3 className="font-semibold mb-2">Compromisso genuíno</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Não abandonamos projetos, não sumimos. 
+                    Estamos junto até a entrega — e depois dela.
+                  </p>
+                </div>
+                
+                <div className="border-l-2 border-primary/30 pl-6">
+                  <Users className="h-5 w-5 text-primary mb-3" />
+                  <h3 className="font-semibold mb-2">Transparência total</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Acesso ao código, updates regulares, sem surpresas no orçamento. 
+                    Você sabe exatamente onde está seu investimento.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          
+        </div>
+      </section>
+
+      {/* Timeline - Minimalista */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {timeline.map((item, index) => (
-                <Card key={index} className="bg-gray-900/30 border-gray-800/50">
-                  <CardContent className="p-4">
-                    <div className="text-lg font-bold text-[#0047ab] mb-1">{item.year}</div>
-                    <h3 className="text-sm font-medium text-white mb-1">{item.title}</h3>
-                    <p className="text-gray-500 text-xs">{item.description}</p>
-                  </CardContent>
-                </Card>
+            <div className="text-center mb-16">
+              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                Trajetória
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                5 anos construindo software sério.
+              </h2>
+            </div>
+            
+            <div className="space-y-0">
+              {[
+                { year: "2020", text: "Fundação. Foco inicial em automações e bots para Discord." },
+                { year: "2021", text: "Expansão para desenvolvimento web. Primeiros sistemas completos." },
+                { year: "2022", text: "50 projetos entregues. Consolidação como software house." },
+                { year: "2023", text: "Lançamento de produtos próprios. Equipe técnica expandida." },
+                { year: "2024", text: "100+ projetos. Reconhecimento no mercado B2B." },
+                { year: "2025", text: "Expansão de serviços. Foco em empresas em crescimento." },
+              ].map((item, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-start gap-6 py-6 border-b border-border last:border-0"
+                >
+                  <span className="text-primary font-bold text-lg w-16 shrink-0">{item.year}</span>
+                  <p className="text-muted-foreground">{item.text}</p>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto text-center">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
-              Vamos conversar sobre seu <span className="text-[#0047ab]">projeto?</span>
+      {/* CTA - Simples e direto */}
+      <section className="py-24 px-4">
+        <div className="container mx-auto">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              Tem um projeto em mente?<br />
+              <span className="text-primary">Vamos conversar.</span>
             </h2>
-            <p className="text-gray-400 text-sm mb-6">
-              Entre em contato para discutir como podemos ajudar sua empresa
+            <p className="text-muted-foreground mb-8 max-w-lg">
+              Sem compromisso. Conte sobre seu desafio e vamos avaliar 
+              se faz sentido trabalharmos juntos.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-wrap gap-4">
               <Link to="/contato">
                 <Button 
                   size="lg" 
-                  className="bg-[#0047ab] hover:bg-[#0047ab]/90 text-white px-6 py-3 font-medium rounded-lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
                 >
                   <MessageCircle className="mr-2 h-4 w-4" />
-                  Falar Conosco
+                  Iniciar conversa
                 </Button>
               </Link>
               <Link to="/equipe">
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white px-6 py-3 font-medium rounded-lg"
+                  className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground font-medium"
                 >
-                  <Users className="mr-2 h-4 w-4" />
-                  Conhecer a Equipe
+                  Conhecer a equipe
                 </Button>
               </Link>
             </div>
