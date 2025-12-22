@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,8 +7,6 @@ import CheetahSolidaria from "./pages/CheetahSolidaria";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Atendefly from "./pages/Atendefly";
-import Portfolio from "./pages/Portfolio";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Security from "./pages/Security";
@@ -35,14 +32,10 @@ import ServiceMobile from "./pages/ServiceMobile";
 import PoliticasTermosEnhanced from "./pages/PoliticasTermosEnhanced";
 import Campaign from "./pages/Campaign";
 import BlogPost from "./pages/BlogPost";
-import Knowledge from "./pages/Knowledge";
 import Management from "./pages/Management";
-import ProjectMap from "./pages/ProjectMap";
 import TeamVerification from "./pages/TeamVerification";
 import TermsExplained from "./pages/TermsExplained";
-import Academy from "./pages/Academy";
 import Report from "./pages/Report";
-
 import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
 
@@ -71,8 +64,6 @@ const App = () => (
             <Route path="/servicos/mobile" element={<ServiceMobile />} />
             <Route path="/politicas" element={<PoliticasTermosEnhanced />} />
             <Route path="/campanha/:id" element={<Campaign />} />
-            <Route path="/atendefly" element={<Atendefly />} />
-            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/numeros" element={<Numbers />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contato" element={<Contact />} />
@@ -80,15 +71,11 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/orcamento" element={<Budget />} />
-            <Route path="/conhecimento" element={<Knowledge />} />
             <Route path="/gestao" element={<Management />} />
-            <Route path="/projetos" element={<ProjectMap />} />
             <Route path="/verificacao-equipe" element={<TeamVerification />} />
             <Route path="/termos-explicados" element={<TermsExplained />} />
-            <Route path="/academy" element={<Academy />} />
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
             <Route path="/denuncia" element={<Report />} />
-            
             <Route path="/sugestoes" element={<Suggestions />} />
             <Route path="/seguranca" element={<Security />} />
             <Route path="/termos" element={<Terms />} />

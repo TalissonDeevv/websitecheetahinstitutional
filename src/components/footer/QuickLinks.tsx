@@ -5,8 +5,8 @@ const QuickLinks = () => {
     { name: "Início", path: "/" },
     { name: "Sobre", path: "/sobre" },
     { name: "Serviços", path: "/servicos" },
-    { name: "Portfólio", path: "/portfolio" },
-    { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
+    { name: "Equipe", path: "/equipe" },
+    { name: "Blog", path: "/blog" },
     { name: "Contato", path: "/contato" },
     { name: "FAQ", path: "/faq" },
   ];
