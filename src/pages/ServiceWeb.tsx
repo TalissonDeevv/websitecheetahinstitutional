@@ -1,239 +1,276 @@
-
-import { Globe, CheckCircle, MessageCircle, ArrowRight, Smartphone, Search, Palette, Code } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Globe, ArrowRight, MessageCircle, Code, Smartphone, Search, Shield, Zap, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const ServiceWeb = () => {
-  const technologies = [
-    "React", "Next.js", "Vue.js", "Angular", "Node.js", "PHP", "Python", "WordPress"
-  ];
-
-  const features = [
-    "Design responsivo e moderno",
-    "Otimização para mecanismos de busca (SEO)",
-    "Integração com sistemas de pagamento",
-    "Painéis administrativos",
-    "E-commerce completo",
-    "Hospedagem e manutenção",
-    "Certificado SSL gratuito",
-    "Backup automático"
-  ];
-
-  const benefits = [
-    {
-      icon: Smartphone,
-      title: "Design Responsivo",
-      description: "Seus usuários terão uma experiência perfeita em qualquer dispositivo, desde smartphones até desktops."
-    },
-    {
-      icon: Search,
-      title: "SEO Otimizado",
-      description: "Otimizamos seu site para aparecer no topo dos resultados de busca do Google e outros buscadores."
-    },
-    {
-      icon: Palette,
-      title: "Design Personalizado",
-      description: "Criamos layouts únicos que refletem a identidade visual da sua marca e conquistam seus clientes."
-    },
-    {
-      icon: Code,
-      title: "Código Limpo",
-      description: "Desenvolvemos com as melhores práticas, garantindo performance, segurança e facilidade de manutenção."
-    }
-  ];
-
-  const projectTypes = [
-    {
-      title: "Sites Institucionais",
-      description: "Apresente sua empresa de forma profissional com páginas que convertem visitantes em clientes."
-    },
-    {
-      title: "E-commerce",
-      description: "Venda online com plataformas completas de comércio eletrônico, integradas com gateways de pagamento."
-    },
-    {
-      title: "Portais e Blogs",
-      description: "Compartilhe conteúdo e construa audiência com portais dinâmicos e blogs otimizados para SEO."
-    },
-    {
-      title: "Aplicações Web",
-      description: "Sistemas complexos e aplicações web personalizadas para automatizar processos do seu negócio."
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 px-4 animate-fade-in">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-6">
-                <span className="text-white">Desenvolvimento </span>
-                <span className="text-primary">Web</span>
+      {/* Hero - Asymmetric */}
+      <section className="pt-28 pb-20 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <AnimatedSection className="lg:col-span-7">
+              <span className="text-xs font-medium text-primary uppercase tracking-wider">Desenvolvimento Web</span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
+                Websites que <span className="text-primary">funcionam</span> e convertem
               </h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Criamos websites modernos, responsivos e otimizados para performance máxima. 
-                Do site institucional ao e-commerce completo, desenvolvemos soluções web que convertem.
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
+                Desenvolvemos websites modernos, rápidos e otimizados para SEO. Do site institucional ao e-commerce, 
+                criamos soluções que geram resultados reais para seu negócio.
               </p>
-              <Link to="/orcamento">
-                <Button className="bg-primary hover:bg-primary/80 text-primary-foreground px-8 py-3 text-lg">
-                  Solicitar Orçamento
-                </Button>
-              </Link>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://i.ibb.co/sJXqD4Dh/Website-setup-cuate.png" 
-                alt="Desenvolvimento Web"
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute -top-4 -left-4 bg-primary/20 rounded-full w-24 h-24 flex items-center justify-center backdrop-blur-sm border border-primary/30">
-                <Globe className="h-12 w-12 text-primary" />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/orcamento">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-border text-foreground hover:bg-secondary">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    Falar no WhatsApp
+                  </Button>
+                </a>
               </div>
-            </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200} className="lg:col-span-5">
+              <div className="relative">
+                <img 
+                  src="https://i.ibb.co/sJXqD4Dh/Website-setup-cuate.png" 
+                  alt="Desenvolvimento Web"
+                  className="rounded-lg w-full"
+                />
+                <div className="absolute -bottom-4 -left-4 bg-primary/10 border border-primary/20 rounded-lg p-4 backdrop-blur-sm">
+                  <Globe className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Por que escolher nossos </span>
-              <span className="text-primary">Websites?</span>
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-card border-border hover:border-primary/30 transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-primary/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="h-8 w-8 text-primary" />
+      {/* O Problema */}
+      <section className="py-16 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <AnimatedSection>
+              <h2 className="text-2xl font-bold mb-6">
+                O problema que <span className="text-primary">resolvemos</span>
+              </h2>
+              <div className="space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  Muitas empresas ainda não têm presença digital adequada, ou possuem sites ultrapassados 
+                  que não representam a qualidade do seu trabalho.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sites lentos, mal otimizados e sem foco em conversão afastam clientes potenciais 
+                  e prejudicam a credibilidade da marca.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Nosso trabalho é criar websites que funcionam como ferramenta de negócio: 
+                  atraem visitantes, transmitem confiança e geram resultados mensuráveis.
+                </p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={150}>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h3 className="text-lg font-semibold mb-4">Nossa abordagem técnica</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Code className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Código limpo e performático</h4>
+                      <p className="text-xs text-muted-foreground mt-1">React, Next.js e tecnologias modernas que garantem velocidade</p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-card-foreground">{benefit.title}</h3>
-                  <p className="text-muted-foreground text-sm">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                  <div className="flex items-start gap-3">
+                    <Search className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">SEO otimizado desde o início</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Estrutura técnica que facilita indexação e ranqueamento</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Smartphone className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Mobile-first obrigatório</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Design responsivo que funciona em qualquer dispositivo</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Shield className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Segurança integrada</h4>
+                      <p className="text-xs text-muted-foreground mt-1">SSL, proteção contra ataques e boas práticas de segurança</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Tipos de Projetos */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center text-foreground">
-            <span className="text-white">Tipos de </span>
-            <span className="text-primary">Projetos</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projectTypes.map((project, index) => (
-              <Card key={index} className="group bg-card border-border hover:border-primary/30 transition-all duration-300">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-card-foreground">{project.title}</h3>
-                  <p className="text-muted-foreground text-sm">{project.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+      <section className="py-16 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <h2 className="text-2xl font-bold mb-2">
+              Tipos de <span className="text-primary">projetos</span>
+            </h2>
+            <p className="text-muted-foreground mb-10 max-w-xl">
+              Desenvolvemos diferentes formatos de websites, cada um com foco específico
+            </p>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <AnimatedSection delay={100}>
+              <div className="p-6 border border-border rounded-lg bg-card h-full">
+                <h3 className="text-lg font-semibold mb-3">Sites Institucionais</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Apresentação profissional da sua empresa com foco em credibilidade e conversão de leads.
+                </p>
+                <div className="text-xs text-muted-foreground">
+                  <span className="text-primary font-medium">Para quem:</span> Empresas que precisam de presença digital sólida
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={150}>
+              <div className="p-6 border border-border rounded-lg bg-card h-full">
+                <h3 className="text-lg font-semibold mb-3">Landing Pages</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Páginas focadas em conversão para campanhas, lançamentos ou captação de leads.
+                </p>
+                <div className="text-xs text-muted-foreground">
+                  <span className="text-primary font-medium">Para quem:</span> Campanhas de marketing e vendas
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200}>
+              <div className="p-6 border border-border rounded-lg bg-card h-full">
+                <h3 className="text-lg font-semibold mb-3">Portais e Blogs</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Plataformas de conteúdo otimizadas para SEO e gestão editorial simplificada.
+                </p>
+                <div className="text-xs text-muted-foreground">
+                  <span className="text-primary font-medium">Para quem:</span> Empresas com estratégia de conteúdo
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={250}>
+              <div className="p-6 border border-border rounded-lg bg-card h-full">
+                <h3 className="text-lg font-semibold mb-3">Aplicações Web</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Sistemas web completos com funcionalidades avançadas e painéis administrativos.
+                </p>
+                <div className="text-xs text-muted-foreground">
+                  <span className="text-primary font-medium">Para quem:</span> Negócios que precisam de funcionalidades específicas
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* O que entregamos */}
+      <section className="py-16 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <AnimatedSection className="lg:col-span-4">
+              <h2 className="text-2xl font-bold mb-4">
+                O que está <span className="text-primary">incluído</span>
+              </h2>
+              <p className="text-muted-foreground text-sm">
+                Cada projeto inclui elementos essenciais para garantir qualidade e resultados.
+              </p>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={150} className="lg:col-span-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  "Design responsivo e moderno",
+                  "Otimização para SEO",
+                  "Certificado SSL gratuito",
+                  "Painel administrativo",
+                  "Integração com analytics",
+                  "Hospedagem configurada",
+                  "Backup automático",
+                  "Suporte pós-lançamento"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Tecnologias */}
-      <section className="py-16 px-4 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center text-foreground">
-            <span className="text-white">Tecnologias que </span>
-            <span className="text-primary">Utilizamos</span>
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {technologies.map((tech, index) => (
-              <span 
-                key={index}
-                className="bg-card text-card-foreground px-4 py-2 rounded-full border border-border hover:border-primary/30 transition-colors"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Recursos */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center text-foreground">
-            <span className="text-white">O que está </span>
-            <span className="text-primary">Incluído</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Processo */}
-      <section className="py-16 px-4 bg-secondary/30">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center text-foreground">
-            <span className="text-white">Nosso Processo de </span>
-            <span className="text-primary">Desenvolvimento</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: "1", title: "Briefing", desc: "Entendemos suas necessidades e objetivos" },
-              { step: "2", title: "Design", desc: "Criamos protótipos e layouts personalizados" },
-              { step: "3", title: "Desenvolvimento", desc: "Codificamos com as melhores práticas" },
-              { step: "4", title: "Entrega", desc: "Testamos, otimizamos e colocamos online" }
-            ].map((process, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-primary/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4 border-2 border-primary/30">
-                  <span className="text-lg font-bold text-primary">{process.step}</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2 text-foreground">{process.title}</h3>
-                <p className="text-muted-foreground text-sm">{process.desc}</p>
-              </div>
-            ))}
-          </div>
+      <section className="py-16 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <h2 className="text-2xl font-bold mb-2">
+              Tecnologias <span className="text-primary">utilizadas</span>
+            </h2>
+            <p className="text-muted-foreground mb-8 max-w-xl">
+              Stack moderna e consolidada para garantir performance e manutenibilidade
+            </p>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={100}>
+            <div className="flex flex-wrap gap-3">
+              {["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "WordPress", "Vercel", "AWS"].map((tech, index) => (
+                <span 
+                  key={index}
+                  className="bg-card text-foreground px-4 py-2 rounded-lg border border-border text-sm"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4 text-foreground">
-            <span className="text-white">Pronto para Criar seu </span>
-            <span className="text-primary">Website?</span>
-          </h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Vamos transformar sua presença digital com um website profissional que realmente converte
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-primary hover:bg-primary/80 text-primary-foreground">
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Falar no WhatsApp
-              </Button>
-            </a>
-            <Link to="/orcamento">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Calcular Orçamento
-              </Button>
-            </Link>
-          </div>
+      <section className="py-20 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="max-w-2xl">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                Pronto para ter um website que <span className="text-primary">funciona</span>?
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                Vamos discutir seu projeto e encontrar a melhor solução para suas necessidades.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/orcamento">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link to="/contato">
+                  <Button variant="outline" className="border-border text-foreground hover:bg-secondary">
+                    Falar com Especialista
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
