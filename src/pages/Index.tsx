@@ -377,53 +377,88 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Nossa Abordagem Section */}
       <section className="py-16 px-4 lg:px-8 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="mb-10">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-                Casos de <span className="text-primary">Uso</span>
+                Nossa <span className="text-primary">Abordagem</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Exemplos de como nossas soluções geram resultados reais para diferentes segmentos
+                Engenharia de software com foco em qualidade, performance e escalabilidade
               </p>
             </div>
           </AnimatedSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
-              <AnimatedSection key={index} delay={index * 150}>
-                <div className="p-6 bg-card border border-border rounded-lg h-full">
-                  <span className="text-xs font-medium text-primary mb-3 block">{useCase.category}</span>
-                  <h3 className="text-lg font-semibold mb-2 text-foreground">{useCase.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{useCase.description}</p>
-                  <div className="space-y-2">
-                    {useCase.results.map((result, rIndex) => (
-                      <div key={rIndex} className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" strokeWidth={1.5} />
-                        <span className="text-xs text-muted-foreground">{result}</span>
-                      </div>
-                    ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <AnimatedSection delay={100}>
+              <div className="space-y-6">
+                <div className="p-5 border-l-2 border-primary bg-card/50">
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Arquitetura Pensada para Crescer</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Cada projeto é planejado considerando o crescimento futuro. Utilizamos padrões de arquitetura modernos que permitem escalar sem reescrever o sistema.
+                  </p>
+                </div>
+                <div className="p-5 border-l-2 border-primary bg-card/50">
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Código Testado e Documentado</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Implementamos testes automatizados e documentação técnica clara. Isso garante manutenibilidade e facilita futuras evoluções do sistema.
+                  </p>
+                </div>
+                <div className="p-5 border-l-2 border-primary bg-card/50">
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Performance como Prioridade</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Otimizamos cada aspecto da aplicação: tempo de carregamento, consumo de recursos e experiência do usuário final.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200}>
+              <div className="bg-card border border-border rounded-lg p-6 h-full">
+                <h3 className="text-lg font-semibold mb-4 text-foreground">Como Trabalhamos</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-primary">1</span>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-foreground">Entendimento profundo do negócio</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Antes de qualquer código, entendemos seu contexto, objetivos e desafios técnicos.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-primary">2</span>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-foreground">Desenvolvimento iterativo</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Entregas incrementais com feedback constante, garantindo alinhamento em cada etapa.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-primary">3</span>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-foreground">Revisão técnica rigorosa</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Code review, testes automatizados e validação de segurança antes de cada release.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-primary">4</span>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-medium text-foreground">Suporte técnico contínuo</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Acompanhamento pós-entrega para garantir estabilidade e evolução do sistema.</p>
+                    </div>
                   </div>
                 </div>
-              </AnimatedSection>
-            ))}
+              </div>
+            </AnimatedSection>
           </div>
-          
-          <AnimatedSection delay={450}>
-            <div className="mt-8">
-              <Link to="/portfolio">
-                <Button 
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm font-medium"
-                >
-                  Ver Portfólio Completo
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 
