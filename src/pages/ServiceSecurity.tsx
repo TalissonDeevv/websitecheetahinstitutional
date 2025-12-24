@@ -1,272 +1,271 @@
-import { Shield, Lock, CheckCircle, ArrowRight, Eye, AlertTriangle, Users, Code } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, MessageCircle, FileCheck, Database, Key, Server, Fingerprint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const ServiceSecurity = () => {
-  const technologies = [
-    "JWT", "OAuth2", "OpenID Connect", "SAML", "SSL/TLS", "bcrypt", "Argon2"
-  ];
-
-  const features = [
-    "Sistemas de autenticação (JWT, OAuth2)",
-    "Proteção contra DDoS, SQL Injection, XSS e outros ataques",
-    "Consultoria especializada em conformidade com a LGPD",
-    "Criptografia de dados sensíveis",
-    "Auditoria de segurança",
-    "Monitoramento em tempo real",
-    "Backup seguro e recuperação"
-  ];
-
-  const benefits = [
-    {
-      icon: Shield,
-      title: "Proteção Avançada",
-      description: "Implementamos as melhores práticas de segurança para proteger seus dados e sistemas."
-    },
-    {
-      icon: Lock,
-      title: "Conformidade LGPD",
-      description: "Garantimos que sua aplicação esteja em conformidade com a Lei Geral de Proteção de Dados."
-    },
-    {
-      icon: Eye,
-      title: "Monitoramento 24/7",
-      description: "Monitoramento contínuo para detectar e prevenir ameaças em tempo real."
-    },
-    {
-      icon: Users,
-      title: "Consultoria Especializada",
-      description: "Nossa equipe oferece consultoria completa em segurança digital e proteção de dados."
-    }
-  ];
-
-  const securityTypes = [
+  const securityServices = [
     {
       title: "Autenticação e Autorização",
-      description: "Sistemas robustos de login e controle de acesso",
+      description: "Sistemas robustos de login, controle de acesso e gerenciamento de permissões",
       icon: Lock,
-      features: ["JWT e OAuth2", "Controle de permissões", "Autenticação multifator", "Single Sign-On (SSO)"]
+      features: ["JWT e OAuth2", "Autenticação multifator (MFA)", "Single Sign-On (SSO)", "Controle granular de permissões"]
     },
     {
       title: "Proteção contra Ataques",
-      description: "Prevenção de DDoS, SQL Injection, XSS e outras vulnerabilidades",
+      description: "Prevenção de vulnerabilidades e ameaças cibernéticas",
       icon: Shield,
-      features: ["Firewall avançado", "Detecção de intrusão", "Análise de tráfego", "Bloqueio automático"]
+      features: ["Proteção DDoS", "Prevenção SQL Injection", "Proteção XSS/CSRF", "Rate limiting e firewall"]
     },
     {
-      title: "Compliance LGPD",
+      title: "Conformidade LGPD",
       description: "Adequação completa à Lei Geral de Proteção de Dados",
-      icon: Eye,
-      features: ["Auditoria de dados", "Consentimento explícito", "Relatórios de conformidade", "Anonimização de dados"]
+      icon: FileCheck,
+      features: ["Auditoria de dados", "Gestão de consentimento", "Relatórios de conformidade", "Anonimização de dados"]
     }
   ];
 
+  const technologies = [
+    "JWT", "OAuth2", "OpenID Connect", "SAML", "SSL/TLS", "bcrypt", "Argon2", "AES-256"
+  ];
+
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 px-4 animate-fade-in">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-6">
-                <span className="text-white">Segurança Digital e </span>
-                <span className="text-[#0047ab]">Proteção de Dados</span>
+      {/* Hero - Asymmetric */}
+      <section className="pt-28 pb-20 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <AnimatedSection className="lg:col-span-7">
+              <span className="text-xs font-medium text-primary uppercase tracking-wider">Segurança Digital</span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
+                Proteção que <span className="text-primary">você pode confiar</span>
               </h1>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Garanta a segurança de suas aplicações com autenticação robusta, prevenção contra ataques e adequação à LGPD. Proteja seus dados e sistemas com soluções de segurança de alta qualidade.
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
+                Segurança não é opcional. Desenvolvemos sistemas com autenticação robusta, 
+                proteção contra ataques e conformidade com LGPD desde o primeiro dia.
               </p>
-              <Link to="/orcamento">
-                <Button className="bg-[#0047ab] hover:bg-[#0047ab]/80 text-white px-8 py-3 text-lg">
-                  Solicitar Orçamento
-                </Button>
-              </Link>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://i.ibb.co/DDjvZNbM/Security-On-pana.png" 
-                alt="Segurança Digital"
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute -top-4 -left-4 bg-[#0047ab]/20 rounded-full w-24 h-24 flex items-center justify-center backdrop-blur-sm border border-[#0047ab]/30">
-                <Shield className="h-12 w-12 text-[#0047ab]" />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/orcamento">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link to="/contato">
+                  <Button variant="outline" className="border-border text-foreground hover:bg-secondary">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    Falar com Especialista
+                  </Button>
+                </Link>
               </div>
-            </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200} className="lg:col-span-5">
+              <div className="relative">
+                <img 
+                  src="https://i.ibb.co/DDjvZNbM/Security-On-pana.png" 
+                  alt="Segurança Digital"
+                  className="rounded-lg w-full"
+                />
+                <div className="absolute -bottom-4 -left-4 bg-primary/10 border border-primary/20 rounded-lg p-4 backdrop-blur-sm">
+                  <Shield className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-[#0047ab]/10 to-black/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Por que escolher nossa </span>
-              <span className="text-[#0047ab]">Segurança Digital?</span>
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-gradient-to-br from-[#0047ab]/10 to-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-[#0047ab]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="h-8 w-8 text-[#0047ab]" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Security Types Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Tipos de </span>
-              <span className="text-[#0047ab]">Segurança</span>
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Oferecemos soluções completas de segurança para proteger seus sistemas e dados
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {securityTypes.map((type, index) => (
-              <Card key={index} className="group bg-gradient-to-br from-[#0047ab]/10 to-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-                <CardContent className="p-8">
-                  <div className="text-center mb-6">
-                    <div className="bg-[#0047ab]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border-2 border-[#0047ab]/30">
-                      <type.icon className="h-8 w-8 text-[#0047ab]" />
+      {/* O Problema */}
+      <section className="py-16 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <AnimatedSection>
+              <h2 className="text-2xl font-bold mb-6">
+                O problema que <span className="text-primary">resolvemos</span>
+              </h2>
+              <div className="space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  Sistemas expostos são alvos fáceis. Vazamentos de dados, acessos não autorizados 
+                  e multas por não conformidade com a LGPD são riscos reais que afetam empresas de todos os tamanhos.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Muitas aplicações são desenvolvidas sem considerar segurança desde o início, 
+                  criando vulnerabilidades que só são descobertas após um incidente.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Implementamos segurança como parte fundamental da arquitetura, não como algo 
+                  adicionado depois. Isso reduz custos e riscos significativamente.
+                </p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={150}>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h3 className="text-lg font-semibold mb-4">Nossa abordagem</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Key className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Security by Design</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Segurança integrada desde a concepção do projeto</p>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-white">{type.title}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{type.description}</p>
                   </div>
+                  <div className="flex items-start gap-3">
+                    <Database className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Criptografia avançada</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Dados sensíveis protegidos em repouso e em trânsito</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Eye className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Monitoramento contínuo</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Detecção de ameaças e anomalias em tempo real</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Fingerprint className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Autenticação forte</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Múltiplos fatores e biometria quando necessário</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Serviços de Segurança */}
+      <section className="py-16 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <h2 className="text-2xl font-bold mb-2">
+              Soluções de <span className="text-primary">segurança</span>
+            </h2>
+            <p className="text-muted-foreground mb-10 max-w-xl">
+              Proteção completa para suas aplicações e dados
+            </p>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {securityServices.map((service, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <div className="bg-card border border-border rounded-xl p-8 h-full">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                    <service.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
                   <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-[#0047ab] mb-3">Principais recursos:</h4>
-                    {type.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-[#0047ab] rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-300 text-xs">{feature}</span>
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-foreground">{feature}</span>
                       </div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-16 px-4 bg-[#0047ab]/5">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Tecnologias de </span>
-              <span className="text-[#0047ab]">Segurança</span>
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Utilizamos as tecnologias mais avançadas e confiáveis do mercado
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {technologies.map((tech, index) => (
-              <div 
-                key={index}
-                className="bg-gradient-to-br from-[#0047ab]/10 to-black/50 border border-[#0047ab]/20 rounded-lg p-4 text-center hover:border-[#0047ab]/50 transition-all duration-300"
-              >
-                <p className="text-white font-medium text-sm">{tech}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Recursos </span>
-              <span className="text-[#0047ab]">Inclusos</span>
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-3 bg-gradient-to-r from-[#0047ab]/10 to-transparent p-4 rounded-lg border border-[#0047ab]/20">
-                <CheckCircle className="h-5 w-5 text-[#0047ab] flex-shrink-0" />
-                <span className="text-white">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-[#0047ab]/10 to-black/30">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12">
-            <span className="text-white">Nosso </span>
-            <span className="text-[#0047ab]">Processo</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {[
-              { icon: AlertTriangle, title: "Análise de Vulnerabilidades", desc: "Identificamos pontos fracos e riscos" },
-              { icon: Shield, title: "Implementação", desc: "Aplicamos as melhores práticas de segurança" },
-              { icon: Eye, title: "Monitoramento", desc: "Acompanhamento contínuo da segurança" },
-              { icon: Code, title: "Manutenção", desc: "Atualizações e melhorias constantes" }
-            ].map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-[#0047ab]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="h-8 w-8 text-[#0047ab]" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white">{step.title}</h3>
-                <p className="text-gray-300 text-sm">{step.desc}</p>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-[#0047ab]/20 to-black/50">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            <span className="text-white">Pronto para </span>
-            <span className="text-[#0047ab]">Proteger seu Negócio?</span>
-          </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Entre em contato conosco e descubra como podemos proteger seus sistemas e dados
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/orcamento">
-              <Button className="bg-[#0047ab] hover:bg-[#0047ab]/80 text-white px-8 py-3">
-                Solicitar Orçamento
-              </Button>
-            </Link>
-            <a
-              href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20segurança%20digital"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="outline" className="border-[#0047ab] text-[#0047ab] hover:bg-[#0047ab] hover:text-white px-8 py-3">
-                Falar no WhatsApp
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
-          </div>
+      {/* Tecnologias */}
+      <section className="py-16 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <h2 className="text-2xl font-bold mb-2">
+              Tecnologias de <span className="text-primary">segurança</span>
+            </h2>
+            <p className="text-muted-foreground mb-10 max-w-xl">
+              Utilizamos padrões e protocolos reconhecidos pela indústria
+            </p>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={100}>
+            <div className="flex flex-wrap gap-3">
+              {technologies.map((tech, index) => (
+                <span 
+                  key={index} 
+                  className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Processo */}
+      <section className="py-16 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl font-bold mb-4">
+                  Nosso <span className="text-primary">processo</span>
+                </h2>
+              </div>
+              
+              <div className="space-y-0">
+                {[
+                  { step: "01", title: "Análise de Vulnerabilidades", text: "Identificamos riscos e pontos fracos na arquitetura atual ou planejada." },
+                  { step: "02", title: "Planejamento de Segurança", text: "Definimos estratégias e controles adequados para cada cenário." },
+                  { step: "03", title: "Implementação", text: "Aplicamos as melhores práticas de segurança no código e infraestrutura." },
+                  { step: "04", title: "Testes e Validação", text: "Testes de penetração e auditoria para garantir a eficácia das proteções." },
+                ].map((item, index) => (
+                  <AnimatedSection key={index} delay={index * 50}>
+                    <div className="flex items-start gap-6 py-6 border-b border-border last:border-0">
+                      <span className="text-primary font-bold text-lg w-12 shrink-0">{item.step}</span>
+                      <div>
+                        <h3 className="font-semibold mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm">{item.text}</p>
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="max-w-2xl">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                Precisa proteger sua <span className="text-primary">aplicação</span>?
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                Vamos analisar sua situação e propor as melhores soluções de segurança.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/orcamento">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link to="/contato">
+                  <Button variant="outline" className="border-border text-foreground hover:bg-secondary">
+                    Falar com Especialista
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
