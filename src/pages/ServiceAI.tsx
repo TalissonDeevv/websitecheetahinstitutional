@@ -1,263 +1,318 @@
-import { Bot, Brain, MessageSquare, ArrowRight, CheckCircle, Zap, Users, Code } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Brain, Bot, MessageSquare, ArrowRight, MessageCircle, CheckCircle, Zap, Sparkles, Cpu, BarChart3, Users, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const ServiceAI = () => {
-  const technologies = [
-    "OpenAI/GPT", "Dialogflow", "Rasa", "LangChain", "Hugging Face", "TensorFlow", "PyTorch"
-  ];
-
-  const features = [
-    "Chatbots com OpenAI/GPT, Dialogflow, Rasa e outros",
-    "Suporte automatizado para sites, apps e redes sociais",
-    "Bots com compreensão de linguagem natural (NLP)",
-    "Integração com sistemas existentes",
-    "Análise de sentimentos",
-    "Automação de atendimento 24/7",
-    "Treinamento personalizado"
-  ];
-
-  const benefits = [
+  const aiSolutions = [
     {
-      icon: Bot,
-      title: "Automação Inteligente",
-      description: "Automatize atendimentos com tecnologia de ponta em inteligência artificial."
-    },
-    {
-      icon: Brain,
-      title: "Linguagem Natural",
-      description: "Bots que compreendem e respondem como humanos."
-    },
-    {
-      icon: MessageSquare,
-      title: "Atendimento 24/7",
-      description: "Suporte contínuo para seus clientes sem interrupções."
-    },
-    {
-      icon: Zap,
-      title: "Respostas Rápidas",
-      description: "Respostas instantâneas e precisas para qualquer consulta."
-    }
-  ];
-
-  const aiTypes = [
-    {
-      title: "Chatbots para Atendimento",
-      description: "Bots inteligentes para suporte ao cliente e vendas",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop"
+      title: "Chatbots Inteligentes",
+      description: "Atendimento automatizado com compreensão de linguagem natural",
+      features: ["Respostas contextuais", "Integração multicanal", "Aprendizado contínuo", "Handoff para humanos"]
     },
     {
       title: "Assistentes Virtuais",
-      description: "IA personalizada para automação de tarefas específicas",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop"
+      description: "IA personalizada para automação de tarefas específicas do negócio",
+      features: ["Processamento de documentos", "Análise de dados", "Geração de relatórios", "Automação de workflows"]
     },
     {
-      title: "Bots para Redes Sociais",
-      description: "Automação inteligente para Instagram, Facebook e WhatsApp",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop"
+      title: "Análise Preditiva",
+      description: "Machine learning para insights e previsões de negócio",
+      features: ["Previsão de demanda", "Detecção de anomalias", "Segmentação de clientes", "Análise de sentimento"]
     }
   ];
 
+  const technologies = [
+    "OpenAI/GPT", "LangChain", "Anthropic Claude", "Hugging Face", "TensorFlow", "PyTorch", "Pinecone"
+  ];
+
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
       
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 px-4 animate-fade-in">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-6">
-                <span className="text-white">Inteligência Artificial e </span>
-                <span className="text-[#0047ab]">Bots Avançados</span>
+      {/* Hero - Asymmetric */}
+      <section className="pt-28 pb-20 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <AnimatedSection className="lg:col-span-7">
+              <span className="text-xs font-medium text-primary uppercase tracking-wider">Inteligência Artificial</span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
+                IA que resolve <span className="text-primary">problemas reais</span>
               </h1>
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Automatize atendimentos e otimize experiências com bots baseados em IA e linguagem natural. Transforme seu atendimento com tecnologia de ponta.
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
+                Implementamos soluções de inteligência artificial focadas em resultados práticos. 
+                Chatbots, automação e análise de dados com tecnologia de ponta.
               </p>
-              <Link to="/orcamento">
-                <Button className="bg-[#0047ab] hover:bg-[#0047ab]/80 text-white px-8 py-3 text-lg">
-                  Solicitar Orçamento
-                </Button>
-              </Link>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://i.ibb.co/mCL6wdbD/Android-amico.png" 
-                alt="Inteligência Artificial"
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute -top-4 -left-4 bg-[#0047ab]/20 rounded-full w-24 h-24 flex items-center justify-center backdrop-blur-sm border border-[#0047ab]/30">
-                <Brain className="h-12 w-12 text-[#0047ab]" />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/orcamento">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link to="/contato">
+                  <Button variant="outline" className="border-border text-foreground hover:bg-secondary">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    Falar com Especialista
+                  </Button>
+                </Link>
               </div>
-            </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200} className="lg:col-span-5">
+              <div className="relative">
+                <img 
+                  src="https://i.ibb.co/mCL6wdbD/Android-amico.png" 
+                  alt="Inteligência Artificial"
+                  className="rounded-lg w-full"
+                />
+                <div className="absolute -bottom-4 -left-4 bg-primary/10 border border-primary/20 rounded-lg p-4 backdrop-blur-sm">
+                  <Brain className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-[#0047ab]/10 to-black/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Por que escolher nossa </span>
-              <span className="text-[#0047ab]">IA?</span>
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-gradient-to-br from-[#0047ab]/10 to-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="bg-[#0047ab]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="h-8 w-8 text-[#0047ab]" />
+      {/* O Problema */}
+      <section className="py-16 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <AnimatedSection>
+              <h2 className="text-2xl font-bold mb-6">
+                O problema que <span className="text-primary">resolvemos</span>
+              </h2>
+              <div className="space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  Muitas empresas querem usar IA mas não sabem por onde começar. 
+                  A tecnologia avança rápido e separar hype de soluções práticas é desafiador.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Equipes perdem tempo em tarefas repetitivas que poderiam ser automatizadas. 
+                  Atendimento ao cliente sobrecarregado, análise manual de dados, processos lentos.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Implementamos IA de forma pragmática, focando em casos de uso com ROI claro 
+                  e integração natural com processos existentes.
+                </p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={150}>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h3 className="text-lg font-semibold mb-4">Por que usar IA agora</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Clock className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Atendimento 24/7</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Respostas imediatas sem aumentar equipe</p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-white">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AI Types Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Tipos de </span>
-              <span className="text-[#0047ab]">Soluções IA</span>
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Desenvolvemos soluções de inteligência artificial personalizadas para diferentes necessidades
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {aiTypes.map((type, index) => (
-              <Card key={index} className="group bg-gradient-to-br from-[#0047ab]/10 to-black/50 border-[#0047ab]/20 hover:border-[#0047ab]/50 transition-all duration-300 overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={type.image} 
-                    alt={type.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="flex items-start gap-3">
+                    <Zap className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Automação inteligente</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Tarefas complexas executadas automaticamente</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <BarChart3 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Insights de dados</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Padrões e previsões que humanos não veem</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Users className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-sm font-medium">Escala ilimitada</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Atende milhares simultaneamente</p>
+                    </div>
+                  </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-white">{type.title}</h3>
-                  <p className="text-gray-300 text-sm">{type.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-16 px-4 bg-[#0047ab]/5">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Tecnologias de </span>
-              <span className="text-[#0047ab]">IA</span>
+      {/* Soluções de IA */}
+      <section className="py-16 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <h2 className="text-2xl font-bold mb-2">
+              Soluções de <span className="text-primary">IA</span>
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Utilizamos as mais avançadas tecnologias de inteligência artificial e machine learning
+            <p className="text-muted-foreground mb-10 max-w-xl">
+              Implementações práticas com resultados mensuráveis
             </p>
-          </div>
+          </AnimatedSection>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {technologies.map((tech, index) => (
-              <div 
-                key={index}
-                className="bg-gradient-to-br from-[#0047ab]/10 to-black/50 border border-[#0047ab]/20 rounded-lg p-4 text-center hover:border-[#0047ab]/50 transition-all duration-300"
-              >
-                <p className="text-white font-medium text-sm">{tech}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-white">Recursos </span>
-              <span className="text-[#0047ab]">Inclusos</span>
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-3 bg-gradient-to-r from-[#0047ab]/10 to-transparent p-4 rounded-lg border border-[#0047ab]/20">
-                <CheckCircle className="h-5 w-5 text-[#0047ab] flex-shrink-0" />
-                <span className="text-white">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-[#0047ab]/10 to-black/30">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12">
-            <span className="text-white">Nosso </span>
-            <span className="text-[#0047ab]">Processo</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {[
-              { icon: Users, title: "Análise de Necessidades", desc: "Entendemos seus requisitos e objetivos" },
-              { icon: Brain, title: "Design da IA", desc: "Criamos a arquitetura de inteligência artificial" },
-              { icon: Code, title: "Desenvolvimento", desc: "Implementamos e treinamos o sistema" },
-              { icon: Zap, title: "Otimização", desc: "Melhorias contínuas e ajustes finos" }
-            ].map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-[#0047ab]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="h-8 w-8 text-[#0047ab]" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {aiSolutions.map((solution, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <div className="bg-card border border-border rounded-xl p-8 h-full">
+                  <h3 className="text-lg font-semibold mb-3">{solution.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{solution.description}</p>
+                  <div className="space-y-2">
+                    {solution.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" />
+                        <span className="text-sm text-foreground">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white">{step.title}</h3>
-                <p className="text-gray-300 text-sm">{step.desc}</p>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-[#0047ab]/20 to-black/50">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            <span className="text-white">Pronto para </span>
-            <span className="text-[#0047ab]">Automatizar?</span>
-          </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Entre em contato conosco e descubra como a inteligência artificial pode revolucionar seu atendimento
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/orcamento">
-              <Button className="bg-[#0047ab] hover:bg-[#0047ab]/80 text-white px-8 py-3">
-                Solicitar Orçamento
-              </Button>
-            </Link>
-            <a
-              href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20IA%20e%20bots"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="outline" className="border-[#0047ab] text-[#0047ab] hover:bg-[#0047ab] hover:text-white px-8 py-3">
-                Falar no WhatsApp
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </a>
+      {/* Casos de Uso */}
+      <section className="py-16 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <h2 className="text-2xl font-bold mb-8">
+              Casos de <span className="text-primary">aplicação</span>
+            </h2>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <AnimatedSection delay={100}>
+              <div className="p-5 border-l-2 border-primary bg-card/50 rounded-r-lg">
+                <h3 className="text-base font-semibold mb-2">Atendimento ao Cliente</h3>
+                <p className="text-sm text-muted-foreground">
+                  Chatbots que resolvem dúvidas frequentes, qualificam leads e 
+                  encaminham casos complexos para atendentes humanos.
+                </p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={150}>
+              <div className="p-5 border-l-2 border-primary bg-card/50 rounded-r-lg">
+                <h3 className="text-base font-semibold mb-2">Processamento de Documentos</h3>
+                <p className="text-sm text-muted-foreground">
+                  Extração automática de dados de contratos, notas fiscais e 
+                  documentos diversos com alta precisão.
+                </p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200}>
+              <div className="p-5 border-l-2 border-primary bg-card/50 rounded-r-lg">
+                <h3 className="text-base font-semibold mb-2">Análise de Feedback</h3>
+                <p className="text-sm text-muted-foreground">
+                  Processamento de avaliações, reviews e menções para 
+                  identificar sentimento e tendências.
+                </p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={250}>
+              <div className="p-5 border-l-2 border-primary bg-card/50 rounded-r-lg">
+                <h3 className="text-base font-semibold mb-2">Recomendações Personalizadas</h3>
+                <p className="text-sm text-muted-foreground">
+                  Sistemas que sugerem produtos, conteúdos ou ações 
+                  baseados no comportamento do usuário.
+                </p>
+              </div>
+            </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* Tecnologias */}
+      <section className="py-16 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <h2 className="text-2xl font-bold mb-2">
+              Tecnologias de <span className="text-primary">IA</span>
+            </h2>
+            <p className="text-muted-foreground mb-10 max-w-xl">
+              Trabalhamos com as principais plataformas e frameworks de IA
+            </p>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={100}>
+            <div className="flex flex-wrap gap-3">
+              {technologies.map((tech, index) => (
+                <span 
+                  key={index} 
+                  className="px-4 py-2 bg-secondary border border-border rounded-lg text-sm font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Processo */}
+      <section className="py-16 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl font-bold mb-4">
+                  Nossa <span className="text-primary">abordagem</span>
+                </h2>
+              </div>
+              
+              <div className="space-y-0">
+                {[
+                  { step: "01", title: "Análise de Viabilidade", text: "Avaliamos se IA é a melhor solução e qual abordagem faz sentido." },
+                  { step: "02", title: "Prova de Conceito", text: "Desenvolvemos um MVP para validar a solução com dados reais." },
+                  { step: "03", title: "Desenvolvimento", text: "Implementação completa com integração aos sistemas existentes." },
+                  { step: "04", title: "Treinamento e Otimização", text: "Ajuste fino do modelo e treinamento da equipe para uso." },
+                ].map((item, index) => (
+                  <AnimatedSection key={index} delay={index * 50}>
+                    <div className="flex items-start gap-6 py-6 border-b border-border last:border-0">
+                      <span className="text-primary font-bold text-lg w-12 shrink-0">{item.step}</span>
+                      <div>
+                        <h3 className="font-semibold mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm">{item.text}</p>
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="max-w-2xl">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                Pronto para usar <span className="text-primary">IA</span> no seu negócio?
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                Vamos avaliar juntos como inteligência artificial pode resolver seus desafios.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/orcamento">
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Link to="/contato">
+                  <Button variant="outline" className="border-border text-foreground hover:bg-secondary">
+                    Falar com Especialista
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
