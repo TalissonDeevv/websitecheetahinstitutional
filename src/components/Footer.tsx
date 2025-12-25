@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowUp, Activity } from "lucide-react";
+import { ArrowUp, Activity, Mail, MapPin, Phone, FileText, Shield, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import SocialLinks from "./footer/SocialLinks";
-import QuickLinks from "./footer/QuickLinks";
-import ContactInfo from "./footer/ContactInfo";
-import LegalLinks from "./footer/LegalLinks";
 import cheetahLogo from "@/assets/cheetah-logo.png";
 
 const Footer = () => {
@@ -12,56 +8,188 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const services = [
+    { name: "Websites", path: "/servicos/web" },
+    { name: "Sistemas Web", path: "/servicos/sistemas" },
+    { name: "E-commerce", path: "/servicos/ecommerce" },
+    { name: "Bots Discord/Telegram", path: "/servicos/bots" },
+    { name: "Integrações", path: "/servicos/integracoes" },
+    { name: "Apps Mobile", path: "/servicos/mobile" },
+  ];
+
+  const company = [
+    { name: "Sobre", path: "/sobre" },
+    { name: "Equipe", path: "/equipe" },
+    { name: "Blog", path: "/blog" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Contato", path: "/contato" },
+    { name: "Transparência", path: "/transparencia" },
+  ];
+
+  const legal = [
+    { name: "Termos de Uso", path: "/termos" },
+    { name: "Privacidade", path: "/privacidade" },
+    { name: "Cookies", path: "/cookies" },
+    { name: "Segurança", path: "/seguranca" },
+    { name: "Isenção", path: "/isencao" },
+  ];
+
   return (
-    <footer className="bg-black border-t border-gray-800/50 relative">
-      {/* Back to Top Button */}
+    <footer className="bg-background border-t border-border relative">
+      {/* Back to Top */}
       <Button
         onClick={scrollToTop}
-        className="absolute -top-6 right-4 sm:right-8 bg-[#0047ab] hover:bg-[#0047ab]/80 text-white rounded-full w-12 h-12 p-0 shadow-lg hover:scale-110 transition-all duration-300 z-10"
+        className="absolute -top-5 right-6 md:right-12 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-10 h-10 p-0 shadow-lg z-10"
         title="Voltar ao topo"
       >
-        <ArrowUp className="h-5 w-5" />
+        <ArrowUp className="h-4 w-4" />
       </Button>
 
-      <div className="container mx-auto px-4 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-          {/* Logo e Descrição */}
-          <div className="space-y-6 sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="inline-block hover:opacity-80 transition-opacity duration-300">
+      <div className="container mx-auto px-4 py-16">
+        {/* Main Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 lg:gap-12">
+          
+          {/* Brand */}
+          <div className="col-span-2">
+            <Link to="/" className="inline-block mb-4">
               <img 
                 src={cheetahLogo} 
                 alt="Cheetah Network" 
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-8 w-auto"
               />
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Inovação e agilidade em soluções tecnológicas. 
-              Transformamos ideias em realidade digital.
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-xs">
+              Software house focada em soluções digitais sob medida. 
+              Engenharia sólida, entregas consistentes.
             </p>
             
-            <SocialLinks />
+            <div className="space-y-2">
+              <a 
+                href="mailto:contatocheetahsolutions@gmail.com"
+                className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Mail className="h-3.5 w-3.5 text-primary" />
+                contatocheetahsolutions@gmail.com
+              </a>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <MapPin className="h-3.5 w-3.5 text-primary" />
+                Recife, PE — Brasil
+              </div>
+            </div>
 
-            {/* Status Button */}
             <a
               href="https://status.cheetahnetwork.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-green-500/80 hover:text-green-400 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-xs text-green-500 hover:text-green-400 transition-colors mt-4"
             >
-              <Activity className="h-4 w-4" />
-              <span>Status dos Serviços</span>
+              <Activity className="h-3.5 w-3.5" />
+              Status dos Serviços
             </a>
           </div>
 
-          <QuickLinks />
-          <LegalLinks />
-          <ContactInfo />
+          {/* Serviços */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
+              Serviços
+            </h4>
+            <ul className="space-y-2.5">
+              {services.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path}
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Empresa */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
+              Empresa
+            </h4>
+            <ul className="space-y-2.5">
+              {company.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path}
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
+              Legal
+            </h4>
+            <ul className="space-y-2.5">
+              {legal.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path}
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CTA */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
+              Projeto?
+            </h4>
+            <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
+              Orçamento gratuito e sem compromisso.
+            </p>
+            <Link to="/orcamento">
+              <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground text-xs">
+                Solicitar orçamento
+              </Button>
+            </Link>
+            
+            <div className="mt-6 pt-4 border-t border-border">
+              <a
+                href="https://discord.gg/63qjkQwKmf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Discord da comunidade →
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className="border-t border-gray-800/50 mt-12 pt-8 text-center">
-          <p className="text-gray-500 text-sm">
-            © 2025 Cheetah Solutions Network LTDA. Todos os direitos reservados.
-          </p>
+        {/* Bottom */}
+        <div className="border-t border-border mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-muted-foreground">
+              © 2025 Cheetah Solutions Network LTDA. CNPJ: XX.XXX.XXX/0001-XX
+            </p>
+            <div className="flex items-center gap-6">
+              <Link to="/termos" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                Termos
+              </Link>
+              <Link to="/privacidade" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                Privacidade
+              </Link>
+              <Link to="/denuncia" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                Denunciar
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
