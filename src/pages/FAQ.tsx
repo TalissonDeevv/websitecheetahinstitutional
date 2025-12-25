@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const FAQ = () => {
   const faqCategories = [
@@ -77,73 +78,79 @@ const FAQ = () => {
       <Header />
       
       {/* Hero */}
-      <section className="pt-28 pb-12 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-2xl">
-            <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-              FAQ
-            </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
-              Perguntas<br />
-              <span className="text-primary">frequentes.</span>
-            </h1>
-            <p className="text-muted-foreground leading-relaxed">
-              Respostas diretas para as dúvidas mais comuns sobre 
-              nossos serviços e forma de trabalho.
-            </p>
+      <AnimatedSection animation="fade-up">
+        <section className="pt-28 pb-12 px-4">
+          <div className="container mx-auto">
+            <div className="max-w-2xl">
+              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
+                FAQ
+              </p>
+              <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
+                Perguntas<br />
+                <span className="text-primary">frequentes.</span>
+              </h1>
+              <p className="text-muted-foreground leading-relaxed">
+                Respostas diretas para as dúvidas mais comuns sobre 
+                nossos serviços e forma de trabalho.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
 
       {/* FAQ Sections */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-3xl">
           {faqCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-16 last:mb-0">
-              <h2 className="text-lg font-semibold mb-6 pb-3 border-b border-border">
-                {category.title}
-              </h2>
-              
-              <Accordion type="single" collapsible className="space-y-2">
-                {category.items.map((faq, index) => (
-                  <AccordionItem 
-                    key={index} 
-                    value={`item-${categoryIndex}-${index}`}
-                    className="border border-border rounded-lg overflow-hidden bg-card"
-                  >
-                    <AccordionTrigger className="text-left px-5 py-4 hover:bg-secondary/50 text-sm font-medium">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="px-5 pb-4 text-muted-foreground text-sm leading-relaxed">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
+            <AnimatedSection key={categoryIndex} animation="fade-up" delay={categoryIndex * 100}>
+              <div className="mb-16 last:mb-0">
+                <h2 className="text-lg font-semibold mb-6 pb-3 border-b border-border">
+                  {category.title}
+                </h2>
+                
+                <Accordion type="single" collapsible className="space-y-2">
+                  {category.items.map((faq, index) => (
+                    <AccordionItem 
+                      key={index} 
+                      value={`item-${categoryIndex}-${index}`}
+                      className="border border-border rounded-lg overflow-hidden bg-card"
+                    >
+                      <AccordionTrigger className="text-left px-5 py-4 hover:bg-secondary/50 text-sm font-medium">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-5 pb-4 text-muted-foreground text-sm leading-relaxed">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </AnimatedSection>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 bg-secondary/30">
-        <div className="container mx-auto">
-          <div className="max-w-xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4">
-              Não encontrou sua resposta?
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              Fale diretamente com nossa equipe. Respondemos em até 24h.
-            </p>
-            <Link to="/contato">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <MessageCircle className="mr-2 h-4 w-4" />
-                Entrar em contato
-              </Button>
-            </Link>
+      <AnimatedSection animation="fade-up">
+        <section className="py-20 px-4 bg-secondary/30">
+          <div className="container mx-auto">
+            <div className="max-w-xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-4">
+                Não encontrou sua resposta?
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Fale diretamente com nossa equipe. Respondemos em até 24h.
+              </p>
+              <Link to="/contato">
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Entrar em contato
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
 
       <Footer />
     </div>
