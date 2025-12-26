@@ -39,6 +39,22 @@ import TermsExplained from "./pages/TermsExplained";
 import Report from "./pages/Report";
 import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
+// Legal Pages
+import LegalOverview from "./pages/legal/LegalOverview";
+import ServicePolicy from "./pages/legal/ServicePolicy";
+import CancellationPolicy from "./pages/legal/CancellationPolicy";
+import BackupPolicy from "./pages/legal/BackupPolicy";
+import SecurityPolicy from "./pages/legal/SecurityPolicy";
+import AcceptableUsePolicy from "./pages/legal/AcceptableUsePolicy";
+import TransparencyPolicy from "./pages/legal/TransparencyPolicy";
+import UpdatePolicy from "./pages/legal/UpdatePolicy";
+import IntellectualPropertyPolicy from "./pages/legal/IntellectualPropertyPolicy";
+import LiabilityPolicy from "./pages/legal/LiabilityPolicy";
+import DisclaimerPolicy from "./pages/legal/DisclaimerPolicy";
+import ReportPage from "./pages/legal/ReportPage";
+import TermsOfUse from "./pages/legal/TermsOfUse";
+import PrivacyPolicyPage from "./pages/legal/PrivacyPolicyPage";
+import RefundPolicy from "./pages/legal/RefundPolicy";
 
 const queryClient = new QueryClient();
 
@@ -85,6 +101,22 @@ const App = () => (
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/isencao" element={<Disclaimer />} />
             <Route path="/transparencia" element={<Transparency />} />
+            {/* Legal Routes */}
+            <Route path="/legal" element={<LegalOverview />} />
+            <Route path="/legal/atendimento" element={<ServicePolicy />} />
+            <Route path="/legal/cancelamento" element={<CancellationPolicy />} />
+            <Route path="/legal/backup" element={<BackupPolicy />} />
+            <Route path="/legal/seguranca" element={<SecurityPolicy />} />
+            <Route path="/legal/uso-aceitavel" element={<AcceptableUsePolicy />} />
+            <Route path="/legal/transparencia" element={<TransparencyPolicy />} />
+            <Route path="/legal/atualizacao" element={<UpdatePolicy />} />
+            <Route path="/legal/propriedade-intelectual" element={<IntellectualPropertyPolicy />} />
+            <Route path="/legal/responsabilidade" element={<LiabilityPolicy />} />
+            <Route path="/legal/isencao" element={<DisclaimerPolicy />} />
+            <Route path="/legal/denuncia" element={<ReportPage />} />
+            <Route path="/legal/termos-uso" element={<TermsOfUse />} />
+            <Route path="/legal/privacidade" element={<PrivacyPolicyPage />} />
+            <Route path="/legal/reembolso" element={<RefundPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

@@ -94,11 +94,23 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
     background-color: #000000;
     color: #ffffff;
     overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Prevent horizontal overflow from animations */
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
 
   /* Mobile-first approach with better touch targets */
