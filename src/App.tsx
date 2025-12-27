@@ -43,55 +43,53 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <div className="animate-fade-in">
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/sobre" element={<About />} />
-            <Route path="/servicos" element={<Services />} />
-            <Route path="/servicos/bots" element={<ServiceBots />} />
-            <Route path="/servicos/web" element={<ServiceWeb />} />
-            <Route path="/servicos/sistemas" element={<ServiceSystems />} />
-            <Route path="/servicos/integracoes" element={<ServiceIntegrations />} />
-            <Route path="/servicos/seguranca" element={<ServiceSecurity />} />
-            <Route path="/servicos/dashboards" element={<ServiceDashboards />} />
-            <Route path="/servicos/ecommerce" element={<ServiceEcommerce />} />
-            <Route path="/servicos/ia" element={<ServiceAI />} />
-            <Route path="/servicos/cloud" element={<ServiceCloud />} />
-            <Route path="/servicos/mobile" element={<ServiceMobile />} />
-            <Route path="/campanha/:id" element={<Campaign />} />
-            <Route path="/numeros" element={<Numbers />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contato" element={<Contact />} />
-            <Route path="/equipe" element={<Team />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/orcamento" element={<Budget />} />
-            <Route path="/gestao" element={<Management />} />
-            <Route path="/verificacao-equipe" element={<TeamVerification />} />
-            <Route path="/termos-explicados" element={<TermsExplained />} />
-            <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
-            <Route path="/sugestoes" element={<Suggestions />} />
-            <Route path="/developers" element={<Developers />} />
-            
-            {/* Guidelines - Single Page with dynamic routing */}
-            <Route path="/diretrizes" element={<GuidelinesPage />} />
-            <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
-            
-            {/* Redirects for legacy routes */}
-            <Route path="/legal" element={<Navigate to="/diretrizes" replace />} />
-            <Route path="/legal/*" element={<Navigate to="/diretrizes" replace />} />
-            <Route path="/politicas" element={<Navigate to="/diretrizes" replace />} />
-            <Route path="/termos" element={<Navigate to="/diretrizes/termos-uso" replace />} />
-            <Route path="/privacidade" element={<Navigate to="/diretrizes/privacidade" replace />} />
-            <Route path="/cookies" element={<Navigate to="/diretrizes/cookies" replace />} />
-            <Route path="/seguranca" element={<Navigate to="/diretrizes/seguranca" replace />} />
-            <Route path="/transparencia" element={<Navigate to="/diretrizes/transparencia" replace />} />
-            <Route path="/isencao" element={<Navigate to="/diretrizes/isencao" replace />} />
-            <Route path="/denuncia" element={<Navigate to="/diretrizes/denuncias" replace />} />
-            
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/sobre" element={<About />} />
+          <Route path="/servicos" element={<Services />} />
+          <Route path="/servicos/bots" element={<ServiceBots />} />
+          <Route path="/servicos/web" element={<ServiceWeb />} />
+          <Route path="/servicos/sistemas" element={<ServiceSystems />} />
+          <Route path="/servicos/integracoes" element={<ServiceIntegrations />} />
+          <Route path="/servicos/seguranca" element={<ServiceSecurity />} />
+          <Route path="/servicos/dashboards" element={<ServiceDashboards />} />
+          <Route path="/servicos/ecommerce" element={<ServiceEcommerce />} />
+          <Route path="/servicos/ia" element={<ServiceAI />} />
+          <Route path="/servicos/cloud" element={<ServiceCloud />} />
+          <Route path="/servicos/mobile" element={<ServiceMobile />} />
+          <Route path="/campanha/:id" element={<Campaign />} />
+          <Route path="/numeros" element={<Numbers />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contato" element={<Contact />} />
+          <Route path="/equipe" element={<Team />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/orcamento" element={<Budget />} />
+          <Route path="/gestao" element={<Management />} />
+          <Route path="/verificacao-equipe" element={<TeamVerification />} />
+          <Route path="/termos-explicados" element={<TermsExplained />} />
+          <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
+          <Route path="/sugestoes" element={<Suggestions />} />
+          <Route path="/developers" element={<Developers />} />
+          
+          {/* Guidelines - Single Page with dynamic routing */}
+          <Route path="/diretrizes" element={<GuidelinesPage />} />
+          <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
+          
+          {/* Redirects for legacy routes */}
+          <Route path="/legal" element={<Navigate to="/diretrizes" replace />} />
+          <Route path="/legal/*" element={<Navigate to="/diretrizes" replace />} />
+          <Route path="/politicas" element={<Navigate to="/diretrizes" replace />} />
+          <Route path="/termos" element={<Navigate to="/diretrizes/termos-uso" replace />} />
+          <Route path="/privacidade" element={<Navigate to="/diretrizes/privacidade" replace />} />
+          <Route path="/cookies" element={<Navigate to="/diretrizes/cookies" replace />} />
+          <Route path="/seguranca" element={<Navigate to="/diretrizes/seguranca" replace />} />
+          <Route path="/transparencia" element={<Navigate to="/diretrizes/transparencia" replace />} />
+          <Route path="/isencao" element={<Navigate to="/diretrizes/isencao" replace />} />
+          <Route path="/denuncia" element={<Navigate to="/diretrizes/denuncias" replace />} />
+          
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
