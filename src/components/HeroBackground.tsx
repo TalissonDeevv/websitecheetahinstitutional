@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 interface Particle {
   x: number;
@@ -15,6 +16,7 @@ const HeroBackground = () => {
   const animationRef = useRef<number>();
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef = useRef({ x: 0, y: 0 });
+  const { theme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -24,6 +26,7 @@ const HeroBackground = () => {
     if (!ctx) return;
 
     let time = 0;
+    const isDark = theme === 'dark';
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
@@ -64,9 +67,6 @@ const HeroBackground = () => {
     window.addEventListener("resize", resizeCanvas);
     window.addEventListener("mousemove", handleMouseMove);
 
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-
     const drawGlow = (x: number, y: number, radius: number, color: string, opacity: number) => {
       const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
       gradient.addColorStop(0, color.replace(")", `, ${opacity})`).replace("rgb", "rgba"));
@@ -84,20 +84,29 @@ const HeroBackground = () => {
 
       ctx.clearRect(0, 0, width, height);
 
+      // Adjust glow opacity based on theme
+      const glowOpacity = isDark ? 0.15 : 0.08;
+      const secondaryGlowOpacity = isDark ? 0.1 : 0.05;
+      const tertiaryGlowOpacity = isDark ? 0.08 : 0.04;
+
       // Primary glow - moved lower to avoid navbar
       const primaryX = width * 0.5 + Math.sin(time * 0.0003) * 50;
       const primaryY = height * 0.55 + Math.cos(time * 0.0002) * 30;
-      drawGlow(primaryX, primaryY, 350, "rgb(59, 130, 246)", 0.15);
+      drawGlow(primaryX, primaryY, 350, "rgb(59, 130, 246)", glowOpacity);
 
       // Secondary glow - moved lower
       const secondaryX = width * 0.65 + Math.cos(time * 0.0004) * 40;
       const secondaryY = height * 0.48 + Math.sin(time * 0.0003) * 25;
-      drawGlow(secondaryX, secondaryY, 280, "rgb(99, 102, 241)", 0.1);
+      drawGlow(secondaryX, secondaryY, 280, "rgb(99, 102, 241)", secondaryGlowOpacity);
 
       // Tertiary glow - moved lower
       const tertiaryX = width * 0.35 + Math.sin(time * 0.0002) * 40;
       const tertiaryY = height * 0.6 + Math.cos(time * 0.0003) * 20;
-      drawGlow(tertiaryX, tertiaryY, 220, "rgb(139, 92, 246)", 0.08);
+      drawGlow(tertiaryX, tertiaryY, 220, "rgb(139, 92, 246)", tertiaryGlowOpacity);
+
+      // Adjust particle colors based on theme
+      const particleColor = isDark ? "0, 71, 171" : "0, 71, 171";
+      const particleCoreColor = isDark ? "255, 255, 255" : "0, 71, 171";
 
       // Draw particles with parallax effect
       particlesRef.current.forEach((particle) => {
@@ -123,8 +132,8 @@ const HeroBackground = () => {
           drawX, drawY, 0,
           drawX, drawY, particle.size * 4
         );
-        gradient.addColorStop(0, `rgba(0, 71, 171, ${particle.opacity * 0.8})`);
-        gradient.addColorStop(0.4, `rgba(0, 71, 171, ${particle.opacity * 0.3})`);
+        gradient.addColorStop(0, `rgba(${particleColor}, ${particle.opacity * 0.8})`);
+        gradient.addColorStop(0.4, `rgba(${particleColor}, ${particle.opacity * 0.3})`);
         gradient.addColorStop(1, "transparent");
         ctx.fillStyle = gradient;
         ctx.arc(drawX, drawY, particle.size * 4, 0, Math.PI * 2);
@@ -133,7 +142,7 @@ const HeroBackground = () => {
         // Core of particle
         ctx.beginPath();
         ctx.arc(drawX, drawY, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity * 0.6})`;
+        ctx.fillStyle = `rgba(${particleCoreColor}, ${particle.opacity * 0.6})`;
         ctx.fill();
       });
 
@@ -150,7 +159,7 @@ const HeroBackground = () => {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, []);
+  }, [theme]);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">

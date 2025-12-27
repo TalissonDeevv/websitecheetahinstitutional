@@ -54,7 +54,7 @@ const Footer = () => {
               <img 
                 src={cheetahLogo} 
                 alt="Cheetah Network" 
-                className="h-8 w-auto"
+                className="h-8 w-auto dark:invert-0 invert"
                 loading="eager"
                 fetchPriority="high"
               />
