@@ -53,8 +53,8 @@ const HeroBackground = () => {
           y: Math.random() * height,
           z,
           size: (Math.random() * 1.8 + 0.4) * z,
-          speedX: (Math.random() - 0.5) * 0.12 * z,
-          speedY: (Math.random() - 0.5) * 0.12 * z,
+          speedX: (Math.random() - 0.5) * 0.6 * z,
+          speedY: (Math.random() - 0.5) * 0.6 * z,
           opacity: (Math.random() * 0.3 + 0.1) * z,
         });
       }
