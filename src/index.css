@@ -272,39 +272,42 @@ All colors MUST be HSL.
   }
 }
 
-/* Scrollbar styling - theme aware */
-::-webkit-scrollbar {
+/* Scrollbar styling - ONLY main page scroll, theme aware */
+html::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background: hsl(var(--background));
 }
 
-::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background: hsl(var(--primary));
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+html::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary) / 0.8);
 }
 
-/* Firefox scrollbar */
-* {
+/* Firefox scrollbar (scope to root) */
+html {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--primary)) hsl(var(--background));
 }
 
-/* Mobile-specific improvements */
+/* Mobile: keep native overlay indicator (avoid custom "blue bar") */
 @media (max-width: 768px) {
-  /* Hide scrollbar on mobile for cleaner look but keep functionality */
-  ::-webkit-scrollbar {
-    width: 4px;
+  html::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
   }
-  
-  /* Better mobile menu spacing */
+
+  html {
+    scrollbar-width: auto;
+  }
+}
   .mobile-menu-item {
     padding: 12px 16px;
     margin: 4px 0;
