@@ -18,32 +18,41 @@ const AnimatedSection = ({
 
   const animations = {
     "fade-up": {
-      hidden: "opacity-0 translate-y-8",
+      hidden: "opacity-0 translate-y-4",
       visible: "opacity-100 translate-y-0"
     },
     "fade-left": {
-      hidden: "opacity-0 -translate-x-8",
+      hidden: "opacity-0 -translate-x-4",
       visible: "opacity-100 translate-x-0"
     },
     "fade-right": {
-      hidden: "opacity-0 translate-x-8",
+      hidden: "opacity-0 translate-x-4",
       visible: "opacity-100 translate-x-0"
     },
     "scale": {
-      hidden: "opacity-0 scale-95",
+      hidden: "opacity-0 scale-[0.98]",
       visible: "opacity-100 scale-100"
     }
   };
 
   const { hidden, visible } = animations[animation];
 
+  /**
+   * IMPORTANT (scrollbar/overflow stability):
+   * We never animate the layout-controlling wrapper. Instead, we clip overflow on the wrapper
+   * and animate only an inner element (opacity/transform). This prevents transient vertical
+   * overflow that can spawn a second scrollbar on mobile.
+   */
   return (
-    <div
-      ref={ref}
-      className={`transition-[opacity,transform] duration-700 ease-out ${isVisible ? visible : hidden} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      {children}
+    <div ref={ref} className={`overflow-hidden ${className}`.trim()}>
+      <div
+        className={`transition-[opacity,transform] duration-700 ease-out will-change-transform ${
+          isVisible ? visible : hidden
+        }`}
+        style={{ transitionDelay: `${delay}ms` }}
+      >
+        {children}
+      </div>
     </div>
   );
 };
