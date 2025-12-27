@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import CheetahSolidaria from "./pages/CheetahSolidaria";
 import Index from "./pages/Index";
@@ -10,12 +10,6 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
-import Security from "./pages/Security";
-import Terms from "./pages/Terms";
-import Privacy from "./pages/Privacy";
-import Disclaimer from "./pages/Disclaimer";
-import Cookies from "./pages/Cookies";
-import Transparency from "./pages/Transparency";
 import Team from "./pages/Team";
 import Blog from "./pages/Blog";
 import Budget from "./pages/Budget";
@@ -30,31 +24,14 @@ import ServiceEcommerce from "./pages/ServiceEcommerce";
 import ServiceAI from "./pages/ServiceAI";
 import ServiceCloud from "./pages/ServiceCloud";
 import ServiceMobile from "./pages/ServiceMobile";
-import PoliticasTermosEnhanced from "./pages/PoliticasTermosEnhanced";
 import Campaign from "./pages/Campaign";
 import BlogPost from "./pages/BlogPost";
 import Management from "./pages/Management";
 import TeamVerification from "./pages/TeamVerification";
 import TermsExplained from "./pages/TermsExplained";
-import Report from "./pages/Report";
 import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
-// Legal Pages
-import GuidelinesHub from "./pages/legal/GuidelinesHub";
-import ServicePolicy from "./pages/legal/ServicePolicy";
-import CancellationPolicy from "./pages/legal/CancellationPolicy";
-import BackupPolicy from "./pages/legal/BackupPolicy";
-import SecurityPolicy from "./pages/legal/SecurityPolicy";
-import AcceptableUsePolicy from "./pages/legal/AcceptableUsePolicy";
-import TransparencyPolicy from "./pages/legal/TransparencyPolicy";
-import UpdatePolicy from "./pages/legal/UpdatePolicy";
-import IntellectualPropertyPolicy from "./pages/legal/IntellectualPropertyPolicy";
-import LiabilityPolicy from "./pages/legal/LiabilityPolicy";
-import DisclaimerPolicy from "./pages/legal/DisclaimerPolicy";
-import ReportPage from "./pages/legal/ReportPage";
-import TermsOfUse from "./pages/legal/TermsOfUse";
-import PrivacyPolicyPage from "./pages/legal/PrivacyPolicyPage";
-import RefundPolicy from "./pages/legal/RefundPolicy";
+import GuidelinesPage from "./pages/legal/GuidelinesPage";
 
 const queryClient = new QueryClient();
 
@@ -80,7 +57,6 @@ const App = () => (
             <Route path="/servicos/ia" element={<ServiceAI />} />
             <Route path="/servicos/cloud" element={<ServiceCloud />} />
             <Route path="/servicos/mobile" element={<ServiceMobile />} />
-            <Route path="/politicas" element={<PoliticasTermosEnhanced />} />
             <Route path="/campanha/:id" element={<Campaign />} />
             <Route path="/numeros" element={<Numbers />} />
             <Route path="/faq" element={<FAQ />} />
@@ -93,32 +69,24 @@ const App = () => (
             <Route path="/verificacao-equipe" element={<TeamVerification />} />
             <Route path="/termos-explicados" element={<TermsExplained />} />
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
-            <Route path="/denuncia" element={<Report />} />
             <Route path="/sugestoes" element={<Suggestions />} />
-            <Route path="/seguranca" element={<Security />} />
-            <Route path="/termos" element={<Terms />} />
-            <Route path="/privacidade" element={<Privacy />} />
-            <Route path="/cookies" element={<Cookies />} />
-            <Route path="/isencao" element={<Disclaimer />} />
-            <Route path="/transparencia" element={<Transparency />} />
-            {/* Legal Routes - Diretrizes */}
-            <Route path="/diretrizes" element={<GuidelinesHub />} />
-            <Route path="/diretrizes/atendimento" element={<ServicePolicy />} />
-            <Route path="/diretrizes/cancelamento" element={<CancellationPolicy />} />
-            <Route path="/diretrizes/backup" element={<BackupPolicy />} />
-            <Route path="/diretrizes/seguranca" element={<SecurityPolicy />} />
-            <Route path="/diretrizes/uso-aceitavel" element={<AcceptableUsePolicy />} />
-            <Route path="/diretrizes/transparencia" element={<TransparencyPolicy />} />
-            <Route path="/diretrizes/atualizacao" element={<UpdatePolicy />} />
-            <Route path="/diretrizes/propriedade-intelectual" element={<IntellectualPropertyPolicy />} />
-            <Route path="/diretrizes/responsabilidade" element={<LiabilityPolicy />} />
-            <Route path="/diretrizes/isencao" element={<DisclaimerPolicy />} />
-            <Route path="/diretrizes/denuncia" element={<ReportPage />} />
-            <Route path="/diretrizes/termos-uso" element={<TermsOfUse />} />
-            <Route path="/diretrizes/privacidade" element={<PrivacyPolicyPage />} />
-            <Route path="/diretrizes/reembolso" element={<RefundPolicy />} />
-            {/* Legacy redirects */}
-            <Route path="/legal" element={<GuidelinesHub />} />
+            
+            {/* Guidelines - Single Page with dynamic routing */}
+            <Route path="/diretrizes" element={<GuidelinesPage />} />
+            <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
+            
+            {/* Redirects for legacy routes */}
+            <Route path="/legal" element={<Navigate to="/diretrizes" replace />} />
+            <Route path="/legal/*" element={<Navigate to="/diretrizes" replace />} />
+            <Route path="/politicas" element={<Navigate to="/diretrizes" replace />} />
+            <Route path="/termos" element={<Navigate to="/diretrizes/termos-uso" replace />} />
+            <Route path="/privacidade" element={<Navigate to="/diretrizes/privacidade" replace />} />
+            <Route path="/cookies" element={<Navigate to="/diretrizes/cookies" replace />} />
+            <Route path="/seguranca" element={<Navigate to="/diretrizes/seguranca" replace />} />
+            <Route path="/transparencia" element={<Navigate to="/diretrizes/transparencia" replace />} />
+            <Route path="/isencao" element={<Navigate to="/diretrizes/isencao" replace />} />
+            <Route path="/denuncia" element={<Navigate to="/diretrizes/denuncias" replace />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

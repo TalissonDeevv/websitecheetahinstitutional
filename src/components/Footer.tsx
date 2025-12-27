@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUp, Activity, Mail, MapPin } from "lucide-react";
+import { ArrowUp, Activity, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cheetahLogo from "@/assets/cheetah-logo.png";
 
@@ -23,13 +23,12 @@ const Footer = () => {
     { name: "Blog", path: "/blog" },
     { name: "FAQ", path: "/faq" },
     { name: "Contato", path: "/contato" },
-    { name: "Transparência", path: "/transparencia" },
   ];
 
   const legal = [
     { name: "Termos de Uso", path: "/diretrizes/termos-uso" },
     { name: "Privacidade", path: "/diretrizes/privacidade" },
-    { name: "Cookies", path: "/cookies" },
+    { name: "Cookies", path: "/diretrizes/cookies" },
     { name: "Segurança", path: "/diretrizes/seguranca" },
     { name: "Diretrizes", path: "/diretrizes" },
   ];
@@ -56,6 +55,8 @@ const Footer = () => {
                 src={cheetahLogo} 
                 alt="Cheetah Network" 
                 className="h-8 w-auto"
+                loading="eager"
+                fetchPriority="high"
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-xs">
@@ -70,6 +71,15 @@ const Footer = () => {
               >
                 <Mail className="h-3.5 w-3.5 text-primary" />
                 contatocheetahsolutions@gmail.com
+              </a>
+              <a 
+                href="https://wa.me/5581993964261"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Phone className="h-3.5 w-3.5 text-primary" />
+                (81) 99396-4261
               </a>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <MapPin className="h-3.5 w-3.5 text-primary" />
@@ -176,7 +186,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-muted-foreground">
-              © 2025 Cheetah Solutions Network LTDA. CNPJ: XX.XXX.XXX/0001-XX
+              © 2025 Cheetah Solutions Network. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-6">
               <Link to="/diretrizes/termos-uso" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
@@ -185,7 +195,7 @@ const Footer = () => {
               <Link to="/diretrizes/privacidade" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Privacidade
               </Link>
-              <Link to="/diretrizes/denuncia" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/diretrizes/denuncias" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Denunciar
               </Link>
             </div>
