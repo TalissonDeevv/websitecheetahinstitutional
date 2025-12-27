@@ -105,29 +105,30 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  /**
+   * SINGLE SCROLL CONTAINER STRATEGY:
+   * - html is the ONLY element with overflow-y: scroll (owns scrollbar)
+   * - body and #root clip overflow-x but allow content to flow naturally
+   * - This prevents any child from spawning a second scrollbar
+   */
   html {
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll; /* Always show scrollbar track to prevent layout shift */
     scrollbar-gutter: stable;
+    height: 100%;
   }
 
   body {
     @apply bg-background text-foreground;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden; /* Body does NOT scroll - html does */
     position: relative;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100%;
   }
 
-  /* Single scroll container - prevent duplicate scrollbars */
   #root {
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden; /* Clip any overflow from children */
     width: 100%;
-    max-width: 100vw;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100%;
   }
 
   /* Mobile-first approach with better touch targets */
@@ -200,12 +201,17 @@ All colors MUST be HSL.
 
 /* Custom animations for smooth interactions */
 @layer utilities {
+  /* 
+   * SCROLL-SAFE ANIMATIONS:
+   * Reduced translateY values to prevent temporary overflow during animation.
+   * Combined with overflow-hidden on parent containers.
+   */
   .animate-fade-in {
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.4s ease-out both;
   }
   
   .animate-slide-up {
-    animation: slideUp 0.5s ease-out;
+    animation: slideUp 0.4s ease-out both;
   }
   
   .hover-lift {
@@ -248,10 +254,11 @@ All colors MUST be HSL.
   }
 }
 
+/* SCROLL-SAFE KEYFRAMES: small translateY to avoid overflow */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -262,7 +269,7 @@ All colors MUST be HSL.
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
