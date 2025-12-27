@@ -51,16 +51,19 @@ const HeroBackground = () => {
       const height = canvas.offsetHeight;
       particlesRef.current = [];
 
-      for (let i = 0; i < 25; i++) {
+      // Increased particle count for more visual density (was 25)
+      const particleCount = 45;
+      
+      for (let i = 0; i < particleCount; i++) {
         const z = Math.random() * 0.8 + 0.2;
         particlesRef.current.push({
           x: Math.random() * width,
           y: Math.random() * height,
           z,
-          size: (Math.random() * 2 + 0.5) * z,
-          speedX: (Math.random() - 0.5) * 0.15 * z,
-          speedY: (Math.random() - 0.5) * 0.15 * z,
-          opacity: (Math.random() * 0.25 + 0.08) * z,
+          size: (Math.random() * 1.8 + 0.4) * z,
+          speedX: (Math.random() - 0.5) * 0.12 * z,
+          speedY: (Math.random() - 0.5) * 0.12 * z,
+          opacity: (Math.random() * 0.3 + 0.1) * z,
         });
       }
     };

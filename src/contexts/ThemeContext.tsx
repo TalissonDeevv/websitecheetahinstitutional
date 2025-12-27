@@ -14,13 +14,11 @@ const STORAGE_KEY = 'cheetah-theme';
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(() => {
-    // Check localStorage first
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
       if (stored === 'dark' || stored === 'light') {
         return stored;
       }
-      // Fallback to system preference, but default to dark
       return 'dark';
     }
     return 'dark';
@@ -28,9 +26,21 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const root = document.documentElement;
+    
+    // Disable all transitions during theme change
+    root.classList.add('theme-transitioning');
+    
+    // Apply theme
     root.classList.remove('light', 'dark');
     root.classList.add(theme);
     localStorage.setItem(STORAGE_KEY, theme);
+    
+    // Re-enable transitions after a frame
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        root.classList.remove('theme-transitioning');
+      });
+    });
   }, [theme]);
 
   const setTheme = (newTheme: Theme) => {
