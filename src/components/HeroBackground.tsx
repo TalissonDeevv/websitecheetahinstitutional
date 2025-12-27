@@ -15,7 +15,6 @@ const HeroBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
   const particlesRef = useRef<Particle[]>([]);
-  const mouseRef = useRef({ x: 0, y: 0 });
 
   const { theme } = useTheme();
   const themeRef = useRef(theme);
@@ -30,13 +29,6 @@ const HeroBackground = () => {
 
     let time = 0;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      mouseRef.current = {
-        x: (e.clientX - rect.left) / rect.width - 0.5,
-        y: (e.clientY - rect.top) / rect.height - 0.5,
-      };
-    };
 
     const resizeCanvas = () => {
       const dpr = window.devicePixelRatio || 1;
@@ -83,7 +75,6 @@ const HeroBackground = () => {
 
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
-    window.addEventListener("mousemove", handleMouseMove);
 
     const animate = () => {
       const width = canvas.offsetWidth;
@@ -120,9 +111,6 @@ const HeroBackground = () => {
       const opacityMultiplier = isDark ? 1 : 2.2;
 
       particlesRef.current.forEach((particle) => {
-        const parallaxX = mouseRef.current.x * 30 * particle.z;
-        const parallaxY = mouseRef.current.y * 20 * particle.z;
-
         particle.x += particle.speedX;
         particle.y += particle.speedY;
 
@@ -131,8 +119,8 @@ const HeroBackground = () => {
         if (particle.y < 0) particle.y = height;
         if (particle.y > height) particle.y = 0;
 
-        const drawX = particle.x + parallaxX;
-        const drawY = particle.y + parallaxY;
+        const drawX = particle.x;
+        const drawY = particle.y;
 
         // Glow externo da partícula
         ctx.beginPath();
@@ -159,7 +147,6 @@ const HeroBackground = () => {
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
-      window.removeEventListener("mousemove", handleMouseMove);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, []);
