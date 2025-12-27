@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +19,17 @@
     <meta name="twitter:site" content="@cheetah_network" />
     <meta name="twitter:image" content="https://i.ibb.co/QvL39zDP/CHEETAHH.jpg" />
     <link rel="icon" href="https://files.catbox.moe/46lzz6.ico" type="image/x-icon">
+    
+    <!-- Theme initialization script - runs before render to prevent flicker -->
+    <script>
+      (function() {
+        const stored = localStorage.getItem('cheetah-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored || (prefersDark ? 'dark' : 'dark'); // Default to dark
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
   </head>
 
   <body>

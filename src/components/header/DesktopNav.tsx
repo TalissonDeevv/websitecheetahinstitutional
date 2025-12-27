@@ -6,6 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const DesktopNav = () => {
   const location = useLocation();
@@ -37,8 +38,8 @@ const DesktopNav = () => {
           to={item.path}
           className={`text-sm font-medium transition-colors duration-200 whitespace-nowrap ${
             isActive(item.path) 
-              ? "text-[#0047ab]" 
-              : "text-gray-400 hover:text-gray-200"
+              ? "text-primary" 
+              : "text-muted-foreground hover:text-foreground"
           }`}
         >
           {item.name}
@@ -46,19 +47,19 @@ const DesktopNav = () => {
       ))}
       
       <DropdownMenu>
-        <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-gray-400 hover:text-gray-200 transition-colors duration-200 outline-none">
+        <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 outline-none">
           Mais
           <ChevronDown className="h-3.5 w-3.5" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="bg-black/95 border-gray-800 z-[100] backdrop-blur-sm">
+        <DropdownMenuContent className="bg-popover border-border z-[100] backdrop-blur-sm">
           {moreMenuItems.map((item) => (
             <DropdownMenuItem key={item.path} asChild>
               <Link
                 to={item.path}
                 className={`w-full transition-colors duration-200 ${
                   isActive(item.path) 
-                    ? "text-[#0047ab] bg-[#0047ab]/10" 
-                    : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
+                    ? "text-primary bg-primary/10" 
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent"
                 }`}
               >
                 {item.name}
@@ -72,11 +73,13 @@ const DesktopNav = () => {
         href="https://discord.gg/63qjkQwKmf"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-1.5 text-gray-500 hover:text-gray-300 text-sm transition-colors duration-200 whitespace-nowrap ml-1"
+        className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground text-sm transition-colors duration-200 whitespace-nowrap ml-1"
       >
         <MessageCircle className="h-3.5 w-3.5" />
         <span className="hidden xl:inline">Discord</span>
       </a>
+
+      <ThemeToggle />
     </nav>
   );
 };
