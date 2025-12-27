@@ -277,13 +277,11 @@ All colors MUST be HSL.
   }
 }
 
-@keyframes softwareUnderline {
-  0% {
-    opacity: 0;
+@keyframes underlineReveal {
+  from {
     transform: scaleX(0);
   }
-  100% {
-    opacity: 1;
+  to {
     transform: scaleX(1);
   }
 }
