@@ -489,6 +489,82 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Cheetah Developers Brasil Section */}
+      <section className="py-16 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection animation="fade-right">
+              <div>
+                <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs font-medium text-primary">
+                  <Users className="h-3.5 w-3.5" />
+                  Comunidade Oficial
+                </div>
+                <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                  Cheetah <span className="text-primary">Developers</span> Brasil
+                </h2>
+                <p className="text-lg text-muted-foreground mb-4 font-medium">
+                  Onde desenvolvedores evoluem juntos.
+                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Programa e comunidade oficial da Cheetah Solutions Network voltado ao crescimento técnico, colaboração e formação de desenvolvedores. Participe de discussões, compartilhe conhecimento e evolua junto com outros profissionais.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link to="/developers">
+                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      Conheça o Programa
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <a 
+                    href="https://discord.gg/rY3HUQpECS" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="border-foreground/15 text-foreground hover:bg-foreground/5">
+                      <MessageCircle className="mr-2 h-4 w-4" />
+                      Entrar na Comunidade
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection animation="fade-left" delay={150}>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-5 bg-card border border-border rounded-lg">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <Code className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-foreground mb-1">Crescimento Técnico</h3>
+                  <p className="text-xs text-muted-foreground">Conteúdo exclusivo e mentorias</p>
+                </div>
+                <div className="p-5 bg-card border border-border rounded-lg">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-foreground mb-1">Networking</h3>
+                  <p className="text-xs text-muted-foreground">Conecte-se com profissionais</p>
+                </div>
+                <div className="p-5 bg-card border border-border rounded-lg">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <Zap className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-foreground mb-1">Oportunidades</h3>
+                  <p className="text-xs text-muted-foreground">Projetos e colaborações</p>
+                </div>
+                <div className="p-5 bg-card border border-border rounded-lg">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <Heart className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-foreground mb-1">Comunidade</h3>
+                  <p className="text-xs text-muted-foreground">Suporte e colaboração</p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-16 px-4 lg:px-8 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
