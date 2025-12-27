@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUp, Activity, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUp, Activity, Mail, MapPin, Phone, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cheetahLogo from "@/assets/cheetah-logo.png";
 
@@ -20,6 +20,7 @@ const Footer = () => {
   const company = [
     { name: "Sobre", path: "/sobre" },
     { name: "Equipe", path: "/equipe" },
+    { name: "Developers Brasil", path: "/developers" },
     { name: "Blog", path: "/blog" },
     { name: "FAQ", path: "/faq" },
     { name: "Contato", path: "/contato" },
@@ -168,15 +169,37 @@ const Footer = () => {
                 Solicitar orçamento
               </Button>
             </Link>
-            
-            <div className="mt-6 pt-4 border-t border-border">
+          </div>
+        </div>
+
+        {/* Cheetah Developers Brasil */}
+        <div className="border-t border-border mt-8 pt-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Users className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-foreground">Cheetah Developers Brasil</h4>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Programa e comunidade oficial da Cheetah Solutions Network
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <Link 
+                to="/developers"
+                className="text-xs text-primary hover:text-primary/80 transition-colors font-medium"
+              >
+                Saiba mais →
+              </Link>
               <a
-                href="https://discord.gg/63qjkQwKmf"
+                href="https://discord.gg/rY3HUQpECS"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-muted-foreground hover:text-foreground transition-colors"
               >
-                Discord da comunidade →
+                Comunidade Discord →
               </a>
             </div>
           </div>

@@ -68,10 +68,12 @@ const HeroBackground = () => {
       }
     };
 
-    const drawGlow = (x: number, y: number, radius: number, color: string, opacity: number) => {
+    const drawGlow = (x: number, y: number, radius: number, color: string, opacity: number, isDark: boolean) => {
       const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
-      gradient.addColorStop(0, color.replace(")", `, ${opacity})`).replace("rgb", "rgba"));
-      gradient.addColorStop(0.5, color.replace(")", `, ${opacity * 0.4})`).replace("rgb", "rgba"));
+      // Light mode: usar cores mais intensas e visíveis
+      const adjustedOpacity = isDark ? opacity : opacity * 2.5;
+      gradient.addColorStop(0, color.replace(")", `, ${adjustedOpacity})`).replace("rgb", "rgba"));
+      gradient.addColorStop(0.5, color.replace(")", `, ${adjustedOpacity * 0.5})`).replace("rgb", "rgba"));
       gradient.addColorStop(1, "transparent");
       ctx.fillStyle = gradient;
       ctx.beginPath();
@@ -90,24 +92,32 @@ const HeroBackground = () => {
 
       ctx.clearRect(0, 0, width, height);
 
-      const glowOpacity = isDark ? 0.15 : 0.08;
-      const secondaryGlowOpacity = isDark ? 0.1 : 0.05;
-      const tertiaryGlowOpacity = isDark ? 0.08 : 0.04;
+      // Glow settings: mais intenso no light mode
+      const glowOpacity = isDark ? 0.15 : 0.12;
+      const secondaryGlowOpacity = isDark ? 0.1 : 0.1;
+      const tertiaryGlowOpacity = isDark ? 0.08 : 0.08;
 
       const primaryX = width * 0.5 + Math.sin(time * 0.0003) * 50;
       const primaryY = height * 0.55 + Math.cos(time * 0.0002) * 30;
-      drawGlow(primaryX, primaryY, 350, "rgb(59, 130, 246)", glowOpacity);
+      // Light mode: usar azul mais saturado
+      const primaryGlowColor = isDark ? "rgb(59, 130, 246)" : "rgb(37, 99, 235)";
+      drawGlow(primaryX, primaryY, 350, primaryGlowColor, glowOpacity, isDark);
 
       const secondaryX = width * 0.65 + Math.cos(time * 0.0004) * 40;
       const secondaryY = height * 0.48 + Math.sin(time * 0.0003) * 25;
-      drawGlow(secondaryX, secondaryY, 280, "rgb(99, 102, 241)", secondaryGlowOpacity);
+      const secondaryGlowColor = isDark ? "rgb(99, 102, 241)" : "rgb(79, 70, 229)";
+      drawGlow(secondaryX, secondaryY, 280, secondaryGlowColor, secondaryGlowOpacity, isDark);
 
       const tertiaryX = width * 0.35 + Math.sin(time * 0.0002) * 40;
       const tertiaryY = height * 0.6 + Math.cos(time * 0.0003) * 20;
-      drawGlow(tertiaryX, tertiaryY, 220, "rgb(139, 92, 246)", tertiaryGlowOpacity);
+      const tertiaryGlowColor = isDark ? "rgb(139, 92, 246)" : "rgb(109, 40, 217)";
+      drawGlow(tertiaryX, tertiaryY, 220, tertiaryGlowColor, tertiaryGlowOpacity, isDark);
 
-      const particleColor = "0, 71, 171";
-      const particleCoreColor = isDark ? "255, 255, 255" : "0, 71, 171";
+      // Partículas: cores e opacidades ajustadas por tema
+      // Dark: branco suave | Light: azul escuro/cinza profundo
+      const particleColor = isDark ? "100, 150, 255" : "30, 64, 175";
+      const particleCoreColor = isDark ? "200, 220, 255" : "37, 99, 235";
+      const opacityMultiplier = isDark ? 1 : 2.2;
 
       particlesRef.current.forEach((particle) => {
         const parallaxX = mouseRef.current.x * 30 * particle.z;
@@ -124,18 +134,20 @@ const HeroBackground = () => {
         const drawX = particle.x + parallaxX;
         const drawY = particle.y + parallaxY;
 
+        // Glow externo da partícula
         ctx.beginPath();
         const gradient = ctx.createRadialGradient(drawX, drawY, 0, drawX, drawY, particle.size * 4);
-        gradient.addColorStop(0, `rgba(${particleColor}, ${particle.opacity * 0.8})`);
-        gradient.addColorStop(0.4, `rgba(${particleColor}, ${particle.opacity * 0.3})`);
+        gradient.addColorStop(0, `rgba(${particleColor}, ${particle.opacity * 0.8 * opacityMultiplier})`);
+        gradient.addColorStop(0.4, `rgba(${particleColor}, ${particle.opacity * 0.3 * opacityMultiplier})`);
         gradient.addColorStop(1, "transparent");
         ctx.fillStyle = gradient;
         ctx.arc(drawX, drawY, particle.size * 4, 0, Math.PI * 2);
         ctx.fill();
 
+        // Core sólido da partícula
         ctx.beginPath();
         ctx.arc(drawX, drawY, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${particleCoreColor}, ${particle.opacity * 0.6})`;
+        ctx.fillStyle = `rgba(${particleCoreColor}, ${particle.opacity * 0.7 * opacityMultiplier})`;
         ctx.fill();
       });
 
