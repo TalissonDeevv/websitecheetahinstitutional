@@ -54,21 +54,24 @@ const GuidelinesPage = () => {
   // Define diretriz ativa (default: privacidade)
   const activeId = policyId || "privacidade";
   const activeGuideline = guidelines.find(g => g.id === activeId);
+  const isValidPolicy = !policyId || guidelines.some(g => g.id === policyId);
   
-  // Redireciona se não existir
-  if (policyId && !guidelines.find(g => g.id === policyId)) {
-    return <Navigate to="/diretrizes/privacidade" replace />;
-  }
-  
-  // Scroll to top quando muda diretriz
+  // Scroll to top quando muda diretriz - MUST be before any conditional return
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setMobileMenuOpen(false);
-  }, [activeId]);
+    if (isValidPolicy) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setMobileMenuOpen(false);
+    }
+  }, [activeId, isValidPolicy]);
 
   const handleNavigation = (id: string) => {
     navigate(`/diretrizes/${id}`, { replace: false });
   };
+
+  // Redireciona se não existir - AFTER all hooks
+  if (!isValidPolicy) {
+    return <Navigate to="/diretrizes/privacidade" replace />;
+  }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
