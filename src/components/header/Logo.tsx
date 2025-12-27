@@ -8,6 +8,8 @@ const Logo = () => {
         src={cheetahLogo} 
         alt="Cheetah Network" 
         className="h-8 sm:h-9 max-h-9 w-auto object-contain"
+        loading="eager"
+        fetchPriority="high"
       />
     </Link>
   );
