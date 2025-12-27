@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUp, Activity, Mail, MapPin, Phone, FileText, Shield, Scale } from "lucide-react";
+import { ArrowUp, Activity, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cheetahLogo from "@/assets/cheetah-logo.png";
 
@@ -27,11 +27,11 @@ const Footer = () => {
   ];
 
   const legal = [
-    { name: "Termos de Uso", path: "/termos" },
-    { name: "Privacidade", path: "/privacidade" },
+    { name: "Termos de Uso", path: "/diretrizes/termos-uso" },
+    { name: "Privacidade", path: "/diretrizes/privacidade" },
     { name: "Cookies", path: "/cookies" },
-    { name: "Segurança", path: "/seguranca" },
-    { name: "Isenção", path: "/isencao" },
+    { name: "Segurança", path: "/diretrizes/seguranca" },
+    { name: "Diretrizes", path: "/diretrizes" },
   ];
 
   return (
@@ -179,13 +179,13 @@ const Footer = () => {
               © 2025 Cheetah Solutions Network LTDA. CNPJ: XX.XXX.XXX/0001-XX
             </p>
             <div className="flex items-center gap-6">
-              <Link to="/termos" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/diretrizes/termos-uso" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Termos
               </Link>
-              <Link to="/privacidade" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/diretrizes/privacidade" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Privacidade
               </Link>
-              <Link to="/denuncia" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/diretrizes/denuncia" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 Denunciar
               </Link>
             </div>
