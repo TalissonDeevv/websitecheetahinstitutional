@@ -21,6 +21,7 @@ const DesktopNav = () => {
 
   const moreMenuItems = [
     { name: "Início", path: "/" },
+    { name: "Developers Brasil", path: "/developers" },
     { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
     { name: "FAQ", path: "/faq" },
     { name: "Sugestões", path: "/sugestoes" },

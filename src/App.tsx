@@ -32,6 +32,7 @@ import TermsExplained from "./pages/TermsExplained";
 import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
 import GuidelinesPage from "./pages/legal/GuidelinesPage";
+import Developers from "./pages/Developers";
 
 const queryClient = new QueryClient();
 
@@ -70,6 +71,7 @@ const App = () => (
             <Route path="/termos-explicados" element={<TermsExplained />} />
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
             <Route path="/sugestoes" element={<Suggestions />} />
+            <Route path="/developers" element={<Developers />} />
             
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />
