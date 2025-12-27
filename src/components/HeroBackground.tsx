@@ -16,7 +16,10 @@ const HeroBackground = () => {
   const animationRef = useRef<number>();
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef = useRef({ x: 0, y: 0 });
+
   const { theme } = useTheme();
+  const themeRef = useRef(theme);
+  themeRef.current = theme;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -26,7 +29,6 @@ const HeroBackground = () => {
     if (!ctx) return;
 
     let time = 0;
-    const isDark = theme === 'dark';
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
@@ -37,9 +39,10 @@ const HeroBackground = () => {
     };
 
     const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = canvas.offsetWidth * dpr;
+      canvas.height = canvas.offsetHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       initParticles();
     };
 
@@ -47,25 +50,20 @@ const HeroBackground = () => {
       const width = canvas.offsetWidth;
       const height = canvas.offsetHeight;
       particlesRef.current = [];
-      
-      // Reduced particle count for elegance
+
       for (let i = 0; i < 25; i++) {
-        const z = Math.random() * 0.8 + 0.2; // depth: 0.2 to 1.0
+        const z = Math.random() * 0.8 + 0.2;
         particlesRef.current.push({
           x: Math.random() * width,
           y: Math.random() * height,
           z,
-          size: (Math.random() * 2 + 0.5) * z, // size varies with depth
-          speedX: (Math.random() - 0.5) * 0.15 * z, // slower, depth-based
+          size: (Math.random() * 2 + 0.5) * z,
+          speedX: (Math.random() - 0.5) * 0.15 * z,
           speedY: (Math.random() - 0.5) * 0.15 * z,
-          opacity: (Math.random() * 0.25 + 0.08) * z, // subtle opacity with depth
+          opacity: (Math.random() * 0.25 + 0.08) * z,
         });
       }
     };
-
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-    window.addEventListener("mousemove", handleMouseMove);
 
     const drawGlow = (x: number, y: number, radius: number, color: string, opacity: number) => {
       const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
@@ -78,46 +76,43 @@ const HeroBackground = () => {
       ctx.fill();
     };
 
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener("mousemove", handleMouseMove);
+
     const animate = () => {
       const width = canvas.offsetWidth;
       const height = canvas.offsetHeight;
+      const isDark = themeRef.current === "dark";
 
       ctx.clearRect(0, 0, width, height);
 
-      // Adjust glow opacity based on theme
       const glowOpacity = isDark ? 0.15 : 0.08;
       const secondaryGlowOpacity = isDark ? 0.1 : 0.05;
       const tertiaryGlowOpacity = isDark ? 0.08 : 0.04;
 
-      // Primary glow - moved lower to avoid navbar
       const primaryX = width * 0.5 + Math.sin(time * 0.0003) * 50;
       const primaryY = height * 0.55 + Math.cos(time * 0.0002) * 30;
       drawGlow(primaryX, primaryY, 350, "rgb(59, 130, 246)", glowOpacity);
 
-      // Secondary glow - moved lower
       const secondaryX = width * 0.65 + Math.cos(time * 0.0004) * 40;
       const secondaryY = height * 0.48 + Math.sin(time * 0.0003) * 25;
       drawGlow(secondaryX, secondaryY, 280, "rgb(99, 102, 241)", secondaryGlowOpacity);
 
-      // Tertiary glow - moved lower
       const tertiaryX = width * 0.35 + Math.sin(time * 0.0002) * 40;
       const tertiaryY = height * 0.6 + Math.cos(time * 0.0003) * 20;
       drawGlow(tertiaryX, tertiaryY, 220, "rgb(139, 92, 246)", tertiaryGlowOpacity);
 
-      // Adjust particle colors based on theme
-      const particleColor = isDark ? "0, 71, 171" : "0, 71, 171";
+      const particleColor = "0, 71, 171";
       const particleCoreColor = isDark ? "255, 255, 255" : "0, 71, 171";
 
-      // Draw particles with parallax effect
       particlesRef.current.forEach((particle) => {
-        // Apply subtle parallax based on mouse position and depth
         const parallaxX = mouseRef.current.x * 30 * particle.z;
         const parallaxY = mouseRef.current.y * 20 * particle.z;
-        
+
         particle.x += particle.speedX;
         particle.y += particle.speedY;
 
-        // Wrap around edges
         if (particle.x < 0) particle.x = width;
         if (particle.x > width) particle.x = 0;
         if (particle.y < 0) particle.y = height;
@@ -126,12 +121,8 @@ const HeroBackground = () => {
         const drawX = particle.x + parallaxX;
         const drawY = particle.y + parallaxY;
 
-        // Draw particle with soft glow
         ctx.beginPath();
-        const gradient = ctx.createRadialGradient(
-          drawX, drawY, 0,
-          drawX, drawY, particle.size * 4
-        );
+        const gradient = ctx.createRadialGradient(drawX, drawY, 0, drawX, drawY, particle.size * 4);
         gradient.addColorStop(0, `rgba(${particleColor}, ${particle.opacity * 0.8})`);
         gradient.addColorStop(0.4, `rgba(${particleColor}, ${particle.opacity * 0.3})`);
         gradient.addColorStop(1, "transparent");
@@ -139,7 +130,6 @@ const HeroBackground = () => {
         ctx.arc(drawX, drawY, particle.size * 4, 0, Math.PI * 2);
         ctx.fill();
 
-        // Core of particle
         ctx.beginPath();
         ctx.arc(drawX, drawY, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${particleCoreColor}, ${particle.opacity * 0.6})`;
@@ -155,23 +145,18 @@ const HeroBackground = () => {
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("mousemove", handleMouseMove);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
-  }, [theme]);
+  }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-      />
-      {/* Fade to top and bottom */}
-      <div 
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+      <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 15%, transparent 75%, hsl(var(--background)) 100%)"
+          background:
+            "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 15%, transparent 75%, hsl(var(--background)) 100%)",
         }}
       />
     </div>
