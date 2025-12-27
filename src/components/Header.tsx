@@ -52,7 +52,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm transition-all duration-300 safe-top h-16 sm:h-[68px]">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm transition-all duration-300 safe-top h-16 sm:h-[68px] border-b border-border/50">
         <div className="container mx-auto px-4 h-full flex items-center justify-between">
           <Logo />
           <DesktopNav />
@@ -61,7 +61,7 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden relative text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation"
+            className="lg:hidden relative text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isMenuOpen}
@@ -86,7 +86,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/80 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 bg-background/80 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
           isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={closeMenu}
@@ -96,7 +96,7 @@ const Header = () => {
       {/* Mobile Menu Panel */}
       <div
         id="mobile-menu"
-        className={`fixed top-16 sm:top-[68px] left-0 right-0 bottom-0 z-40 lg:hidden bg-black/98 backdrop-blur-md overflow-y-auto transition-all duration-300 ease-out ${
+        className={`fixed top-16 sm:top-[68px] left-0 right-0 bottom-0 z-40 lg:hidden bg-background/98 backdrop-blur-md overflow-y-auto transition-all duration-300 ease-out ${
           isMenuOpen 
             ? "opacity-100 translate-y-0" 
             : "opacity-0 -translate-y-4 pointer-events-none"

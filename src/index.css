@@ -8,47 +8,49 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  /* Light Theme */
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 217 33% 17%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 98%;
+    --card-foreground: 217 33% 17%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 33% 17%;
 
     --primary: 217 100% 33%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 217 20% 94%;
+    --secondary-foreground: 217 33% 17%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 80%;
+    --muted: 217 20% 94%;
+    --muted-foreground: 217 15% 45%;
 
-    --accent: 0 0% 12%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 217 20% 94%;
+    --accent-foreground: 217 33% 17%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
+    --border: 217 20% 88%;
+    --input: 217 20% 88%;
     --ring: 217 100% 33%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 0%;
-    --sidebar-foreground: 0 0% 100%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 217 33% 17%;
     --sidebar-primary: 217 100% 33%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 217 100% 33%;
+    --sidebar-accent: 217 20% 94%;
+    --sidebar-accent-foreground: 217 33% 17%;
+    --sidebar-border: 217 20% 88%;
     --sidebar-ring: 217 100% 33%;
   }
 
+  /* Dark Theme (default) */
   .dark {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
@@ -96,21 +98,27 @@ All colors MUST be HSL.
 
   html {
     overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
   }
 
   body {
     @apply bg-background text-foreground;
-    background-color: #000000;
-    color: #ffffff;
     overflow-x: hidden;
+    overflow-y: visible;
     position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 
-  /* Prevent horizontal overflow from animations */
+  /* Single scroll container - prevent duplicate scrollbars */
   #root {
     overflow-x: hidden;
+    overflow-y: visible;
     width: 100%;
     max-width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   /* Mobile-first approach with better touch targets */
@@ -149,12 +157,6 @@ All colors MUST be HSL.
       max-width: 100%;
       overflow-x: hidden;
     }
-  }
-
-  /* Fix viewport units on mobile browsers */
-  .min-h-screen {
-    min-height: 100vh;
-    min-height: 100dvh;
   }
 
   /* Improve scrolling on iOS */
@@ -270,26 +272,38 @@ All colors MUST be HSL.
   }
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - theme aware */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: hsl(var(--background));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0047ab;
+  background: hsl(var(--primary));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0059d9;
+  background: hsl(var(--primary) / 0.8);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary)) hsl(var(--background));
 }
 
 /* Mobile-specific improvements */
 @media (max-width: 768px) {
+  /* Hide scrollbar on mobile for cleaner look but keep functionality */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  
   /* Better mobile menu spacing */
   .mobile-menu-item {
     padding: 12px 16px;
@@ -310,7 +324,7 @@ All colors MUST be HSL.
   input:focus,
   select:focus,
   textarea:focus {
-    outline: 2px solid #0047ab;
+    outline: 2px solid hsl(var(--primary));
     outline-offset: 2px;
   }
   
@@ -359,10 +373,13 @@ All colors MUST be HSL.
   }
 }
 
-/* Dark mode improvements for mobile */
-@media (prefers-color-scheme: dark) {
-  .mobile-card {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-color: rgba(0, 71, 171, 0.2);
-  }
+/* Theme-aware mobile cards */
+.dark .mobile-card {
+  background-color: hsl(var(--card));
+  border-color: hsl(var(--border));
+}
+
+.light .mobile-card {
+  background-color: hsl(var(--card));
+  border-color: hsl(var(--border));
 }
