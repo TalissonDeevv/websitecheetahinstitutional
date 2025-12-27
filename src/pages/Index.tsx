@@ -201,22 +201,8 @@ const Index = () => {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-[1.08] tracking-tight animate-fade-in"
               style={{ animationDelay: '200ms', animationFillMode: 'both' }}
             >
-              Desenvolvimento de{" "}
-              <span className="relative inline-block">
-                <span className="text-primary relative">
-                  software
-                  <span 
-                    className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-primary/60 via-primary to-primary/60 rounded-full"
-                    style={{
-                      animation: 'softwareUnderline 1.5s ease-out 1s forwards',
-                      opacity: 0,
-                      transform: 'scaleX(0)',
-                      transformOrigin: 'left',
-                    }}
-                  />
-                </span>
-                <span className="absolute -inset-2 bg-primary/8 blur-3xl rounded-xl -z-10" />
-              </span>{" "}
+            Desenvolvimento de{" "}
+              <span className="text-primary">software</span>{" "}
               sob medida para negócios que exigem <SubtleHighlight>performance</SubtleHighlight>
             </h1>
             

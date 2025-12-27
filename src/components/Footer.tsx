@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUp, Activity, Mail, MapPin, Phone, Users } from "lucide-react";
+import { ArrowUp, Mail, MapPin, Phone, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import cheetahLogo from "@/assets/cheetah-logo.png";
 
@@ -88,15 +88,6 @@ const Footer = () => {
               </div>
             </div>
 
-            <a
-              href="https://status.cheetahnetwork.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs text-green-500 hover:text-green-400 transition-colors mt-4"
-            >
-              <Activity className="h-3.5 w-3.5" />
-              Status dos Serviços
-            </a>
           </div>
 
           {/* Serviços */}
