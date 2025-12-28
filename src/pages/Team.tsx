@@ -46,8 +46,7 @@ const Team = () => {
   ];
 
   const supportTeam = [
-    { name: "Ana Oliveira", role: "Suporte ao Cliente" },
-    { name: "Pedro Santos", role: "Suporte Técnico" }
+    { name: "Camile Vitória Barros", role: "Assistente de Suporte Adminstrativo" }
   ];
 
   return (
