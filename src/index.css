@@ -400,3 +400,45 @@ html {
   background-color: hsl(var(--card));
   border-color: hsl(var(--border));
 }
+
+/* ===== BLOG CONTENT THEME OVERRIDES ===== */
+/* Override hardcoded colors in blog content for light theme */
+
+/* Light theme overrides for blog content */
+:root .text-white {
+  color: hsl(var(--foreground)) !important;
+}
+
+:root .text-gray-300 {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+:root .text-gray-400 {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+/* Blog callout boxes - light theme */
+:root .bg-\[\#0047ab\]\/10 {
+  background-color: hsl(var(--primary) / 0.1) !important;
+}
+
+:root .border-\[\#0047ab\]\/20 {
+  border-color: hsl(var(--primary) / 0.2) !important;
+}
+
+:root .text-\[\#0047ab\] {
+  color: hsl(var(--primary)) !important;
+}
+
+/* Dark theme: keep the original behavior */
+.dark .text-white {
+  color: white !important;
+}
+
+.dark .text-gray-300 {
+  color: rgb(209 213 219) !important;
+}
+
+.dark .text-gray-400 {
+  color: rgb(156 163 175) !important;
+}
