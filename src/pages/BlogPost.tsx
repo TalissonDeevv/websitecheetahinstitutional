@@ -601,11 +601,11 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen bg-background text-foreground">
         <Header />
         <div className="container mx-auto px-4 py-24 text-center">
           <h1 className="text-4xl font-bold mb-4">Post não encontrado</h1>
-          <p className="text-gray-300">O artigo que você procura não existe.</p>
+          <p className="text-muted-foreground">O artigo que você procura não existe.</p>
         </div>
         <Footer />
       </div>
@@ -613,7 +613,7 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
       <BlogHeader 
         title={post.title}

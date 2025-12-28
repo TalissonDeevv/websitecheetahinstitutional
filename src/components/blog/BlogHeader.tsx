@@ -15,17 +15,17 @@ const BlogHeader = ({ title, date, author, readTime }: BlogHeaderProps) => {
       <div className="container mx-auto max-w-4xl">
         <Link 
           to="/blog" 
-          className="inline-flex items-center gap-2 text-[#0047ab] hover:text-[#0047ab]/80 transition-colors mb-6 text-sm font-medium"
+          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6 text-sm font-medium"
         >
           <ArrowLeft className="h-4 w-4" />
           Voltar ao Blog
         </Link>
         
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
           {title}
         </h1>
         
-        <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-gray-400 mb-8">
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground mb-8">
           <div className="flex items-center gap-2">
             <Calendar className="h-4 w-4" />
             <span>{date}</span>
