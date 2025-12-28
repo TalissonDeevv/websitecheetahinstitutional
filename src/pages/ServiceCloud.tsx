@@ -84,17 +84,7 @@ const ServiceCloud = () => {
                 <Button className="bg-[#0047ab] hover:bg-[#0047ab]/80 text-white px-8 py-3 text-lg">
                   Solicitar Orçamento
                 </Button>
-              </Link>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://i.ibb.co/1JtvzStp/Cloud-hosting-pana.png" 
-                alt="Cloud Solutions"
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute -top-4 -left-4 bg-[#0047ab]/20 rounded-full w-24 h-24 flex items-center justify-center backdrop-blur-sm border border-[#0047ab]/30">
-                <Cloud className="h-12 w-12 text-[#0047ab]" />
-              </div>
+            </Link>
             </div>
           </div>
         </div>

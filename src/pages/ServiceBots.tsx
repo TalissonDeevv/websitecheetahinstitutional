@@ -65,18 +65,6 @@ const ServiceBots = () => {
               </div>
             </AnimatedSection>
             
-            <AnimatedSection delay={200} className="lg:col-span-5">
-              <div className="relative">
-                <img 
-                  src="https://i.ibb.co/nskDq5wN/people-using-robots-pana.png" 
-                  alt="Desenvolvimento de Bots"
-                  className="rounded-lg w-full"
-                />
-                <div className="absolute -bottom-4 -left-4 bg-primary/10 border border-primary/20 rounded-lg p-4 backdrop-blur-sm">
-                  <Bot className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
         </div>
       </section>

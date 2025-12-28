@@ -48,18 +48,6 @@ const ServiceIntegrations = () => {
               </div>
             </AnimatedSection>
             
-            <AnimatedSection delay={200} className="lg:col-span-5">
-              <div className="relative">
-                <img 
-                  src="https://i.ibb.co/xSvmb0X9/Software-integration-rafiki.png" 
-                  alt="Integrações de Sistemas"
-                  className="rounded-lg w-full"
-                />
-                <div className="absolute -bottom-4 -left-4 bg-primary/10 border border-primary/20 rounded-lg p-4 backdrop-blur-sm">
-                  <Zap className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
         </div>
       </section>

@@ -39,18 +39,6 @@ const ServiceEcommerce = () => {
               </div>
             </AnimatedSection>
             
-            <AnimatedSection delay={200} className="lg:col-span-5">
-              <div className="relative">
-                <img 
-                  src="https://i.ibb.co/n26RLZ5/Ecommerce-web-page-amico.png" 
-                  alt="E-commerce"
-                  className="rounded-lg w-full"
-                />
-                <div className="absolute -bottom-4 -left-4 bg-primary/10 border border-primary/20 rounded-lg p-4 backdrop-blur-sm">
-                  <ShoppingCart className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
         </div>
       </section>
