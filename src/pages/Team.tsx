@@ -30,13 +30,19 @@ const Team = () => {
       role: "CCO",
       description: "Comunicação, relacionamento com clientes e identidade de marca.",
       email: "snoows2marina@outlook.com"
+    },
+    {
+      name: "Ruan Oliveira",
+      role: "SSO",
+      description: "Administração, Moderação e Gerenciamento.",
+      email: null
     }
   ];
 
   const devTeam = [
-    { name: "João Silva", role: "Front-end Developer", stack: ["React", "TypeScript", "Tailwind"] },
-    { name: "Maria Souza", role: "Back-end Developer", stack: ["Node.js", "Python", "PostgreSQL"] },
-    { name: "Carlos Pereira", role: "Data Engineer", stack: ["Python", "SQL", "Machine Learning"] }
+    { name: "Caio Frederico", role: "Back-end Developer", stack: ["Java", "SpringBoot", "PostgreSQL", "Docker", "AWS"] },
+    { name: "Kleber Laranjeira", role: "Full Stack Developer", stack: ["JavaScript", "React", "Java", "Node.js", "TypeScript", "Python", "Kotlin"] },
+    { name: "Matheus Yuri", role: "Back-end Developer / DevOps e Arquiteto Cloud", stack: ["Java", "Python", "Shellscript", "framework Springboot"] }
   ];
 
   const supportTeam = [
