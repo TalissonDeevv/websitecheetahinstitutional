@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useState } from "react";
+import familySolidaritySvg from "@/assets/family-solidarity.svg";
 
 const CheetahSolidaria = () => {
   const [copiedPix, setCopiedPix] = useState(false);
@@ -26,23 +27,34 @@ const CheetahSolidaria = () => {
       <Header />
       
       {/* Hero - Asymmetric like other pages */}
-      <section className="pt-28 pb-20 px-4">
+      <section className="pt-28 pb-20 px-4 overflow-x-hidden overflow-y-visible">
         <div className="container mx-auto">
-          <AnimatedSection>
-            <div className="max-w-5xl">
-              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-                Responsabilidade Social
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
-                Cheetah<br />
-                <span className="text-primary">Solidária</span>
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Acreditamos que tecnologia e solidariedade podem transformar vidas. 
-                Por isso, destinamos parte de nossos resultados para causas sociais.
-              </p>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <AnimatedSection className="flex-1">
+              <div className="max-w-2xl">
+                <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
+                  Responsabilidade Social
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
+                  Cheetah<br />
+                  <span className="text-primary">Solidária</span>
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                  Acreditamos que tecnologia e solidariedade podem transformar vidas. 
+                  Por isso, destinamos parte de nossos resultados para causas sociais.
+                </p>
+              </div>
+            </AnimatedSection>
+            
+            {/* SVG Illustration - Static, no animation */}
+            <div className="hidden lg:flex items-center justify-center flex-shrink-0">
+              <img 
+                src={familySolidaritySvg} 
+                alt="Family solidarity illustration" 
+                className="w-[420px] h-[420px] xl:w-[480px] xl:h-[480px]"
+              />
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
