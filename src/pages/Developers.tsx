@@ -170,7 +170,7 @@ const Developers = () => {
                 <img 
                   src={pairProgrammingSvg} 
                   alt="Pair programming illustration" 
-                  className="w-80 h-80 xl:w-96 xl:h-96"
+                  className="w-[420px] h-[420px] xl:w-[480px] xl:h-[480px]"
                 />
               </div>
             </div>
