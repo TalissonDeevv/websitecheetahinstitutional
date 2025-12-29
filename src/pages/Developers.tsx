@@ -118,48 +118,113 @@ const Developers = () => {
       
       {/* Hero Section */}
       <AnimatedSection animation="fade-up">
-        <section className="pt-28 pb-20 px-4">
+        <section className="pt-28 pb-20 px-4 overflow-hidden">
           <div className="container mx-auto">
-            <div className="max-w-5xl">
-              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-                Programa de Comunidade Oficial
-              </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
-                Cheetah Developers<br />
-                <span className="text-primary">Brasil</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-medium">
-                Onde desenvolvedores evoluem juntos.
-              </p>
-              <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-10">
-                Um programa de comunidade oficial da Cheetah Solutions Network, criado para reunir 
-                pessoas apaixonadas por programação, tecnologia e inovação em um ambiente público, 
-                colaborativo e orientado ao aprendizado contínuo e à evolução técnica coletiva.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href="https://discord.gg/rY3HUQpECS" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+            <div className="flex items-center justify-between gap-8">
+              <div className="max-w-3xl">
+                <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
+                  Programa de Comunidade Oficial
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
+                  Cheetah Developers<br />
+                  <span className="text-primary">Brasil</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-medium">
+                  Onde desenvolvedores evoluem juntos.
+                </p>
+                <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-10">
+                  Um programa de comunidade oficial da Cheetah Solutions Network, criado para reunir 
+                  pessoas apaixonadas por programação, tecnologia e inovação em um ambiente público, 
+                  colaborativo e orientado ao aprendizado contínuo e à evolução técnica coletiva.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a 
+                    href="https://discord.gg/rY3HUQpECS" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
+                      size="lg" 
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+                    >
+                      Entrar para a Comunidade
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
+                  <a href="#areas-tecnicas">
+                    <Button 
+                      size="lg" 
+                      variant="outline"
+                      className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground font-medium"
+                    >
+                      Conhecer as Áreas Técnicas
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
+                </div>
+              </div>
+              
+              {/* Community SVG Icon - Right Side */}
+              <div className="hidden lg:flex items-center justify-center flex-shrink-0">
+                <svg 
+                  viewBox="0 0 200 200" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="1.5" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="w-64 h-64 xl:w-80 xl:h-80 text-primary/40 dark:text-primary/30"
                 >
-                  <Button 
-                    size="lg" 
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
-                  >
-                    Entrar para a Comunidade
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                </a>
-                <a href="#areas-tecnicas">
-                  <Button 
-                    size="lg" 
-                    variant="outline"
-                    className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground font-medium"
-                  >
-                    Conhecer as Áreas Técnicas
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </a>
+                  {/* Central connection hub */}
+                  <circle cx="100" cy="100" r="12" strokeWidth="2" />
+                  
+                  {/* Developer nodes - representing community members */}
+                  {/* Top */}
+                  <circle cx="100" cy="40" r="16" />
+                  <circle cx="100" cy="40" r="8" />
+                  
+                  {/* Top Right */}
+                  <circle cx="152" cy="60" r="14" />
+                  <circle cx="152" cy="60" r="7" />
+                  
+                  {/* Right */}
+                  <circle cx="165" cy="110" r="12" />
+                  <circle cx="165" cy="110" r="6" />
+                  
+                  {/* Bottom Right */}
+                  <circle cx="145" cy="155" r="15" />
+                  <circle cx="145" cy="155" r="7.5" />
+                  
+                  {/* Bottom */}
+                  <circle cx="100" cy="165" r="13" />
+                  <circle cx="100" cy="165" r="6.5" />
+                  
+                  {/* Bottom Left */}
+                  <circle cx="55" cy="155" r="14" />
+                  <circle cx="55" cy="155" r="7" />
+                  
+                  {/* Left */}
+                  <circle cx="35" cy="105" r="11" />
+                  <circle cx="35" cy="105" r="5.5" />
+                  
+                  {/* Top Left */}
+                  <circle cx="50" cy="55" r="15" />
+                  <circle cx="50" cy="55" r="7.5" />
+                  
+                  {/* Connection lines from center to nodes */}
+                  <line x1="100" y1="88" x2="100" y2="56" />
+                  <line x1="110" y1="92" x2="140" y2="68" />
+                  <line x1="112" y1="100" x2="153" y2="110" />
+                  <line x1="108" y1="110" x2="132" y2="145" />
+                  <line x1="100" y1="112" x2="100" y2="152" />
+                  <line x1="92" y1="110" x2="68" y2="145" />
+                  <line x1="88" y1="100" x2="46" y2="105" />
+                  <line x1="90" y1="92" x2="63" y2="63" />
+                  
+                  {/* Code brackets - subtle tech element */}
+                  <path d="M85 95 L80 100 L85 105" strokeWidth="2" />
+                  <path d="M115 95 L120 100 L115 105" strokeWidth="2" />
+                </svg>
               </div>
             </div>
           </div>
