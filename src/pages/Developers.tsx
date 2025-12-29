@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import pairProgrammingSvg from "@/assets/pair-programming.svg";
 
 const Developers = () => {
   const technicalAreas = [
@@ -164,67 +165,13 @@ const Developers = () => {
                 </div>
               </div>
               
-              {/* Community SVG Icon - Right Side */}
+              {/* Pair Programming SVG - Right Side */}
               <div className="hidden lg:flex items-center justify-center flex-shrink-0">
-                <svg 
-                  viewBox="0 0 200 200" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="1.5" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                  className="w-64 h-64 xl:w-80 xl:h-80 text-primary/40 dark:text-primary/30"
-                >
-                  {/* Central connection hub */}
-                  <circle cx="100" cy="100" r="12" strokeWidth="2" />
-                  
-                  {/* Developer nodes - representing community members */}
-                  {/* Top */}
-                  <circle cx="100" cy="40" r="16" />
-                  <circle cx="100" cy="40" r="8" />
-                  
-                  {/* Top Right */}
-                  <circle cx="152" cy="60" r="14" />
-                  <circle cx="152" cy="60" r="7" />
-                  
-                  {/* Right */}
-                  <circle cx="165" cy="110" r="12" />
-                  <circle cx="165" cy="110" r="6" />
-                  
-                  {/* Bottom Right */}
-                  <circle cx="145" cy="155" r="15" />
-                  <circle cx="145" cy="155" r="7.5" />
-                  
-                  {/* Bottom */}
-                  <circle cx="100" cy="165" r="13" />
-                  <circle cx="100" cy="165" r="6.5" />
-                  
-                  {/* Bottom Left */}
-                  <circle cx="55" cy="155" r="14" />
-                  <circle cx="55" cy="155" r="7" />
-                  
-                  {/* Left */}
-                  <circle cx="35" cy="105" r="11" />
-                  <circle cx="35" cy="105" r="5.5" />
-                  
-                  {/* Top Left */}
-                  <circle cx="50" cy="55" r="15" />
-                  <circle cx="50" cy="55" r="7.5" />
-                  
-                  {/* Connection lines from center to nodes */}
-                  <line x1="100" y1="88" x2="100" y2="56" />
-                  <line x1="110" y1="92" x2="140" y2="68" />
-                  <line x1="112" y1="100" x2="153" y2="110" />
-                  <line x1="108" y1="110" x2="132" y2="145" />
-                  <line x1="100" y1="112" x2="100" y2="152" />
-                  <line x1="92" y1="110" x2="68" y2="145" />
-                  <line x1="88" y1="100" x2="46" y2="105" />
-                  <line x1="90" y1="92" x2="63" y2="63" />
-                  
-                  {/* Code brackets - subtle tech element */}
-                  <path d="M85 95 L80 100 L85 105" strokeWidth="2" />
-                  <path d="M115 95 L120 100 L115 105" strokeWidth="2" />
-                </svg>
+                <img 
+                  src={pairProgrammingSvg} 
+                  alt="Pair programming illustration" 
+                  className="w-80 h-80 xl:w-96 xl:h-96"
+                />
               </div>
             </div>
           </div>
