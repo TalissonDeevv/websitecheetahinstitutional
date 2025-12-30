@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Copy, ExternalLink, Users, Target, HandHeart, Building } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -10,10 +9,6 @@ import familySolidaritySvg from "@/assets/family-solidarity.svg";
 
 const CheetahSolidaria = () => {
   const [copiedPix, setCopiedPix] = useState(false);
-  
-  const metaTotal = 100000;
-  const valorArrecadado = 32500;
-  const progressoPercentual = (valorArrecadado / metaTotal) * 100;
   const aacdonPIX = "03.738.013/0001-02";
   
   const copyPixToClipboard = () => {
@@ -46,15 +41,24 @@ const CheetahSolidaria = () => {
               </div>
             </AnimatedSection>
             
-            {/* SVG Illustration - Static, no animation */}
-            <div className="hidden lg:flex items-center justify-center flex-shrink-0">
+            {/* SVG Illustration - Desktop with animation */}
+            <AnimatedSection animation="fade-left" delay={150} className="hidden lg:flex items-center justify-center flex-shrink-0">
               <img 
                 src={familySolidaritySvg} 
                 alt="Family solidarity illustration" 
                 className="w-[420px] h-[420px] xl:w-[480px] xl:h-[480px]"
               />
-            </div>
+            </AnimatedSection>
           </div>
+          
+          {/* SVG Illustration - Mobile/Tablet with animation */}
+          <AnimatedSection animation="fade-up" delay={200} className="flex lg:hidden items-center justify-center mt-8">
+            <img 
+              src={familySolidaritySvg} 
+              alt="Family solidarity illustration" 
+              className="w-64 h-64 sm:w-80 sm:h-80"
+            />
+          </AnimatedSection>
         </div>
       </section>
 
@@ -158,46 +162,49 @@ const CheetahSolidaria = () => {
         </div>
       </section>
 
-      {/* Meta Coletiva */}
+      {/* Vídeo Institucional Teleton */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <AnimatedSection>
-              <div className="bg-card border border-border rounded-xl p-8 md:p-12">
-                <div className="text-center mb-8">
-                  <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
-                    Meta Coletiva 2025
-                  </span>
-                  <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                    Juntos podemos mais
-                  </h2>
-                </div>
-                
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">Valor arrecadado</p>
-                    <p className="text-4xl font-bold text-primary">
-                      R$ {valorArrecadado.toLocaleString('pt-BR')}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm text-muted-foreground mb-1">Meta</p>
-                    <p className="text-xl font-semibold text-foreground">
-                      R$ {metaTotal.toLocaleString('pt-BR')}
-                    </p>
-                  </div>
-                </div>
-                
-                <Progress value={progressoPercentual} className="h-3 mb-4" />
-                
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">
-                    {progressoPercentual.toFixed(1)}% da meta alcançado
-                  </span>
-                  <span className="text-muted-foreground">
-                    Faltam R$ {(metaTotal - valorArrecadado).toLocaleString('pt-BR')}
-                  </span>
-                </div>
+              <div className="text-center mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  Teleton é Solidariedade. Teleton é Gratidão!
+                </h2>
+              </div>
+              
+              <div className="mb-8">
+                <p className="text-muted-foreground text-center leading-relaxed max-w-2xl mx-auto">
+                  A Cheetah Solidária acredita que tecnologia também é sobre pessoas. Apoiar iniciativas 
+                  como o Teleton é reforçar nosso compromisso com impacto social, inclusão e transformação 
+                  real de vidas.
+                </p>
+              </div>
+              
+              {/* YouTube Video Embed */}
+              <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-secondary/50">
+                <iframe
+                  src="https://www.youtube.com/embed/HNK4VIu8M9I"
+                  title="Teleton - Vídeo Institucional"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+              
+              {/* Credits */}
+              <div className="mt-6 text-center">
+                <p className="text-sm text-muted-foreground">
+                  Vídeo do canal oficial{" "}
+                  <a 
+                    href="https://www.youtube.com/@teleton" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    Teleton AACD
+                  </a>
+                </p>
               </div>
             </AnimatedSection>
           </div>
