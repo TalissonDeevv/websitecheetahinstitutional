@@ -165,7 +165,7 @@ const Developers = () => {
                 </div>
               </div>
               
-              {/* Pair Programming SVG - Right Side */}
+              {/* Pair Programming SVG - Right Side (Desktop) */}
               <div className="hidden lg:flex items-center justify-center flex-shrink-0">
                 <img 
                   src={pairProgrammingSvg} 
@@ -174,7 +174,16 @@ const Developers = () => {
                 />
               </div>
             </div>
-          </div>
+            
+            {/* Pair Programming SVG - Mobile/Tablet */}
+            <div className="flex lg:hidden items-center justify-center mt-8">
+              <img 
+                src={pairProgrammingSvg} 
+                alt="Pair programming illustration" 
+                className="w-64 h-64 sm:w-80 sm:h-80"
+              />
+            </div>
+            </div>
         </section>
       </AnimatedSection>
 
