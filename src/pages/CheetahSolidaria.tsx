@@ -22,45 +22,47 @@ const CheetahSolidaria = () => {
       <Header />
       
       {/* Hero - Asymmetric like other pages */}
-      <section className="pt-28 pb-20 px-4 overflow-x-hidden overflow-y-visible">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-            <AnimatedSection className="flex-1">
-              <div className="max-w-2xl">
-                <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-                  Responsabilidade Social
-                </p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
-                  Cheetah<br />
-                  <span className="text-primary">Solidária</span>
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                  Acreditamos que tecnologia e solidariedade podem transformar vidas. 
-                  Por isso, destinamos parte de nossos resultados para causas sociais.
-                </p>
+      <AnimatedSection animation="fade-up">
+        <section className="pt-28 pb-20 px-4 overflow-x-hidden overflow-y-visible">
+          <div className="container mx-auto">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              <div className="flex-1">
+                <div className="max-w-2xl">
+                  <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
+                    Responsabilidade Social
+                  </p>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
+                    Cheetah<br />
+                    <span className="text-primary">Solidária</span>
+                  </h1>
+                  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                    Acreditamos que tecnologia e solidariedade podem transformar vidas. 
+                    Por isso, destinamos parte de nossos resultados para causas sociais.
+                  </p>
+                </div>
               </div>
-            </AnimatedSection>
+              
+              {/* SVG Illustration - Desktop */}
+              <div className="hidden lg:flex items-center justify-center flex-shrink-0">
+                <img 
+                  src={familySolidaritySvg} 
+                  alt="Family solidarity illustration" 
+                  className="w-[420px] h-[420px] xl:w-[480px] xl:h-[480px]"
+                />
+              </div>
+            </div>
             
-            {/* SVG Illustration - Desktop with animation */}
-            <AnimatedSection animation="fade-left" delay={150} className="hidden lg:flex items-center justify-center flex-shrink-0">
+            {/* SVG Illustration - Mobile/Tablet */}
+            <div className="flex lg:hidden items-center justify-center mt-8">
               <img 
                 src={familySolidaritySvg} 
                 alt="Family solidarity illustration" 
-                className="w-[420px] h-[420px] xl:w-[480px] xl:h-[480px]"
+                className="w-64 h-64 sm:w-80 sm:h-80"
               />
-            </AnimatedSection>
+            </div>
           </div>
-          
-          {/* SVG Illustration - Mobile/Tablet with animation */}
-          <AnimatedSection animation="fade-up" delay={200} className="flex lg:hidden items-center justify-center mt-8">
-            <img 
-              src={familySolidaritySvg} 
-              alt="Family solidarity illustration" 
-              className="w-64 h-64 sm:w-80 sm:h-80"
-            />
-          </AnimatedSection>
-        </div>
-      </section>
+        </section>
+      </AnimatedSection>
 
       {/* Sobre o Projeto */}
       <section className="py-20 px-4">
@@ -165,8 +167,8 @@ const CheetahSolidaria = () => {
       {/* Vídeo Institucional Teleton */}
       <section className="relative py-20 px-4 overflow-hidden">
         {/* Glow effect - similar to hero */}
-        <div className="absolute inset-x-0 top-0 h-96 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#0047ab]/10 dark:bg-[#0047ab]/20 rounded-full blur-[100px]" />
+        <div className="absolute inset-x-0 top-0 h-[500px] pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#0047ab]/20 dark:bg-[#0047ab]/35 rounded-full blur-[120px]" />
         </div>
         
         <div className="container mx-auto relative z-10">
