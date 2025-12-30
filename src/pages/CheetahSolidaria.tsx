@@ -163,50 +163,139 @@ const CheetahSolidaria = () => {
       </section>
 
       {/* Vídeo Institucional Teleton */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        {/* Glow effect - similar to hero */}
+        <div className="absolute inset-x-0 top-0 h-96 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#0047ab]/10 dark:bg-[#0047ab]/20 rounded-full blur-[100px]" />
+        </div>
+        
+        <div className="container mx-auto relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold">
+                Teleton é Solidariedade. Teleton é Gratidão!
+              </h2>
+            </div>
+            
+            <div className="mb-10">
+              <p className="text-muted-foreground text-center leading-relaxed max-w-2xl mx-auto text-lg">
+                A Cheetah Solidária acredita que tecnologia também é sobre pessoas. Apoiar iniciativas 
+                como o Teleton é reforçar nosso compromisso com impacto social, inclusão e transformação 
+                real de vidas.
+              </p>
+            </div>
+            
+            {/* YouTube Video Embed with border and shadow */}
+            <div 
+              className="relative w-full aspect-video rounded-2xl overflow-hidden"
+              style={{
+                border: '2px solid #0047ab',
+                boxShadow: '0 8px 32px rgba(0, 71, 171, 0.2), 0 2px 8px rgba(0, 71, 171, 0.1)'
+              }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/HNK4VIu8M9I"
+                title="Teleton - Vídeo Institucional"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+            
+            {/* Credits */}
+            <div className="mt-6 text-center">
+              <p className="text-sm text-muted-foreground">
+                Vídeo do canal oficial{" "}
+                <a 
+                  href="https://www.youtube.com/@teleton" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Teleton AACD
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Por que essa causa importa */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <AnimatedSection>
-              <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold">
-                  Teleton é Solidariedade. Teleton é Gratidão!
-                </h2>
-              </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <Users className="h-8 w-8 text-primary mx-auto mb-4 opacity-70" />
+              <h2 className="text-2xl md:text-3xl font-bold">
+                Mais do que uma causa, uma vivência real
+              </h2>
+            </div>
+            
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                A Cheetah Solidária nasce de uma vivência real.
+              </p>
+              <p>
+                Convivo com uma deficiência física e, ao longo da minha trajetória, frequento a AACD. 
+                De perto, pude ver o impacto que um atendimento especializado, humano e acessível pode 
+                ter na vida de uma pessoa — não apenas no aspecto físico, mas também emocional e social.
+              </p>
+              <p>
+                Instituições como a AACD não representam apenas tratamento, mas oportunidade, dignidade 
+                e recomeços. Para muitas famílias, esse apoio faz toda a diferença.
+              </p>
+              <p>
+                Apoiar iniciativas como o Teleton é reconhecer que o progresso não se mede apenas por 
+                tecnologia ou negócios, mas também pela capacidade de gerar impacto positivo na vida das pessoas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nosso Compromisso Social */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <HandHeart className="h-8 w-8 text-primary mx-auto mb-4 opacity-70" />
+              <h2 className="text-2xl md:text-3xl font-bold">
+                Nosso compromisso vai além da tecnologia
+              </h2>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-muted-foreground leading-relaxed text-lg max-w-2xl mx-auto mb-10">
+                A Cheetah Solutions Network acredita que inovação também é responsabilidade social. 
+                Por meio da Cheetah Solidária, buscamos apoiar, divulgar e fortalecer iniciativas que 
+                promovem inclusão, acessibilidade e qualidade de vida, alinhando tecnologia, consciência 
+                social e impacto positivo.
+              </p>
               
-              <div className="mb-8">
-                <p className="text-muted-foreground text-center leading-relaxed max-w-2xl mx-auto">
-                  A Cheetah Solidária acredita que tecnologia também é sobre pessoas. Apoiar iniciativas 
-                  como o Teleton é reforçar nosso compromisso com impacto social, inclusão e transformação 
-                  real de vidas.
-                </p>
+              {/* Discrete CTAs */}
+              <div className="flex flex-wrap justify-center gap-4">
+                <a 
+                  href="https://aacd.org.br/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" className="border-border text-muted-foreground hover:text-foreground">
+                    Conheça o trabalho da AACD
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
+                <a 
+                  href="https://www.youtube.com/@teleton" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" className="border-border text-muted-foreground hover:text-foreground">
+                    Saiba mais sobre o Teleton
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
               </div>
-              
-              {/* YouTube Video Embed */}
-              <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-secondary/50">
-                <iframe
-                  src="https://www.youtube.com/embed/HNK4VIu8M9I"
-                  title="Teleton - Vídeo Institucional"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
-              
-              {/* Credits */}
-              <div className="mt-6 text-center">
-                <p className="text-sm text-muted-foreground">
-                  Vídeo do canal oficial{" "}
-                  <a 
-                    href="https://www.youtube.com/@teleton" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    Teleton AACD
-                  </a>
-                </p>
-              </div>
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
