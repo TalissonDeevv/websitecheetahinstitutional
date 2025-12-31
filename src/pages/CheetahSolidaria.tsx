@@ -184,21 +184,22 @@ const CheetahSolidaria = () => {
             
             {/* YouTube Video Embed with centered glow effect */}
             <div className="relative">
-              {/* Glow effect - centered on video */}
+              {/* Glow effect - centered on video - light mode */}
               <div 
-                className="absolute inset-0 pointer-events-none"
+                className="absolute inset-0 pointer-events-none dark:hidden"
                 style={{
-                  background: 'radial-gradient(ellipse at center, rgba(0, 71, 171, 0.15) 0%, rgba(0, 71, 171, 0.08) 40%, transparent 70%)',
-                  transform: 'scale(1.3)',
-                  filter: 'blur(40px)'
+                  background: 'radial-gradient(ellipse at center, rgba(0, 71, 171, 0.25) 0%, rgba(0, 71, 171, 0.12) 45%, transparent 75%)',
+                  transform: 'scale(1.4)',
+                  filter: 'blur(50px)'
                 }}
               />
+              {/* Glow effect - centered on video - dark mode */}
               <div 
-                className="dark:block hidden absolute inset-0 pointer-events-none"
+                className="absolute inset-0 pointer-events-none hidden dark:block"
                 style={{
-                  background: 'radial-gradient(ellipse at center, rgba(0, 71, 171, 0.25) 0%, rgba(0, 71, 171, 0.12) 40%, transparent 70%)',
-                  transform: 'scale(1.3)',
-                  filter: 'blur(40px)'
+                  background: 'radial-gradient(ellipse at center, rgba(0, 71, 171, 0.4) 0%, rgba(0, 71, 171, 0.2) 45%, transparent 75%)',
+                  transform: 'scale(1.4)',
+                  filter: 'blur(50px)'
                 }}
               />
               
@@ -206,7 +207,7 @@ const CheetahSolidaria = () => {
                 className="relative w-full aspect-video rounded-2xl overflow-hidden"
                 style={{
                   border: '2px solid #0047ab',
-                  boxShadow: '0 0 40px rgba(0, 71, 171, 0.15), 0 0 80px rgba(0, 71, 171, 0.08)'
+                  boxShadow: '0 0 50px rgba(0, 71, 171, 0.2), 0 0 100px rgba(0, 71, 171, 0.1)'
                 }}
               >
                 <iframe
@@ -237,33 +238,29 @@ const CheetahSolidaria = () => {
         </div>
       </section>
 
-      {/* Por que essa causa importa */}
+      {/* O que a AACD representa */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
               <Users className="h-8 w-8 text-primary mx-auto mb-4 opacity-70" />
               <h2 className="text-2xl md:text-3xl font-bold">
-                Mais do que apoiar, compreender
+                O que a AACD representa
               </h2>
             </div>
             
-            <div className="space-y-6 text-muted-foreground leading-relaxed">
+            <div className="space-y-6 text-muted-foreground leading-relaxed text-center">
               <p>
-                A Cheetah Solidária nasce de uma vivência real.
+                A AACD é referência nacional em reabilitação de pessoas com deficiência física, 
+                oferecendo atendimento de excelência há mais de 70 anos.
               </p>
               <p>
-                Conviver com uma deficiência física e acompanhar de perto o trabalho da AACD permite 
-                enxergar algo que muitas vezes passa despercebido: o impacto verdadeiro de um atendimento 
-                humano, especializado e acessível na vida de uma pessoa.
+                Seu trabalho vai além do tratamento clínico — promove autonomia, inclusão social 
+                e dignidade para milhares de brasileiros que dependem desse suporte especializado.
               </p>
               <p>
-                Esse impacto vai além do tratamento. Ele envolve autonomia, confiança, inclusão e a 
-                possibilidade de seguir evoluindo — técnica, emocional e socialmente.
-              </p>
-              <p>
-                Apoiar iniciativas como o Teleton é reconhecer que tecnologia, inovação e progresso só 
-                fazem sentido quando caminham junto com responsabilidade social e impacto humano real.
+                O Teleton é a principal fonte de recursos da instituição, permitindo que o 
+                atendimento gratuito continue alcançando quem mais precisa.
               </p>
             </div>
           </div>
