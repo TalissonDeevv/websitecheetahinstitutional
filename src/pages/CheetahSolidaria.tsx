@@ -166,11 +166,6 @@ const CheetahSolidaria = () => {
 
       {/* Vídeo Institucional Teleton */}
       <section className="relative py-20 px-4 overflow-hidden">
-        {/* Glow effect - similar to hero */}
-        <div className="absolute inset-x-0 top-0 h-[500px] pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#0047ab]/20 dark:bg-[#0047ab]/35 rounded-full blur-[120px]" />
-        </div>
-        
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
@@ -187,21 +182,41 @@ const CheetahSolidaria = () => {
               </p>
             </div>
             
-            {/* YouTube Video Embed with border and shadow */}
-            <div 
-              className="relative w-full aspect-video rounded-2xl overflow-hidden"
-              style={{
-                border: '2px solid #0047ab',
-                boxShadow: '0 8px 32px rgba(0, 71, 171, 0.2), 0 2px 8px rgba(0, 71, 171, 0.1)'
-              }}
-            >
-              <iframe
-                src="https://www.youtube.com/embed/HNK4VIu8M9I"
-                title="Teleton - Vídeo Institucional"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
+            {/* YouTube Video Embed with centered glow effect */}
+            <div className="relative">
+              {/* Glow effect - centered on video */}
+              <div 
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: 'radial-gradient(ellipse at center, rgba(0, 71, 171, 0.15) 0%, rgba(0, 71, 171, 0.08) 40%, transparent 70%)',
+                  transform: 'scale(1.3)',
+                  filter: 'blur(40px)'
+                }}
               />
+              <div 
+                className="dark:block hidden absolute inset-0 pointer-events-none"
+                style={{
+                  background: 'radial-gradient(ellipse at center, rgba(0, 71, 171, 0.25) 0%, rgba(0, 71, 171, 0.12) 40%, transparent 70%)',
+                  transform: 'scale(1.3)',
+                  filter: 'blur(40px)'
+                }}
+              />
+              
+              <div 
+                className="relative w-full aspect-video rounded-2xl overflow-hidden"
+                style={{
+                  border: '2px solid #0047ab',
+                  boxShadow: '0 0 40px rgba(0, 71, 171, 0.15), 0 0 80px rgba(0, 71, 171, 0.08)'
+                }}
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/HNK4VIu8M9I"
+                  title="Teleton - Vídeo Institucional"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
             </div>
             
             {/* Credits */}
@@ -229,7 +244,7 @@ const CheetahSolidaria = () => {
             <div className="text-center mb-10">
               <Users className="h-8 w-8 text-primary mx-auto mb-4 opacity-70" />
               <h2 className="text-2xl md:text-3xl font-bold">
-                Mais do que uma causa, uma vivência real
+                Mais do que apoiar, compreender
               </h2>
             </div>
             
@@ -238,17 +253,17 @@ const CheetahSolidaria = () => {
                 A Cheetah Solidária nasce de uma vivência real.
               </p>
               <p>
-                Convivo com uma deficiência física e, ao longo da minha trajetória, frequento a AACD. 
-                De perto, pude ver o impacto que um atendimento especializado, humano e acessível pode 
-                ter na vida de uma pessoa — não apenas no aspecto físico, mas também emocional e social.
+                Conviver com uma deficiência física e acompanhar de perto o trabalho da AACD permite 
+                enxergar algo que muitas vezes passa despercebido: o impacto verdadeiro de um atendimento 
+                humano, especializado e acessível na vida de uma pessoa.
               </p>
               <p>
-                Instituições como a AACD não representam apenas tratamento, mas oportunidade, dignidade 
-                e recomeços. Para muitas famílias, esse apoio faz toda a diferença.
+                Esse impacto vai além do tratamento. Ele envolve autonomia, confiança, inclusão e a 
+                possibilidade de seguir evoluindo — técnica, emocional e socialmente.
               </p>
               <p>
-                Apoiar iniciativas como o Teleton é reconhecer que o progresso não se mede apenas por 
-                tecnologia ou negócios, mas também pela capacidade de gerar impacto positivo na vida das pessoas.
+                Apoiar iniciativas como o Teleton é reconhecer que tecnologia, inovação e progresso só 
+                fazem sentido quando caminham junto com responsabilidade social e impacto humano real.
               </p>
             </div>
           </div>
