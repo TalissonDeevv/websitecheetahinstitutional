@@ -1,30 +1,32 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Send, MessageCircle, CheckCircle } from "lucide-react";
+import { Send, MessageCircle, CheckCircle, AlertCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BudgetTermsAccordion from "@/components/BudgetTermsAccordion";
 import AnimatedSection from "@/components/AnimatedSection";
+import { useBudgetForm } from "@/hooks/useBudgetForm";
+import { toast } from "@/hooks/use-toast";
 
 const Budget = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    service: "",
-    description: "",
-    budget: "",
-    timeline: "",
-    features: [] as string[]
-  });
-
-  const [acceptTerms, setAcceptTerms] = useState(false);
+  const {
+    formData,
+    updateField,
+    acceptTerms,
+    setAcceptTerms,
+    handleFeatureChange,
+    getSuggestedFeatures,
+    getDescriptionValidation,
+    getLeadQualification,
+    isPhoneValid,
+    isFormValid,
+    submitted,
+    markAsSubmitted
+  } = useBudgetForm();
 
   const services = [
     { name: "Bot Discord/Telegram", price: "A partir de R$ 500" },
@@ -48,16 +50,13 @@ const Budget = () => {
     "Analytics"
   ];
 
-  const handleFeatureChange = (featureName: string, checked: boolean) => {
-    setFormData(prev => ({
-      ...prev,
-      features: checked 
-        ? [...prev.features, featureName]
-        : prev.features.filter(f => f !== featureName)
-    }));
-  };
+  const suggestedFeatures = getSuggestedFeatures();
+  const descriptionValidation = getDescriptionValidation();
 
   const generateWhatsAppMessage = () => {
+    // Obter qualificação interna para incluir na mensagem (não visível para usuário)
+    const qualification = getLeadQualification();
+    
     const message = `Olá! Gostaria de solicitar um orçamento:
 
 Nome: ${formData.name}
@@ -69,13 +68,24 @@ Serviço: ${formData.service}
 Descrição: ${formData.description}
 Orçamento: ${formData.budget}
 Prazo: ${formData.timeline}
-${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` : ''}`;
+${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` : ''}
+
+[Lead: ${qualification}]`;
 
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/5511999999999?text=${encodedMessage}`, '_blank');
+    
+    markAsSubmitted();
+    toast({
+      title: "Solicitação enviada",
+      description: "Redirecionando para o WhatsApp...",
+    });
   };
 
   const handleSubmitEmail = () => {
+    // Obter qualificação interna para incluir na mensagem (não visível para usuário)
+    const qualification = getLeadQualification();
+    
     const subject = encodeURIComponent("Solicitação de Orçamento - Cheetah Network");
     const body = encodeURIComponent(`Nome: ${formData.name}
 Email: ${formData.email}
@@ -86,16 +96,33 @@ Serviço: ${formData.service}
 Descrição: ${formData.description}
 Orçamento: ${formData.budget}
 Prazo: ${formData.timeline}
-${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` : ''}`);
+${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` : ''}
+
+[Lead: ${qualification}]`);
 
     window.open(`mailto:contato@cheetahnetwork.com?subject=${subject}&body=${body}`);
+    
+    markAsSubmitted();
+    toast({
+      title: "Solicitação enviada",
+      description: "Abrindo seu cliente de e-mail...",
+    });
   };
 
-  const isFormValid = formData.name && formData.email && formData.phone && formData.service && formData.description && acceptTerms;
+  const canSubmit = isFormValid();
+  const canUseWhatsApp = canSubmit && isPhoneValid();
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
+      
+      {/* Success feedback */}
+      {submitted && (
+        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-fade-in">
+          <CheckCircle className="h-5 w-5" />
+          <span>Solicitação enviada com sucesso!</span>
+        </div>
+      )}
       
       {/* Hero */}
       <AnimatedSection animation="fade-up">
@@ -125,29 +152,29 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
             {/* Main Form */}
             <div className="lg:col-span-7">
               <AnimatedSection animation="fade-up" delay={100}>
-                <div className="bg-card border border-border rounded-xl p-8">
-                  <h2 className="text-lg font-semibold mb-6">Dados do projeto</h2>
+                <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
+                  <h2 className="text-lg font-semibold mb-6 text-card-foreground">Dados do projeto</h2>
                   
                   <div className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name" className="text-xs text-muted-foreground">Nome *</Label>
+                        <Label htmlFor="name" className="text-xs text-muted-foreground font-medium">Nome *</Label>
                         <Input
                           id="name"
                           value={formData.name}
-                          onChange={(e) => setFormData(prev => ({...prev, name: e.target.value}))}
-                          className="bg-secondary border-border mt-1.5"
+                          onChange={(e) => updateField("name", e.target.value)}
+                          className="bg-secondary border-border mt-1.5 text-secondary-foreground placeholder:text-muted-foreground/60"
                           placeholder="Seu nome"
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email" className="text-xs text-muted-foreground">E-mail *</Label>
+                        <Label htmlFor="email" className="text-xs text-muted-foreground font-medium">E-mail *</Label>
                         <Input
                           id="email"
                           type="email"
                           value={formData.email}
-                          onChange={(e) => setFormData(prev => ({...prev, email: e.target.value}))}
-                          className="bg-secondary border-border mt-1.5"
+                          onChange={(e) => updateField("email", e.target.value)}
+                          className="bg-secondary border-border mt-1.5 text-secondary-foreground placeholder:text-muted-foreground/60"
                           placeholder="seu@email.com"
                         />
                       </div>
@@ -155,31 +182,34 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                     
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="phone" className="text-xs text-muted-foreground">Telefone *</Label>
+                        <Label htmlFor="phone" className="text-xs text-muted-foreground font-medium">Telefone *</Label>
                         <Input
                           id="phone"
                           value={formData.phone}
-                          onChange={(e) => setFormData(prev => ({...prev, phone: e.target.value}))}
-                          className="bg-secondary border-border mt-1.5"
+                          onChange={(e) => updateField("phone", e.target.value)}
+                          className="bg-secondary border-border mt-1.5 text-secondary-foreground placeholder:text-muted-foreground/60"
                           placeholder="(00) 00000-0000"
                         />
                       </div>
                       <div>
-                        <Label htmlFor="company" className="text-xs text-muted-foreground">Empresa</Label>
+                        <Label htmlFor="company" className="text-xs text-muted-foreground font-medium">Empresa</Label>
                         <Input
                           id="company"
                           value={formData.company}
-                          onChange={(e) => setFormData(prev => ({...prev, company: e.target.value}))}
-                          className="bg-secondary border-border mt-1.5"
+                          onChange={(e) => updateField("company", e.target.value)}
+                          className="bg-secondary border-border mt-1.5 text-secondary-foreground placeholder:text-muted-foreground/60"
                           placeholder="Opcional"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <Label className="text-xs text-muted-foreground">Tipo de serviço *</Label>
-                      <Select onValueChange={(value) => setFormData(prev => ({...prev, service: value}))}>
-                        <SelectTrigger className="bg-secondary border-border mt-1.5">
+                      <Label className="text-xs text-muted-foreground font-medium">Tipo de serviço *</Label>
+                      <Select 
+                        value={formData.service} 
+                        onValueChange={(value) => updateField("service", value)}
+                      >
+                        <SelectTrigger className="bg-secondary border-border mt-1.5 text-secondary-foreground">
                           <SelectValue placeholder="Selecione" />
                         </SelectTrigger>
                         <SelectContent>
@@ -193,21 +223,30 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                     </div>
 
                     <div>
-                      <Label htmlFor="description" className="text-xs text-muted-foreground">Descrição do projeto *</Label>
+                      <Label htmlFor="description" className="text-xs text-muted-foreground font-medium">Descrição do projeto *</Label>
                       <Textarea
                         id="description"
                         value={formData.description}
-                        onChange={(e) => setFormData(prev => ({...prev, description: e.target.value}))}
-                        className="bg-secondary border-border mt-1.5 min-h-[100px] resize-none"
+                        onChange={(e) => updateField("description", e.target.value)}
+                        className="bg-secondary border-border mt-1.5 min-h-[100px] resize-none text-secondary-foreground placeholder:text-muted-foreground/60"
                         placeholder="Descreva o que você precisa..."
                       />
+                      {descriptionValidation.message && (
+                        <p className="text-xs text-muted-foreground mt-1.5 flex items-center gap-1">
+                          <AlertCircle className="h-3 w-3" />
+                          {descriptionValidation.message}
+                        </p>
+                      )}
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <Label className="text-xs text-muted-foreground">Orçamento disponível</Label>
-                        <Select onValueChange={(value) => setFormData(prev => ({...prev, budget: value}))}>
-                          <SelectTrigger className="bg-secondary border-border mt-1.5">
+                        <Label className="text-xs text-muted-foreground font-medium">Orçamento disponível</Label>
+                        <Select 
+                          value={formData.budget}
+                          onValueChange={(value) => updateField("budget", value)}
+                        >
+                          <SelectTrigger className="bg-secondary border-border mt-1.5 text-secondary-foreground">
                             <SelectValue placeholder="Faixa" />
                           </SelectTrigger>
                           <SelectContent>
@@ -220,9 +259,12 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                         </Select>
                       </div>
                       <div>
-                        <Label className="text-xs text-muted-foreground">Prazo desejado</Label>
-                        <Select onValueChange={(value) => setFormData(prev => ({...prev, timeline: value}))}>
-                          <SelectTrigger className="bg-secondary border-border mt-1.5">
+                        <Label className="text-xs text-muted-foreground font-medium">Prazo desejado</Label>
+                        <Select 
+                          value={formData.timeline}
+                          onValueChange={(value) => updateField("timeline", value)}
+                        >
+                          <SelectTrigger className="bg-secondary border-border mt-1.5 text-secondary-foreground">
                             <SelectValue placeholder="Prazo" />
                           </SelectTrigger>
                           <SelectContent>
@@ -243,28 +285,52 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
             <div className="lg:col-span-5 space-y-6">
               <AnimatedSection animation="fade-left" delay={150}>
                 {/* Features */}
-                <div className="bg-card border border-border rounded-xl p-6">
-                  <h3 className="text-sm font-semibold mb-4">Recursos desejados</h3>
+                <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+                  <h3 className="text-sm font-semibold mb-4 text-card-foreground">Recursos desejados</h3>
                   <div className="grid grid-cols-2 gap-3">
-                    {features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-2">
-                        <Checkbox
-                          id={feature}
-                          onCheckedChange={(checked) => handleFeatureChange(feature, checked as boolean)}
-                          className="border-border"
-                        />
-                        <label htmlFor={feature} className="text-xs text-muted-foreground cursor-pointer">
-                          {feature}
-                        </label>
-                      </div>
-                    ))}
+                    {features.map((feature) => {
+                      const isSuggested = suggestedFeatures.includes(feature);
+                      const isChecked = formData.features.includes(feature);
+                      
+                      return (
+                        <div 
+                          key={feature} 
+                          className={`flex items-center gap-2 ${isSuggested && !isChecked ? 'opacity-100' : ''}`}
+                        >
+                          <Checkbox
+                            id={feature}
+                            checked={isChecked}
+                            onCheckedChange={(checked) => handleFeatureChange(feature, checked as boolean)}
+                            className="border-border data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                          />
+                          <label 
+                            htmlFor={feature} 
+                            className={`text-xs cursor-pointer ${
+                              isSuggested && !isChecked 
+                                ? 'text-primary font-medium' 
+                                : 'text-muted-foreground'
+                            }`}
+                          >
+                            {feature}
+                            {isSuggested && !isChecked && (
+                              <span className="text-[10px] ml-1 text-primary/70">•</span>
+                            )}
+                          </label>
+                        </div>
+                      );
+                    })}
                   </div>
+                  {suggestedFeatures.length > 0 && formData.service && (
+                    <p className="text-[10px] text-muted-foreground mt-3 border-t border-border pt-3">
+                      Recursos destacados são comuns para {formData.service}
+                    </p>
+                  )}
                 </div>
               </AnimatedSection>
 
               <AnimatedSection animation="fade-left" delay={200}>
                 {/* Terms & Submit */}
-                <div className="bg-card border border-border rounded-xl p-6">
+                <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
                   <BudgetTermsAccordion 
                     acceptTerms={acceptTerms}
                     setAcceptTerms={setAcceptTerms}
@@ -273,8 +339,8 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                   <div className="space-y-3 mt-6">
                     <Button
                       onClick={handleSubmitEmail}
-                      disabled={!isFormValid}
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground disabled:opacity-50"
+                      disabled={!canSubmit}
+                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <Send className="mr-2 h-4 w-4" />
                       Enviar por e-mail
@@ -282,23 +348,30 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                     
                     <Button
                       onClick={generateWhatsAppMessage}
-                      disabled={!isFormValid}
+                      disabled={!canUseWhatsApp}
                       variant="outline"
-                      className="w-full border-border disabled:opacity-50"
+                      className="w-full border-border text-foreground hover:bg-accent disabled:opacity-50 disabled:cursor-not-allowed"
+                      title={!isPhoneValid() && formData.phone ? "Informe um telefone válido para usar WhatsApp" : ""}
                     >
                       <MessageCircle className="mr-2 h-4 w-4" />
                       Enviar via WhatsApp
                     </Button>
+                    
+                    {!isPhoneValid() && formData.phone.length > 0 && (
+                      <p className="text-xs text-muted-foreground text-center">
+                        Telefone inválido para WhatsApp
+                      </p>
+                    )}
                   </div>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection animation="fade-left" delay={250}>
                 {/* Info */}
-                <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg">
+                <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg border border-border">
                   <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm font-medium">Orçamento gratuito</p>
+                    <p className="text-sm font-medium text-foreground">Orçamento gratuito</p>
                     <p className="text-xs text-muted-foreground">Sem compromisso. Você decide se quer prosseguir.</p>
                   </div>
                 </div>
