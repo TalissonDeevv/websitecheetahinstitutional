@@ -4,13 +4,104 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Send, MessageCircle, CheckCircle, AlertCircle } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { 
+  Send, 
+  MessageCircle, 
+  CheckCircle, 
+  AlertCircle,
+  FileText,
+  MessageSquare,
+  Rocket,
+  Shield,
+  Clock,
+  Headphones,
+  Code,
+  Zap
+} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BudgetTermsAccordion from "@/components/BudgetTermsAccordion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useBudgetForm } from "@/hooks/useBudgetForm";
 import { toast } from "@/hooks/use-toast";
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Solicitação",
+    description: "Você preenche o formulário com os detalhes do seu projeto",
+    icon: FileText
+  },
+  {
+    step: "02",
+    title: "Análise",
+    description: "Nossa equipe avalia os requisitos e complexidade",
+    icon: MessageSquare
+  },
+  {
+    step: "03",
+    title: "Proposta",
+    description: "Enviamos um orçamento detalhado em até 48h",
+    icon: Clock
+  },
+  {
+    step: "04",
+    title: "Desenvolvimento",
+    description: "Após aprovação, iniciamos o projeto com acompanhamento",
+    icon: Rocket
+  }
+];
+
+const benefits = [
+  {
+    title: "Código proprietário",
+    description: "Você recebe 100% do código-fonte ao final do projeto",
+    icon: Code
+  },
+  {
+    title: "Suporte dedicado",
+    description: "Acompanhamento durante todo o desenvolvimento",
+    icon: Headphones
+  },
+  {
+    title: "Entrega garantida",
+    description: "Compromisso com prazos e qualidade acordados",
+    icon: Shield
+  },
+  {
+    title: "Performance otimizada",
+    description: "Aplicações rápidas, seguras e escaláveis",
+    icon: Zap
+  }
+];
+
+const faqItems = [
+  {
+    question: "O orçamento é gratuito?",
+    answer: "Sim, a elaboração do orçamento é totalmente gratuita e sem compromisso. Você decide se quer prosseguir após receber nossa proposta."
+  },
+  {
+    question: "Qual o prazo para receber o orçamento?",
+    answer: "Retornamos em até 48 horas úteis com uma proposta detalhada. Projetos mais complexos podem necessitar de prazo adicional para análise."
+  },
+  {
+    question: "Como funciona o pagamento?",
+    answer: "Trabalhamos com pagamento parcelado: uma entrada para início do projeto e parcelas conforme entregas. Aceitamos PIX, boleto e cartão."
+  },
+  {
+    question: "Vocês oferecem suporte após a entrega?",
+    answer: "Sim, oferecemos garantia de 30 dias para correções e opções de contrato de manutenção mensal para suporte contínuo."
+  },
+  {
+    question: "Posso acompanhar o desenvolvimento?",
+    answer: "Sim, você terá acesso a um ambiente de homologação para acompanhar o progresso e validar cada etapa antes da entrega final."
+  },
+  {
+    question: "E se eu precisar de alterações no escopo?",
+    answer: "Mudanças de escopo são comuns e tratadas de forma transparente. Avaliamos o impacto e apresentamos um adendo ao orçamento original."
+  }
+];
 
 const Budget = () => {
   const {
@@ -378,6 +469,104 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
               </AnimatedSection>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 px-4 border-t border-border">
+        <div className="container mx-auto max-w-5xl">
+          <AnimatedSection animation="fade-up">
+            <div className="text-center mb-12">
+              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-4 font-medium">
+                Processo
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Como funciona
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {processSteps.map((item, index) => (
+              <AnimatedSection key={item.step} animation="fade-up" delay={index * 100}>
+                <div className="bg-card border border-border rounded-xl p-6 text-center h-full">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="text-xs text-primary font-medium">{item.step}</span>
+                  <h3 className="text-foreground font-semibold mt-1 mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 bg-secondary/30">
+        <div className="container mx-auto max-w-5xl">
+          <AnimatedSection animation="fade-up">
+            <div className="text-center mb-12">
+              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-4 font-medium">
+                Diferenciais
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Por que escolher a Cheetah
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <AnimatedSection key={benefit.title} animation="fade-up" delay={index * 100}>
+                <div className="flex items-start gap-4 p-5 bg-card border border-border rounded-xl">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                    <benefit.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-foreground font-semibold mb-1">{benefit.title}</h3>
+                    <p className="text-muted-foreground text-sm">{benefit.description}</p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-4 border-t border-border">
+        <div className="container mx-auto max-w-3xl">
+          <AnimatedSection animation="fade-up">
+            <div className="text-center mb-12">
+              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-4 font-medium">
+                Dúvidas
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Perguntas frequentes
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="fade-up" delay={100}>
+            <Accordion type="single" collapsible className="w-full space-y-3">
+              {faqItems.map((item, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`faq-${index}`}
+                  className="bg-card border border-border rounded-xl px-6 data-[state=open]:bg-card"
+                >
+                  <AccordionTrigger className="text-foreground hover:text-primary text-left py-4 text-sm font-medium">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-sm pb-4">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </AnimatedSection>
         </div>
       </section>
 
