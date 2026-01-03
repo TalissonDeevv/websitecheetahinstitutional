@@ -4,10 +4,18 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Sobre"
+        description="Conheça a Cheetah Solutions Network, uma software house focada em soluções digitais sob medida para empresas."
+        ogTitle="Quem Somos"
+        ogDescription="Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida para empresas que buscam eficiência, performance e escalabilidade."
+        ogUrl="/sobre"
+      />
       <Header />
       
       {/* Hero - Asymmetric */}
