@@ -29,7 +29,9 @@ import Footer from "@/components/Footer";
 import SubtleHighlight from "@/components/SubtleHighlight";
 import HeroBackground from "@/components/HeroBackground";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 import pairProgrammingSvg from "@/assets/pair-programming.svg";
+
 const Index = () => {
   const services = [
     {
@@ -177,6 +179,13 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-inter">
+      <SEO
+        title="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
+        description="Software house especializada no desenvolvimento de soluções digitais sob medida para empresas que exigem performance, escalabilidade e eficiência."
+        ogTitle="Desenvolvimento de Software Sob Medida"
+        ogDescription="Software house focada na criação de soluções digitais sob medida para negócios."
+        ogUrl="/"
+      />
       <Header />
       
       {/* Hero Section */}
