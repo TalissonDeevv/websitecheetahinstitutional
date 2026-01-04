@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const Team = () => {
   const leadership = [
@@ -51,6 +52,13 @@ const Team = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Equipes Técnicas"
+        description="Conheça a equipe técnica da Cheetah Solutions: desenvolvedores, liderança e profissionais de suporte comprometidos com excelência."
+        ogTitle="Equipes Técnicas"
+        ogDescription="Uma equipe técnica com foco em resultado. Profissionais que entendem de código e de negócio."
+        ogUrl="/equipe"
+      />
       <Header />
       
       {/* Hero */}

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const Services = () => {
   const services = [
@@ -78,6 +79,13 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Nossos Serviços"
+        description="Desenvolvimento de software sob medida: bots, websites, sistemas web, integrações, apps mobile e e-commerce. Soluções personalizadas para sua empresa."
+        ogTitle="Nossos Serviços"
+        ogDescription="Desenvolvimento de software sob medida para empresas. Bots, websites, sistemas web, integrações, apps mobile e e-commerce."
+        ogUrl="/servicos"
+      />
       <Header />
       
       {/* Hero - Asymmetric */}

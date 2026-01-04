@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const Blog = () => {
   const featuredPost = {
@@ -83,6 +84,13 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Blogs e Artigos"
+        description="Artigos sobre desenvolvimento de software, tecnologia e boas práticas. Conteúdo técnico direto ao ponto."
+        ogTitle="Blogs e Artigos"
+        ogDescription="Conteúdo técnico sobre desenvolvimento, tecnologia e boas práticas. Direto ao ponto."
+        ogUrl="/blog"
+      />
       <Header />
       
       {/* Hero */}
