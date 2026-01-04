@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const FAQ = () => {
   const faqCategories = [
@@ -75,6 +76,14 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Cheetah Solutions | Perguntas Frequentes"
+        description="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico."
+        ogTitle="Perguntas Frequentes"
+        ogDescription="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico."
+        ogUrl="/faq"
+        canonical="/faq"
+      />
       <Header />
       
       {/* Hero */}

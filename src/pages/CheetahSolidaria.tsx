@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useState } from "react";
 import familySolidaritySvg from "@/assets/family-solidarity.svg";
+import SEO from "@/components/SEO";
 
 const CheetahSolidaria = () => {
   const [copiedPix, setCopiedPix] = useState(false);
@@ -19,6 +20,14 @@ const CheetahSolidaria = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Cheetah Solutions | Cheetah Solidária"
+        description="Conheça a Cheetah Solidária, nossa iniciativa de responsabilidade social em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas."
+        ogTitle="Cheetah Solidária"
+        ogDescription="Conheça a Cheetah Solidária, nossa iniciativa de responsabilidade social em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas."
+        ogUrl="/cheetah-solidaria"
+        canonical="/cheetah-solidaria"
+      />
       <Header />
       
       {/* Hero - Asymmetric like other pages */}

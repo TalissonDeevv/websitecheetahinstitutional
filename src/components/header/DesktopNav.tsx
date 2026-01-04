@@ -46,34 +46,32 @@ const DesktopNav = () => {
         </Link>
       ))}
       
-      <div className="relative">
-        <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 outline-none focus:outline-none focus-visible:outline-none">
-            Mais
-            <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent 
-            align="end" 
-            sideOffset={8}
-            className="min-w-[180px] bg-popover border border-border shadow-lg z-[999]"
-          >
-            {moreMenuItems.map((item) => (
-              <DropdownMenuItem key={item.path} asChild>
-                <Link
-                  to={item.path}
-                  className={`w-full cursor-pointer transition-colors duration-200 ${
-                    isActive(item.path) 
-                      ? "text-primary bg-primary/10" 
-                      : "text-foreground hover:text-foreground hover:bg-accent"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
+      <DropdownMenu modal={false}>
+        <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 outline-none focus:outline-none focus-visible:outline-none">
+          Mais
+          <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent 
+          align="end" 
+          sideOffset={8}
+          className="min-w-[180px] bg-popover border border-border shadow-lg z-[9999]"
+        >
+          {moreMenuItems.map((item) => (
+            <DropdownMenuItem key={item.path} asChild>
+              <Link
+                to={item.path}
+                className={`w-full cursor-pointer transition-colors duration-200 ${
+                  isActive(item.path) 
+                    ? "text-primary bg-primary/10" 
+                    : "text-foreground hover:text-foreground hover:bg-accent"
+                }`}
+              >
+                {item.name}
+              </Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
 
       <a
         href="https://discord.gg/63qjkQwKmf"

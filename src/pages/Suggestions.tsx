@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const Suggestions = () => {
   const [name, setName] = useState("");
@@ -44,6 +45,14 @@ const Suggestions = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Cheetah Solutions | Sugestões e Melhorias"
+        description="Envie suas sugestões para a Cheetah Solutions Network. Sua opinião é fundamental para nossa evolução e melhoria contínua dos serviços."
+        ogTitle="Sugestões e Melhorias"
+        ogDescription="Envie suas sugestões para a Cheetah Solutions Network. Sua opinião é fundamental para nossa evolução e melhoria contínua dos serviços."
+        ogUrl="/sugestoes"
+        canonical="/sugestoes"
+      />
       <Header />
       
       {/* Hero - Asymmetric like other pages */}
