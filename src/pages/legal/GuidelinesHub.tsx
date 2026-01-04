@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const GuidelinesHub = () => {
   const policyGroups = [
@@ -66,6 +67,14 @@ const GuidelinesHub = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Cheetah Solutions | Diretrizes e Privacidade"
+        description="Diretrizes, políticas de privacidade e conformidade da Cheetah Solutions Network. Transparência e governança corporativa."
+        ogTitle="Diretrizes e Privacidade"
+        ogDescription="Diretrizes, políticas de privacidade e conformidade da Cheetah Solutions Network. Transparência e governança corporativa."
+        ogUrl="/diretrizes"
+        canonical="/diretrizes"
+      />
       <Header />
       
       {/* Hero Section */}

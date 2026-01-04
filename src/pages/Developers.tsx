@@ -10,6 +10,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import pairProgrammingSvg from "@/assets/pair-programming.svg";
+import SEO from "@/components/SEO";
 
 const Developers = () => {
   const technicalAreas = [
@@ -115,6 +116,14 @@ const Developers = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO 
+        title="Cheetah Solutions | Cheetah Developers Brasil"
+        description="Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia."
+        ogTitle="Cheetah Developers Brasil"
+        ogDescription="Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia."
+        ogUrl="/developers"
+        canonical="/developers"
+      />
       <Header />
       
       {/* Hero Section */}
