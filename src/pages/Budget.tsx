@@ -25,6 +25,7 @@ import BudgetTermsAccordion from "@/components/BudgetTermsAccordion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { useBudgetForm } from "@/hooks/useBudgetForm";
 import { toast } from "@/hooks/use-toast";
+import SEO from "@/components/SEO";
 
 const processSteps = [
   {
@@ -205,6 +206,13 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Solicite Orçamento"
+        description="Solicite um orçamento gratuito para seu projeto. Retornamos em até 48 horas com uma proposta detalhada."
+        ogTitle="Solicite Orçamento"
+        ogDescription="Preencha o formulário com as informações do seu projeto. Retornamos em até 48 horas com uma proposta detalhada."
+        ogUrl="/orcamento"
+      />
       <Header />
       
       {/* Success feedback */}
