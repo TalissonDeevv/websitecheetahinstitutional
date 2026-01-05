@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const ServiceMobile = () => {
   const appTypes = [
@@ -30,6 +31,13 @@ const ServiceMobile = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Apps Mobile"
+        description="Desenvolvemos aplicativos Android e iOS com foco em performance, usabilidade e experiência do usuário. Nativos ou híbridos."
+        ogTitle="Apps Mobile | Cheetah Solutions"
+        ogDescription="Apps que funcionam de verdade. Desenvolvemos aplicativos Android e iOS com foco em performance e usabilidade."
+        ogUrl="/servicos/mobile"
+      />
       <Header />
       
       {/* Hero - Asymmetric */}

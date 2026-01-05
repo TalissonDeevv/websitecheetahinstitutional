@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const ServiceDashboards = () => {
   const technologies = [
@@ -48,13 +49,13 @@ const ServiceDashboards = () => {
       title: "Dashboards Executivos",
       description: "Visão geral dos KPIs e métricas principais do negócio",
       icon: BarChart3,
-      features: ["KPIs em tempo real", "Gráficos executivos", "Análise de tendências", "Relatórios estratégicos"]
+      features: ["KPIs estratégicos", "Visão consolidada", "Comparativos", "Metas e objetivos"]
     },
     {
       title: "Dashboards Operacionais",
       description: "Monitoramento em tempo real de processos e operações",
       icon: Monitor,
-      features: ["Monitoramento 24/7", "Alertas automáticos", "Métricas operacionais", "Status em tempo real"]
+      features: ["Tempo real", "Alertas automáticos", "Status de processos", "Filas e backlogs"]
     },
     {
       title: "Dashboards Analíticos",
@@ -66,6 +67,13 @@ const ServiceDashboards = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO
+        title="Cheetah Solutions | Dashboards e BI"
+        description="Dashboards interativos e personalizados. Visualização de dados com React, Chart.js, Power BI e Superset."
+        ogTitle="Dashboards e Business Intelligence | Cheetah Solutions"
+        ogDescription="Transforme dados em decisões. Dashboards interativos, KPIs em tempo real e relatórios automatizados."
+        ogUrl="/servicos/dashboards"
+      />
       <Header />
       
       {/* Hero Section */}

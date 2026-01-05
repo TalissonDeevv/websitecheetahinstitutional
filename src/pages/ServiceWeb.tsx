@@ -4,10 +4,18 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const ServiceWeb = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Desenvolvimento Web"
+        description="Desenvolvemos websites modernos, rápidos e otimizados para SEO. Do site institucional ao e-commerce, criamos soluções que geram resultados reais."
+        ogTitle="Desenvolvimento Web | Cheetah Solutions"
+        ogDescription="Websites que funcionam e convertem. Desenvolvemos soluções web modernas, rápidas e otimizadas para SEO."
+        ogUrl="/servicos/web"
+      />
       <Header />
       
       {/* Hero - Asymmetric */}
