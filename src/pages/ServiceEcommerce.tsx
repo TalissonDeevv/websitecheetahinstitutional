@@ -4,10 +4,18 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const ServiceEcommerce = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | E-commerce"
+        description="Desenvolvemos e-commerces completos, otimizados para conversão e preparados para escalar. Da loja básica ao marketplace."
+        ogTitle="E-commerce | Cheetah Solutions"
+        ogDescription="Lojas virtuais que vendem. E-commerces completos, otimizados para conversão e preparados para escalar."
+        ogUrl="/servicos/ecommerce"
+      />
       <Header />
       
       {/* Hero - Asymmetric */}

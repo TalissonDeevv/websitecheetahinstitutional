@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const ServiceSecurity = () => {
   const securityServices = [
@@ -33,6 +34,13 @@ const ServiceSecurity = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Segurança Digital"
+        description="Desenvolvemos sistemas com autenticação robusta, proteção contra ataques e conformidade com LGPD desde o primeiro dia."
+        ogTitle="Segurança Digital | Cheetah Solutions"
+        ogDescription="Proteção que você pode confiar. Autenticação robusta, proteção contra ataques e conformidade LGPD."
+        ogUrl="/servicos/seguranca"
+      />
       <Header />
       
       {/* Hero - Asymmetric */}

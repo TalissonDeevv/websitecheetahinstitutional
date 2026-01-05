@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const ServiceCloud = () => {
   const technologies = [
@@ -48,13 +49,13 @@ const ServiceCloud = () => {
       title: "Deploy para Startups",
       description: "Soluções ágeis e econômicas para projetos em crescimento",
       icon: Rocket,
-      features: ["Deploy automatizado", "Escalabilidade automática", "Monitoramento básico", "Backup diário"]
+      features: ["Vercel/Netlify", "Firebase", "Supabase", "CI/CD básico"]
     },
     {
       title: "Infraestrutura Corporativa",
-      description: "Soluções robustas e escaláveis para grandes empresas",
+      description: "Arquiteturas robustas para empresas estabelecidas",
       icon: Building2,
-      features: ["Alta disponibilidade", "Load balancing", "Disaster recovery", "Suporte 24/7"]
+      features: ["AWS/GCP/Azure", "Alta disponibilidade", "Disaster recovery", "Compliance"]
     },
     {
       title: "Microserviços e APIs",
@@ -66,6 +67,13 @@ const ServiceCloud = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <SEO
+        title="Cheetah Solutions | Cloud e Deploy"
+        description="Deploy em AWS, Vercel, Firebase, Railway e outros. Monitoramento contínuo, escalabilidade e segurança avançada."
+        ogTitle="Cloud e Deploy | Cheetah Solutions"
+        ogDescription="Cloud Solutions & Deploy. Publique suas aplicações com facilidade, performance otimizada e segurança garantida."
+        ogUrl="/servicos/cloud"
+      />
       <Header />
       
       {/* Hero Section */}

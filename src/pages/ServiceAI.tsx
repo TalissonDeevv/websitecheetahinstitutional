@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const ServiceAI = () => {
   const aiSolutions = [
@@ -30,6 +31,13 @@ const ServiceAI = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Inteligência Artificial"
+        description="Implementamos soluções de IA focadas em resultados práticos. Chatbots, automação e análise de dados com tecnologia de ponta."
+        ogTitle="Inteligência Artificial | Cheetah Solutions"
+        ogDescription="IA que resolve problemas reais. Chatbots inteligentes, assistentes virtuais e análise preditiva."
+        ogUrl="/servicos/ia"
+      />
       <Header />
       
       {/* Hero - Asymmetric */}

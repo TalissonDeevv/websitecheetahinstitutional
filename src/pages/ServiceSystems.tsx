@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import SEO from "@/components/SEO";
 
 const ServiceSystems = () => {
   const systemTypes = [
@@ -41,6 +42,13 @@ const ServiceSystems = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Cheetah Solutions | Sistemas Personalizados"
+        description="Desenvolvemos sistemas sob medida: CRM, ERP, gestão de estoque, dashboards e portais. Soluções completas para seu negócio."
+        ogTitle="Sistemas Personalizados | Cheetah Solutions"
+        ogDescription="Sistemas sob medida para empresas. CRM, ERP, gestão de estoque, dashboards analíticos e portais de clientes."
+        ogUrl="/servicos/sistemas"
+      />
       <Header />
       
       {/* Hero - Asymmetric */}

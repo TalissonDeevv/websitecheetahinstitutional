@@ -1,7 +1,7 @@
-// Edge function para injetar Open Graph metadata dinâmico
-// Detecta crawlers de redes sociais e retorna HTML com meta tags corretas
+// Configuração de metadados Open Graph por rota
+// Este arquivo é usado para referência e pode ser integrado com serviços de prerendering
 
-const routes = {
+export const routes = {
   '/': {
     title: 'Cheetah Solutions | Desenvolvimento de Software Sob Medida',
     description: 'Criamos sistemas, aplicações e plataformas digitais escaláveis, unindo engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais.',
@@ -16,6 +16,56 @@ const routes = {
     title: 'Cheetah Solutions | Nossos Serviços',
     description: 'Desenvolvimento de software sob medida para empresas. Bots, websites, sistemas web, integrações, apps mobile e e-commerce.',
     ogTitle: 'Nossos Serviços | Cheetah Solutions',
+  },
+  '/servicos/web': {
+    title: 'Cheetah Solutions | Desenvolvimento Web',
+    description: 'Websites que funcionam e convertem. Desenvolvemos soluções web modernas, rápidas e otimizadas para SEO.',
+    ogTitle: 'Desenvolvimento Web | Cheetah Solutions',
+  },
+  '/servicos/mobile': {
+    title: 'Cheetah Solutions | Apps Mobile',
+    description: 'Apps que funcionam de verdade. Desenvolvemos aplicativos Android e iOS com foco em performance e usabilidade.',
+    ogTitle: 'Apps Mobile | Cheetah Solutions',
+  },
+  '/servicos/bots': {
+    title: 'Cheetah Solutions | Bots e Automação',
+    description: 'Bots que trabalham por você. Desenvolvemos bots inteligentes para Discord, Telegram e WhatsApp.',
+    ogTitle: 'Bots e Automação | Cheetah Solutions',
+  },
+  '/servicos/sistemas': {
+    title: 'Cheetah Solutions | Sistemas Personalizados',
+    description: 'Sistemas sob medida para empresas. CRM, ERP, gestão de estoque, dashboards analíticos e portais de clientes.',
+    ogTitle: 'Sistemas Personalizados | Cheetah Solutions',
+  },
+  '/servicos/ecommerce': {
+    title: 'Cheetah Solutions | E-commerce',
+    description: 'Lojas virtuais que vendem. E-commerces completos, otimizados para conversão e preparados para escalar.',
+    ogTitle: 'E-commerce | Cheetah Solutions',
+  },
+  '/servicos/integracoes': {
+    title: 'Cheetah Solutions | APIs e Integrações',
+    description: 'Sistemas que conversam. Conectamos diferentes sistemas e automatizamos fluxos complexos.',
+    ogTitle: 'APIs e Integrações | Cheetah Solutions',
+  },
+  '/servicos/ia': {
+    title: 'Cheetah Solutions | Inteligência Artificial',
+    description: 'IA que resolve problemas reais. Chatbots inteligentes, assistentes virtuais e análise preditiva.',
+    ogTitle: 'Inteligência Artificial | Cheetah Solutions',
+  },
+  '/servicos/cloud': {
+    title: 'Cheetah Solutions | Cloud e Deploy',
+    description: 'Cloud Solutions & Deploy. Publique suas aplicações com facilidade, performance otimizada e segurança garantida.',
+    ogTitle: 'Cloud e Deploy | Cheetah Solutions',
+  },
+  '/servicos/dashboards': {
+    title: 'Cheetah Solutions | Dashboards e BI',
+    description: 'Transforme dados em decisões. Dashboards interativos, KPIs em tempo real e relatórios automatizados.',
+    ogTitle: 'Dashboards e Business Intelligence | Cheetah Solutions',
+  },
+  '/servicos/seguranca': {
+    title: 'Cheetah Solutions | Segurança Digital',
+    description: 'Proteção que você pode confiar. Autenticação robusta, proteção contra ataques e conformidade LGPD.',
+    ogTitle: 'Segurança Digital | Cheetah Solutions',
   },
   '/equipe': {
     title: 'Cheetah Solutions | Equipes Técnicas',
@@ -64,16 +114,11 @@ const routes = {
   },
 };
 
-const BASE_URL = 'https://cheetahsolutions.com.br';
-const DEFAULT_IMAGE = 'https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png';
+export const BASE_URL = 'https://cheetahsolutions.com.br';
+export const DEFAULT_IMAGE = 'https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png';
 
-export default function handler(req) {
-  const url = new URL(req.url);
-  const path = url.pathname;
-  
-  // Get metadata for route or use defaults
+export function getMetadata(path) {
   const metadata = routes[path] || routes['/'];
-  
   return {
     title: metadata.title,
     description: metadata.description,
