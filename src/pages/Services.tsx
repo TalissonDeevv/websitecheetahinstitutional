@@ -82,7 +82,7 @@ const Services = () => {
       <SEO
         title="Cheetah Solutions | Nossos Serviços"
         description="Desenvolvimento de software sob medida: bots, websites, sistemas web, integrações, apps mobile e e-commerce. Soluções personalizadas para sua empresa."
-        ogTitle="Nossos Serviços"
+        ogTitle="Nossos Serviços | Cheetah Solutions"
         ogDescription="Desenvolvimento de software sob medida para empresas. Bots, websites, sistemas web, integrações, apps mobile e e-commerce."
         ogUrl="/servicos"
       />

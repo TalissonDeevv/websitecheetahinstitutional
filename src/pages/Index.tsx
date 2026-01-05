@@ -182,8 +182,8 @@ const Index = () => {
       <SEO
         title="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
         description="Software house especializada no desenvolvimento de soluções digitais sob medida para empresas que exigem performance, escalabilidade e eficiência."
-        ogTitle="Desenvolvimento de Software Sob Medida"
-        ogDescription="Software house focada na criação de soluções digitais sob medida para negócios."
+        ogTitle="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
+        ogDescription="Criamos sistemas, aplicações e plataformas digitais escaláveis, unindo engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais."
         ogUrl="/"
       />
       <Header />
