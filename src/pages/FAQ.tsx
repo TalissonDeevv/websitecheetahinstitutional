@@ -79,7 +79,7 @@ const FAQ = () => {
       <SEO 
         title="Cheetah Solutions | Perguntas Frequentes"
         description="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico."
-        ogTitle="Perguntas Frequentes"
+        ogTitle="Perguntas Frequentes | Cheetah Solutions"
         ogDescription="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico."
         ogUrl="/faq"
         canonical="/faq"

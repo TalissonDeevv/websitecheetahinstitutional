@@ -119,7 +119,7 @@ const Developers = () => {
       <SEO 
         title="Cheetah Solutions | Cheetah Developers Brasil"
         description="Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia."
-        ogTitle="Cheetah Developers Brasil"
+        ogTitle="Cheetah Developers Brasil | Cheetah Solutions"
         ogDescription="Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia."
         ogUrl="/developers"
         canonical="/developers"

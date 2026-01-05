@@ -12,7 +12,7 @@ const About = () => {
       <SEO
         title="Cheetah Solutions | Quem Somos"
         description="Conheça a Cheetah Solutions Network, uma software house focada em soluções digitais sob medida para empresas."
-        ogTitle="Quem Somos"
+        ogTitle="Quem Somos | Cheetah Solutions"
         ogDescription="Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida para empresas que buscam eficiência, performance e escalabilidade."
         ogUrl="/sobre"
       />

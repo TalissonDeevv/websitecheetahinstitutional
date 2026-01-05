@@ -70,7 +70,7 @@ const GuidelinesHub = () => {
       <SEO 
         title="Cheetah Solutions | Diretrizes e Privacidade"
         description="Diretrizes, políticas de privacidade e conformidade da Cheetah Solutions Network. Transparência e governança corporativa."
-        ogTitle="Diretrizes e Privacidade"
+        ogTitle="Diretrizes e Privacidade | Cheetah Solutions"
         ogDescription="Diretrizes, políticas de privacidade e conformidade da Cheetah Solutions Network. Transparência e governança corporativa."
         ogUrl="/diretrizes"
         canonical="/diretrizes"

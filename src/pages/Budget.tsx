@@ -209,7 +209,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
       <SEO
         title="Cheetah Solutions | Solicite Orçamento"
         description="Solicite um orçamento gratuito para seu projeto. Retornamos em até 48 horas com uma proposta detalhada."
-        ogTitle="Solicite Orçamento"
+        ogTitle="Solicite Orçamento | Cheetah Solutions"
         ogDescription="Preencha o formulário com as informações do seu projeto. Retornamos em até 48 horas com uma proposta detalhada."
         ogUrl="/orcamento"
       />

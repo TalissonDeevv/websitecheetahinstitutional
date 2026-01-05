@@ -87,7 +87,7 @@ const Blog = () => {
       <SEO
         title="Cheetah Solutions | Blogs e Artigos"
         description="Artigos sobre desenvolvimento de software, tecnologia e boas práticas. Conteúdo técnico direto ao ponto."
-        ogTitle="Blogs e Artigos"
+        ogTitle="Blogs e Artigos | Cheetah Solutions"
         ogDescription="Conteúdo técnico sobre desenvolvimento, tecnologia e boas práticas. Direto ao ponto."
         ogUrl="/blog"
       />
