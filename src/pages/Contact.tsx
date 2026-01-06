@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
+import { WebPageJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -48,6 +49,17 @@ const Contact = () => {
         ogTitle="Fale Conosco | Cheetah Solutions"
         ogDescription="Entre em contato com a Cheetah Solutions. Sem compromisso. Conte o que precisa e avaliamos se faz sentido trabalharmos juntos."
         ogUrl="/contato"
+      />
+      <WebPageJsonLd 
+        title="Fale Conosco | Cheetah Solutions"
+        description="Entre em contato com a Cheetah Solutions. Fale sobre seu projeto sem compromisso."
+        url="/contato"
+      />
+      <BreadcrumbJsonLd 
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Contato", url: "/contato" }
+        ]}
       />
       <Header />
       

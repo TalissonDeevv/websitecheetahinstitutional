@@ -31,6 +31,8 @@ const CRAWLER_USER_AGENTS = [
   'Embedly',
   'Pinterest',
   'redditbot',
+  'Googlebot',
+  'bingbot',
 ];
 
 const routes = {
@@ -146,7 +148,7 @@ const routes = {
   },
 };
 
-const BASE_URL = 'https://cheetahsolutions.com.br';
+const BASE_URL = 'https://www.cheetahsolutions.com.br';
 const DEFAULT_IMAGE = 'https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png';
 
 function isCrawler(userAgent) {
@@ -174,6 +176,8 @@ function generateHTML(path) {
   <meta property="og:type" content="website">
   <meta property="og:url" content="${fullUrl}">
   <meta property="og:image" content="${DEFAULT_IMAGE}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Cheetah Solutions">
   <meta property="og:locale" content="pt_BR">
   
@@ -185,6 +189,7 @@ function generateHTML(path) {
   <meta name="twitter:site" content="@cheetahsolutionsbr">
   
   <link rel="canonical" href="${fullUrl}">
+  <link rel="icon" href="https://files.catbox.moe/46lzz6.ico" type="image/x-icon">
 </head>
 <body>
   <main>
@@ -199,7 +204,15 @@ function generateHTML(path) {
 export default function middleware(request) {
   const userAgent = request.headers.get('user-agent') || '';
   const url = new URL(request.url);
+  const hostname = url.hostname;
   const path = url.pathname;
+  
+  // Redirect non-www to www (301 permanent redirect)
+  if (hostname === 'cheetahsolutions.com.br') {
+    const newUrl = new URL(request.url);
+    newUrl.hostname = 'www.cheetahsolutions.com.br';
+    return Response.redirect(newUrl.toString(), 301);
+  }
   
   // Se for um crawler, retorna HTML estático com meta tags
   if (isCrawler(userAgent)) {

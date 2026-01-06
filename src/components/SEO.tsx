@@ -12,7 +12,7 @@ interface SEOProps {
 }
 
 const DEFAULT_OG_IMAGE = "https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png";
-const BASE_URL = "https://cheetahsolutions.com.br";
+const BASE_URL = "https://www.cheetahsolutions.com.br";
 
 const SEO = ({
   title,
@@ -24,7 +24,8 @@ const SEO = ({
   ogUrl,
   canonical,
 }: SEOProps) => {
-  const fullUrl = ogUrl ? `${BASE_URL}${ogUrl}` : BASE_URL;
+  const path = ogUrl || "";
+  const fullUrl = path ? `${BASE_URL}${path}` : BASE_URL;
   const canonicalUrl = canonical ? `${BASE_URL}${canonical}` : fullUrl;
 
   return (

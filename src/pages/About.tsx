@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
+import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 
 const About = () => {
   return (
@@ -15,6 +16,12 @@ const About = () => {
         ogTitle="Quem Somos | Cheetah Solutions"
         ogDescription="Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida para empresas que buscam eficiência, performance e escalabilidade."
         ogUrl="/sobre"
+      />
+      <OrganizationJsonLd />
+      <WebPageJsonLd 
+        title="Quem Somos | Cheetah Solutions"
+        description="Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida."
+        url="/sobre"
       />
       <Header />
       

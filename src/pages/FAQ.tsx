@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
+import { FAQJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 
 const FAQ = () => {
   const faqCategories = [
@@ -84,8 +85,17 @@ const FAQ = () => {
         ogUrl="/faq"
         canonical="/faq"
       />
+      <WebPageJsonLd 
+        title="Perguntas Frequentes | Cheetah Solutions"
+        description="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network."
+        url="/faq"
+      />
+      <FAQJsonLd 
+        questions={faqCategories.flatMap(cat => 
+          cat.items.map(item => ({ question: item.question, answer: item.answer }))
+        )}
+      />
       <Header />
-      
       {/* Hero */}
       <AnimatedSection animation="fade-up">
         <section className="pt-28 pb-12 px-4">
