@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Páginas Principais -->
   <url>
     <loc>https://www.cheetahsolutions.com.br</loc>
     <changefreq>weekly</changefreq>
@@ -15,6 +16,23 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/equipe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/contato</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/orcamento</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Serviços Individuais -->
   <url>
     <loc>https://www.cheetahsolutions.com.br/servicos/web</loc>
     <changefreq>monthly</changefreq>
@@ -65,26 +83,60 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://www.cheetahsolutions.com.br/equipe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  
+  <!-- Blog -->
   <url>
     <loc>https://www.cheetahsolutions.com.br/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.cheetahsolutions.com.br/contato</loc>
+    <loc>https://www.cheetahsolutions.com.br/blog/como-escolher-bot-ideal</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.cheetahsolutions.com.br/orcamento</loc>
+    <loc>https://www.cheetahsolutions.com.br/blog/tendencias-desenvolvimento-web-2025</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/blog/automacao-processos-sistemas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/blog/seguranca-digital-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/blog/integracoes-api-sistemas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/blog/design-ux-ui-experiencias</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/blog/monitoramento-analytics-sucesso</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/blog/migracao-cloud-estrategias</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/blog/chatbots-ia-atendimento</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Páginas Institucionais -->
   <url>
     <loc>https://www.cheetahsolutions.com.br/developers</loc>
     <changefreq>monthly</changefreq>
@@ -105,9 +157,86 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  
+  <!-- Diretrizes e Políticas -->
   <url>
     <loc>https://www.cheetahsolutions.com.br/diretrizes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/termos-uso</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/privacidade</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/cookies</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/seguranca</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/transparencia</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/isencao</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/denuncias</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/reembolso</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/cancelamento</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/servico</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/propriedade-intelectual</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/responsabilidade</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/uso-aceitavel</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/backup</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.cheetahsolutions.com.br/diretrizes/atualizacoes</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>

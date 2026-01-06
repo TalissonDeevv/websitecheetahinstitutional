@@ -196,9 +196,9 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-4 lg:px-8 overflow-x-hidden overflow-y-visible">
+      <section className="relative pt-32 pb-24 px-4 lg:px-8 overflow-hidden">
         <HeroBackground />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/3 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] lg:w-[600px] h-[300px] sm:h-[400px] lg:h-[600px] bg-primary/3 rounded-full blur-[120px] pointer-events-none -translate-x-1/4" />
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl">
