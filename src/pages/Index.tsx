@@ -30,6 +30,7 @@ import SubtleHighlight from "@/components/SubtleHighlight";
 import HeroBackground from "@/components/HeroBackground";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
+import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 import pairProgrammingSvg from "@/assets/pair-programming.svg";
 
 const Index = () => {
@@ -185,6 +186,12 @@ const Index = () => {
         ogTitle="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
         ogDescription="Criamos sistemas, aplicações e plataformas digitais escaláveis, unindo engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais."
         ogUrl="/"
+      />
+      <OrganizationJsonLd />
+      <WebPageJsonLd 
+        title="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
+        description="Software house especializada no desenvolvimento de soluções digitais sob medida para empresas que exigem performance, escalabilidade e eficiência."
+        url="/"
       />
       <Header />
       

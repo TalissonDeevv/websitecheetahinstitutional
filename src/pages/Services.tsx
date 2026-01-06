@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
+import { WebPageJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 const Services = () => {
   const services = [
@@ -85,6 +86,17 @@ const Services = () => {
         ogTitle="Nossos Serviços | Cheetah Solutions"
         ogDescription="Desenvolvimento de software sob medida para empresas. Bots, websites, sistemas web, integrações, apps mobile e e-commerce."
         ogUrl="/servicos"
+      />
+      <WebPageJsonLd 
+        title="Nossos Serviços | Cheetah Solutions"
+        description="Desenvolvimento de software sob medida para empresas."
+        url="/servicos"
+      />
+      <BreadcrumbJsonLd 
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Serviços", url: "/servicos" }
+        ]}
       />
       <Header />
       
