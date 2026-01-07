@@ -288,11 +288,11 @@ All colors MUST be HSL.
   }
 }
 
-/* SCROLL-SAFE KEYFRAMES: small translateY to avoid overflow */
+/* SCROLL-SAFE KEYFRAMES: minimal translateY to avoid overflow on mobile */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(4px);
   }
   to {
     opacity: 1;
