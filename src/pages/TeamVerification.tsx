@@ -20,7 +20,6 @@ const TeamVerification = () => {
 
   const officialMembers = [
     { name: "Talisson Souza", role: "CEO & Founder", status: "Ativo" },
-    { name: "José Jorge", role: "CTO", status: "Ativo" },
     { name: "Vitor Mapeli", role: "COO", status: "Ativo" },
     { name: "Bruno Nugget", role: "CCO", status: "Ativo" },
     { name: "Guilherme Garrido", role: "Senior Developer", status: "Ativo" },
