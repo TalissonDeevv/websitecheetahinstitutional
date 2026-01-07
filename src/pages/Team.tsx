@@ -15,12 +15,6 @@ const Team = () => {
       email: "talissondeveloper@gmail.com"
     },
     {
-      name: "José Jorge",
-      role: "CTO",
-      description: "Responsável pela arquitetura técnica e decisões de tecnologia.",
-      email: "J.jfalasco77@gmail.com"
-    },
-    {
       name: "Vitor Mapeli",
       role: "COO",
       description: "Gestão de operações, processos internos e entrega de projetos.",
