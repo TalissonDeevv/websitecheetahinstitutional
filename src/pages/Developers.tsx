@@ -27,7 +27,7 @@ const communityProjects: CommunityProject[] = [
     name: "Quack Pay",
     description: "A Quack Pay nasceu de uma frustração que muitos conhecem: simplesmente não encontramos um gateway de pagamento que atendesse nossas expectativas. A solução foi criar o nosso próprio. Com taxa fixa de apenas R$ 0,80 por transação (PIX in e PIX out), oferecemos transparência e previsibilidade para o seu negócio. A proposta é simplificar operações financeiras com eficiência, clareza e controle.",
     link: "https://quackpay.com.br",
-    image: "https://quackpay.com.br/og-image.png",
+    image: "https://i.ibb.co/ZpbgCWjg/image.png",
   },
 ];
 
