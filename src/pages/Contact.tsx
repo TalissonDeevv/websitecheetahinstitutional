@@ -36,8 +36,7 @@ const Contact = () => {
   };
 
   const leadership = [
-    { name: "Talisson Souza", role: "CEO", email: "talissondeveloper@gmail.com" },
-    { name: "José Jorge", role: "CTO", email: "J.jfalasco77@gmail.com" },
+    { name: "Talisson Souza", role: "CEO", email: "talinhodev@gmail.com" },
     { name: "Bruno Nugget", role: "CCO", email: "snoows2marina@outlook.com" },
   ];
 
