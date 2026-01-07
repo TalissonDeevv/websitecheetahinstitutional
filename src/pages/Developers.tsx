@@ -12,6 +12,25 @@ import AnimatedSection from "@/components/AnimatedSection";
 import pairProgrammingSvg from "@/assets/pair-programming.svg";
 import SEO from "@/components/SEO";
 
+// Estrutura escalável para projetos da comunidade
+interface CommunityProject {
+  id: string;
+  name: string;
+  description: string;
+  link?: string;
+  image?: string;
+}
+
+const communityProjects: CommunityProject[] = [
+  {
+    id: "quack-pay",
+    name: "Quack Pay",
+    description: "A Quack Pay nasceu de uma frustração que muitos conhecem: simplesmente não encontramos um gateway de pagamento que atendesse nossas expectativas. A solução foi criar o nosso próprio. Com taxa fixa de apenas R$ 0,80 por transação (PIX in e PIX out), oferecemos transparência e previsibilidade para o seu negócio. A proposta é simplificar operações financeiras com eficiência, clareza e controle.",
+    link: "https://quackpay.com.br",
+    image: "https://quackpay.com.br/og-image.png",
+  },
+];
+
 const Developers = () => {
   const technicalAreas = [
     {
@@ -415,8 +434,65 @@ const Developers = () => {
         </div>
       </section>
 
-      {/* Como Participar */}
+      {/* Projetos em Destaque */}
       <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <AnimatedSection>
+            <div className="max-w-xl mb-12">
+              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                Projetos em Destaque
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                Soluções reais criadas<br />
+                por membros da comunidade.
+              </h2>
+              <p className="text-muted-foreground mt-4 leading-relaxed">
+                Projetos selecionados e aprovados que demonstram o talento e a capacidade 
+                técnica dos desenvolvedores da Cheetah Developers Brasil.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {communityProjects.map((project, index) => (
+              <AnimatedSection key={project.id} animation="fade-up" delay={index * 100}>
+                <article className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-colors h-full flex flex-col">
+                  {project.image && (
+                    <div className="aspect-video overflow-hidden bg-secondary/50">
+                      <img 
+                        src={project.image} 
+                        alt={`${project.name} - Projeto da Cheetah Developers Brasil`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-lg font-semibold mb-3">{project.name}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-grow mb-4">
+                      {project.description}
+                    </p>
+                    {project.link && (
+                      <a 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium transition-colors"
+                      >
+                        Conhecer solução
+                        <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                      </a>
+                    )}
+                  </div>
+                </article>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Como Participar */}
+      <section className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
@@ -464,7 +540,7 @@ const Developers = () => {
 
       {/* CTA Final */}
       <AnimatedSection animation="fade-up">
-        <section className="py-24 px-4 bg-secondary/30">
+        <section className="py-24 px-4">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-muted-foreground leading-relaxed text-lg mb-6">
