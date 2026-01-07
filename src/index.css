@@ -235,6 +235,21 @@ All colors MUST be HSL.
 
 /* Custom animations for smooth interactions */
 @layer utilities {
+  /*
+   * Viewport stability on mobile browsers:
+   * Tailwind's min-h-screen uses 100vh which can temporarily exceed the visible viewport
+   * while the address bar collapses/expands, creating a brief extra scrollbar.
+   */
+  .min-h-screen {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Prevent transformed children from expanding scrollable overflow during entrance animations */
+  .contain-paint {
+    contain: paint;
+  }
+
   /* 
    * SCROLL-SAFE ANIMATIONS:
    * Reduced translateY values to prevent temporary overflow during animation.
@@ -247,7 +262,7 @@ All colors MUST be HSL.
   .animate-slide-up {
     animation: slideUp 0.4s ease-out both;
   }
-  
+
   .hover-lift {
     transition: transform 0.3s ease;
   }
