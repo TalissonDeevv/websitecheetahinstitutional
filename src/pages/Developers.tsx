@@ -36,6 +36,13 @@ const communityProjects: CommunityProject[] = [
     link: "https://quackpay.com.br",
     image: "https://i.ibb.co/ZpbgCWjg/image.png",
   },
+  {
+    id: "bix-bot",
+    name: "Brix Bot",
+    description: "Brix é um bot para Discord que traz a experiência de ter um Pokémon vivo no servidor, interagindo, organizando e animando a comunidade com comandos úteis, automações, personalização, entretenimento e integração com IA, tornando o ambiente mais dinâmico e divertido.",
+    link: "https://brixbot.xyz",
+    image: "https://i.ibb.co/N63z0jt3/image.png",
+  },
 ];
 
 const Developers = () => {
