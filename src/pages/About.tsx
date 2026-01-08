@@ -440,15 +440,17 @@ const About = () => {
             </AnimatedSection>
             
             {/* Right column - logo */}
-            <AnimatedSection delay={150}>
+            <AnimatedSection delay={150} className="overflow-visible">
               <div className="flex items-center justify-center h-full">
                 <div className="relative">
-                  {/* Glow effect around logo */}
-                  <div className="absolute -inset-4 rounded-3xl bg-primary/30 blur-2xl"></div>
+                  {/* Glow 360° (radial) */}
+                  <div className="pointer-events-none absolute -inset-10 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.35)_0%,transparent_65%)] blur-2xl" />
+                  <div className="pointer-events-none absolute -inset-16 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.18)_0%,transparent_70%)] blur-3xl" />
+
                   <img 
                     src={squareCloudLogo} 
                     alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
-                    className="relative w-52 h-52 md:w-72 md:h-72 object-contain"
+                    className="relative w-60 h-60 md:w-80 md:h-80 object-contain"
                   />
                 </div>
               </div>
