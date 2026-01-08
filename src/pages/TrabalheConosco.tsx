@@ -148,11 +148,11 @@ const TrabalheConosco = () => {
                   organização e visão de produto.
                 </p>
               </div>
-              <div className="hidden lg:flex lg:flex-shrink-0 lg:items-center lg:justify-center">
+              <div className="flex justify-center mt-10 lg:mt-0 lg:flex-shrink-0 lg:items-center lg:justify-center">
                 <img 
                   src={goodTeamSvg} 
                   alt="Ilustração de equipe trabalhando juntos" 
-                  className="w-72 xl:w-96 h-auto animate-fade-in"
+                  className="w-64 md:w-72 xl:w-96 h-auto animate-fade-in"
                   style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
                 />
               </div>
