@@ -134,19 +134,11 @@ const TrabalheConosco = () => {
       <AnimatedSection animation="fade-up">
         <section className="pt-28 pb-16 px-4">
           <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
-              <div className="max-w-3xl lg:max-w-xl">
-                <div className="flex items-center gap-3 mb-6">
-                  <p className="text-xs text-primary uppercase tracking-[0.2em] font-medium">
-                    Faça parte do time
-                  </p>
-                  <img 
-                    src={goodTeamSvg} 
-                    alt="" 
-                    className="w-8 h-8 animate-fade-in"
-                    style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
-                  />
-                </div>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16">
+              <div className="max-w-3xl lg:flex-1">
+                <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
+                  Faça parte do time
+                </p>
                 <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-8">
                   Trabalhe Conosco
                 </h1>
@@ -156,11 +148,11 @@ const TrabalheConosco = () => {
                   organização e visão de produto.
                 </p>
               </div>
-              <div className="hidden lg:block lg:w-64 xl:w-80">
+              <div className="hidden lg:flex lg:flex-shrink-0 lg:items-center lg:justify-center">
                 <img 
                   src={goodTeamSvg} 
                   alt="Ilustração de equipe trabalhando juntos" 
-                  className="w-full h-auto animate-fade-in"
+                  className="w-72 xl:w-96 h-auto animate-fade-in"
                   style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
                 />
               </div>
