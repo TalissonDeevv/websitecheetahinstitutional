@@ -418,7 +418,7 @@ const TrabalheConosco = () => {
               <div className="space-y-8">
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   Buscamos profissionais que compartilhem nosso compromisso com excelência técnica 
-                  e entregas de qualidade. Não importa a senioridade — importa a atitude.
+                  e entregas de qualidade. Não importa a senioridade, importa a atitude.
                 </p>
                 
                 <div className="grid sm:grid-cols-2 gap-6">

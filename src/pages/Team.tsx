@@ -208,10 +208,10 @@ const Team = () => {
                 Estamos sempre procurando pessoas qualificadas que compartilham 
                 nosso compromisso com qualidade técnica.
               </p>
-              <Link to="/contato">
+              <Link to="/inscricoes">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   <MessageCircle className="mr-2 h-4 w-4" />
-                  Entrar em contato
+                  Trabalhe conosco
                 </Button>
               </Link>
             </div>

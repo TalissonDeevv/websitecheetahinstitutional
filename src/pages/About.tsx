@@ -359,22 +359,40 @@ const About = () => {
                 </h2>
               </div>
               
-              <div className="space-y-0">
-                {[
-                  { year: "2020", text: "Fundação. Foco inicial em automações e bots para Discord." },
-                  { year: "2021", text: "Expansão para desenvolvimento web. Primeiros sistemas completos." },
-                  { year: "2022", text: "50 projetos entregues. Consolidação como software house." },
-                  { year: "2023", text: "Lançamento de produtos próprios. Equipe técnica expandida." },
-                  { year: "2024", text: "100+ projetos. Reconhecimento no mercado B2B." },
-                  { year: "2025", text: "Expansão de serviços. Foco em empresas em crescimento." },
-                ].map((item, index) => (
-                  <AnimatedSection key={index} delay={index * 50}>
-                    <div className="flex items-start gap-6 py-6 border-b border-border last:border-0">
-                      <span className="text-primary font-bold text-lg w-16 shrink-0">{item.year}</span>
-                      <p className="text-muted-foreground">{item.text}</p>
-                    </div>
-                  </AnimatedSection>
-                ))}
+              <div className="max-w-4xl mx-auto">
+                <div className="relative">
+                  {/* Timeline Line */}
+                  <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
+                  
+                  <div className="space-y-8">
+                    {[
+                      { year: "2020", text: "Fundação. Foco inicial em automações e bots para Discord." },
+                      { year: "2021", text: "Expansão para desenvolvimento web. Primeiros sistemas completos." },
+                      { year: "2022", text: "50 projetos entregues. Consolidação como software house." },
+                      { year: "2023", text: "Lançamento de produtos próprios. Equipe técnica expandida." },
+                      { year: "2024", text: "100+ projetos. Reconhecimento no mercado B2B." },
+                      { year: "2025", text: "Expansão de serviços. Foco em empresas em crescimento." },
+                    ].map((item, index) => (
+                      <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
+                        <div className="flex gap-6 items-start">
+                          {/* Year Number */}
+                          <div className="relative z-10 flex-shrink-0">
+                            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">
+                              {item.year}
+                            </div>
+                          </div>
+                          
+                          {/* Content */}
+                          <div className="flex-1 bg-card border border-border rounded-xl p-6 -mt-1">
+                            <p className="text-muted-foreground leading-relaxed">
+                              {item.text}
+                            </p>
+                          </div>
+                        </div>
+                      </AnimatedSection>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </AnimatedSection>
