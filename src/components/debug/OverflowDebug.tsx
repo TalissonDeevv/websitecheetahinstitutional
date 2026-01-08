@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type OverflowSuspect = {
+  el: HTMLElement;
   selector: string;
   left: number;
   right: number;
@@ -19,6 +20,10 @@ type OverflowSnapshot = {
   overflowX: number;
   overflowY: number;
   suspects: OverflowSuspect[];
+};
+
+type OverflowDebugProps = {
+  onDisable?: () => void;
 };
 
 function toSelector(el: Element) {
@@ -41,7 +46,7 @@ function clamp(n: number) {
   return Number.isFinite(n) ? n : 0;
 }
 
-export default function OverflowDebug() {
+export default function OverflowDebug({ onDisable }: OverflowDebugProps) {
   const [snapshot, setSnapshot] = useState<OverflowSnapshot | null>(null);
   const rafRef = useRef<number | null>(null);
   const lastLogRef = useRef<number>(0);
@@ -61,6 +66,9 @@ export default function OverflowDebug() {
       const elements = Array.from(document.body.querySelectorAll<HTMLElement>("*"));
 
       for (const el of elements) {
+        // Ignora o próprio painel do debug
+        if (el.closest("[data-overflow-debug-root]")) continue;
+
         // Evita elementos invisíveis/sem impacto
         if (!el.offsetParent && getComputedStyle(el).position !== "fixed") continue;
 
@@ -75,6 +83,7 @@ export default function OverflowDebug() {
 
         if (overflowX > 1 || overflowY > 1) {
           suspects.push({
+            el,
             selector: toSelector(el),
             left: clamp(rect.left),
             right: clamp(rect.right),
@@ -110,29 +119,33 @@ export default function OverflowDebug() {
 
       clearOutlines();
       if (suspects.length) {
-        // Outline apenas nos principais para visualização rápida
-        const top = suspects.slice(0, 2).map((s) => s.selector);
-        const els = Array.from(document.body.querySelectorAll<HTMLElement>("*"));
-        for (const el of els) {
-          const sel = toSelector(el);
-          if (top.includes(sel)) {
-            el.style.outline = "2px solid hsl(var(--destructive))";
-            el.style.outlineOffset = "2px";
-            outlinedRef.current.push(el);
-          }
+        // Outline nos 2 principais para “bater o olho” (sem ambiguidade)
+        for (const s of suspects.slice(0, 2)) {
+          s.el.style.outline = "2px solid hsl(var(--destructive))";
+          s.el.style.outlineOffset = "2px";
+          outlinedRef.current.push(s.el);
         }
       }
 
       const now = Date.now();
       if (suspects.length && now - lastLogRef.current > 350) {
         lastLogRef.current = now;
-        // Log resumido (sem spam por frame)
         // eslint-disable-next-line no-console
         console.groupCollapsed(
           `[debugOverflow] overflowX=${overflowX.toFixed(0)} overflowY=${overflowY.toFixed(0)} | scrollW=${scrollWidth} clientW=${clientWidth} | scrollH=${scrollHeight} clientH=${clientHeight}`
         );
         // eslint-disable-next-line no-console
-        console.table(suspects);
+        console.table(
+          suspects.map((s) => ({
+            selector: s.selector,
+            overflowX: s.overflowX.toFixed(0),
+            overflowY: s.overflowY.toFixed(0),
+            left: s.left.toFixed(0),
+            right: s.right.toFixed(0),
+            top: s.top.toFixed(0),
+            bottom: s.bottom.toFixed(0),
+          }))
+        );
         // eslint-disable-next-line no-console
         console.groupEnd();
       }
@@ -159,49 +172,109 @@ export default function OverflowDebug() {
     };
   }, []);
 
+  const top = snapshot?.suspects?.[0];
+
+  const topBox = useMemo(() => {
+    if (!top) return null;
+
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    const left = Math.max(0, top.left);
+    const topY = Math.max(0, top.top);
+    const right = Math.min(vw, top.right);
+    const bottom = Math.min(vh, top.bottom);
+
+    return {
+      left,
+      top: topY,
+      width: Math.max(0, right - left),
+      height: Math.max(0, bottom - topY),
+    };
+  }, [top]);
+
   if (!snapshot) return null;
 
   return (
-    <div className="fixed bottom-3 left-3 z-[9999] w-[min(92vw,420px)] pointer-events-none">
-      <div className="pointer-events-auto rounded-lg border border-border bg-card/95 backdrop-blur p-3 shadow-lg">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <p className="text-xs font-semibold text-foreground">Debug Overflow</p>
-            <p className="mt-0.5 text-[11px] text-muted-foreground">
-              Ativo via <span className="font-mono">?debugOverflow=1</span>. Quando houver overflow, o console
-              mostra os suspeitos.
-            </p>
+    <>
+      {/* Highlight do culpado #1 */}
+      {topBox ? (
+        <div className="fixed inset-0 z-[9998] pointer-events-none">
+          <div
+            className="absolute rounded-md border-2 border-destructive bg-destructive/10"
+            style={{
+              left: `${topBox.left}px`,
+              top: `${topBox.top}px`,
+              width: `${topBox.width}px`,
+              height: `${topBox.height}px`,
+            }}
+          />
+          <div
+            className="absolute"
+            style={{ left: `${topBox.left}px`, top: `${Math.max(0, topBox.top - 22)}px` }}
+          >
+            <div className="rounded-md border border-border bg-card/95 px-2 py-1 text-[11px] text-foreground shadow">
+              <span className="font-mono">{top.selector}</span>
+              <span className="ml-2 text-muted-foreground">
+                x:{top.overflowX.toFixed(0)} y:{top.overflowY.toFixed(0)}
+              </span>
+            </div>
           </div>
         </div>
+      ) : null}
 
-        <div className="mt-2 grid grid-cols-2 gap-2 text-[11px] text-muted-foreground">
-          <div className="rounded-md bg-muted/40 p-2">
-            <p className="font-mono">scrollW: {snapshot.scrollWidth}</p>
-            <p className="font-mono">clientW: {snapshot.clientWidth}</p>
-            <p className="font-mono">overflowX: {snapshot.overflowX.toFixed(0)}</p>
+      {/* Painel */}
+      <div
+        data-overflow-debug-root
+        className="fixed bottom-3 left-3 z-[9999] w-[min(92vw,440px)] pointer-events-none"
+      >
+        <div className="pointer-events-auto rounded-lg border border-border bg-card/95 backdrop-blur p-3 shadow-lg">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold text-foreground">Debug Overflow</p>
+              <p className="mt-0.5 text-[11px] text-muted-foreground">
+                Toggle: <span className="font-mono">Ctrl/Cmd + Shift + O</span> (ou habilite via{" "}
+                <span className="font-mono">?debugOverflow=1</span>).\n              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => onDisable?.()}
+              className="shrink-0 rounded-md border border-border bg-background px-2 py-1 text-[11px] font-medium text-foreground hover:bg-muted"
+            >
+              Desativar
+            </button>
           </div>
-          <div className="rounded-md bg-muted/40 p-2">
-            <p className="font-mono">scrollH: {snapshot.scrollHeight}</p>
-            <p className="font-mono">clientH: {snapshot.clientHeight}</p>
-            <p className="font-mono">overflowY: {snapshot.overflowY.toFixed(0)}</p>
+
+          <div className="mt-2 grid grid-cols-2 gap-2 text-[11px] text-muted-foreground">
+            <div className="rounded-md bg-muted/40 p-2">
+              <p className="font-mono">scrollW: {snapshot.scrollWidth}</p>
+              <p className="font-mono">clientW: {snapshot.clientWidth}</p>
+              <p className="font-mono">overflowX: {snapshot.overflowX.toFixed(0)}</p>
+            </div>
+            <div className="rounded-md bg-muted/40 p-2">
+              <p className="font-mono">scrollH: {snapshot.scrollHeight}</p>
+              <p className="font-mono">clientH: {snapshot.clientHeight}</p>
+              <p className="font-mono">overflowY: {snapshot.overflowY.toFixed(0)}</p>
+            </div>
           </div>
+
+          {snapshot.suspects.length > 0 ? (
+            <div className="mt-2">
+              <p className="text-[11px] font-medium text-foreground">Suspeitos (top):</p>
+              <ul className="mt-1 space-y-1 text-[11px] text-muted-foreground">
+                {snapshot.suspects.slice(0, 4).map((s, idx) => (
+                  <li key={`${s.selector}-${idx}`} className="font-mono break-words">
+                    {s.selector} — x:{s.overflowX.toFixed(0)} y:{s.overflowY.toFixed(0)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            <p className="mt-2 text-[11px] text-muted-foreground">Sem overflow detectado neste instante.</p>
+          )}
         </div>
-
-        {snapshot.suspects.length > 0 ? (
-          <div className="mt-2">
-            <p className="text-[11px] font-medium text-foreground">Suspeitos (top):</p>
-            <ul className="mt-1 space-y-1 text-[11px] text-muted-foreground">
-              {snapshot.suspects.slice(0, 4).map((s) => (
-                <li key={s.selector} className="font-mono break-words">
-                  {s.selector} — x:{s.overflowX.toFixed(0)} y:{s.overflowY.toFixed(0)}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : (
-          <p className="mt-2 text-[11px] text-muted-foreground">Sem overflow detectado neste instante.</p>
-        )}
       </div>
-    </div>
+    </>
   );
 }
