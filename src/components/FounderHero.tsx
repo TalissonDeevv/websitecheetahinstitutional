@@ -1,0 +1,136 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import talissonPhoto from "@/assets/talisson-souza.png";
+
+const FounderHero = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.15, triggerOnce: true });
+
+  return (
+    <section 
+      ref={ref}
+      className="relative py-20 lg:py-28 px-4 lg:px-8 bg-gradient-to-b from-background via-secondary/20 to-background overflow-hidden"
+      aria-labelledby="founder-heading"
+    >
+      {/* Decorative elements */}
+      <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/3 rounded-full blur-[120px] pointer-events-none" />
+      
+      <div className="container mx-auto max-w-5xl relative z-10">
+        <div className="grid lg:grid-cols-[1fr,auto] gap-12 lg:gap-16 items-center">
+          {/* Content */}
+          <div className="order-2 lg:order-1">
+            <h2 
+              id="founder-heading"
+              className={`text-3xl sm:text-4xl lg:text-[2.75rem] font-bold mb-6 leading-[1.15] tracking-tight transition-all duration-700 ease-out ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-6'
+              }`}
+            >
+              Software que gera{" "}
+              <span className="text-primary">resultado real</span>{" "}
+              para negócios que exigem{" "}
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                  excelência
+                </span>
+              </span>
+            </h2>
+            
+            <p 
+              className={`text-base lg:text-lg text-foreground/70 mb-8 max-w-2xl leading-[1.8] transition-all duration-700 ease-out delay-150 ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-6'
+              }`}
+            >
+              Na Cheetah Solutions, desenvolvemos{" "}
+              <strong className="text-foreground/90 font-medium">soluções digitais sob medida</strong>{" "}
+              com foco em <strong className="text-foreground/90 font-medium">performance</strong>,{" "}
+              <strong className="text-foreground/90 font-medium">escalabilidade</strong> e{" "}
+              <strong className="text-foreground/90 font-medium">eficiência operacional</strong>.
+              Cada projeto é tratado com visão de produto e rigor técnico, garantindo que a tecnologia 
+              seja um diferencial competitivo real para seu negócio.
+            </p>
+            
+            <p 
+              className={`text-base lg:text-lg text-foreground/70 mb-10 max-w-2xl leading-[1.8] transition-all duration-700 ease-out delay-200 ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-6'
+              }`}
+            >
+              Nosso compromisso é entregar{" "}
+              <strong className="text-foreground/90 font-medium">software escalável</strong>{" "}
+              que evolui com a sua operação — código limpo, arquitetura sólida e resultados mensuráveis.
+              Acreditamos que <strong className="text-foreground/90 font-medium">tecnologia para negócios</strong>{" "}
+              deve ser simples de manter, fácil de escalar e pronta para o mercado.
+            </p>
+            
+            {/* Founder signature block */}
+            <div 
+              className={`flex items-center gap-4 transition-all duration-700 ease-out delay-300 ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-6'
+              }`}
+            >
+              <Avatar className="h-14 w-14 lg:h-16 lg:w-16 border-2 border-primary/20 shadow-lg shadow-primary/10">
+                <AvatarImage 
+                  src={talissonPhoto} 
+                  alt="Talisson Souza - Fundador e CEO da Cheetah Solutions Network"
+                  className="object-cover"
+                />
+                <AvatarFallback className="bg-primary/10 text-primary font-semibold text-lg">
+                  TS
+                </AvatarFallback>
+              </Avatar>
+              
+              <div>
+                <p className="font-semibold text-foreground text-base lg:text-lg">
+                  Talisson Souza
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Fundador & CEO
+                </p>
+              </div>
+              
+              {/* Decorative line */}
+              <div className="hidden sm:block h-px flex-1 max-w-[100px] bg-gradient-to-r from-border to-transparent ml-2" />
+            </div>
+          </div>
+          
+          {/* Photo - Mobile: centered, Desktop: right side */}
+          <div 
+            className={`order-1 lg:order-2 flex justify-center lg:justify-end transition-all duration-700 ease-out delay-100 ${
+              isVisible 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-95'
+            }`}
+          >
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl scale-110 opacity-50" />
+              
+              {/* Main photo container */}
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary/15 shadow-2xl shadow-primary/10">
+                <img 
+                  src={talissonPhoto}
+                  alt="Talisson Souza - Fundador e CEO da Cheetah Solutions Network"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              
+              {/* Decorative ring */}
+              <div className="absolute -inset-3 border border-primary/10 rounded-full pointer-events-none" />
+              <div className="absolute -inset-6 border border-primary/5 rounded-full pointer-events-none" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FounderHero;
