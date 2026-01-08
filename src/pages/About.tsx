@@ -443,18 +443,18 @@ const About = () => {
             {/* Right column - logo */}
             <AnimatedSection animation="fade" delay={150}>
               <div className="flex items-center justify-center h-full">
-                <div className="relative p-8">
+                <div className="relative p-6">
                   {/* Main logo container */}
-                  <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-3xl overflow-hidden border-4 border-primary/15 shadow-2xl shadow-primary/10 bg-card flex items-center justify-center">
+                  <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-3xl overflow-hidden border-4 border-primary/15 shadow-2xl shadow-primary/10">
                     <img 
                       src={squareCloudLogo} 
                       alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
-                      className="w-48 h-48 md:w-64 md:h-64 object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   
                   {/* Decorative ring - around the logo */}
-                  <div className="absolute inset-4 border border-primary/10 rounded-3xl pointer-events-none" />
+                  <div className="absolute inset-3 border border-primary/10 rounded-3xl pointer-events-none" />
                 </div>
               </div>
             </AnimatedSection>
