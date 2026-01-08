@@ -442,14 +442,13 @@ const About = () => {
             {/* Right column - logo */}
             <AnimatedSection delay={150}>
               <div className="flex items-center justify-center h-full">
-                <div className="relative p-4">
-                  {/* Glow effect - border style around logo */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/50 via-primary/30 to-primary/50 blur-xl"></div>
-                  <div className="absolute inset-2 rounded-2xl bg-background/80"></div>
+                <div className="relative">
+                  {/* Glow effect around logo */}
+                  <div className="absolute -inset-4 rounded-3xl bg-primary/30 blur-2xl"></div>
                   <img 
                     src={squareCloudLogo} 
                     alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
-                    className="relative w-52 h-52 md:w-72 md:h-72 object-contain rounded-2xl shadow-[0_0_40px_rgba(var(--primary-rgb,59,130,246),0.4)]"
+                    className="relative w-52 h-52 md:w-72 md:h-72 object-contain"
                   />
                 </div>
               </div>
