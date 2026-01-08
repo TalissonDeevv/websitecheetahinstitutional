@@ -92,6 +92,11 @@ export const routes = {
     description: 'Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia.',
     ogTitle: 'Cheetah Developers Brasil | Cheetah Solutions',
   },
+  '/inscricoes': {
+    title: 'Trabalhe Conosco | Cheetah Solutions',
+    description: 'Junte-se à equipe da Cheetah Solutions. Vagas remotas para desenvolvedores, designers e profissionais de tecnologia. Projetos reais, remuneração justa e crescimento técnico.',
+    ogTitle: 'Trabalhe Conosco | Cheetah Solutions',
+  },
   '/cheetah-solidaria': {
     title: 'Cheetah Solutions | Cheetah Solidária',
     description: 'Conheça a Cheetah Solidária, nossa iniciativa de responsabilidade social em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas.',
