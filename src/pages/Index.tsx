@@ -32,6 +32,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 import pairProgrammingSvg from "@/assets/pair-programming.svg";
+import FounderHero from "@/components/FounderHero";
 
 const Index = () => {
   const services = [
@@ -278,6 +279,9 @@ const Index = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Founder Hero Section */}
+      <FounderHero />
 
       {/* Services Section */}
       <section className="py-16 px-4 lg:px-8">
