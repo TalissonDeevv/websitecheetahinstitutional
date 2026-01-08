@@ -120,7 +120,7 @@ export const routes = {
 };
 
 export const BASE_URL = 'https://cheetahsolutions.com.br';
-export const DEFAULT_IMAGE = 'https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png';
+export const DEFAULT_IMAGE = 'https://i.ibb.co/gFfPkTZ7/Cheetah-Solutions-Network.png';
 
 export function getMetadata(path) {
   const metadata = routes[path] || routes['/'];
