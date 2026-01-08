@@ -1,13 +1,48 @@
-import { Briefcase, Code, Cloud, Layout, Settings, TestTube, Users, HeadphonesIcon, ExternalLink, Laptop, DollarSign, Zap, MessageCircle, Target, Shield, Clock, TrendingUp } from "lucide-react";
+import { Briefcase, Code, Cloud, Layout, Settings, TestTube, Users, HeadphonesIcon, ExternalLink, Laptop, DollarSign, Zap, MessageCircle, Target, Shield, Clock, TrendingUp, FileText, Search, UserCheck, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import goodTeamSvg from "@/assets/good-team.svg";
+
 const TALENT_FORM_URL =
   "https://docs.google.com/forms/d/1CtiCmGVmRhXX1YZrQXt78d_WDCnDpEnb6mTibvVmhiI";
+
+const ETAPAS_PROCESSO = [
+  {
+    step: 1,
+    title: "Inscrição no Banco de Talentos",
+    description: "Preencha o formulário de inscrição com suas informações profissionais, áreas de interesse e portfólio.",
+    icon: FileText,
+  },
+  {
+    step: 2,
+    title: "Análise de Perfil",
+    description: "Quando surgem projetos compatíveis, nossa equipe analisa os perfis cadastrados buscando alinhamento técnico.",
+    icon: Search,
+  },
+  {
+    step: 3,
+    title: "Conversa Inicial",
+    description: "Se houver compatibilidade, entramos em contato para uma conversa sobre expectativas, disponibilidade e escopo.",
+    icon: MessageCircle,
+  },
+  {
+    step: 4,
+    title: "Avaliação Técnica",
+    description: "Dependendo do projeto, pode haver um teste técnico ou análise de código/portfólio para validar as habilidades.",
+    icon: UserCheck,
+  },
+  {
+    step: 5,
+    title: "Alinhamento e Início",
+    description: "Com tudo alinhado, definimos valores, prazos e iniciamos o projeto com comunicação direta e objetiva.",
+    icon: Handshake,
+  },
+];
 
 const LINKEDIN_URL = "https://linkedin.com/company/cheetahnetwork";
 
@@ -73,38 +108,53 @@ const COMO_TRABALHAMOS = [
   }
 ];
 
-const FAQ_ITEMS = [
+const FAQ_CATEGORIES = [
   {
-    question: "Como funciona o processo seletivo da Cheetah Solutions?",
-    answer: "O processo ocorre conforme demanda de projetos. Após inscrição no banco de talentos, perfis são analisados quando surgem oportunidades. Se houver compatibilidade técnica, entramos em contato para uma conversa inicial, avaliação técnica e alinhamento de expectativas."
+    title: "Processo Seletivo",
+    items: [
+      {
+        question: "Como funciona o processo seletivo da Cheetah Solutions?",
+        answer: "O processo ocorre conforme demanda de projetos. Após inscrição no banco de talentos, perfis são analisados quando surgem oportunidades. Se houver compatibilidade técnica, entramos em contato para uma conversa inicial, avaliação técnica e alinhamento de expectativas."
+      },
+      {
+        question: "A inscrição no banco de talentos garante contratação?",
+        answer: "Não. A inscrição é um cadastro para futuras oportunidades. Todas as vagas efetivas são divulgadas exclusivamente pelo nosso LinkedIn oficial, e o processo segue critérios de alinhamento técnico e disponibilidade."
+      },
+      {
+        question: "Como acompanho as oportunidades abertas?",
+        answer: "Todas as vagas são publicadas no nosso LinkedIn oficial. Recomendamos seguir a página e ativar notificações para não perder nenhuma oportunidade."
+      }
+    ]
   },
   {
-    question: "A inscrição no banco de talentos garante contratação?",
-    answer: "Não. A inscrição é um cadastro para futuras oportunidades. Todas as vagas efetivas são divulgadas exclusivamente pelo nosso LinkedIn oficial, e o processo segue critérios de alinhamento técnico e disponibilidade."
+    title: "Remuneração e Contratação",
+    items: [
+      {
+        question: "Como funciona a remuneração na Cheetah?",
+        answer: "A remuneração é definida conforme o escopo e a complexidade de cada projeto. Trabalhamos com valores justos, alinhados ao mercado e transparentes desde o início da negociação."
+      },
+      {
+        question: "Vocês contratam remotamente?",
+        answer: "Sim. A maior parte da equipe trabalha remotamente. Buscamos profissionais organizados, com boa comunicação e autonomia para atuar de qualquer lugar do Brasil."
+      }
+    ]
   },
   {
-    question: "Como funciona a remuneração na Cheetah?",
-    answer: "A remuneração é definida conforme o escopo e a complexidade de cada projeto. Trabalhamos com valores justos, alinhados ao mercado e transparentes desde o início da negociação."
-  },
-  {
-    question: "Quais áreas têm mais demanda na Cheetah?",
-    answer: "Desenvolvimento Full Stack, Backend com foco em APIs e integrações, e DevOps/Cloud são as áreas com maior frequência de demanda. Contudo, todas as áreas listadas recebem oportunidades conforme os projetos."
-  },
-  {
-    question: "Vocês contratam remotamente?",
-    answer: "Sim. A maior parte da equipe trabalha remotamente. Buscamos profissionais organizados, com boa comunicação e autonomia para atuar de qualquer lugar do Brasil."
-  },
-  {
-    question: "Qual o perfil de profissional que vocês buscam?",
-    answer: "Buscamos profissionais com excelência técnica, organização, boa comunicação e visão de produto. Valorizamos quem entrega com qualidade, cumpre prazos e se comunica de forma clara."
-  },
-  {
-    question: "Quais tecnologias vocês utilizam?",
-    answer: "Trabalhamos principalmente com React, Next.js, Node.js, TypeScript, Python, PostgreSQL, MongoDB, AWS, Docker e Kubernetes. O stack pode variar conforme o projeto."
-  },
-  {
-    question: "Como acompanho as oportunidades abertas?",
-    answer: "Todas as vagas são publicadas no nosso LinkedIn oficial. Recomendamos seguir a página e ativar notificações para não perder nenhuma oportunidade."
+    title: "Perfil e Tecnologias",
+    items: [
+      {
+        question: "Quais áreas têm mais demanda na Cheetah?",
+        answer: "Desenvolvimento Full Stack, Backend com foco em APIs e integrações, e DevOps/Cloud são as áreas com maior frequência de demanda. Contudo, todas as áreas listadas recebem oportunidades conforme os projetos."
+      },
+      {
+        question: "Qual o perfil de profissional que vocês buscam?",
+        answer: "Buscamos profissionais com excelência técnica, organização, boa comunicação e visão de produto. Valorizamos quem entrega com qualidade, cumpre prazos e se comunica de forma clara."
+      },
+      {
+        question: "Quais tecnologias vocês utilizam?",
+        answer: "Trabalhamos principalmente com React, Next.js, Node.js, TypeScript, Python, PostgreSQL, MongoDB, AWS, Docker e Kubernetes. O stack pode variar conforme o projeto."
+      }
+    ]
   }
 ];
 
@@ -126,46 +176,105 @@ const TrabalheConosco = () => {
 
       <OrganizationJsonLd />
       <WebPageJsonLd title={title} description={description} url="/inscricoes" />
-      <FAQJsonLd questions={FAQ_ITEMS} />
+      <FAQJsonLd questions={FAQ_CATEGORIES.flatMap(cat => cat.items.map(item => ({ question: item.question, answer: item.answer })))} />
 
       <Header />
 
-      {/* Hero */}
+      {/* Hero - Same style as Developers/Solidária */}
       <AnimatedSection animation="fade-up">
-        <section className="pt-28 pb-16 px-4 overflow-x-hidden">
+        <section className="pt-28 pb-20 px-4 overflow-x-hidden overflow-y-visible">
           <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16">
-              <div className="max-w-3xl lg:flex-1 min-w-0">
-                <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-                  Faça parte do time
-                </p>
-                <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-8">
-                  Trabalhe Conosco
-                </h1>
-                <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                  Somos uma software house focada na criação de soluções digitais sob medida para negócios que exigem
-                  eficiência, performance e escalabilidade. Buscamos profissionais alinhados com excelência técnica,
-                  organização e visão de produto.
-                </p>
-              </div>
-              <div className="flex justify-center mt-10 lg:mt-0 lg:flex-shrink-0 lg:items-center lg:justify-center">
-                <div className="w-64 md:w-72 xl:w-96 aspect-square overflow-hidden">
-                  <img 
-                    src={goodTeamSvg} 
-                    alt="Ilustração de equipe trabalhando juntos" 
-                    width={384}
-                    height={384}
-                    loading="eager"
-                    decoding="async"
-                    className="w-full h-full object-contain animate-fade-in"
-                    style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
-                  />
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+              <div className="flex-1">
+                <div className="max-w-2xl">
+                  <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
+                    Faça parte do time
+                  </p>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
+                    Trabalhe<br />
+                    <span className="text-primary">Conosco</span>
+                  </h1>
+                  <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+                    Somos uma software house focada na criação de soluções digitais sob medida para negócios que exigem
+                    eficiência, performance e escalabilidade. Buscamos profissionais alinhados com excelência técnica,
+                    organização e visão de produto.
+                  </p>
                 </div>
               </div>
+              
+              {/* SVG Illustration - Desktop */}
+              <div className="hidden lg:flex items-center justify-center flex-shrink-0">
+                <img 
+                  src={goodTeamSvg} 
+                  alt="Ilustração de equipe trabalhando juntos" 
+                  className="w-[420px] h-[420px] xl:w-[480px] xl:h-[480px]"
+                />
+              </div>
+            </div>
+            
+            {/* SVG Illustration - Mobile/Tablet */}
+            <div className="flex lg:hidden items-center justify-center mt-8">
+              <img 
+                src={goodTeamSvg} 
+                alt="Ilustração de equipe trabalhando juntos" 
+                className="w-64 h-64 sm:w-80 sm:h-80"
+              />
             </div>
           </div>
         </section>
       </AnimatedSection>
+
+      {/* Etapas do Processo - Timeline */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <AnimatedSection>
+            <div className="max-w-xl mb-16">
+              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                Processo Seletivo
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                Etapas do processo.
+              </h2>
+              <p className="text-muted-foreground mt-4 leading-relaxed">
+                Conheça as etapas do nosso processo seletivo, da inscrição até o início do projeto.
+              </p>
+            </div>
+          </AnimatedSection>
+          
+          <div className="max-w-4xl">
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
+              
+              <div className="space-y-8">
+                {ETAPAS_PROCESSO.map((etapa, index) => (
+                  <AnimatedSection key={etapa.step} animation="fade-up" delay={index * 100}>
+                    <div className="flex gap-6 items-start">
+                      {/* Step Number/Icon */}
+                      <div className="relative z-10 flex-shrink-0">
+                        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
+                          {etapa.step}
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="flex-1 bg-card border border-border rounded-xl p-6 -mt-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <etapa.icon className="h-5 w-5 text-primary" />
+                          <h3 className="font-semibold text-lg">{etapa.title}</h3>
+                        </div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {etapa.description}
+                        </p>
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Por que trabalhar na Cheetah - Benefícios */}
       <section className="py-20 px-4">
@@ -419,32 +528,51 @@ const TrabalheConosco = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 px-4 bg-secondary/30">
-        <div className="container mx-auto">
+      {/* FAQ Section - Accordion Style */}
+      <section className="py-16 px-4 bg-secondary/30">
+        <div className="container mx-auto max-w-3xl">
           <AnimatedSection>
-            <div className="max-w-xl mb-16">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+            <div className="max-w-2xl mb-12">
+              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
                 Dúvidas frequentes
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                Perguntas sobre o processo.
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold leading-[1.1] mb-4">
+                Perguntas sobre<br />
+                <span className="text-primary">o processo.</span>
               </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Respostas diretas para as dúvidas mais comuns sobre 
+                nosso processo seletivo e forma de trabalho.
+              </p>
             </div>
           </AnimatedSection>
           
-          <div className="grid lg:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
-            {FAQ_ITEMS.map((item, index) => (
-              <AnimatedSection key={index} delay={index * 50}>
-                <div className="border-l-2 border-primary/30 pl-6 py-2">
-                  <h3 className="font-semibold mb-2">{item.question}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.answer}
-                  </p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+          {FAQ_CATEGORIES.map((category, categoryIndex) => (
+            <AnimatedSection key={categoryIndex} animation="fade-up" delay={categoryIndex * 100}>
+              <div className="mb-12 last:mb-0">
+                <h3 className="text-lg font-semibold mb-6 pb-3 border-b border-border">
+                  {category.title}
+                </h3>
+                
+                <Accordion type="single" collapsible className="space-y-2">
+                  {category.items.map((faq, index) => (
+                    <AccordionItem 
+                      key={index} 
+                      value={`item-${categoryIndex}-${index}`}
+                      className="border border-border rounded-lg overflow-hidden bg-card"
+                    >
+                      <AccordionTrigger className="text-left px-5 py-4 hover:bg-secondary/50 text-sm font-medium">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-5 pb-4 text-muted-foreground text-sm leading-relaxed">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </AnimatedSection>
+          ))}
         </div>
       </section>
 
