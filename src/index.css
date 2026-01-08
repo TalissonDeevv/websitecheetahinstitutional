@@ -331,15 +331,15 @@ All colors MUST be HSL.
   }
 }
 
-/* Hero: sem transform (apenas opacity + blur) */
+/* Hero: sem translate (apenas opacity + scale mínimo) - GPU accelerated */
 @keyframes fadeInSoft {
   from {
     opacity: 0;
-    filter: blur(8px);
+    transform: scale(0.98);
   }
   to {
     opacity: 1;
-    filter: blur(0px);
+    transform: scale(1);
   }
 }
 
