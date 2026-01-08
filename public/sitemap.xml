@@ -143,6 +143,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.cheetahsolutions.com.br/trabalhe-conosco</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.cheetahsolutions.com.br/cheetah-solidaria</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -157,7 +162,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  
   <!-- Diretrizes e Políticas -->
   <url>
     <loc>https://www.cheetahsolutions.com.br/diretrizes</loc>
