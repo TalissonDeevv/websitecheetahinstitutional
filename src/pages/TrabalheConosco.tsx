@@ -182,10 +182,10 @@ const TrabalheConosco = () => {
 
       {/* Hero - Same style as Developers/Solidária */}
       <AnimatedSection animation="fade-up">
-        <section className="pt-28 pb-20 px-4 overflow-x-hidden overflow-y-visible">
+        <section className="pt-28 pb-20 px-4 overflow-hidden">
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <div className="max-w-2xl">
                   <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
                     Faça parte do time
@@ -204,21 +204,33 @@ const TrabalheConosco = () => {
               
               {/* SVG Illustration - Desktop */}
               <div className="hidden lg:flex items-center justify-center flex-shrink-0">
-                <img 
-                  src={goodTeamSvg} 
-                  alt="Ilustração de equipe trabalhando juntos" 
-                  className="w-[420px] h-[420px] xl:w-[480px] xl:h-[480px]"
-                />
+                <div className="w-[420px] h-[420px] xl:w-[480px] xl:h-[480px] overflow-hidden contain-paint">
+                  <img 
+                    src={goodTeamSvg} 
+                    alt="Ilustração de equipe trabalhando juntos" 
+                    width={480}
+                    height={480}
+                    loading="eager"
+                    decoding="async"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
             </div>
             
             {/* SVG Illustration - Mobile/Tablet */}
             <div className="flex lg:hidden items-center justify-center mt-8">
-              <img 
-                src={goodTeamSvg} 
-                alt="Ilustração de equipe trabalhando juntos" 
-                className="w-64 h-64 sm:w-80 sm:h-80"
-              />
+              <div className="w-64 h-64 sm:w-80 sm:h-80 overflow-hidden contain-paint">
+                <img 
+                  src={goodTeamSvg} 
+                  alt="Ilustração de equipe trabalhando juntos" 
+                  width={320}
+                  height={320}
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </section>

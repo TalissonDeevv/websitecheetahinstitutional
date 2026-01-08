@@ -166,7 +166,7 @@ export default function OverflowDebug() {
       <div className="pointer-events-auto rounded-lg border border-border bg-card/95 backdrop-blur p-3 shadow-lg">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs font-semibold text-foreground">Debug Overflow (home)</p>
+            <p className="text-xs font-semibold text-foreground">Debug Overflow</p>
             <p className="mt-0.5 text-[11px] text-muted-foreground">
               Ativo via <span className="font-mono">?debugOverflow=1</span>. Quando houver overflow, o console
               mostra os suspeitos.
