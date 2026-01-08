@@ -386,7 +386,7 @@ const About = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left column - text content */}
-            <AnimatedSection>
+            <AnimatedSection animation="fade">
               <div>
                 <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Infraestrutura & Tecnologia
@@ -441,7 +441,7 @@ const About = () => {
             </AnimatedSection>
             
             {/* Right column - logo */}
-            <AnimatedSection delay={150}>
+            <AnimatedSection animation="fade" delay={150}>
               <div className="flex items-center justify-center h-full">
                 <div className="relative overflow-visible">
                   {/* Glow 360° (radial) — em GlowLayer para nunca gerar overflow lateral */}

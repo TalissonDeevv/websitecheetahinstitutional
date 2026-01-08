@@ -24,10 +24,10 @@ const FounderHero = () => {
           <div className="order-2 lg:order-1">
             <h2 
               id="founder-heading"
-              className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-[1.2] tracking-tight transition-[opacity,transform] duration-700 ease-out ${
+              className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-[1.2] tracking-tight transition-opacity sm:transition-[opacity,transform] duration-700 ease-out ${
                 isVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-6'
+                  ? 'opacity-100 sm:translate-y-0' 
+                  : 'opacity-0 sm:translate-y-6'
               }`}
             >
               <span className="text-primary">Resultado real</span>{" "}
@@ -35,10 +35,10 @@ const FounderHero = () => {
             </h2>
             
             <p 
-              className={`text-base lg:text-lg text-foreground/70 mb-10 max-w-2xl leading-[1.8] transition-[opacity,transform] duration-700 ease-out delay-150 ${
+              className={`text-base lg:text-lg text-foreground/70 mb-10 max-w-2xl leading-[1.8] transition-opacity sm:transition-[opacity,transform] duration-700 ease-out delay-150 ${
                 isVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-6'
+                  ? 'opacity-100 sm:translate-y-0' 
+                  : 'opacity-0 sm:translate-y-6'
               }`}
             >
               Desenvolvemos <strong className="text-foreground/90 font-medium">soluções digitais escaláveis</strong>{" "}
@@ -49,10 +49,10 @@ const FounderHero = () => {
             
             {/* Founder signature block */}
             <div 
-              className={`flex items-center gap-4 transition-[opacity,transform] duration-700 ease-out delay-300 ${
+              className={`flex items-center gap-4 transition-opacity sm:transition-[opacity,transform] duration-700 ease-out delay-300 ${
                 isVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-6'
+                  ? 'opacity-100 sm:translate-y-0' 
+                  : 'opacity-0 sm:translate-y-6'
               }`}
             >
               <Avatar className="h-14 w-14 lg:h-16 lg:w-16 border-2 border-primary/20 shadow-lg shadow-primary/10">
@@ -82,10 +82,10 @@ const FounderHero = () => {
           
           {/* Photo - Mobile: centered, Desktop: right side */}
           <div 
-            className={`order-1 lg:order-2 flex justify-center lg:justify-end transition-[opacity,transform] duration-700 ease-out delay-100 ${
+            className={`order-1 lg:order-2 flex justify-center lg:justify-end transition-opacity sm:transition-[opacity,transform] duration-700 ease-out delay-100 ${
               isVisible 
-                ? 'opacity-100 scale-100' 
-                : 'opacity-0 scale-95'
+                ? 'opacity-100 sm:scale-100' 
+                : 'opacity-0 sm:scale-95'
             }`}
           >
             <div className="relative p-6 contain-paint">

@@ -5,7 +5,7 @@ interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  animation?: "fade-up" | "fade-left" | "fade-right" | "scale";
+  animation?: "fade" | "fade-up" | "fade-left" | "fade-right" | "scale";
   /**
    * Controla apenas o comportamento de overflow do WRAPPER.
    * - clip (padrão): clippa o eixo X (evita overflow lateral) e mantém o eixo Y visível (glows não “cortam” em cima/baixo)
@@ -23,7 +23,14 @@ const AnimatedSection = ({
 }: AnimatedSectionProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  const animations = {
+  const animations: Record<
+    NonNullable<AnimatedSectionProps["animation"]>,
+    { hidden: string; visible: string }
+  > = {
+    fade: {
+      hidden: "opacity-0",
+      visible: "opacity-100",
+    },
     "fade-up": {
       hidden: "opacity-0 translate-y-4",
       visible: "opacity-100 translate-y-0",
@@ -36,7 +43,7 @@ const AnimatedSection = ({
       hidden: "opacity-0 translate-x-4",
       visible: "opacity-100 translate-x-0",
     },
-    "scale": {
+    scale: {
       hidden: "opacity-0 scale-[0.98]",
       visible: "opacity-100 scale-100",
     },
@@ -54,6 +61,11 @@ const AnimatedSection = ({
   const wrapperClass =
     overflow === "visible" ? "overflow-visible" : "overflow-x-hidden overflow-y-visible";
 
+  const transitionClass =
+    animation === "fade"
+      ? "transition-opacity duration-700 ease-out will-change-[opacity]"
+      : "transform-gpu transition-[opacity,transform] duration-700 ease-out will-change-transform";
+
   return (
     <div
       ref={ref}
@@ -61,9 +73,7 @@ const AnimatedSection = ({
       style={overflow === "clip" ? { overflowX: "clip" } : undefined}
     >
       <div
-        className={`transform-gpu transition-[opacity,transform] duration-700 ease-out will-change-transform ${
-          isVisible ? visible : hidden
-        }`}
+        className={`${transitionClass} ${isVisible ? visible : hidden}`}
         style={{ transitionDelay: `${delay}ms` }}
       >
         {children}

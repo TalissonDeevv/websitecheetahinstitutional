@@ -101,7 +101,7 @@ const Services = () => {
       <Header />
       
       {/* Hero - Asymmetric */}
-      <AnimatedSection animation="fade-up">
+      <AnimatedSection animation="fade">
         <section className="pt-28 pb-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-4xl">
