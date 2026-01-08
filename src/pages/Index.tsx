@@ -211,7 +211,7 @@ const Index = () => {
           <div className="max-w-4xl">
             {/* Tag with refined animation */}
             <div 
-              className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-10 px-4 py-1.5 bg-primary/8 border border-primary/15 rounded-full text-xs font-medium text-primary/80 backdrop-blur-sm animate-fade-in max-w-full"
+              className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-10 px-4 py-1.5 bg-primary/8 border border-primary/15 rounded-full text-xs font-medium text-primary/80 backdrop-blur-sm animate-fade-in-soft max-w-full"
               style={{ animationDelay: '100ms', animationFillMode: 'both' }}
             >
               <span>Software</span>
@@ -222,7 +222,7 @@ const Index = () => {
             </div>
             
             <h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-[1.08] tracking-tight animate-fade-in"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-[1.08] tracking-tight animate-fade-in-soft"
               style={{ animationDelay: '200ms', animationFillMode: 'both' }}
             >
               Desenvolvimento de{" "}
@@ -237,14 +237,14 @@ const Index = () => {
             </h1>
             
             <p 
-              className="text-lg lg:text-xl text-foreground/65 mb-12 max-w-3xl leading-[1.7] animate-fade-in"
+              className="text-lg lg:text-xl text-foreground/65 mb-12 max-w-3xl leading-[1.7] animate-fade-in-soft"
               style={{ animationDelay: '350ms', animationFillMode: 'both' }}
             >
               Criamos sistemas, aplicações e plataformas digitais escaláveis, combinando engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais.
             </p>
             
             <div 
-              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+              className="flex flex-col sm:flex-row gap-4 animate-fade-in-soft"
               style={{ animationDelay: '500ms', animationFillMode: 'both' }}
             >
               <Link to="/servicos">
