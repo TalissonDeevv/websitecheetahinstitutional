@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Quote } from "lucide-react";
+
 import talissonPhoto from "@/assets/talisson-souza.png";
 
 const FounderHero = () => {
@@ -28,25 +28,20 @@ const FounderHero = () => {
               com software sob medida
             </h2>
             
-            <div 
-              className={`relative mb-10 max-w-2xl transition-opacity sm:transition-[opacity,transform] duration-700 ease-out delay-150 ${
+            <p 
+              className={`text-base lg:text-lg text-foreground/70 mb-10 max-w-2xl leading-[1.8] transition-opacity sm:transition-[opacity,transform] duration-700 ease-out delay-150 ${
                 isVisible 
                   ? 'opacity-100 sm:translate-y-0' 
                   : 'opacity-0 sm:translate-y-6'
               }`}
             >
-              {/* Decorative quote icon */}
-              <Quote className="absolute -left-2 -top-4 w-10 h-10 lg:w-12 lg:h-12 text-primary/20 rotate-180" />
-              
-              <p className="text-base lg:text-lg text-foreground/70 leading-[1.8] pl-6">
-                <span className="text-primary text-2xl font-bold">"</span>
-                Desenvolvemos <strong className="text-foreground/90 font-medium">soluções digitais escaláveis</strong>{" "}
-                com foco em <strong className="text-foreground/90 font-medium">performance</strong> e{" "}
-                <strong className="text-foreground/90 font-medium">eficiência</strong>. Código limpo, arquitetura sólida 
-                e tecnologia para negócios que precisam crescer.
-                <span className="text-primary text-2xl font-bold">"</span>
-              </p>
-            </div>
+              <span className="text-primary text-2xl lg:text-3xl font-bold align-top leading-none">"</span>
+              Desenvolvemos <strong className="text-foreground/90 font-medium">soluções digitais escaláveis</strong>{" "}
+              com foco em <strong className="text-foreground/90 font-medium">performance</strong> e{" "}
+              <strong className="text-foreground/90 font-medium">eficiência</strong>. Código limpo, arquitetura sólida 
+              e tecnologia para negócios que precisam crescer.
+              <span className="text-primary text-2xl lg:text-3xl font-bold align-bottom leading-none">"</span>
+            </p>
             
             {/* Founder signature block */}
             <div 
