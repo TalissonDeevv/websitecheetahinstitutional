@@ -1,4 +1,4 @@
-import { Briefcase, Code, Cloud, Layout, Settings, TestTube, Users, HeadphonesIcon, ExternalLink } from "lucide-react";
+import { Briefcase, Code, Cloud, Layout, Settings, TestTube, Users, HeadphonesIcon, ExternalLink, Laptop, DollarSign, Zap, MessageCircle, Target, Shield, Clock, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,6 +22,57 @@ const AREAS_DE_INTERESSE = [
   { name: "Suporte", icon: HeadphonesIcon },
 ];
 
+const BENEFICIOS = [
+  {
+    icon: Laptop,
+    title: "100% Remoto",
+    description: "Trabalhe de qualquer lugar do Brasil com total flexibilidade de horário e autonomia."
+  },
+  {
+    icon: DollarSign,
+    title: "Remuneração por Projeto",
+    description: "Salário definido conforme o escopo e complexidade de cada projeto. Transparência total."
+  },
+  {
+    icon: Zap,
+    title: "Projetos Reais",
+    description: "Atue em projetos diversos: sistemas web, APIs, automações, e-commerces e apps mobile."
+  },
+  {
+    icon: MessageCircle,
+    title: "Comunicação Direta",
+    description: "Sem burocracia excessiva. Acesso direto à liderança técnica e decisões rápidas."
+  },
+  {
+    icon: Target,
+    title: "Foco em Resultado",
+    description: "Valorizamos entregas de qualidade. Menos reuniões, mais código funcionando."
+  },
+  {
+    icon: TrendingUp,
+    title: "Crescimento Técnico",
+    description: "Trabalhe com tecnologias modernas: React, Node.js, TypeScript, AWS, Docker e mais."
+  }
+];
+
+const COMO_TRABALHAMOS = [
+  {
+    icon: Shield,
+    title: "Processos Definidos",
+    description: "Metodologias ágeis aplicadas de forma prática, sem cerimônias desnecessárias."
+  },
+  {
+    icon: Clock,
+    title: "Flexibilidade",
+    description: "Horários flexíveis desde que as entregas sejam cumpridas com qualidade."
+  },
+  {
+    icon: Users,
+    title: "Equipe Enxuta",
+    description: "Times pequenos e focados. Cada profissional tem impacto direto nos resultados."
+  }
+];
+
 const FAQ_ITEMS = [
   {
     question: "Como funciona o processo seletivo da Cheetah Solutions?",
@@ -32,6 +83,10 @@ const FAQ_ITEMS = [
     answer: "Não. A inscrição é um cadastro para futuras oportunidades. Todas as vagas efetivas são divulgadas exclusivamente pelo nosso LinkedIn oficial, e o processo segue critérios de alinhamento técnico e disponibilidade."
   },
   {
+    question: "Como funciona a remuneração na Cheetah?",
+    answer: "A remuneração é definida conforme o escopo e a complexidade de cada projeto. Trabalhamos com valores justos, alinhados ao mercado e transparentes desde o início da negociação."
+  },
+  {
     question: "Quais áreas têm mais demanda na Cheetah?",
     answer: "Desenvolvimento Full Stack, Backend com foco em APIs e integrações, e DevOps/Cloud são as áreas com maior frequência de demanda. Contudo, todas as áreas listadas recebem oportunidades conforme os projetos."
   },
@@ -40,15 +95,23 @@ const FAQ_ITEMS = [
     answer: "Sim. A maior parte da equipe trabalha remotamente. Buscamos profissionais organizados, com boa comunicação e autonomia para atuar de qualquer lugar do Brasil."
   },
   {
+    question: "Qual o perfil de profissional que vocês buscam?",
+    answer: "Buscamos profissionais com excelência técnica, organização, boa comunicação e visão de produto. Valorizamos quem entrega com qualidade, cumpre prazos e se comunica de forma clara."
+  },
+  {
+    question: "Quais tecnologias vocês utilizam?",
+    answer: "Trabalhamos principalmente com React, Next.js, Node.js, TypeScript, Python, PostgreSQL, MongoDB, AWS, Docker e Kubernetes. O stack pode variar conforme o projeto."
+  },
+  {
     question: "Como acompanho as oportunidades abertas?",
     answer: "Todas as vagas são publicadas no nosso LinkedIn oficial. Recomendamos seguir a página e ativar notificações para não perder nenhuma oportunidade."
   }
 ];
 
 const TrabalheConosco = () => {
-  const title = "Cheetah Solutions | Trabalhe Conosco";
+  const title = "Trabalhe Conosco | Cheetah Solutions - Vagas para Desenvolvedores";
   const description =
-    "Software house especializada em soluções digitais sob medida. Conheça as áreas de interesse, faça parte do nosso banco de talentos e acompanhe oportunidades técnicas na Cheetah Solutions.";
+    "Junte-se à equipe da Cheetah Solutions. Vagas remotas para desenvolvedores, designers e profissionais de tecnologia. Projetos reais, remuneração justa e crescimento técnico. Inscreva-se no banco de talentos.";
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -56,7 +119,7 @@ const TrabalheConosco = () => {
         title={title}
         description={description}
         ogTitle="Trabalhe Conosco | Cheetah Solutions"
-        ogDescription="Conheça as áreas de atuação da Cheetah Solutions, inscreva-se em nosso banco de talentos e acompanhe futuras oportunidades técnicas."
+        ogDescription="Vagas remotas para desenvolvedores e profissionais de tecnologia. Projetos reais, remuneração por projeto e crescimento técnico."
         ogUrl="/inscricoes"
         canonical="/inscricoes"
       />
@@ -88,8 +151,82 @@ const TrabalheConosco = () => {
         </section>
       </AnimatedSection>
 
-      {/* Áreas de Interesse */}
+      {/* Por que trabalhar na Cheetah - Benefícios */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <AnimatedSection>
+            <div className="max-w-xl mb-16">
+              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                Diferenciais
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                Por que trabalhar na Cheetah?
+              </h2>
+              <p className="text-muted-foreground mt-4 leading-relaxed">
+                Oferecemos um ambiente de trabalho focado em resultados, com flexibilidade e 
+                oportunidades reais de crescimento técnico.
+              </p>
+            </div>
+          </AnimatedSection>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {BENEFICIOS.map((beneficio, index) => (
+              <AnimatedSection key={beneficio.title} delay={index * 100}>
+                <div className="bg-card border border-border rounded-xl p-6 h-full">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <beneficio.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">{beneficio.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {beneficio.description}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Como Trabalhamos */}
       <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <AnimatedSection>
+            <div className="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-20">
+              <div className="lg:w-1/3">
+                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                  Cultura
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                  Como trabalhamos.
+                </h2>
+                <p className="text-muted-foreground mt-4 leading-relaxed">
+                  Valorizamos autonomia, entregas consistentes e comunicação clara. 
+                  Menos burocracia, mais foco no que importa.
+                </p>
+              </div>
+              
+              <div className="lg:w-2/3">
+                <div className="grid sm:grid-cols-3 gap-8">
+                  {COMO_TRABALHAMOS.map((item, index) => (
+                    <AnimatedSection key={item.title} delay={index * 100}>
+                      <div className="border-l-2 border-primary/30 pl-6">
+                        <item.icon className="h-5 w-5 text-primary mb-3" />
+                        <h3 className="font-semibold mb-2">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </AnimatedSection>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Áreas de Interesse */}
+      <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
@@ -125,11 +262,83 @@ const TrabalheConosco = () => {
         </div>
       </section>
 
+      {/* O que buscamos */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+            <AnimatedSection className="lg:col-span-4">
+              <div className="sticky top-32">
+                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                  Perfil
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
+                  O que buscamos.
+                </h2>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={100} className="lg:col-span-8">
+              <div className="space-y-8">
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  Buscamos profissionais que compartilhem nosso compromisso com excelência técnica 
+                  e entregas de qualidade. Não importa a senioridade — importa a atitude.
+                </p>
+                
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="bg-card border border-border rounded-xl p-6">
+                    <h3 className="font-semibold mb-3">Habilidades Técnicas</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        Domínio de pelo menos uma linguagem/framework
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        Conhecimento em versionamento (Git)
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        Capacidade de aprender novas tecnologias
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        Código limpo e documentado
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-card border border-border rounded-xl p-6">
+                    <h3 className="font-semibold mb-3">Soft Skills</h3>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        Comunicação clara e objetiva
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        Organização e gestão de tempo
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        Autonomia para trabalho remoto
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0" />
+                        Comprometimento com prazos
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Banco de Talentos */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
-            {/* Left column */}
             <AnimatedSection className="lg:col-span-4">
               <div className="sticky top-32">
                 <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
@@ -141,7 +350,6 @@ const TrabalheConosco = () => {
               </div>
             </AnimatedSection>
             
-            {/* Right column */}
             <AnimatedSection delay={100} className="lg:col-span-8">
               <div className="space-y-8">
                 <p className="text-muted-foreground leading-relaxed text-lg">
@@ -209,9 +417,9 @@ const TrabalheConosco = () => {
             </div>
           </AnimatedSection>
           
-          <div className="max-w-3xl space-y-6">
+          <div className="grid lg:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl">
             {FAQ_ITEMS.map((item, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
+              <AnimatedSection key={index} delay={index * 50}>
                 <div className="border-l-2 border-primary/30 pl-6 py-2">
                   <h3 className="font-semibold mb-2">{item.question}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
