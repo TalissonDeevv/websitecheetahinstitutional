@@ -21,50 +21,27 @@ const FounderHero = () => {
           <div className="order-2 lg:order-1">
             <h2 
               id="founder-heading"
-              className={`text-3xl sm:text-4xl lg:text-[2.75rem] font-bold mb-6 leading-[1.15] tracking-tight transition-all duration-700 ease-out ${
+              className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-[1.2] tracking-tight transition-all duration-700 ease-out ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-6'
               }`}
             >
-              Software que gera{" "}
-              <span className="text-primary">resultado real</span>{" "}
-              para negócios que exigem{" "}
-              <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                  excelência
-                </span>
-              </span>
+              <span className="text-primary">Resultado real</span>{" "}
+              com software sob medida
             </h2>
             
             <p 
-              className={`text-base lg:text-lg text-foreground/70 mb-8 max-w-2xl leading-[1.8] transition-all duration-700 ease-out delay-150 ${
+              className={`text-base lg:text-lg text-foreground/70 mb-10 max-w-2xl leading-[1.8] transition-all duration-700 ease-out delay-150 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-6'
               }`}
             >
-              Na Cheetah Solutions, desenvolvemos{" "}
-              <strong className="text-foreground/90 font-medium">soluções digitais sob medida</strong>{" "}
-              com foco em <strong className="text-foreground/90 font-medium">performance</strong>,{" "}
-              <strong className="text-foreground/90 font-medium">escalabilidade</strong> e{" "}
-              <strong className="text-foreground/90 font-medium">eficiência operacional</strong>.
-              Cada projeto é tratado com visão de produto e rigor técnico, garantindo que a tecnologia 
-              seja um diferencial competitivo real para seu negócio.
-            </p>
-            
-            <p 
-              className={`text-base lg:text-lg text-foreground/70 mb-10 max-w-2xl leading-[1.8] transition-all duration-700 ease-out delay-200 ${
-                isVisible 
-                  ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-6'
-              }`}
-            >
-              Nosso compromisso é entregar{" "}
-              <strong className="text-foreground/90 font-medium">software escalável</strong>{" "}
-              que evolui com a sua operação — código limpo, arquitetura sólida e resultados mensuráveis.
-              Acreditamos que <strong className="text-foreground/90 font-medium">tecnologia para negócios</strong>{" "}
-              deve ser simples de manter, fácil de escalar e pronta para o mercado.
+              Desenvolvemos <strong className="text-foreground/90 font-medium">soluções digitais escaláveis</strong>{" "}
+              com foco em <strong className="text-foreground/90 font-medium">performance</strong> e{" "}
+              <strong className="text-foreground/90 font-medium">eficiência</strong>. Código limpo, arquitetura sólida 
+              e tecnologia para negócios que precisam crescer.
             </p>
             
             {/* Founder signature block */}
