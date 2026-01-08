@@ -22,6 +22,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
   ];
 
   const secondaryMenuItems = [
+    { name: "Trabalhe Conosco", path: "/inscricoes" },
     { name: "Developers Brasil", path: "/developers" },
     { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
     { name: "FAQ", path: "/faq" },

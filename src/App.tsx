@@ -77,7 +77,8 @@ const App = () => (
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
             <Route path="/sugestoes" element={<Suggestions />} />
             <Route path="/developers" element={<Developers />} />
-            <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
+            <Route path="/inscricoes" element={<TrabalheConosco />} />
+            <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
 
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />
