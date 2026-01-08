@@ -412,7 +412,17 @@ const About = () => {
                     bancos de dados, oferecendo uma base sólida para projetos escaláveis e confiáveis.
                   </p>
                 </div>
-                <div className="mt-8 flex flex-wrap gap-4">
+                <div className="mt-6 pt-6 border-t border-border">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Handshake className="h-4 w-4 text-primary" />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Parceria tecnológica para infraestrutura de hospedagem e soluções escaláveis
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6 flex flex-wrap gap-4">
                   <a 
                     href="https://squarecloud.app/pt-br/" 
                     target="_blank" 
@@ -431,14 +441,14 @@ const About = () => {
             
             {/* Right column - logo */}
             <AnimatedSection delay={150}>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center h-full">
                 <div className="relative">
                   {/* Glow effect behind logo */}
-                  <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-75"></div>
+                  <div className="absolute inset-0 bg-primary/40 blur-[60px] rounded-full scale-110"></div>
                   <img 
                     src={squareCloudLogo} 
                     alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
-                    className="relative w-40 h-40 md:w-56 md:h-56 object-contain drop-shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)] rounded-2xl"
+                    className="relative w-52 h-52 md:w-72 md:h-72 object-contain rounded-2xl"
                   />
                 </div>
               </div>
