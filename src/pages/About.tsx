@@ -383,9 +383,9 @@ const About = () => {
       {/* Parcerias Estratégicas */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left column - text content */}
-            <AnimatedSection className="lg:col-span-7">
+            <AnimatedSection>
               <div>
                 <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Infraestrutura & Tecnologia
@@ -412,27 +412,31 @@ const About = () => {
                     bancos de dados, oferecendo uma base sólida para projetos escaláveis e confiáveis.
                   </p>
                 </div>
-                <div className="mt-8 pt-6 border-t border-border">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Handshake className="h-4 w-4 text-primary" />
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Parceria tecnológica para infraestrutura de hospedagem e soluções escaláveis
-                    </p>
-                  </div>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <a 
+                    href="https://squarecloud.app/pt-br/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
+                      variant="outline"
+                      className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground font-medium"
+                    >
+                      Conhecer Square Cloud
+                    </Button>
+                  </a>
                 </div>
               </div>
             </AnimatedSection>
             
             {/* Right column - logo */}
-            <AnimatedSection delay={150} className="lg:col-span-5">
-              <div className="flex items-center justify-center lg:justify-end">
-                <div className="bg-card border border-border rounded-xl p-8 md:p-12">
+            <AnimatedSection delay={150}>
+              <div className="flex items-center justify-center">
+                <div className="bg-card border border-border rounded-xl p-10 md:p-14">
                   <img 
                     src={squareCloudLogo} 
                     alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
-                    className="w-32 h-32 md:w-40 md:h-40 object-contain"
+                    className="w-36 h-36 md:w-48 md:h-48 object-contain"
                   />
                 </div>
               </div>
