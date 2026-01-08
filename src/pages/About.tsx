@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
+import GlowLayer from "@/components/decorations/GlowLayer";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 
@@ -440,12 +441,14 @@ const About = () => {
             </AnimatedSection>
             
             {/* Right column - logo */}
-            <AnimatedSection delay={150} className="overflow-x-hidden overflow-y-visible contain-paint">
+            <AnimatedSection delay={150}>
               <div className="flex items-center justify-center h-full">
-                <div className="relative"> 
-                  {/* Glow 360° (radial) */}
-                  <div className="pointer-events-none absolute -inset-10 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.35)_0%,transparent_65%)] blur-2xl" />
-                  <div className="pointer-events-none absolute -inset-16 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.18)_0%,transparent_70%)] blur-3xl" />
+                <div className="relative overflow-visible">
+                  {/* Glow 360° (radial) — em GlowLayer para nunca gerar overflow lateral */}
+                  <GlowLayer fade="none" className="absolute -inset-20">
+                    <div className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.35)_0%,transparent_65%)] blur-2xl" />
+                    <div className="pointer-events-none absolute -inset-6 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.18)_0%,transparent_70%)] blur-3xl" />
+                  </GlowLayer>
 
                   <img 
                     src={squareCloudLogo} 
