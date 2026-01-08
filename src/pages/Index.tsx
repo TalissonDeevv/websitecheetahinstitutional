@@ -280,9 +280,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Founder Hero Section */}
-      <FounderHero />
-
       {/* Services Section */}
       <section className="py-16 px-4 lg:px-8">
         <div className="container mx-auto max-w-6xl">
@@ -596,6 +593,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Founder Hero Section */}
+      <FounderHero />
 
       {/* Final CTA Section */}
       <section className="py-20 px-4 lg:px-8 relative overflow-hidden">
