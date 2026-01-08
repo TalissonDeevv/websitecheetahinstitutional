@@ -230,23 +230,39 @@ const Services = () => {
               </div>
             </AnimatedSection>
             
-            <div className="space-y-0">
-              {[
-                { step: "01", title: "Conversa inicial", text: "Entendemos o problema e avaliamos se faz sentido trabalharmos juntos." },
-                { step: "02", title: "Proposta", text: "Escopo detalhado, prazo e orçamento. Sem surpresas." },
-                { step: "03", title: "Desenvolvimento", text: "Sprints semanais com entregas e validação constante." },
-                { step: "04", title: "Entrega e suporte", text: "Deploy, documentação e 30 dias de suporte inclusos." },
-              ].map((item, index) => (
-                <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
-                  <div className="flex items-start gap-6 py-8 border-b border-border last:border-0">
-                    <span className="text-primary font-bold text-2xl w-12 shrink-0">{item.step}</span>
-                    <div>
-                      <h3 className="font-semibold mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm">{item.text}</p>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              ))}
+            <div className="max-w-4xl mx-auto">
+              <div className="relative">
+                {/* Timeline Line */}
+                <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
+                
+                <div className="space-y-8">
+                  {[
+                    { step: "01", title: "Conversa inicial", text: "Entendemos o problema e avaliamos se faz sentido trabalharmos juntos." },
+                    { step: "02", title: "Proposta", text: "Escopo detalhado, prazo e orçamento. Sem surpresas." },
+                    { step: "03", title: "Desenvolvimento", text: "Sprints semanais com entregas e validação constante." },
+                    { step: "04", title: "Entrega e suporte", text: "Deploy, documentação e 30 dias de suporte inclusos." },
+                  ].map((item, index) => (
+                    <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
+                      <div className="flex gap-6 items-start">
+                        {/* Step Number */}
+                        <div className="relative z-10 flex-shrink-0">
+                          <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
+                            {item.step}
+                          </div>
+                        </div>
+                        
+                        {/* Content */}
+                        <div className="flex-1 bg-card border border-border rounded-xl p-6 -mt-1">
+                          <h3 className="font-semibold mb-2">{item.title}</h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed">
+                            {item.text}
+                          </p>
+                        </div>
+                      </div>
+                    </AnimatedSection>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
