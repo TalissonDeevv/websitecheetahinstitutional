@@ -1,5 +1,5 @@
 import { Target, Code, Zap, Shield, Users, Heart, MessageCircle, Lightbulb, Cog, Award, Handshake } from "lucide-react";
-import squareCloudLogo from "@/assets/square-cloud-logo.png";
+import squareCloudLogo from "@/assets/square-cloud-logo.webp";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -432,11 +432,13 @@ const About = () => {
             {/* Right column - logo */}
             <AnimatedSection delay={150}>
               <div className="flex items-center justify-center">
-                <div className="bg-card border border-border rounded-xl p-10 md:p-14">
+                <div className="relative">
+                  {/* Glow effect behind logo */}
+                  <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-75"></div>
                   <img 
                     src={squareCloudLogo} 
                     alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
-                    className="w-36 h-36 md:w-48 md:h-48 object-contain"
+                    className="relative w-40 h-40 md:w-56 md:h-56 object-contain drop-shadow-[0_0_15px_rgba(var(--primary-rgb),0.3)] rounded-2xl"
                   />
                 </div>
               </div>
