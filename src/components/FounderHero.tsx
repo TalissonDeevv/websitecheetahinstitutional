@@ -8,7 +8,7 @@ const FounderHero = () => {
   return (
     <section 
       ref={ref}
-      className="relative py-20 lg:py-28 px-4 lg:px-8 bg-gradient-to-b from-background via-secondary/20 to-background overflow-hidden"
+      className="relative py-20 lg:py-28 px-4 lg:px-8 bg-gradient-to-b from-background via-secondary/20 to-background overflow-x-hidden"
       aria-labelledby="founder-heading"
     >
       {/* Decorative elements */}
@@ -85,9 +85,9 @@ const FounderHero = () => {
                 : 'opacity-0 scale-95'
             }`}
           >
-            <div className="relative">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl scale-110 opacity-50" />
+            <div className="relative p-6">
+              {/* Glow effect - contained within padding */}
+              <div className="absolute inset-4 bg-primary/15 rounded-full blur-2xl pointer-events-none" />
               
               {/* Main photo container */}
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary/15 shadow-2xl shadow-primary/10">
@@ -99,9 +99,8 @@ const FounderHero = () => {
                 />
               </div>
               
-              {/* Decorative ring */}
-              <div className="absolute -inset-3 border border-primary/10 rounded-full pointer-events-none" />
-              <div className="absolute -inset-6 border border-primary/5 rounded-full pointer-events-none" />
+              {/* Decorative ring - inside padding area */}
+              <div className="absolute inset-3 border border-primary/10 rounded-full pointer-events-none" />
             </div>
           </div>
         </div>
