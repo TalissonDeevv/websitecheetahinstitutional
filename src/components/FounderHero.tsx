@@ -8,7 +8,7 @@ const FounderHero = () => {
   return (
     <section 
       ref={ref}
-      className="relative py-20 lg:py-28 px-4 lg:px-8 bg-gradient-to-b from-background via-secondary/20 to-background overflow-x-hidden"
+      className="relative py-20 lg:py-28 px-4 lg:px-8 bg-gradient-to-b from-background via-secondary/20 to-background overflow-x-hidden contain-paint"
       aria-labelledby="founder-heading"
     >
       {/* Decorative elements */}
@@ -21,7 +21,7 @@ const FounderHero = () => {
           <div className="order-2 lg:order-1">
             <h2 
               id="founder-heading"
-              className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-[1.2] tracking-tight transition-all duration-700 ease-out ${
+              className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-[1.2] tracking-tight transition-[opacity,transform] duration-700 ease-out ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-6'
@@ -32,7 +32,7 @@ const FounderHero = () => {
             </h2>
             
             <p 
-              className={`text-base lg:text-lg text-foreground/70 mb-10 max-w-2xl leading-[1.8] transition-all duration-700 ease-out delay-150 ${
+              className={`text-base lg:text-lg text-foreground/70 mb-10 max-w-2xl leading-[1.8] transition-[opacity,transform] duration-700 ease-out delay-150 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-6'
@@ -46,7 +46,7 @@ const FounderHero = () => {
             
             {/* Founder signature block */}
             <div 
-              className={`flex items-center gap-4 transition-all duration-700 ease-out delay-300 ${
+              className={`flex items-center gap-4 transition-[opacity,transform] duration-700 ease-out delay-300 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-6'
@@ -79,7 +79,7 @@ const FounderHero = () => {
           
           {/* Photo - Mobile: centered, Desktop: right side */}
           <div 
-            className={`order-1 lg:order-2 flex justify-center lg:justify-end transition-all duration-700 ease-out delay-100 ${
+            className={`order-1 lg:order-2 flex justify-center lg:justify-end transition-[opacity,transform] duration-700 ease-out delay-100 ${
               isVisible 
                 ? 'opacity-100 scale-100' 
                 : 'opacity-0 scale-95'
