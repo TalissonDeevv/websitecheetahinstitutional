@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd, FAQJsonLd } from "@/components/JsonLd";
-
+import goodTeamSvg from "@/assets/good-team.svg";
 const TALENT_FORM_URL =
   "https://docs.google.com/forms/d/1CtiCmGVmRhXX1YZrQXt78d_WDCnDpEnb6mTibvVmhiI";
 
@@ -134,18 +134,36 @@ const TrabalheConosco = () => {
       <AnimatedSection animation="fade-up">
         <section className="pt-28 pb-16 px-4">
           <div className="container mx-auto">
-            <div className="max-w-3xl">
-              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-                Faça parte do time
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-8">
-                Trabalhe Conosco
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                Somos uma software house focada na criação de soluções digitais sob medida para negócios que exigem
-                eficiência, performance e escalabilidade. Buscamos profissionais alinhados com excelência técnica,
-                organização e visão de produto.
-              </p>
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+              <div className="max-w-3xl lg:max-w-xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <p className="text-xs text-primary uppercase tracking-[0.2em] font-medium">
+                    Faça parte do time
+                  </p>
+                  <img 
+                    src={goodTeamSvg} 
+                    alt="" 
+                    className="w-8 h-8 animate-fade-in"
+                    style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
+                  />
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-8">
+                  Trabalhe Conosco
+                </h1>
+                <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+                  Somos uma software house focada na criação de soluções digitais sob medida para negócios que exigem
+                  eficiência, performance e escalabilidade. Buscamos profissionais alinhados com excelência técnica,
+                  organização e visão de produto.
+                </p>
+              </div>
+              <div className="hidden lg:block lg:w-64 xl:w-80">
+                <img 
+                  src={goodTeamSvg} 
+                  alt="Ilustração de equipe trabalhando juntos" 
+                  className="w-full h-auto animate-fade-in"
+                  style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+                />
+              </div>
             </div>
           </div>
         </section>
