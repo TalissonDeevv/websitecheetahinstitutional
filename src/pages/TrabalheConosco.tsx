@@ -114,7 +114,7 @@ const TrabalheConosco = () => {
     "Junte-se à equipe da Cheetah Solutions. Vagas remotas para desenvolvedores, designers e profissionais de tecnologia. Projetos reais, remuneração justa e crescimento técnico. Inscreva-se no banco de talentos.";
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <SEO
         title={title}
         description={description}
@@ -132,10 +132,10 @@ const TrabalheConosco = () => {
 
       {/* Hero */}
       <AnimatedSection animation="fade-up">
-        <section className="pt-28 pb-16 px-4">
+        <section className="pt-28 pb-16 px-4 overflow-x-hidden">
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16">
-              <div className="max-w-3xl lg:flex-1">
+              <div className="max-w-3xl lg:flex-1 min-w-0">
                 <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
                   Faça parte do time
                 </p>
@@ -149,12 +149,18 @@ const TrabalheConosco = () => {
                 </p>
               </div>
               <div className="flex justify-center mt-10 lg:mt-0 lg:flex-shrink-0 lg:items-center lg:justify-center">
-                <img 
-                  src={goodTeamSvg} 
-                  alt="Ilustração de equipe trabalhando juntos" 
-                  className="w-64 md:w-72 xl:w-96 h-auto animate-fade-in"
-                  style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
-                />
+                <div className="w-64 md:w-72 xl:w-96 aspect-square overflow-hidden">
+                  <img 
+                    src={goodTeamSvg} 
+                    alt="Ilustração de equipe trabalhando juntos" 
+                    width={384}
+                    height={384}
+                    loading="eager"
+                    decoding="async"
+                    className="w-full h-full object-contain animate-fade-in"
+                    style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+                  />
+                </div>
               </div>
             </div>
           </div>
