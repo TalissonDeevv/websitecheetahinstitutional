@@ -28,6 +28,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubtleHighlight from "@/components/SubtleHighlight";
 import HeroBackground from "@/components/HeroBackground";
+import GlowLayer from "@/components/decorations/GlowLayer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
@@ -199,9 +200,12 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 px-4 lg:px-8 overflow-x-hidden contain-paint">
         <HeroBackground />
-        <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] lg:w-[600px] h-[300px] sm:h-[400px] lg:h-[600px] bg-primary/3 rounded-full blur-[120px] pointer-events-none -translate-x-1/4 z-0" />
-        {/* Fade vertical edges so the glow não fique "cortado" no mobile */}
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-background via-transparent to-background z-[1]" />
+
+        <GlowLayer className="z-[1]">
+          <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] lg:w-[600px] h-[300px] sm:h-[400px] lg:h-[600px] bg-primary/3 rounded-full blur-[120px] pointer-events-none -translate-x-1/4 z-0" />
+          {/* Fade vertical edges so the glow não fique "cortado" no mobile */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-background via-transparent to-background z-[1]" />
+        </GlowLayer>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="max-w-4xl">

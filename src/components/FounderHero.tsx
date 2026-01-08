@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import GlowLayer from "@/components/decorations/GlowLayer";
 import talissonPhoto from "@/assets/talisson-souza.png";
 
 const FounderHero = () => {
@@ -11,10 +12,12 @@ const FounderHero = () => {
       className="relative py-20 lg:py-28 px-4 lg:px-8 bg-gradient-to-b from-background via-secondary/20 to-background overflow-x-hidden contain-paint"
       aria-labelledby="founder-heading"
     >
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/3 rounded-full blur-[120px] pointer-events-none" />
-      
+      {/* Decorative elements (clippados no eixo X para nunca gerar overflow lateral) */}
+      <GlowLayer>
+        <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/3 rounded-full blur-[120px] pointer-events-none" />
+      </GlowLayer>
+
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="grid lg:grid-cols-[1fr,auto] gap-12 lg:gap-16 items-center">
           {/* Content */}
