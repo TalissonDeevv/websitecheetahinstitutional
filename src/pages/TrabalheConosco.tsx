@@ -561,7 +561,7 @@ const TrabalheConosco = () => {
           
           {FAQ_CATEGORIES.map((category, categoryIndex) => (
             <AnimatedSection key={categoryIndex} animation="fade-up" delay={categoryIndex * 100}>
-              <div className="mb-12 last:mb-0">
+              <div className={categoryIndex === 0 ? "mb-6" : "mt-10 mb-6"}>
                 <h3 className="text-lg font-semibold mb-6 pb-3 border-b border-border">
                   {category.title}
                 </h3>
