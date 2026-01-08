@@ -121,7 +121,7 @@ const routes = {
       "Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia.",
     ogTitle: "Cheetah Developers Brasil | Cheetah Solutions",
   },
-  "/trabalhe-conosco": {
+  "/inscricoes": {
     title: "Cheetah Solutions | Trabalhe Conosco",
     description:
       "Software house especializada em soluções digitais sob medida. Conheça as áreas de interesse, faça parte do nosso banco de talentos e acompanhe oportunidades técnicas na Cheetah Solutions.",

@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
-import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
+import { OrganizationJsonLd, WebPageJsonLd, FAQJsonLd } from "@/components/JsonLd";
 
 const TALENT_FORM_URL =
   "https://docs.google.com/forms/d/1CtiCmGVmRhXX1YZrQXt78d_WDCnDpEnb6mTibvVmhiI";
@@ -22,6 +22,29 @@ const AREAS_DE_INTERESSE = [
   { name: "Suporte", icon: HeadphonesIcon },
 ];
 
+const FAQ_ITEMS = [
+  {
+    question: "Como funciona o processo seletivo da Cheetah Solutions?",
+    answer: "O processo ocorre conforme demanda de projetos. Após inscrição no banco de talentos, perfis são analisados quando surgem oportunidades. Se houver compatibilidade técnica, entramos em contato para uma conversa inicial, avaliação técnica e alinhamento de expectativas."
+  },
+  {
+    question: "A inscrição no banco de talentos garante contratação?",
+    answer: "Não. A inscrição é um cadastro para futuras oportunidades. Todas as vagas efetivas são divulgadas exclusivamente pelo nosso LinkedIn oficial, e o processo segue critérios de alinhamento técnico e disponibilidade."
+  },
+  {
+    question: "Quais áreas têm mais demanda na Cheetah?",
+    answer: "Desenvolvimento Full Stack, Backend com foco em APIs e integrações, e DevOps/Cloud são as áreas com maior frequência de demanda. Contudo, todas as áreas listadas recebem oportunidades conforme os projetos."
+  },
+  {
+    question: "Vocês contratam remotamente?",
+    answer: "Sim. A maior parte da equipe trabalha remotamente. Buscamos profissionais organizados, com boa comunicação e autonomia para atuar de qualquer lugar do Brasil."
+  },
+  {
+    question: "Como acompanho as oportunidades abertas?",
+    answer: "Todas as vagas são publicadas no nosso LinkedIn oficial. Recomendamos seguir a página e ativar notificações para não perder nenhuma oportunidade."
+  }
+];
+
 const TrabalheConosco = () => {
   const title = "Cheetah Solutions | Trabalhe Conosco";
   const description =
@@ -34,12 +57,13 @@ const TrabalheConosco = () => {
         description={description}
         ogTitle="Trabalhe Conosco | Cheetah Solutions"
         ogDescription="Conheça as áreas de atuação da Cheetah Solutions, inscreva-se em nosso banco de talentos e acompanhe futuras oportunidades técnicas."
-        ogUrl="/trabalhe-conosco"
-        canonical="/trabalhe-conosco"
+        ogUrl="/inscricoes"
+        canonical="/inscricoes"
       />
 
       <OrganizationJsonLd />
-      <WebPageJsonLd title={title} description={description} url="/trabalhe-conosco" />
+      <WebPageJsonLd title={title} description={description} url="/inscricoes" />
+      <FAQJsonLd questions={FAQ_ITEMS} />
 
       <Header />
 
@@ -171,9 +195,38 @@ const TrabalheConosco = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <AnimatedSection>
+            <div className="max-w-xl mb-16">
+              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                Dúvidas frequentes
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                Perguntas sobre o processo.
+              </h2>
+            </div>
+          </AnimatedSection>
+          
+          <div className="max-w-3xl space-y-6">
+            {FAQ_ITEMS.map((item, index) => (
+              <AnimatedSection key={index} delay={index * 100}>
+                <div className="border-l-2 border-primary/30 pl-6 py-2">
+                  <h3 className="font-semibold mb-2">{item.question}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.answer}
+                  </p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <AnimatedSection animation="fade-up">
-        <section className="py-20 px-4 bg-secondary/30">
+        <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="max-w-xl">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
