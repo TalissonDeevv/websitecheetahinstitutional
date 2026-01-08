@@ -440,9 +440,9 @@ const About = () => {
             </AnimatedSection>
             
             {/* Right column - logo */}
-            <AnimatedSection delay={150} className="overflow-visible">
+            <AnimatedSection delay={150} className="overflow-x-hidden overflow-y-visible contain-paint">
               <div className="flex items-center justify-center h-full">
-                <div className="relative">
+                <div className="relative"> 
                   {/* Glow 360° (radial) */}
                   <div className="pointer-events-none absolute -inset-10 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.35)_0%,transparent_65%)] blur-2xl" />
                   <div className="pointer-events-none absolute -inset-16 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.18)_0%,transparent_70%)] blur-3xl" />
