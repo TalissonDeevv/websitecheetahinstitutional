@@ -204,7 +204,7 @@ const Index = () => {
           <div className="max-w-4xl">
             {/* Tag with refined animation */}
             <div 
-              className="inline-flex items-center gap-2.5 mb-10 px-4 py-1.5 bg-primary/8 border border-primary/15 rounded-full text-xs font-medium text-primary/80 backdrop-blur-sm animate-fade-in"
+              className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-10 px-4 py-1.5 bg-primary/8 border border-primary/15 rounded-full text-xs font-medium text-primary/80 backdrop-blur-sm animate-fade-in max-w-full"
               style={{ animationDelay: '100ms', animationFillMode: 'both' }}
             >
               <span>Software</span>
