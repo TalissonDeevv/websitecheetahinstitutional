@@ -1,4 +1,5 @@
-import { Target, Code, Zap, Shield, Users, Heart, MessageCircle, Lightbulb, Cog, Award } from "lucide-react";
+import { Target, Code, Zap, Shield, Users, Heart, MessageCircle, Lightbulb, Cog, Award, Handshake } from "lucide-react";
+import squareCloudLogo from "@/assets/square-cloud-logo.png";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -376,6 +377,67 @@ const About = () => {
               </div>
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Parcerias Estratégicas */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+            {/* Left column - text content */}
+            <AnimatedSection className="lg:col-span-7">
+              <div>
+                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                  Infraestrutura & Tecnologia
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold mt-3 mb-6">
+                  Parcerias Estratégicas
+                </h2>
+                <div className="space-y-4">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Trabalhamos com parceiros estratégicos que garantem estabilidade, performance 
+                    e previsibilidade para as soluções que desenvolvemos.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    A Cheetah Solutions Network é parceira da{" "}
+                    <a 
+                      href="https://squarecloud.app/pt-br/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline font-medium"
+                    >
+                      Square Cloud
+                    </a>
+                    , uma plataforma moderna de hospedagem focada em aplicações, bots, sites e 
+                    bancos de dados, oferecendo uma base sólida para projetos escaláveis e confiáveis.
+                  </p>
+                </div>
+                <div className="mt-8 pt-6 border-t border-border">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Handshake className="h-4 w-4 text-primary" />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Parceria tecnológica para infraestrutura de hospedagem e soluções escaláveis
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            {/* Right column - logo */}
+            <AnimatedSection delay={150} className="lg:col-span-5">
+              <div className="flex items-center justify-center lg:justify-end">
+                <div className="bg-card border border-border rounded-xl p-8 md:p-12">
+                  <img 
+                    src={squareCloudLogo} 
+                    alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
+                    className="w-32 h-32 md:w-40 md:h-40 object-contain"
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
