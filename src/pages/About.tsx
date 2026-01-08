@@ -443,18 +443,18 @@ const About = () => {
             {/* Right column - logo */}
             <AnimatedSection animation="fade" delay={150}>
               <div className="flex items-center justify-center h-full">
-                <div className="relative overflow-visible">
-                  {/* Glow 360° (radial) — em GlowLayer para nunca gerar overflow lateral */}
-                  <GlowLayer fade="none" className="absolute -inset-20">
-                    <div className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.35)_0%,transparent_65%)] blur-2xl" />
-                    <div className="pointer-events-none absolute -inset-6 rounded-full bg-[radial-gradient(circle,hsl(var(--primary)/0.18)_0%,transparent_70%)] blur-3xl" />
-                  </GlowLayer>
-
-                  <img 
-                    src={squareCloudLogo} 
-                    alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
-                    className="relative w-60 h-60 md:w-80 md:h-80 object-contain"
-                  />
+                <div className="relative p-8">
+                  {/* Main logo container */}
+                  <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-3xl overflow-hidden border-4 border-primary/15 shadow-2xl shadow-primary/10 bg-card flex items-center justify-center">
+                    <img 
+                      src={squareCloudLogo} 
+                      alt="Square Cloud - Plataforma de Hospedagem Parceira da Cheetah Solutions Network"
+                      className="w-48 h-48 md:w-64 md:h-64 object-contain"
+                    />
+                  </div>
+                  
+                  {/* Decorative ring - around the logo */}
+                  <div className="absolute inset-4 border border-primary/10 rounded-3xl pointer-events-none" />
                 </div>
               </div>
             </AnimatedSection>
