@@ -1,6 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import GlowLayer from "@/components/decorations/GlowLayer";
 import talissonPhoto from "@/assets/talisson-souza.png";
 
 const FounderHero = () => {
@@ -12,12 +11,6 @@ const FounderHero = () => {
       className="relative py-20 lg:py-28 px-4 lg:px-8 bg-gradient-to-b from-background via-secondary/20 to-background overflow-x-hidden contain-paint"
       aria-labelledby="founder-heading"
     >
-      {/* Decorative elements (clippados no eixo X para nunca gerar overflow lateral) */}
-      <GlowLayer>
-        <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-primary/3 rounded-full blur-[120px] pointer-events-none" />
-      </GlowLayer>
-
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="grid lg:grid-cols-[1fr,auto] gap-12 lg:gap-16 items-center">
           {/* Content */}
@@ -89,19 +82,6 @@ const FounderHero = () => {
             }`}
           >
             <div className="relative p-6 contain-paint">
-              {/* Glow effect (com fade vertical para não “cortar” no topo/rodapé no mobile) */}
-              <div
-                className="pointer-events-none absolute inset-0"
-                style={{
-                  WebkitMaskImage:
-                    "linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)",
-                  maskImage:
-                    "linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)",
-                }}
-              >
-                <div className="absolute inset-4 bg-primary/15 rounded-full blur-2xl" />
-              </div>
-              
               {/* Main photo container */}
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary/15 shadow-2xl shadow-primary/10">
                 <img 
