@@ -34,10 +34,12 @@ const FounderHero = () => {
                   : 'opacity-0 sm:translate-y-6'
               }`}
             >
+              <span className="text-primary text-2xl font-bold">"</span>
               Desenvolvemos <strong className="text-foreground/90 font-medium">soluções digitais escaláveis</strong>{" "}
               com foco em <strong className="text-foreground/90 font-medium">performance</strong> e{" "}
               <strong className="text-foreground/90 font-medium">eficiência</strong>. Código limpo, arquitetura sólida 
               e tecnologia para negócios que precisam crescer.
+              <span className="text-primary text-2xl font-bold">"</span>
             </p>
             
             {/* Founder signature block */}
