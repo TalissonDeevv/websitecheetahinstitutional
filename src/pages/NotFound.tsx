@@ -1,7 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Home } from "lucide-react";
+import { Home, MessageCircle } from "lucide-react";
 import errorIllustration from "@/assets/error-illustration.svg";
 
 const NotFound = () => {
@@ -31,12 +31,24 @@ const NotFound = () => {
           Isso pode ter ocorrido devido a uma instabilidade temporária, falha de conexão ou atualização em andamento. Você pode tentar novamente ou retornar à página inicial.
         </p>
         
-        <Button asChild size="lg">
-          <Link to="/">
-            <Home className="mr-2 h-5 w-5" />
-            Voltar para a página inicial
-          </Link>
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button asChild size="lg">
+            <Link to="/">
+              <Home className="mr-2 h-5 w-5" />
+              Voltar para a página inicial
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline">
+            <a
+              href="https://discord.gg/63qjkQwKmf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Servidor de Suporte no Discord
+            </a>
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -145,10 +145,11 @@ const Contact = () => {
                       href="https://discord.gg/63qjkQwKmf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      <MessageCircle className="h-4 w-4" />
-                      Entrar no Discord
+                      <Button variant="outline" className="w-full">
+                        <MessageCircle className="mr-2 h-4 w-4" />
+                        Servidor de Suporte no Discord
+                      </Button>
                     </a>
                   </div>
                 </div>

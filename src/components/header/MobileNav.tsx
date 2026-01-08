@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { MessageCircle, ArrowRight, Moon, Sun } from "lucide-react";
+import { ArrowRight, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -109,20 +109,6 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
         ))}
       </div>
 
-      {/* Divider */}
-      <div className="my-6 border-t border-border" />
-
-      {/* Discord Link */}
-      <a
-        href="https://discord.gg/63qjkQwKmf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-3 text-muted-foreground hover:text-[#5865F2] px-4 py-3 text-sm font-medium transition-all duration-200 rounded-lg touch-manipulation active:bg-accent"
-        onClick={handleLinkClick}
-      >
-        <MessageCircle className="h-5 w-5" />
-        <span>Nosso Discord</span>
-      </a>
 
       {/* Spacer */}
       <div className="flex-1" />
