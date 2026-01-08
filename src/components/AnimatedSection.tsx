@@ -46,7 +46,7 @@ const AnimatedSection = ({
   return (
     <div
       ref={ref}
-      className={`overflow-x-hidden overflow-y-visible contain-paint ${className}`.trim()}
+      className={`overflow-hidden contain-paint min-w-0 ${className}`.trim()}
     >
       <div
         className={`transition-[opacity,transform] duration-700 ease-out will-change-transform ${
