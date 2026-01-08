@@ -155,7 +155,7 @@ const routes = {
 };
 
 const BASE_URL = 'https://www.cheetahsolutions.com.br';
-const DEFAULT_IMAGE = 'https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png';
+const DEFAULT_IMAGE = 'https://i.ibb.co/gFfPkTZ7/Cheetah-Solutions-Network.png';
 
 function isCrawler(userAgent) {
   if (!userAgent) return false;
