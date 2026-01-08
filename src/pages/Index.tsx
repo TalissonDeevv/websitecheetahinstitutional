@@ -180,7 +180,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-inter">
+    <div className="min-h-screen bg-background text-foreground font-inter overflow-x-hidden">
       <SEO
         title="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
         description="Software house especializada no desenvolvimento de soluções digitais sob medida para empresas que exigem performance, escalabilidade e eficiência."

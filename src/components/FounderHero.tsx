@@ -85,9 +85,19 @@ const FounderHero = () => {
                 : 'opacity-0 scale-95'
             }`}
           >
-            <div className="relative p-6">
-              {/* Glow effect - contained within padding */}
-              <div className="absolute inset-4 bg-primary/15 rounded-full blur-2xl pointer-events-none" />
+            <div className="relative p-6 contain-paint">
+              {/* Glow effect (com fade vertical para não “cortar” no topo/rodapé no mobile) */}
+              <div
+                className="pointer-events-none absolute inset-0"
+                style={{
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)",
+                  maskImage:
+                    "linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)",
+                }}
+              >
+                <div className="absolute inset-4 bg-primary/15 rounded-full blur-2xl" />
+              </div>
               
               {/* Main photo container */}
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary/15 shadow-2xl shadow-primary/10">

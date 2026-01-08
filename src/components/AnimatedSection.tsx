@@ -44,7 +44,10 @@ const AnimatedSection = ({
    * overflow that can spawn a second scrollbar on mobile.
    */
   return (
-    <div ref={ref} className={`overflow-hidden ${className}`.trim()}>
+    <div
+      ref={ref}
+      className={`overflow-x-hidden overflow-y-visible contain-paint ${className}`.trim()}
+    >
       <div
         className={`transition-[opacity,transform] duration-700 ease-out will-change-transform ${
           isVisible ? visible : hidden
