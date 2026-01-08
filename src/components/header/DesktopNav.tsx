@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown, MessageCircle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -74,15 +74,6 @@ const DesktopNav = () => {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <a
-        href="https://discord.gg/63qjkQwKmf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground text-sm transition-colors duration-200 whitespace-nowrap ml-1"
-      >
-        <MessageCircle className="h-3.5 w-3.5" />
-        <span className="hidden xl:inline">Discord</span>
-      </a>
 
       <ThemeToggle />
     </nav>
