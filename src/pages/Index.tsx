@@ -196,7 +196,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 px-4 lg:px-8 overflow-hidden overflow-y-clip contain-paint">
+      <section className="relative pt-32 pb-24 px-4 lg:px-8 overflow-hidden contain-paint">
         <HeroBackground />
         <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] lg:w-[600px] h-[300px] sm:h-[400px] lg:h-[600px] bg-primary/3 rounded-full blur-[120px] pointer-events-none -translate-x-1/4" />
         

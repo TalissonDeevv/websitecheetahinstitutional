@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "@/components/ScrollToTop";
+import OverflowDebugGate from "@/components/debug/OverflowDebugGate";
+
 import CheetahSolidaria from "./pages/CheetahSolidaria";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -34,6 +36,7 @@ import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
 import GuidelinesPage from "./pages/legal/GuidelinesPage";
 import Developers from "./pages/Developers";
+import TrabalheConosco from "./pages/TrabalheConosco";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +48,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <OverflowDebugGate />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/sobre" element={<About />} />
@@ -73,11 +77,12 @@ const App = () => (
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
             <Route path="/sugestoes" element={<Suggestions />} />
             <Route path="/developers" element={<Developers />} />
-            
+            <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
+
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />
             <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
-            
+
             {/* Redirects for legacy routes */}
             <Route path="/legal" element={<Navigate to="/diretrizes" replace />} />
             <Route path="/legal/*" element={<Navigate to="/diretrizes" replace />} />
@@ -89,7 +94,7 @@ const App = () => (
             <Route path="/transparencia" element={<Navigate to="/diretrizes/transparencia" replace />} />
             <Route path="/isencao" element={<Navigate to="/diretrizes/isencao" replace />} />
             <Route path="/denuncia" element={<Navigate to="/diretrizes/denuncias" replace />} />
-            
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
@@ -99,3 +104,4 @@ const App = () => (
 );
 
 export default App;
+
