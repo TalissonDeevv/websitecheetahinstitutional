@@ -1,6 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-
 import talissonPhoto from "@/assets/talisson-souza.png";
 
 const FounderHero = () => {
@@ -35,12 +34,10 @@ const FounderHero = () => {
                   : 'opacity-0 sm:translate-y-6'
               }`}
             >
-              <span className="text-primary text-2xl lg:text-3xl font-bold align-top leading-none">"</span>
               Desenvolvemos <strong className="text-foreground/90 font-medium">soluções digitais escaláveis</strong>{" "}
               com foco em <strong className="text-foreground/90 font-medium">performance</strong> e{" "}
               <strong className="text-foreground/90 font-medium">eficiência</strong>. Código limpo, arquitetura sólida 
               e tecnologia para negócios que precisam crescer.
-              <span className="text-primary text-2xl lg:text-3xl font-bold align-bottom leading-none">"</span>
             </p>
             
             {/* Founder signature block */}
