@@ -19,6 +19,7 @@ interface CommunityProject {
   description: string;
   link?: string;
   image?: string;
+  featured?: boolean;
 }
 
 const communityProjects: CommunityProject[] = [
@@ -35,6 +36,7 @@ const communityProjects: CommunityProject[] = [
     description: "A Quack Pay é um gateway de pagamento criado para oferecer eficiência e transparência, com taxa fixa de R$ 0,80 por transação via PIX (entrada e saída), garantindo previsibilidade e controle financeiro para o seu negócio.",
     link: "https://quackpay.com.br",
     image: "https://i.ibb.co/ZpbgCWjg/image.png",
+    featured: true,
   },
   {
     id: "bix-bot",
@@ -470,7 +472,13 @@ const Developers = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {communityProjects.map((project, index) => (
               <AnimatedSection key={project.id} animation="fade-up" delay={index * 100}>
-                <article className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-colors h-full flex flex-col">
+                <article className={`group bg-card border rounded-xl overflow-hidden transition-colors h-full flex flex-col relative ${project.featured ? 'border-primary ring-2 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
+                  {project.featured && (
+                    <div className="absolute top-3 right-3 z-10 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5">
+                      <Award className="h-3 w-3" />
+                      Recomendado
+                    </div>
+                  )}
                   {project.image && (
                     <div className="aspect-video overflow-hidden bg-secondary/50">
                       <img 
