@@ -54,7 +54,7 @@ export const WebPageJsonLd = ({ title, description, url }: WebPageJsonLdProps) =
     url: `https://www.cheetahsolutions.com.br${url}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "Cheetah Solutions",
+      name: "Cheetah Solutions Network",
       url: "https://www.cheetahsolutions.com.br"
     },
     publisher: {
