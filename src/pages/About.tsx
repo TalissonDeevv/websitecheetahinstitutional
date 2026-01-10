@@ -113,11 +113,12 @@ const About = () => {
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             {/* Left column - cheetah illustration */}
             <AnimatedSection animation="fade" className="lg:col-span-5 order-2 lg:order-1">
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex justify-center lg:justify-start relative">
+                <div className="absolute inset-0 bg-primary/30 blur-[80px] rounded-full scale-90" />
                 <img 
                   src={cheetahMascot} 
                   alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
-                  className="w-full max-w-md h-auto dark:invert-0 invert dark:drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]"
+                  className="w-full max-w-md h-auto dark:invert-0 invert relative z-10"
                 />
               </div>
             </AnimatedSection>
@@ -143,7 +144,7 @@ const About = () => {
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     Assim como o guepardo, acreditamos que alta performance não está apenas na rapidez, 
-                    mas na inteligência por trás de cada decisão — na estratégia correta e na execução 
+                    mas na inteligência por trás de cada decisão, na estratégia correta e na execução 
                     precisa. Essa filosofia guia nossa engenharia de software e o desenvolvimento de 
                     software sob medida para cada cliente.
                   </p>
