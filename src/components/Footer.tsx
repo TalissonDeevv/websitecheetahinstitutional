@@ -167,7 +167,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-muted-foreground">
-              © 2025 Cheetah Solutions Network. Todos os direitos reservados.
+              © {new Date().getFullYear()} Cheetah Solutions Network. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-6">
               <Link to="/diretrizes/termos-uso" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
