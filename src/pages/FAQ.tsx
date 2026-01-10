@@ -122,8 +122,8 @@ const FAQ = () => {
         <div className="container mx-auto max-w-3xl">
           {faqCategories.map((category, categoryIndex) => (
             <AnimatedSection key={categoryIndex} animation="fade-up" delay={categoryIndex * 100}>
-              <div className="mb-16 last:mb-0">
-                <h2 className="text-lg font-semibold mb-6 pb-3 border-b border-border">
+              <div className={`${categoryIndex > 0 ? 'mt-12' : ''} mb-8`}>
+                <h2 className="text-lg font-semibold mb-4 pb-3 border-b border-border">
                   {category.title}
                 </h2>
                 
