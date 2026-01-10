@@ -116,19 +116,12 @@ const About = () => {
               <div className="flex justify-center lg:justify-start relative">
                 <div
                   aria-hidden="true"
-                  className="absolute -inset-16 pointer-events-none z-0"
-                  style={{
-                    background:
-                      "radial-gradient(closest-side, hsl(var(--primary) / 0.22), transparent 72%), radial-gradient(closest-side, hsl(var(--primary) / 0.14), transparent 70%)",
-                    borderRadius: "60% 40% 55% 45% / 55% 45% 55% 45%",
-                    transform: "translate3d(-6%, 2%, 0) rotate(10deg)",
-                    opacity: 0.9,
-                  }}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none z-0 blur-[80px] bg-primary/30"
                 />
                 <img 
                   src={cheetahMascot} 
                   alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
-                  className="w-full max-w-md h-auto dark:invert-0 invert relative z-10"
+                  className="w-full max-w-md h-auto relative z-10 [filter:brightness(0)_invert(1)] dark:[filter:none]"
                 />
               </div>
             </AnimatedSection>
