@@ -142,11 +142,12 @@ const About = () => {
             
             {/* Right column - cheetah illustration */}
             <AnimatedSection delay={150} animation="fade" className="lg:col-span-5">
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end relative">
+                <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-75" />
                 <img 
                   src={cheetahMascot} 
                   alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
-                  className="w-full max-w-md h-auto dark:invert-0 invert"
+                  className="w-full max-w-md h-auto dark:invert-0 invert relative z-10 drop-shadow-[0_0_30px_hsl(var(--primary)/0.4)]"
                 />
               </div>
             </AnimatedSection>
