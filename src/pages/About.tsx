@@ -1,5 +1,6 @@
 import { Target, Code, Zap, Shield, Users, Heart, MessageCircle, Lightbulb, Cog, Award, Handshake } from "lucide-react";
 import squareCloudLogo from "@/assets/square-cloud-logo.webp";
+import cheetahMascot from "@/assets/cheetah-mascot.svg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -100,6 +101,53 @@ const About = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Por que um guepardo como mascote? */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+            {/* Left column - text content */}
+            <AnimatedSection className="lg:col-span-7">
+              <div>
+                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                  Nossa Identidade
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold mt-3 mb-8">
+                  Por que um guepardo como mascote?
+                </h2>
+                <div className="space-y-6">
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    O guepardo é o animal terrestre mais rápido do mundo, reconhecido por sua 
+                    aceleração, precisão e eficiência.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Na Cheetah Solutions Network, ele simboliza nossa forma de desenvolver software 
+                    de alta performance: agir com velocidade quando necessário, manter controle técnico 
+                    em cada etapa e entregar soluções digitais eficientes, escaláveis e bem executadas.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Assim como o guepardo, acreditamos que alta performance não está apenas na rapidez, 
+                    mas na inteligência por trás de cada decisão — na estratégia correta e na execução 
+                    precisa. Essa filosofia guia nossa engenharia de software e o desenvolvimento de 
+                    software sob medida para cada cliente.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            {/* Right column - cheetah illustration */}
+            <AnimatedSection delay={150} animation="fade" className="lg:col-span-5">
+              <div className="flex justify-center lg:justify-end">
+                <img 
+                  src={cheetahMascot} 
+                  alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
+                  className="w-full max-w-md h-auto"
+                />
               </div>
             </AnimatedSection>
           </div>
