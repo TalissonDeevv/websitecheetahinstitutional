@@ -112,9 +112,9 @@ const About = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
             {/* Left column - cheetah illustration */}
-            <AnimatedSection animation="fade" className="lg:col-span-5 order-2 lg:order-1">
+            <AnimatedSection animation="fade" className="lg:col-span-5 order-2 lg:order-1" overflow="visible">
               <div className="flex justify-center lg:justify-start relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/25 blur-[100px] rounded-full pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
                 <img 
                   src={cheetahMascot} 
                   alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
