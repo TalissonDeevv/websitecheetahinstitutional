@@ -524,9 +524,9 @@ const About = () => {
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-5 pl-8">
-                    A Cheetah Solutions Network nasceu no Rio de Janeiro, Brasil. 
+                    A Cheetah Solutions Network nasceu em Recife, Pernambuco, Brasil. 
                     Apesar de atuarmos de forma remota com clientes de todo o país, 
-                    nossas raízes estão fincadas no estado carioca.
+                    nossas raízes estão fincadas no estado pernambucano.
                   </AccordionContent>
                 </AccordionItem>
 
