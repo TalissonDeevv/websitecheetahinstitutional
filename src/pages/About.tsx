@@ -114,17 +114,17 @@ const About = () => {
             {/* Left column - cheetah illustration */}
             <AnimatedSection animation="fade" className="lg:col-span-5 order-2 lg:order-1" overflow="visible">
               <div className="flex justify-center lg:justify-start relative">
-                <div
-                  aria-hidden="true"
-                  className="absolute -inset-16 pointer-events-none z-0"
-                  style={{
-                    background:
-                      "radial-gradient(closest-side, hsl(var(--primary) / 0.22), transparent 72%), radial-gradient(closest-side, hsl(var(--primary) / 0.14), transparent 70%)",
-                    borderRadius: "60% 40% 55% 45% / 55% 45% 55% 45%",
-                    transform: "translate3d(-6%, 2%, 0) rotate(10deg)",
-                    opacity: 0.9,
-                  }}
-                />
+  <div
+    aria-hidden="true"
+    className="absolute -inset-12 pointer-events-none z-0"
+    style={{
+      background:
+        "radial-gradient(closest-side, hsl(var(--primary) / 0.12), transparent 65%)",
+      borderRadius: "60% 40% 55% 45% / 55% 45% 55% 45%",
+      transform: "translate3d(-4%, 2%, 0) rotate(8deg)",
+      opacity: 0.7,
+    }}
+  />
                 <img 
                   src={cheetahMascot} 
                   alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
