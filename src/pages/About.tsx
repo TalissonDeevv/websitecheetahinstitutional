@@ -114,7 +114,7 @@ const About = () => {
             {/* Left column - cheetah illustration */}
             <AnimatedSection animation="fade" className="lg:col-span-5 order-2 lg:order-1">
               <div className="flex justify-center lg:justify-start relative">
-                <div className="absolute inset-0 bg-primary/30 blur-[80px] rounded-full scale-90" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/25 blur-[100px] rounded-full pointer-events-none" />
                 <img 
                   src={cheetahMascot} 
                   alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
