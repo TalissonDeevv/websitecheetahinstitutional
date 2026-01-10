@@ -111,8 +111,19 @@ const About = () => {
       <section className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-            {/* Left column - text content */}
-            <AnimatedSection className="lg:col-span-7">
+            {/* Left column - cheetah illustration */}
+            <AnimatedSection animation="fade" className="lg:col-span-5 order-2 lg:order-1">
+              <div className="flex justify-center lg:justify-start">
+                <img 
+                  src={cheetahMascot} 
+                  alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
+                  className="w-full max-w-md h-auto dark:invert-0 invert dark:drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]"
+                />
+              </div>
+            </AnimatedSection>
+            
+            {/* Right column - text content */}
+            <AnimatedSection delay={150} className="lg:col-span-7 order-1 lg:order-2">
               <div>
                 <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Nossa Identidade
@@ -137,18 +148,6 @@ const About = () => {
                     software sob medida para cada cliente.
                   </p>
                 </div>
-              </div>
-            </AnimatedSection>
-            
-            {/* Right column - cheetah illustration */}
-            <AnimatedSection delay={150} animation="fade" className="lg:col-span-5">
-              <div className="flex justify-center lg:justify-end relative">
-                <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full scale-75" />
-                <img 
-                  src={cheetahMascot} 
-                  alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
-                  className="w-full max-w-md h-auto dark:invert-0 invert relative z-10 drop-shadow-[0_0_30px_hsl(var(--primary)/0.4)]"
-                />
               </div>
             </AnimatedSection>
           </div>
