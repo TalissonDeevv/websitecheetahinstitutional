@@ -17,146 +17,146 @@ const CRAWLER_USER_AGENTS = [
 
 const routes = {
   "/": {
-    title: "Cheetah Solutions | Desenvolvimento de Software Sob Medida",
+    title: "Cheetah Solutions Network | Desenvolvimento de Software Sob Medida",
     description:
-      "Criamos sistemas, aplicações e plataformas digitais escaláveis, unindo engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais.",
-    ogTitle: "Cheetah Solutions | Desenvolvimento de Software Sob Medida",
+      "A Cheetah Solutions Network é uma software house especializada em desenvolvimento de software sob medida, criando sistemas, automações e plataformas digitais escaláveis para empresas que exigem performance e eficiência.",
+    ogTitle: "Cheetah Solutions Network | Desenvolvimento de Software Sob Medida",
   },
   "/sobre": {
-    title: "Cheetah Solutions | Quem Somos",
+    title: "Cheetah Solutions Network | Quem Somos",
     description:
-      "Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida para empresas que buscam eficiência, performance e escalabilidade.",
-    ogTitle: "Quem Somos | Cheetah Solutions",
+      "Conheça a Cheetah Solutions Network, uma software house especializada em soluções digitais sob medida para empresas que buscam performance, escalabilidade e eficiência.",
+    ogTitle: "Quem Somos | Cheetah Solutions Network",
   },
   "/servicos": {
-    title: "Cheetah Solutions | Nossos Serviços",
+    title: "Cheetah Solutions Network | Nossos Serviços",
     description:
-      "Desenvolvimento de software sob medida para empresas. Bots, websites, sistemas web, integrações, apps mobile e e-commerce.",
-    ogTitle: "Nossos Serviços | Cheetah Solutions",
+      "A Cheetah Solutions Network oferece desenvolvimento de software sob medida para empresas. Bots, websites, sistemas web, integrações, apps mobile e e-commerce.",
+    ogTitle: "Nossos Serviços | Cheetah Solutions Network",
   },
   "/servicos/web": {
-    title: "Cheetah Solutions | Desenvolvimento Web",
+    title: "Cheetah Solutions Network | Desenvolvimento Web",
     description:
-      "Websites que funcionam e convertem. Desenvolvemos soluções web modernas, rápidas e otimizadas para SEO.",
-    ogTitle: "Desenvolvimento Web | Cheetah Solutions",
+      "Websites que funcionam e convertem. A Cheetah Solutions Network desenvolve soluções web modernas, rápidas e otimizadas para SEO.",
+    ogTitle: "Desenvolvimento Web | Cheetah Solutions Network",
   },
   "/servicos/mobile": {
-    title: "Cheetah Solutions | Apps Mobile",
+    title: "Cheetah Solutions Network | Apps Mobile",
     description:
-      "Apps que funcionam de verdade. Desenvolvemos aplicativos Android e iOS com foco em performance e usabilidade.",
-    ogTitle: "Apps Mobile | Cheetah Solutions",
+      "Apps que funcionam de verdade. A Cheetah Solutions Network desenvolve aplicativos Android e iOS com foco em performance e usabilidade.",
+    ogTitle: "Apps Mobile | Cheetah Solutions Network",
   },
   "/servicos/bots": {
-    title: "Cheetah Solutions | Bots e Automação",
+    title: "Cheetah Solutions Network | Bots e Automação",
     description:
-      "Bots que trabalham por você. Desenvolvemos bots inteligentes para Discord, Telegram e WhatsApp.",
-    ogTitle: "Bots e Automação | Cheetah Solutions",
+      "Bots que trabalham por você. A Cheetah Solutions Network desenvolve bots inteligentes para Discord, Telegram e WhatsApp.",
+    ogTitle: "Bots e Automação | Cheetah Solutions Network",
   },
   "/servicos/sistemas": {
-    title: "Cheetah Solutions | Sistemas Personalizados",
+    title: "Cheetah Solutions Network | Sistemas Personalizados",
     description:
-      "Sistemas sob medida para empresas. CRM, ERP, gestão de estoque, dashboards analíticos e portais de clientes.",
-    ogTitle: "Sistemas Personalizados | Cheetah Solutions",
+      "Sistemas sob medida para empresas. A Cheetah Solutions Network desenvolve CRM, ERP, gestão de estoque, dashboards analíticos e portais de clientes.",
+    ogTitle: "Sistemas Personalizados | Cheetah Solutions Network",
   },
   "/servicos/ecommerce": {
-    title: "Cheetah Solutions | E-commerce",
+    title: "Cheetah Solutions Network | E-commerce",
     description:
-      "Lojas virtuais que vendem. E-commerces completos, otimizados para conversão e preparados para escalar.",
-    ogTitle: "E-commerce | Cheetah Solutions",
+      "Lojas virtuais que vendem. A Cheetah Solutions Network desenvolve e-commerces completos, otimizados para conversão e preparados para escalar.",
+    ogTitle: "E-commerce | Cheetah Solutions Network",
   },
   "/servicos/integracoes": {
-    title: "Cheetah Solutions | APIs e Integrações",
-    description: "Sistemas que conversam. Conectamos diferentes sistemas e automatizamos fluxos complexos.",
-    ogTitle: "APIs e Integrações | Cheetah Solutions",
+    title: "Cheetah Solutions Network | APIs e Integrações",
+    description: "Sistemas que conversam. A Cheetah Solutions Network conecta diferentes sistemas e automatiza fluxos complexos.",
+    ogTitle: "APIs e Integrações | Cheetah Solutions Network",
   },
   "/servicos/ia": {
-    title: "Cheetah Solutions | Inteligência Artificial",
-    description: "IA que resolve problemas reais. Chatbots inteligentes, assistentes virtuais e análise preditiva.",
-    ogTitle: "Inteligência Artificial | Cheetah Solutions",
+    title: "Cheetah Solutions Network | Inteligência Artificial",
+    description: "IA que resolve problemas reais. A Cheetah Solutions Network desenvolve chatbots inteligentes, assistentes virtuais e análise preditiva.",
+    ogTitle: "Inteligência Artificial | Cheetah Solutions Network",
   },
   "/servicos/cloud": {
-    title: "Cheetah Solutions | Cloud e Deploy",
+    title: "Cheetah Solutions Network | Cloud e Deploy",
     description:
-      "Cloud Solutions & Deploy. Publique suas aplicações com facilidade, performance otimizada e segurança garantida.",
-    ogTitle: "Cloud e Deploy | Cheetah Solutions",
+      "Cloud Solutions & Deploy. A Cheetah Solutions Network publica suas aplicações com facilidade, performance otimizada e segurança garantida.",
+    ogTitle: "Cloud e Deploy | Cheetah Solutions Network",
   },
   "/servicos/dashboards": {
-    title: "Cheetah Solutions | Dashboards e BI",
+    title: "Cheetah Solutions Network | Dashboards e BI",
     description:
-      "Transforme dados em decisões. Dashboards interativos, KPIs em tempo real e relatórios automatizados.",
-    ogTitle: "Dashboards e Business Intelligence | Cheetah Solutions",
+      "Transforme dados em decisões. A Cheetah Solutions Network desenvolve dashboards interativos, KPIs em tempo real e relatórios automatizados.",
+    ogTitle: "Dashboards e Business Intelligence | Cheetah Solutions Network",
   },
   "/servicos/seguranca": {
-    title: "Cheetah Solutions | Segurança Digital",
+    title: "Cheetah Solutions Network | Segurança Digital",
     description:
-      "Proteção que você pode confiar. Autenticação robusta, proteção contra ataques e conformidade LGPD.",
-    ogTitle: "Segurança Digital | Cheetah Solutions",
+      "Proteção que você pode confiar. A Cheetah Solutions Network implementa autenticação robusta, proteção contra ataques e conformidade LGPD.",
+    ogTitle: "Segurança Digital | Cheetah Solutions Network",
   },
   "/equipe": {
-    title: "Cheetah Solutions | Equipes Técnicas",
+    title: "Cheetah Solutions Network | Equipes Técnicas",
     description:
-      "Uma equipe técnica com foco em resultado. Profissionais que entendem de código e de negócio.",
-    ogTitle: "Equipes Técnicas | Cheetah Solutions",
+      "Uma equipe técnica com foco em resultado. Profissionais da Cheetah Solutions Network que entendem de código e de negócio.",
+    ogTitle: "Equipes Técnicas | Cheetah Solutions Network",
   },
   "/blog": {
-    title: "Cheetah Solutions | Blogs e Artigos",
-    description: "Conteúdo técnico sobre desenvolvimento, tecnologia e boas práticas. Direto ao ponto.",
-    ogTitle: "Blogs e Artigos | Cheetah Solutions",
+    title: "Cheetah Solutions Network | Blogs e Artigos",
+    description: "Conteúdo técnico da Cheetah Solutions Network sobre desenvolvimento, tecnologia e boas práticas. Direto ao ponto.",
+    ogTitle: "Blogs e Artigos | Cheetah Solutions Network",
   },
   "/contato": {
-    title: "Cheetah Solutions | Fale Conosco",
+    title: "Cheetah Solutions Network | Fale Conosco",
     description:
-      "Entre em contato com a Cheetah Solutions. Sem compromisso. Conte o que precisa e avaliamos se faz sentido trabalharmos juntos.",
-    ogTitle: "Fale Conosco | Cheetah Solutions",
+      "Entre em contato com a Cheetah Solutions Network. Sem compromisso. Conte o que precisa e avaliamos se faz sentido trabalharmos juntos.",
+    ogTitle: "Fale Conosco | Cheetah Solutions Network",
   },
   "/orcamento": {
-    title: "Cheetah Solutions | Solicite Orçamento",
+    title: "Cheetah Solutions Network | Solicite Orçamento",
     description:
-      "Preencha o formulário com as informações do seu projeto. Retornamos em até 48 horas com uma proposta detalhada.",
-    ogTitle: "Solicite Orçamento | Cheetah Solutions",
+      "Preencha o formulário com as informações do seu projeto. A Cheetah Solutions Network retorna em até 48 horas com uma proposta detalhada.",
+    ogTitle: "Solicite Orçamento | Cheetah Solutions Network",
   },
   "/developers": {
-    title: "Cheetah Solutions | Cheetah Developers Brasil",
+    title: "Cheetah Solutions Network | Cheetah Developers Brasil",
     description:
       "Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia.",
-    ogTitle: "Cheetah Developers Brasil | Cheetah Solutions",
+    ogTitle: "Cheetah Developers Brasil | Cheetah Solutions Network",
   },
   "/inscricoes": {
-    title: "Cheetah Solutions | Trabalhe Conosco",
+    title: "Cheetah Solutions Network | Trabalhe Conosco",
     description:
-      "Software house especializada em soluções digitais sob medida. Conheça as áreas de interesse, faça parte do nosso banco de talentos e acompanhe oportunidades técnicas na Cheetah Solutions.",
-    ogTitle: "Trabalhe Conosco | Cheetah Solutions",
+      "Junte-se à equipe da Cheetah Solutions Network. Vagas remotas para desenvolvedores, designers e profissionais de tecnologia. Projetos reais, remuneração justa e crescimento técnico.",
+    ogTitle: "Trabalhe Conosco | Cheetah Solutions Network",
     ogDescription:
-      "Conheça as áreas de atuação da Cheetah Solutions, inscreva-se em nosso banco de talentos e acompanhe futuras oportunidades técnicas.",
+      "Conheça as áreas de atuação da Cheetah Solutions Network, inscreva-se em nosso banco de talentos e acompanhe futuras oportunidades técnicas.",
   },
   "/cheetah-solidaria": {
-    title: "Cheetah Solutions | Cheetah Solidária",
+    title: "Cheetah Solutions Network | Cheetah Solidária",
     description:
-      "Conheça a Cheetah Solidária, nossa iniciativa de responsabilidade social em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas.",
-    ogTitle: "Cheetah Solidária | Cheetah Solutions",
+      "Conheça a Cheetah Solidária, iniciativa de responsabilidade social da Cheetah Solutions Network em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas.",
+    ogTitle: "Cheetah Solidária | Cheetah Solutions Network",
   },
   "/faq": {
-    title: "Cheetah Solutions | Perguntas Frequentes",
+    title: "Cheetah Solutions Network | Perguntas Frequentes",
     description:
       "Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico.",
-    ogTitle: "Perguntas Frequentes | Cheetah Solutions",
+    ogTitle: "Perguntas Frequentes | Cheetah Solutions Network",
   },
   "/sugestoes": {
-    title: "Cheetah Solutions | Sugestões e Melhorias",
+    title: "Cheetah Solutions Network | Sugestões e Melhorias",
     description:
       "Envie suas sugestões para a Cheetah Solutions Network. Sua opinião é fundamental para nossa evolução e melhoria contínua dos serviços.",
-    ogTitle: "Sugestões e Melhorias | Cheetah Solutions",
+    ogTitle: "Sugestões e Melhorias | Cheetah Solutions Network",
   },
   "/diretrizes": {
-    title: "Cheetah Solutions | Diretrizes e Privacidade",
+    title: "Cheetah Solutions Network | Diretrizes e Privacidade",
     description:
       "Diretrizes, políticas de privacidade e conformidade da Cheetah Solutions Network. Transparência e governança corporativa.",
-    ogTitle: "Diretrizes e Privacidade | Cheetah Solutions",
+    ogTitle: "Diretrizes e Privacidade | Cheetah Solutions Network",
   },
 };
 
-const BASE_URL = "https://cheetahsolutions.com.br";
-const DEFAULT_IMAGE = "https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png";
+const BASE_URL = "https://www.cheetahsolutions.com.br";
+const DEFAULT_IMAGE = "https://i.ibb.co/gFfPkTZ7/Cheetah-Solutions-Network.png";
 
 function isCrawler(userAgent) {
   if (!userAgent) return false;
@@ -182,7 +182,7 @@ function generateHTML(path) {
   <meta property="og:type" content="website">
   <meta property="og:url" content="${fullUrl}">
   <meta property="og:image" content="${DEFAULT_IMAGE}">
-  <meta property="og:site_name" content="Cheetah Solutions">
+  <meta property="og:site_name" content="Cheetah Solutions Network">
   <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
@@ -197,7 +197,7 @@ function generateHTML(path) {
 <body>
   <h1>${metadata.ogTitle}</h1>
   <p>${metadata.description}</p>
-  <a href="${fullUrl}">Visite Cheetah Solutions</a>
+  <a href="${fullUrl}">Visite Cheetah Solutions Network</a>
 </body>
 </html>`;
 }
@@ -218,4 +218,3 @@ export default function handler(req, res) {
 export const config = {
   runtime: "edge",
 };
-

@@ -40,7 +40,7 @@ const SEO = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullUrl} />
-      <meta property="og:site_name" content="Cheetah Solutions" />
+      <meta property="og:site_name" content="Cheetah Solutions Network" />
       <meta property="og:locale" content="pt_BR" />
       
       {/* Twitter Card */}

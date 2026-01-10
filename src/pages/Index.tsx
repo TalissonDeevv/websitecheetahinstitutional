@@ -183,16 +183,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground font-inter overflow-x-hidden">
       <SEO
-        title="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
-        description="Software house especializada no desenvolvimento de soluções digitais sob medida para empresas que exigem performance, escalabilidade e eficiência."
-        ogTitle="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
-        ogDescription="Criamos sistemas, aplicações e plataformas digitais escaláveis, unindo engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais."
+        title="Cheetah Solutions Network | Desenvolvimento de Software Sob Medida"
+        description="A Cheetah Solutions Network é uma software house especializada em desenvolvimento de software sob medida, criando sistemas, automações e plataformas digitais escaláveis para empresas que exigem performance e eficiência."
+        ogTitle="Cheetah Solutions Network | Desenvolvimento de Software Sob Medida"
+        ogDescription="A Cheetah Solutions Network cria sistemas, aplicações e plataformas digitais escaláveis, unindo engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais."
         ogUrl="/"
       />
       <OrganizationJsonLd />
       <WebPageJsonLd 
-        title="Cheetah Solutions | Desenvolvimento de Software Sob Medida"
-        description="Software house especializada no desenvolvimento de soluções digitais sob medida para empresas que exigem performance, escalabilidade e eficiência."
+        title="Cheetah Solutions Network | Desenvolvimento de Software Sob Medida"
+        description="A Cheetah Solutions Network é uma software house especializada em desenvolvimento de software sob medida, criando sistemas, automações e plataformas digitais escaláveis para empresas."
         url="/"
       />
       <Header />
