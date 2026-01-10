@@ -510,7 +510,7 @@ const About = () => {
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-5 pl-8">
                     O guepardo é o animal terrestre mais rápido do mundo, simbolizando velocidade, 
-                    agilidade e precisão — valores que são o centro da nossa atuação. Assim como o 
+                    agilidade e precisão, valores que são o centro da nossa atuação. Assim como o 
                     guepardo ataca com estratégia e eficiência, nós desenvolvemos soluções rápidas, 
                     focadas e certeiras para os desafios dos nossos clientes.
                   </AccordionContent>
