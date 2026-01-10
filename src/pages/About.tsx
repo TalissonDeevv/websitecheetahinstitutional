@@ -1,4 +1,4 @@
-import { Target, Code, Zap, Shield, Users, Heart, MessageCircle, Lightbulb, Cog, Award, Handshake } from "lucide-react";
+import { Target, Code, Zap, Shield, Users, Heart, MessageCircle, Lightbulb, Cog, Award, Handshake, HelpCircle } from "lucide-react";
 import squareCloudLogo from "@/assets/square-cloud-logo.webp";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -8,6 +8,12 @@ import AnimatedSection from "@/components/AnimatedSection";
 import GlowLayer from "@/components/decorations/GlowLayer";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const About = () => {
   return (
@@ -477,6 +483,83 @@ const About = () => {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <AnimatedSection>
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                  Perguntas Frequentes
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                  Saiba mais sobre nós.
+                </h2>
+              </div>
+
+              <Accordion type="single" collapsible className="w-full space-y-4">
+                <AccordionItem value="item-1" className="bg-card border border-border rounded-xl px-6 data-[state=open]:ring-2 data-[state=open]:ring-primary/20">
+                  <AccordionTrigger className="hover:no-underline py-5">
+                    <div className="flex items-center gap-3 text-left">
+                      <HelpCircle className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-medium">Por que um Guepardo como logotipo?</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5 pl-8">
+                    O guepardo é o animal terrestre mais rápido do mundo, simbolizando velocidade, 
+                    agilidade e precisão — valores que são o centro da nossa atuação. Assim como o 
+                    guepardo ataca com estratégia e eficiência, nós desenvolvemos soluções rápidas, 
+                    focadas e certeiras para os desafios dos nossos clientes.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="bg-card border border-border rounded-xl px-6 data-[state=open]:ring-2 data-[state=open]:ring-primary/20">
+                  <AccordionTrigger className="hover:no-underline py-5">
+                    <div className="flex items-center gap-3 text-left">
+                      <HelpCircle className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-medium">Qual Estado a empresa nasceu?</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5 pl-8">
+                    A Cheetah Solutions Network nasceu no Rio de Janeiro, Brasil. 
+                    Apesar de atuarmos de forma remota com clientes de todo o país, 
+                    nossas raízes estão fincadas no estado carioca.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="bg-card border border-border rounded-xl px-6 data-[state=open]:ring-2 data-[state=open]:ring-primary/20">
+                  <AccordionTrigger className="hover:no-underline py-5">
+                    <div className="flex items-center gap-3 text-left">
+                      <HelpCircle className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-medium">Quem é o Fundador e CEO?</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5 pl-8">
+                    Talisson Souza é o fundador e CEO da Cheetah Solutions Network. 
+                    Com visão empreendedora e experiência em tecnologia, ele lidera a empresa 
+                    desde sua fundação, guiando a equipe na entrega de soluções digitais de alta qualidade.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="bg-card border border-border rounded-xl px-6 data-[state=open]:ring-2 data-[state=open]:ring-primary/20">
+                  <AccordionTrigger className="hover:no-underline py-5">
+                    <div className="flex items-center gap-3 text-left">
+                      <HelpCircle className="h-5 w-5 text-primary shrink-0" />
+                      <span className="font-medium">Em que ano vocês foram fundados?</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5 pl-8">
+                    A Cheetah Solutions Network foi fundada em 2020. 
+                    Desde então, já são mais de 5 anos de experiência desenvolvendo 
+                    software de qualidade e ajudando empresas a crescerem com tecnologia.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
