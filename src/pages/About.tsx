@@ -146,7 +146,7 @@ const About = () => {
                 <img 
                   src={cheetahMascot} 
                   alt="Guepardo como mascote da Cheetah Solutions Network, representando velocidade, precisão e performance em software"
-                  className="w-full max-w-md h-auto"
+                  className="w-full max-w-md h-auto dark:invert-0 invert"
                 />
               </div>
             </AnimatedSection>
