@@ -45,6 +45,14 @@ const communityProjects: CommunityProject[] = [
     link: "https://brixbot.xyz",
     image: "https://i.ibb.co/N63z0jt3/image.png",
   },
+  {
+    id: "azura-js",
+    name: "Azura JS",
+    description: "O AzuraJS é um framework moderno para criação de APIs, TypeScript-first e zero dependências, criado com foco total em performance, segurança e experiência do desenvolvedor.",
+    link: "https://azura.js.org/",
+    image: "https://i.ibb.co/svp2w6sV/image.png",
+    featured: true,
+  },
 ];
 
 const Developers = () => {
