@@ -36,6 +36,7 @@ import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
 import GuidelinesPage from "./pages/legal/GuidelinesPage";
 import Developers from "./pages/Developers";
+import ApprovedProjects from "./pages/ApprovedProjects";
 import TrabalheConosco from "./pages/TrabalheConosco";
 
 const queryClient = new QueryClient();
@@ -77,6 +78,7 @@ const App = () => (
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
             <Route path="/sugestoes" element={<Suggestions />} />
             <Route path="/developers" element={<Developers />} />
+            <Route path="/developers/projetos-aprovados" element={<ApprovedProjects />} />
             <Route path="/inscricoes" element={<TrabalheConosco />} />
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
 

@@ -478,7 +478,7 @@ const Developers = () => {
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {communityProjects.map((project, index) => (
+            {communityProjects.slice(0, 3).map((project, index) => (
               <AnimatedSection key={project.id} animation="fade-up" delay={index * 100}>
                 <article className={`group bg-card border rounded-xl overflow-hidden transition-colors h-full flex flex-col relative ${project.featured ? 'border-primary ring-2 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
                   {project.featured && (
@@ -518,6 +518,22 @@ const Developers = () => {
               </AnimatedSection>
             ))}
           </div>
+
+          {/* CTA para ver todos os projetos */}
+          <AnimatedSection animation="fade-up" delay={300}>
+            <div className="flex justify-center mt-10">
+              <Link to="/developers/projetos-aprovados">
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium"
+                >
+                  Ver todos os projetos aprovados
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
