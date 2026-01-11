@@ -458,13 +458,13 @@ const Developers = () => {
         </div>
       </section>
 
-      {/* Projetos em Destaque */}
+      {/* Projetos Aprovados */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <AnimatedSection>
-            <div className="max-w-xl mb-12">
+            <div className="max-w-2xl mx-auto text-center">
               <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
-                Projetos em Destaque
+                Projetos Aprovados
               </span>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
                 Soluções reais criadas<br />
@@ -474,64 +474,17 @@ const Developers = () => {
                 Projetos selecionados e aprovados que demonstram o talento e a capacidade 
                 técnica dos desenvolvedores da Cheetah Developers Brasil.
               </p>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {communityProjects.slice(0, 3).map((project, index) => (
-              <AnimatedSection key={project.id} animation="fade-up" delay={index * 100}>
-                <article className={`group bg-card border rounded-xl overflow-hidden transition-colors h-full flex flex-col relative ${project.featured ? 'border-primary ring-2 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
-                  {project.featured && (
-                    <div className="absolute top-3 right-3 z-10 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5">
-                      <Award className="h-3 w-3" />
-                      Recomendado
-                    </div>
-                  )}
-                  {project.image && (
-                    <div className="aspect-video overflow-hidden bg-secondary/50">
-                      <img 
-                        src={project.image} 
-                        alt={`${project.name} - Projeto da Cheetah Developers Brasil`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-lg font-semibold mb-3">{project.name}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed flex-grow mb-4">
-                      {project.description}
-                    </p>
-                    {project.link && (
-                      <a 
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium transition-colors"
-                      >
-                        Conhecer solução
-                        <ExternalLink className="ml-2 h-3.5 w-3.5" />
-                      </a>
-                    )}
-                  </div>
-                </article>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          {/* CTA para ver todos os projetos */}
-          <AnimatedSection animation="fade-up" delay={300}>
-            <div className="flex justify-center mt-10">
-              <Link to="/developers/projetos">
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium"
-                >
-                  Ver todos os projetos aprovados
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+              <div className="mt-8">
+                <Link to="/developers/projetos">
+                  <Button 
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
+                  >
+                    Ver todos os projetos aprovados
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </AnimatedSection>
         </div>
