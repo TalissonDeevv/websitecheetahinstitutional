@@ -83,13 +83,13 @@ const ApprovedProjects = () => {
         description="Conheça os projetos aprovados e desenvolvidos dentro da Cheetah Solutions Network, com soluções digitais focadas em performance, escalabilidade e inovação."
         ogTitle="Projetos Aprovados | Cheetah Solutions Network"
         ogDescription="Conheça os projetos aprovados e desenvolvidos dentro da Cheetah Solutions Network, com soluções digitais focadas em performance, escalabilidade e inovação."
-        ogUrl="/developers/projetos-aprovados"
-        canonical="/developers/projetos-aprovados"
+        ogUrl="/developers/projetos"
+        canonical="/developers/projetos"
       />
       <WebPageJsonLd 
         title="Projetos Aprovados | Cheetah Solutions Network"
         description="Conheça os projetos aprovados e desenvolvidos dentro da Cheetah Solutions Network, com soluções digitais focadas em performance, escalabilidade e inovação."
-        url="/developers/projetos-aprovados"
+        url="/developers/projetos"
       />
 
       {/* Hero Section */}

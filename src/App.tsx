@@ -78,7 +78,7 @@ const App = () => (
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
             <Route path="/sugestoes" element={<Suggestions />} />
             <Route path="/developers" element={<Developers />} />
-            <Route path="/developers/projetos-aprovados" element={<ApprovedProjects />} />
+            <Route path="/developers/projetos" element={<ApprovedProjects />} />
             <Route path="/inscricoes" element={<TrabalheConosco />} />
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
 
