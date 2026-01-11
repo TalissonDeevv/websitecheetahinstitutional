@@ -1,9 +1,11 @@
-import { ArrowLeft, ExternalLink, Award, Bot, Globe, CreditCard, Code2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { ExternalLink, Award, Bot, Globe, CreditCard, Code2, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { WebPageJsonLd } from "@/components/JsonLd";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Categorias disponíveis para projetos
 type ProjectCategory = "Bot" | "Plataforma" | "Sistema Web" | "Gateway" | "Framework" | "Outro";
@@ -18,6 +20,15 @@ interface ApprovedProject {
   image?: string;
   featured?: boolean;
 }
+
+// Filtros disponíveis
+const categoryFilters: { label: string; value: ProjectCategory | "all"; icon: React.ComponentType<{ className?: string }> }[] = [
+  { label: "Todos", value: "all", icon: LayoutGrid },
+  { label: "Bot", value: "Bot", icon: Bot },
+  { label: "Plataforma", value: "Plataforma", icon: Globe },
+  { label: "Gateway", value: "Gateway", icon: CreditCard },
+  { label: "Framework", value: "Framework", icon: Code2 },
+];
 
 // Ícone baseado na categoria
 const getCategoryIcon = (category: ProjectCategory) => {
@@ -76,6 +87,12 @@ const approvedProjects: ApprovedProject[] = [
 ];
 
 const ApprovedProjects = () => {
+  const [activeFilter, setActiveFilter] = useState<ProjectCategory | "all">("all");
+
+  const filteredProjects = activeFilter === "all" 
+    ? approvedProjects 
+    : approvedProjects.filter(project => project.category === activeFilter);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
@@ -91,10 +108,12 @@ const ApprovedProjects = () => {
         description="Conheça os projetos aprovados e desenvolvidos dentro da Cheetah Solutions Network, com soluções digitais focadas em performance, escalabilidade e inovação."
         url="/developers/projetos"
       />
+      
+      <Header />
 
       {/* Hero Section */}
       <AnimatedSection animation="fade-up">
-        <section className="pt-20 pb-16 px-4">
+        <section className="pt-28 pb-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-3xl">
               <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
@@ -118,93 +137,111 @@ const ApprovedProjects = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <AnimatedSection>
-            <div className="max-w-xl mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold">
-                Soluções desenvolvidas<br />
-                pela comunidade.
-              </h2>
-              <p className="text-muted-foreground mt-4 leading-relaxed">
-                Cada projeto listado passou por um processo de aprovação interno, 
-                garantindo qualidade técnica e alinhamento com os valores da 
-                Cheetah Solutions Network.
-              </p>
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+              <div className="max-w-xl">
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  Soluções desenvolvidas<br />
+                  pela comunidade.
+                </h2>
+                <p className="text-muted-foreground mt-4 leading-relaxed">
+                  Cada projeto listado passou por um processo de aprovação interno, 
+                  garantindo qualidade técnica e alinhamento com os valores da 
+                  Cheetah Solutions Network.
+                </p>
+              </div>
+
+              {/* Filtros por categoria */}
+              <div className="flex flex-wrap gap-2">
+                {categoryFilters.map((filter) => {
+                  const FilterIcon = filter.icon;
+                  const isActive = activeFilter === filter.value;
+                  return (
+                    <Button
+                      key={filter.value}
+                      variant={isActive ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setActiveFilter(filter.value)}
+                      className={`transition-all ${
+                        isActive 
+                          ? "bg-primary text-primary-foreground" 
+                          : "border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"
+                      }`}
+                    >
+                      <FilterIcon className="h-4 w-4 mr-2" />
+                      {filter.label}
+                    </Button>
+                  );
+                })}
+              </div>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {approvedProjects.map((project, index) => {
-              const CategoryIcon = getCategoryIcon(project.category);
-              return (
-                <AnimatedSection key={project.id} animation="fade-up" delay={index * 100}>
-                  <article className={`group bg-card border rounded-xl overflow-hidden transition-colors h-full flex flex-col relative ${project.featured ? 'border-primary ring-2 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
-                    {project.featured && (
-                      <div className="absolute top-3 right-3 z-10 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5">
-                        <Award className="h-3 w-3" />
-                        Recomendado
-                      </div>
-                    )}
-                    {project.image && (
-                      <div className="aspect-video overflow-hidden bg-secondary/50">
-                        <img 
-                          src={project.image} 
-                          alt={`${project.name} - Projeto aprovado da Cheetah Solutions Network`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                        />
-                      </div>
-                    )}
-                    <div className="p-6 flex flex-col flex-grow">
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="w-6 h-6 bg-primary/10 rounded flex items-center justify-center">
-                          <CategoryIcon className="h-3.5 w-3.5 text-primary" />
+          {filteredProjects.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredProjects.map((project, index) => {
+                const CategoryIcon = getCategoryIcon(project.category);
+                return (
+                  <AnimatedSection key={project.id} animation="fade-up" delay={index * 100}>
+                    <article className={`group bg-card border rounded-xl overflow-hidden transition-colors h-full flex flex-col relative ${project.featured ? 'border-primary ring-2 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
+                      {project.featured && (
+                        <div className="absolute top-3 right-3 z-10 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1.5">
+                          <Award className="h-3 w-3" />
+                          Recomendado
                         </div>
-                        <span className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
-                          {project.category}
-                        </span>
-                      </div>
-                      <h3 className="text-lg font-semibold mb-3">{project.name}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed flex-grow mb-4">
-                        {project.description}
-                      </p>
-                      {project.link && (
-                        <a 
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium transition-colors"
-                        >
-                          Conhecer solução
-                          <ExternalLink className="ml-2 h-3.5 w-3.5" />
-                        </a>
                       )}
-                    </div>
-                  </article>
-                </AnimatedSection>
-              );
-            })}
-          </div>
+                      {project.image && (
+                        <div className="aspect-video overflow-hidden bg-secondary/50">
+                          <img 
+                            src={project.image} 
+                            alt={`${project.name} - Projeto aprovado da Cheetah Solutions Network`}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <div className="p-6 flex flex-col flex-grow">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-6 h-6 bg-primary/10 rounded flex items-center justify-center">
+                            <CategoryIcon className="h-3.5 w-3.5 text-primary" />
+                          </div>
+                          <span className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
+                            {project.category}
+                          </span>
+                        </div>
+                        <h3 className="text-lg font-semibold mb-3">{project.name}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed flex-grow mb-4">
+                          {project.description}
+                        </p>
+                        {project.link && (
+                          <a 
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium transition-colors"
+                          >
+                            Conhecer solução
+                            <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                          </a>
+                        )}
+                      </div>
+                    </article>
+                  </AnimatedSection>
+                );
+              })}
+            </div>
+          ) : (
+            <AnimatedSection animation="fade-up">
+              <div className="text-center py-16">
+                <p className="text-muted-foreground">
+                  Nenhum projeto encontrado para esta categoria.
+                </p>
+              </div>
+            </AnimatedSection>
+          )}
         </div>
       </section>
 
-      {/* Back Button Section */}
-      <AnimatedSection animation="fade-up">
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="flex justify-center">
-              <Link to="/developers">
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground font-medium"
-                >
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Voltar para Developers
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
+      <Footer />
     </div>
   );
 };
