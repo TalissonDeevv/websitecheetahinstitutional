@@ -522,7 +522,7 @@ const Developers = () => {
           {/* CTA para ver todos os projetos */}
           <AnimatedSection animation="fade-up" delay={300}>
             <div className="flex justify-center mt-10">
-              <Link to="/developers/projetos-aprovados">
+              <Link to="/developers/projetos">
                 <Button 
                   size="lg"
                   variant="outline"
