@@ -245,9 +245,9 @@ const Developers = () => {
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
             <AnimatedSection className="lg:col-span-4">
               <div className="sticky top-32">
-                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Sobre a Comunidade
-                </span>
+                </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
                   Um espaço público<br />
                   para evoluir junto.
@@ -308,9 +308,9 @@ const Developers = () => {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-xl mb-16">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Áreas Técnicas
-              </span>
+              </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
                 Encontre seu espaço<br />
                 e aprofunde-se.
@@ -347,9 +347,9 @@ const Developers = () => {
             <div className="lg:col-span-4">
               <AnimatedSection animation="fade-right">
                 <div className="sticky top-32">
-                  <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                  <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                     Benefícios
-                  </span>
+                  </p>
                   <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
                     O que a comunidade<br />
                     oferece.
@@ -389,9 +389,9 @@ const Developers = () => {
           <AnimatedSection>
             <div className="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-20">
               <div className="lg:w-1/3">
-                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Para Quem
-                </span>
+                </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3">
                   Uma comunidade<br />
                   para todos os níveis.
@@ -463,9 +463,9 @@ const Developers = () => {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-xl mb-12">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Projetos em Destaque
-              </span>
+              </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
                 Soluções reais criadas<br />
                 por membros da comunidade.
@@ -542,9 +542,9 @@ const Developers = () => {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Como Participar
-              </span>
+              </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3 mb-6">
                 Entre para a comunidade.
               </h2>

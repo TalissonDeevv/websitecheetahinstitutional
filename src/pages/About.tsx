@@ -61,9 +61,9 @@ const About = () => {
             {/* Left column - narrower */}
             <AnimatedSection className="lg:col-span-4">
               <div className="sticky top-32">
-                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Quem Somos
-                </span>
+                </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
                   Uma equipe técnica<br />
                   que entende de negócio.
@@ -117,9 +117,9 @@ const About = () => {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-xl mb-16">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Como trabalhamos
-              </span>
+              </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
                 Processos bem definidos,<br />
                 resultados consistentes.
@@ -187,9 +187,9 @@ const About = () => {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-xl mb-16">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 O que fazemos
-              </span>
+              </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
                 Desenvolvimento sob medida,<br />
                 não templates genéricos.
@@ -277,9 +277,9 @@ const About = () => {
           <AnimatedSection>
             <div className="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-20">
               <div className="lg:w-1/3">
-                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Como pensamos
-                </span>
+                </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3">
                   Nossos princípios não são decorativos.
                 </h2>
@@ -334,9 +334,9 @@ const About = () => {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Nossa visão
-              </span>
+              </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3 mb-8">
                 Software preparado para crescer.
               </h2>
