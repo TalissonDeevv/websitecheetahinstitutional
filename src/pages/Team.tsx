@@ -81,9 +81,9 @@ const Team = () => {
         <div className="container mx-auto">
           <AnimatedSection animation="fade-up">
             <div className="mb-12">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Liderança
-              </span>
+              </p>
               <h2 className="text-2xl font-bold mt-3">
                 Direção executiva.
               </h2>
@@ -123,9 +123,9 @@ const Team = () => {
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <AnimatedSection animation="fade-right">
-                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Desenvolvimento
-                </span>
+                </p>
                 <h2 className="text-2xl font-bold mt-3 leading-tight">
                   Equipe técnica.
                 </h2>
@@ -167,9 +167,9 @@ const Team = () => {
         <div className="container mx-auto">
           <div className="max-w-2xl">
             <AnimatedSection animation="fade-up">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Suporte
-              </span>
+              </p>
               <h2 className="text-2xl font-bold mt-3 mb-8">
                 Atendimento ao cliente.
               </h2>

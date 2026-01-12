@@ -241,9 +241,9 @@ const TrabalheConosco = () => {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-xl mb-16">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Processo Seletivo
-              </span>
+              </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
                 Etapas do processo.
               </h2>
@@ -293,9 +293,9 @@ const TrabalheConosco = () => {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="max-w-xl mb-16">
-              <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                 Diferenciais
-              </span>
+              </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
                 Por que trabalhar na Cheetah?
               </h2>
@@ -330,9 +330,9 @@ const TrabalheConosco = () => {
           <AnimatedSection>
             <div className="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-20">
               <div className="lg:w-1/3">
-                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Cultura
-                </span>
+                </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3">
                   Como trabalhamos.
                 </h2>
@@ -368,9 +368,9 @@ const TrabalheConosco = () => {
           <div className="grid lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
               <AnimatedSection animation="fade-right">
-                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Oportunidades
-                </span>
+                </p>
                 <h2 className="text-2xl font-bold mt-3 leading-tight">
                   Áreas de Interesse
                 </h2>

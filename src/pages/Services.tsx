@@ -170,13 +170,13 @@ const Services = () => {
             <div className="lg:col-span-4">
               <AnimatedSection animation="fade-right">
                 <div className="sticky top-32">
-                  <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
-                    Mais serviços
-                  </span>
-                  <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
-                    Soluções<br />
-                    complementares.
-                  </h2>
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                Mais serviços
+              </p>
+              <h3 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
+                Soluções<br />
+                complementares.
+              </h3>
                   <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
                     Além dos serviços principais, desenvolvemos 
                     soluções específicas conforme a necessidade de cada projeto.
@@ -221,12 +221,12 @@ const Services = () => {
           <div className="max-w-3xl mx-auto">
             <AnimatedSection animation="fade-up">
               <div className="text-center mb-16">
-                <span className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
                   Como funciona
-                </span>
-                <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold mt-3">
                   Processo direto, sem burocracia.
-                </h2>
+                </h3>
               </div>
             </AnimatedSection>
             
@@ -273,10 +273,10 @@ const Services = () => {
         <section className="py-24 px-4">
           <div className="container mx-auto">
             <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 Tem um projeto?<br />
                 <span className="text-primary">Vamos avaliar juntos.</span>
-              </h2>
+              </h3>
               <p className="text-muted-foreground mb-8">
                 Orçamento gratuito e sem compromisso.
               </p>
