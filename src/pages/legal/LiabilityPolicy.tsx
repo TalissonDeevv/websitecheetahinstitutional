@@ -44,7 +44,7 @@ const LiabilityPolicy = () => {
                 partes contratantes.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.1. Princípios Gerais</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Princípios Gerais</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li><strong>Boa-fé:</strong> Atuação baseada em honestidade e transparência</li>
                 <li><strong>Proporcionalidade:</strong> Responsabilidade proporcional ao valor contratado</li>
@@ -52,7 +52,7 @@ const LiabilityPolicy = () => {
                 <li><strong>Mitigação:</strong> Dever de ambas as partes de minimizar danos</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.2. Aplicabilidade</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Aplicabilidade</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Esta política aplica-se a todos os contratos de prestação de serviços, salvo 
                 quando houver disposição específica em contrato individual que prevaleça 
@@ -106,7 +106,7 @@ const LiabilityPolicy = () => {
             </div>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.1. Período de Garantia</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Período de Garantia</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Os serviços possuem garantia de funcionamento conforme especificado em contrato, 
                 geralmente:
@@ -117,7 +117,7 @@ const LiabilityPolicy = () => {
                 <li>• Suporte técnico: Conforme plano contratado</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.2. Exclusões de Garantia</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Exclusões de Garantia</h3>
               <p className="text-muted-foreground leading-relaxed">
                 A garantia não cobre problemas decorrentes de:
               </p>
@@ -153,14 +153,14 @@ const LiabilityPolicy = () => {
             </div>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">3.1. Limite Monetário</h3>
+              <h3 className="text-xl font-semibold mb-4">Limite Monetário</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Em nenhuma hipótese a responsabilidade total da Cheetah Solutions Network 
                 excederá o valor efetivamente pago pelo cliente nos 12 meses anteriores ao 
                 evento que gerou a reclamação.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.2. Danos Excluídos</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Danos Excluídos</h3>
               <p className="text-muted-foreground leading-relaxed">
                 A Cheetah Solutions Network não será responsável por:
               </p>
@@ -173,7 +173,7 @@ const LiabilityPolicy = () => {
                 <li><strong>Danos a terceiros:</strong> Resultantes do uso do software pelo cliente</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.3. Exclusões Absolutas</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Exclusões Absolutas</h3>
               <p className="text-muted-foreground leading-relaxed">
                 A Cheetah Solutions Network está isenta de responsabilidade em casos de:
               </p>
@@ -196,7 +196,7 @@ const LiabilityPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">4. Responsabilidades do Cliente</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">4.1. Obrigações Gerais</h3>
+              <h3 className="text-xl font-semibold mb-4">Obrigações Gerais</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Fornecer informações precisas e completas sobre requisitos</li>
                 <li>• Disponibilizar acessos e recursos necessários</li>
@@ -206,7 +206,7 @@ const LiabilityPolicy = () => {
                 <li>• Cumprir com obrigações de pagamento</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.2. Uso dos Serviços</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Uso dos Serviços</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O cliente é integralmente responsável por:
               </p>
@@ -218,7 +218,7 @@ const LiabilityPolicy = () => {
                 <li>• Tratamento de dados pessoais de seus clientes</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.3. Indenização</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Indenização</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O cliente concorda em indenizar a Cheetah Solutions Network por quaisquer 
                 perdas, danos, custos ou despesas decorrentes de:
@@ -241,7 +241,7 @@ const LiabilityPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">5. Resolução de Disputas</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">5.1. Procedimento</h3>
+              <h3 className="text-xl font-semibold mb-4">Procedimento</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Em caso de controvérsia, as partes comprometem-se a buscar solução amigável 
                 antes de qualquer medida judicial:
@@ -285,14 +285,14 @@ const LiabilityPolicy = () => {
                 </div>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Foro Competente</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Foro Competente</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Fica eleito o foro da Comarca de [Cidade/Estado], com renúncia a qualquer outro, 
                 por mais privilegiado que seja, para dirimir quaisquer questões oriundas desta 
                 relação contratual.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.3. Prescrição</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Prescrição</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Qualquer reclamação relacionada aos serviços deve ser apresentada dentro do 
                 prazo de 2 anos a partir da data do evento que deu origem à reclamação, 
@@ -310,7 +310,7 @@ const LiabilityPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">6. Níveis de Serviço (SLA)</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">6.1. Compromissos de Disponibilidade</h3>
+              <h3 className="text-xl font-semibold mb-4">Compromissos de Disponibilidade</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Para serviços de hospedagem e infraestrutura, comprometemo-nos com:
               </p>

@@ -93,7 +93,7 @@ const SecurityPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">2. Controles de Acesso</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">2.1. Autenticação</h3>
+              <h3 className="text-xl font-semibold mb-4">Autenticação</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Implementamos múltiplas camadas de autenticação para garantir que apenas usuários 
                 legítimos acessem os sistemas:
@@ -146,7 +146,7 @@ const SecurityPolicy = () => {
                 </Card>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.2. Autorização</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Autorização</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O acesso a recursos é controlado através do princípio do menor privilégio:
               </p>
@@ -157,7 +157,7 @@ const SecurityPolicy = () => {
                 <li>• Revogação imediata de acessos em casos de desligamento</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.3. Gestão de Identidades</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Gestão de Identidades</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Ciclo de vida completo de identidades digitais:
               </p>
@@ -179,7 +179,7 @@ const SecurityPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">3. Criptografia e Proteção de Dados</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">3.1. Dados em Trânsito</h3>
+              <h3 className="text-xl font-semibold mb-4">Dados em Trânsito</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Toda comunicação entre sistemas e usuários é protegida:
               </p>
@@ -190,7 +190,7 @@ const SecurityPolicy = () => {
                 <li><strong>Perfect Forward Secrecy:</strong> Proteção contra comprometimento futuro de chaves</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.2. Dados em Repouso</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Dados em Repouso</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Dados armazenados são protegidos com criptografia forte:
               </p>
@@ -201,7 +201,7 @@ const SecurityPolicy = () => {
                 <li><strong>Key Rotation:</strong> Rotação automática de chaves conforme política</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.3. Dados Sensíveis</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Dados Sensíveis</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Tratamento especial para dados que requerem proteção adicional:
               </p>
@@ -223,7 +223,7 @@ const SecurityPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">4. Segurança de Rede e Infraestrutura</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">4.1. Proteção Perimetral</h3>
+              <h3 className="text-xl font-semibold mb-4">Proteção Perimetral</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
                 <Card className="bg-card/50 border-border/50">
                   <CardContent className="p-4">
@@ -249,7 +249,7 @@ const SecurityPolicy = () => {
                 </Card>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.2. Segmentação de Rede</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Segmentação de Rede</h3>
               <p className="text-muted-foreground leading-relaxed">
                 A infraestrutura é segmentada em zonas de segurança distintas:
               </p>
@@ -260,7 +260,7 @@ const SecurityPolicy = () => {
                 <li>• Rede de gestão dedicada para administração</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.3. Monitoramento Contínuo</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Monitoramento Contínuo</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Sistemas de monitoramento 24/7:
               </p>

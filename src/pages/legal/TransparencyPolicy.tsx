@@ -45,7 +45,7 @@ const TransparencyPolicy = () => {
                 gestão aberta e responsável.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.1. Pilares da Transparência</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Pilares da Transparência</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
                 <Card className="bg-card/50 border-border/50">
@@ -96,7 +96,7 @@ const TransparencyPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">2. Informações que Divulgamos</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">2.1. Informações Institucionais</h3>
+              <h3 className="text-xl font-semibold mb-4">Informações Institucionais</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Estrutura organizacional e governança corporativa</li>
                 <li>• Missão, visão e valores da empresa</li>
@@ -105,7 +105,7 @@ const TransparencyPolicy = () => {
                 <li>• Histórico e marcos importantes da empresa</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.2. Informações Operacionais</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Informações Operacionais</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Disponibilidade de serviços (status page pública)</li>
                 <li>• Incidentes de segurança que afetem clientes</li>
@@ -114,7 +114,7 @@ const TransparencyPolicy = () => {
                 <li>• Roadmap de produtos (quando aplicável)</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.3. Informações de Conformidade</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Informações de Conformidade</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Relatórios de transparência anuais</li>
                 <li>• Estatísticas de solicitações governamentais</li>
@@ -200,7 +200,7 @@ const TransparencyPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">4. Relatórios de Transparência</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">4.1. Relatório Anual</h3>
+              <h3 className="text-xl font-semibold mb-4">Relatório Anual</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Publicamos anualmente um relatório abrangente contendo:
               </p>
@@ -213,7 +213,7 @@ const TransparencyPolicy = () => {
                 <li>• Metas para o próximo período</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.2. Relatórios Trimestrais</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Relatórios Trimestrais</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Atualizações trimestrais sobre:
               </p>
@@ -224,7 +224,7 @@ const TransparencyPolicy = () => {
                 <li>• Feedback consolidado de clientes</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.3. Acesso aos Relatórios</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Acesso aos Relatórios</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Os relatórios estão disponíveis em nossa central de documentos e podem ser 
                 solicitados diretamente à nossa equipe de atendimento. Clientes com contratos 
@@ -242,7 +242,7 @@ const TransparencyPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">5. Governança Corporativa</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">5.1. Estrutura Organizacional</h3>
+              <h3 className="text-xl font-semibold mb-4">Estrutura Organizacional</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Nossa estrutura de governança é desenhada para garantir decisões éticas e responsáveis:
               </p>
@@ -294,7 +294,7 @@ const TransparencyPolicy = () => {
                 </Card>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Código de Ética</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Código de Ética</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Todos os colaboradores são orientados por nosso Código de Ética, que estabelece:
               </p>
@@ -317,14 +317,14 @@ const TransparencyPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">6. Canais de Comunicação</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">6.1. Status de Serviços</h3>
+              <h3 className="text-xl font-semibold mb-4">Status de Serviços</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Mantemos uma página de status pública (status.cheetahnetwork.com.br) com 
                 informações em tempo real sobre a disponibilidade de nossos serviços, 
                 incidentes em andamento e histórico de eventos.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.2. Comunicados Oficiais</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Comunicados Oficiais</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Notícias e atualizações importantes são comunicadas através de:
               </p>
@@ -336,7 +336,7 @@ const TransparencyPolicy = () => {
                 <li>• E-mail direto para comunicações críticas</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.3. Feedback e Sugestões</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Feedback e Sugestões</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Valorizamos o feedback de nossos stakeholders e mantemos canais abertos para:
               </p>

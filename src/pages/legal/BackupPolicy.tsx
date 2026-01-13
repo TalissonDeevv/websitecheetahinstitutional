@@ -44,21 +44,21 @@ const BackupPolicy = () => {
                 pela Cheetah Solutions Network.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.1. Objetivo</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Objetivo</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Garantir a disponibilidade, integridade e recuperabilidade dos dados dos clientes 
                 e sistemas internos, minimizando riscos de perda de informações e assegurando a 
                 continuidade das operações em caso de incidentes.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.2. Escopo</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Escopo</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Esta política aplica-se a todos os sistemas, aplicações, bancos de dados e arquivos 
                 sob responsabilidade da Cheetah Solutions Network, incluindo ambientes de produção, 
                 homologação e desenvolvimento.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.3. Princípios</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Princípios</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li><strong>Regularidade:</strong> Backups realizados em intervalos definidos e previsíveis</li>
                 <li><strong>Redundância:</strong> Múltiplas cópias em locais geograficamente distintos</li>
@@ -232,7 +232,7 @@ const BackupPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">4. Armazenamento e Segurança</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">4.1. Locais de Armazenamento</h3>
+              <h3 className="text-xl font-semibold mb-4">Locais de Armazenamento</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Os backups são armazenados em múltiplas localizações para garantir disponibilidade 
                 e proteção contra desastres:
@@ -262,7 +262,7 @@ const BackupPolicy = () => {
                 </Card>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.2. Criptografia</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Criptografia</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Todos os backups são criptografados utilizando padrões de mercado:
               </p>
@@ -272,7 +272,7 @@ const BackupPolicy = () => {
                 <li><strong>Chaves:</strong> Gerenciadas via AWS KMS com rotação automática</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.3. Controle de Acesso</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Controle de Acesso</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O acesso aos backups é restrito e controlado:
               </p>
@@ -294,7 +294,7 @@ const BackupPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">5. Procedimentos de Recuperação</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">5.1. Solicitação de Restauração</h3>
+              <h3 className="text-xl font-semibold mb-4">Solicitação de Restauração</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Para solicitar restauração de dados, o cliente deve:
               </p>
@@ -305,7 +305,7 @@ const BackupPolicy = () => {
                 <li>4. Aguardar aprovação e execução pela equipe técnica</li>
               </ol>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Tempos de Recuperação (RTO)</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Tempos de Recuperação (RTO)</h3>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
@@ -335,7 +335,7 @@ const BackupPolicy = () => {
                 </table>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.3. Testes de Recuperação</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Testes de Recuperação</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Testes regulares de recuperação são realizados para garantir a eficácia dos backups:
               </p>

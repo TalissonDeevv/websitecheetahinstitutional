@@ -43,7 +43,7 @@ const ServicePolicy = () => {
                 do cliente e a manutenção de relacionamentos comerciais duradouros e produtivos.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.1. Compromisso com a Qualidade</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Compromisso com a Qualidade</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Todos os colaboradores da Cheetah Solutions Network são treinados para oferecer atendimento 
                 de alta qualidade, com foco na resolução efetiva de problemas e na comunicação clara e objetiva. 
@@ -51,7 +51,7 @@ const ServicePolicy = () => {
                 das habilidades de atendimento.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.2. Respeito e Profissionalismo</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Respeito e Profissionalismo</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O tratamento respeitoso e profissional é obrigatório em todas as interações. Esperamos que 
                 nossos clientes também mantenham conduta adequada durante o atendimento. Casos de desrespeito, 
@@ -59,7 +59,7 @@ const ServicePolicy = () => {
                 conforme previsto em nossa Política de Uso Aceitável.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.3. Transparência nas Informações</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Transparência nas Informações</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Comprometemo-nos a fornecer informações precisas e completas sobre nossos serviços, prazos, 
                 custos e limitações. Em caso de impossibilidade técnica ou limitação de escopo, o cliente 
@@ -325,7 +325,7 @@ const ServicePolicy = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">5. Procedimento de Escalação</h2>
+            <h2 className="text-3xl font-bold mb-8">5. Escalação</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
               <p className="text-muted-foreground leading-relaxed">
@@ -333,7 +333,7 @@ const ServicePolicy = () => {
                 seja resolvido dentro do SLA estabelecido, existe um processo formal de escalação:
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.1. Níveis de Escalação</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Níveis de Escalação</h3>
               
               <div className="space-y-4">
                 <Card className="bg-card/50 border-border/50">

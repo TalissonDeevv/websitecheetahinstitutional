@@ -93,7 +93,7 @@ const IntellectualPropertyPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">2. Propriedade do Código Desenvolvido</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">2.1. Código Desenvolvido sob Contrato</h3>
+              <h3 className="text-xl font-semibold mb-4">Código Desenvolvido sob Contrato</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Salvo disposição contratual em contrário, os direitos sobre código desenvolvido 
                 especificamente para um cliente são definidos da seguinte forma:
@@ -133,7 +133,7 @@ const IntellectualPropertyPolicy = () => {
                 </Card>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.2. Transferência de Propriedade</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Transferência de Propriedade</h3>
               <p className="text-muted-foreground leading-relaxed">
                 A transferência completa de propriedade intelectual (work-for-hire) pode ser 
                 acordada mediante contrato específico, com as seguintes condições:
@@ -145,7 +145,7 @@ const IntellectualPropertyPolicy = () => {
                 <li>• Exclusão de bibliotecas de terceiros licenciadas</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.3. Código Proprietário da Cheetah</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Código Proprietário da Cheetah</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Determinados componentes desenvolvidos pela Cheetah Solutions Network são 
                 propriedade exclusiva da empresa e licenciados para uso nos projetos:
@@ -168,7 +168,7 @@ const IntellectualPropertyPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">3. Licenciamento de Software</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">3.1. Uso de Software de Terceiros</h3>
+              <h3 className="text-xl font-semibold mb-4">Uso de Software de Terceiros</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Os projetos desenvolvidos podem utilizar bibliotecas e frameworks de terceiros, 
                 sujeitos às suas respectivas licenças. A Cheetah Solutions Network:
@@ -181,7 +181,7 @@ const IntellectualPropertyPolicy = () => {
                 <li>• Fornece lista de dependências ao cliente mediante solicitação</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.2. Tipos de Licença Utilizadas</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Tipos de Licença Utilizadas</h3>
               <div className="overflow-x-auto my-6">
                 <table className="w-full border-collapse">
                   <thead>
@@ -216,7 +216,7 @@ const IntellectualPropertyPolicy = () => {
                 </table>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.3. Licença de Uso para Clientes</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Licença de Uso para Clientes</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Quando não há transferência de propriedade, o cliente recebe licença de uso 
                 com as seguintes características:
@@ -239,7 +239,7 @@ const IntellectualPropertyPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">4. Marcas e Identidade Visual</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">4.1. Marcas da Cheetah Solutions Network</h3>
+              <h3 className="text-xl font-semibold mb-4">Marcas da Cheetah Solutions Network</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Os seguintes elementos são marcas registradas ou em processo de registro:
               </p>
@@ -250,7 +250,7 @@ const IntellectualPropertyPolicy = () => {
                 <li>• Slogans e taglines</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.2. Uso das Marcas</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Uso das Marcas</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O uso de nossas marcas por terceiros requer autorização prévia e deve seguir 
                 as diretrizes de identidade visual. Usos permitidos incluem:
@@ -261,7 +261,7 @@ const IntellectualPropertyPolicy = () => {
                 <li>• Uso do selo "Desenvolvido por Cheetah Solutions" quando acordado</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.3. Marca d'Água e Créditos</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Marca d'Água e Créditos</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Por padrão, não inserimos marcas d'água ou créditos visíveis nos produtos 
                 desenvolvidos para clientes, exceto quando:
@@ -283,7 +283,7 @@ const IntellectualPropertyPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">5. Confidencialidade e Segredos Comerciais</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">5.1. Informações Confidenciais</h3>
+              <h3 className="text-xl font-semibold mb-4">Informações Confidenciais</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Consideram-se informações confidenciais:
               </p>
@@ -295,7 +295,7 @@ const IntellectualPropertyPolicy = () => {
                 <li>• Informações financeiras e contratuais</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Acordo de Confidencialidade (NDA)</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Acordo de Confidencialidade (NDA)</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Projetos que envolvam informações sensíveis são protegidos por NDA específico, 
                 que estabelece:
@@ -308,7 +308,7 @@ const IntellectualPropertyPolicy = () => {
                 <li>• Penalidades por descumprimento</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.3. Proteção de Segredos Comerciais</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Proteção de Segredos Comerciais</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Implementamos medidas técnicas e organizacionais para proteção:
               </p>
