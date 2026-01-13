@@ -116,9 +116,9 @@ const ApprovedProjects = () => {
         <section className="pt-28 pb-16 px-4">
           <div className="container mx-auto">
             <div className="max-w-3xl">
-              <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
+              <span className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium block">
                 Cheetah Developers Brasil
-              </p>
+              </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
                 Projetos<br />
                 <span className="text-primary">Aprovados</span>

@@ -44,14 +44,14 @@ const CancellationPolicy = () => {
                 e seus clientes.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.1. Aplicabilidade</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Aplicabilidade</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Esta política aplica-se a todos os contratos de prestação de serviços firmados com a 
                 Cheetah Solutions Network, incluindo, mas não se limitando a: desenvolvimento de software, 
                 manutenção de sistemas, hospedagem, suporte técnico e serviços de consultoria.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.2. Definições</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Definições</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li><strong>Cancelamento:</strong> Encerramento definitivo do contrato de prestação de serviços.</li>
                 <li><strong>Suspensão:</strong> Interrupção temporária dos serviços, com possibilidade de reativação.</li>
@@ -147,7 +147,7 @@ const CancellationPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">3. Procedimento de Cancelamento</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">3.1. Solicitação Formal</h3>
+              <h3 className="text-xl font-semibold mb-4">Solicitação Formal</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O cancelamento deve ser solicitado formalmente através de e-mail para 
                 cancelamento@cheetahnetwork.com.br, contendo as seguintes informações:
@@ -160,14 +160,14 @@ const CancellationPolicy = () => {
                 <li>• Dados bancários para eventual reembolso</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.2. Confirmação</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Confirmação</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Após recebimento da solicitação, a Cheetah Solutions Network enviará confirmação em até 
                 2 dias úteis, contendo o protocolo de cancelamento e as condições aplicáveis, incluindo 
                 eventuais valores a pagar ou a receber.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.3. Período de Transição</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Período de Transição</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Durante o período de aviso prévio, os serviços continuam sendo prestados normalmente. 
                 O cliente deve providenciar a migração de dados e sistemas para outro provedor, se aplicável. 
@@ -248,14 +248,14 @@ const CancellationPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">5. Retenção e Exclusão de Dados</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">5.1. Exportação de Dados</h3>
+              <h3 className="text-xl font-semibold mb-4">Exportação de Dados</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O cliente tem direito a solicitar exportação completa de seus dados antes da efetivação 
                 do cancelamento. A exportação será disponibilizada em formato padrão de mercado (JSON, CSV, 
                 SQL) em até 5 dias úteis após a solicitação.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Período de Retenção</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Período de Retenção</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Card className="bg-card/50 border-border/50">
                   <CardContent className="p-4">
@@ -281,7 +281,7 @@ const CancellationPolicy = () => {
                 </Card>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.3. Exclusão Definitiva</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Exclusão Definitiva</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Após o período de retenção, todos os dados do cliente serão excluídos de forma permanente 
                 e irrecuperável. Esta exclusão inclui backups, logs de acesso e quaisquer cópias secundárias. 
@@ -299,7 +299,7 @@ const CancellationPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">6. Multas e Penalidades</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">6.1. Multa Rescisória</h3>
+              <h3 className="text-xl font-semibold mb-4">Multa Rescisória</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Em caso de cancelamento antecipado sem justa causa, aplica-se multa rescisória conforme 
                 estabelecido no contrato específico, geralmente correspondente a:
@@ -310,7 +310,7 @@ const CancellationPolicy = () => {
                 <li>• Contratos trimestrais: 10% do valor restante do contrato</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.2. Isenções</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Isenções</h3>
               <p className="text-muted-foreground leading-relaxed">
                 A multa rescisória não será aplicada nos seguintes casos:
               </p>
@@ -321,7 +321,7 @@ const CancellationPolicy = () => {
                 <li>• Acordo mútuo entre as partes</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.3. Débitos Pendentes</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Débitos Pendentes</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Eventuais débitos pendentes devem ser quitados para efetivação do cancelamento. 
                 Débitos não quitados serão encaminhados para cobrança judicial após 90 dias.
@@ -338,7 +338,7 @@ const CancellationPolicy = () => {
             <h2 className="text-3xl font-bold mb-8">7. Após o Cancelamento</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">7.1. Obrigações do Cliente</h3>
+              <h3 className="text-xl font-semibold mb-4">Obrigações do Cliente</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Realizar backup de todos os dados antes da data de efetivação</li>
                 <li>• Remover integrações e acessos de sistemas terceiros</li>

@@ -44,7 +44,7 @@ const AcceptableUsePolicy = () => {
                 seguro, ético e produtivo para todos.
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.1. Aplicabilidade</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Aplicabilidade</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Esta política aplica-se a:
               </p>
@@ -55,7 +55,7 @@ const AcceptableUsePolicy = () => {
                 <li>• Qualquer pessoa que interaja com nossos sistemas e serviços</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">1.2. Aceitação</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Aceitação</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Ao utilizar nossos serviços, você concorda em cumprir integralmente esta política. 
                 O desconhecimento não exime o usuário de suas obrigações e das consequências por violações.
@@ -147,7 +147,7 @@ const AcceptableUsePolicy = () => {
             </div>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">3.1. Atividades Ilegais</h3>
+              <h3 className="text-xl font-semibold mb-4">Atividades Ilegais</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Qualquer atividade que viole leis federais, estaduais ou municipais brasileiras</li>
                 <li>• Fraude, estelionato, lavagem de dinheiro ou financiamento de atividades ilegais</li>
@@ -156,7 +156,7 @@ const AcceptableUsePolicy = () => {
                 <li>• Invasão de sistemas, hacking ou acesso não autorizado</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.2. Abuso de Recursos</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Abuso de Recursos</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Mineração de criptomoedas sem autorização expressa</li>
                 <li>• Ataques DDoS, spam ou qualquer forma de abuso de rede</li>
@@ -165,7 +165,7 @@ const AcceptableUsePolicy = () => {
                 <li>• Engenharia reversa de nossos sistemas</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.3. Conteúdo Inadequado</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Conteúdo Inadequado</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Discurso de ódio, discriminação ou incitação à violência</li>
                 <li>• Assédio, bullying ou comportamento intimidador</li>
@@ -174,7 +174,7 @@ const AcceptableUsePolicy = () => {
                 <li>• Conteúdo que viole direitos de terceiros</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.4. Violações de Segurança</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Violações de Segurança</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Tentativas de acesso não autorizado a sistemas ou dados</li>
                 <li>• Distribuição de malware, vírus ou código malicioso</li>
@@ -238,7 +238,7 @@ const AcceptableUsePolicy = () => {
                 </Card>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">4.1. Processo de Análise</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Processo de Análise</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Toda denúncia de violação será analisada por nossa equipe de compliance:
               </p>
@@ -261,7 +261,7 @@ const AcceptableUsePolicy = () => {
             <h2 className="text-3xl font-bold mb-8">5. Responsabilidades do Usuário</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">5.1. Segurança de Conta</h3>
+              <h3 className="text-xl font-semibold mb-4">Segurança de Conta</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Manter credenciais de acesso em sigilo</li>
                 <li>• Utilizar senhas fortes e únicas</li>
@@ -270,7 +270,7 @@ const AcceptableUsePolicy = () => {
                 <li>• Não compartilhar contas com terceiros</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Conteúdo Próprio</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Conteúdo Próprio</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Responsabilidade integral pelo conteúdo publicado</li>
                 <li>• Garantir conformidade com leis de propriedade intelectual</li>
@@ -278,7 +278,7 @@ const AcceptableUsePolicy = () => {
                 <li>• Manter backups de dados críticos</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.3. Uso de Recursos</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Uso de Recursos</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Utilizar recursos de forma razoável e eficiente</li>
                 <li>• Não explorar vulnerabilidades ou bugs</li>
@@ -302,7 +302,7 @@ const AcceptableUsePolicy = () => {
                 para garantir conformidade com esta política:
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.1. O que Monitoramos</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">O que Monitoramos</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Logs de acesso e atividades do sistema</li>
                 <li>• Consumo de recursos (CPU, memória, banda)</li>
@@ -310,14 +310,14 @@ const AcceptableUsePolicy = () => {
                 <li>• Alertas automatizados de segurança</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.2. O que NÃO Monitoramos</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">O que NÃO Monitoramos</h3>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Conteúdo de comunicações privadas</li>
                 <li>• Dados de clientes (exceto em investigações autorizadas)</li>
                 <li>• Código-fonte de aplicações (sem autorização)</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.3. Transparência</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Transparência</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Relatórios de transparência sobre ações tomadas são publicados anualmente, 
                 preservando a privacidade dos envolvidos.

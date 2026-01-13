@@ -129,7 +129,7 @@ const UpdatePolicy = () => {
             <h2 className="text-3xl font-bold mb-8">2. Janelas de Manutenção</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">2.1. Horários Padrão</h3>
+              <h3 className="text-xl font-semibold mb-4">Horários Padrão</h3>
               <p className="text-muted-foreground leading-relaxed">
                 As manutenções programadas são realizadas preferencialmente em horários de 
                 menor impacto:
@@ -172,7 +172,7 @@ const UpdatePolicy = () => {
                 * Todos os horários são em horário de Brasília (BRT/BRST).
               </p>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">2.2. Impacto nos Serviços</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Impacto nos Serviços</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Classificamos o impacto das manutenções da seguinte forma:
               </p>
@@ -194,7 +194,7 @@ const UpdatePolicy = () => {
             <h2 className="text-3xl font-bold mb-8">3. Comunicação de Atualizações</h2>
 
             <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">3.1. Canais de Notificação</h3>
+              <h3 className="text-xl font-semibold mb-4">Canais de Notificação</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
                 <Card className="bg-card/50 border-border/50">
@@ -221,7 +221,7 @@ const UpdatePolicy = () => {
                 </Card>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.2. Cronograma de Avisos</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Cronograma de Avisos</h3>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
@@ -261,7 +261,7 @@ const UpdatePolicy = () => {
                 </table>
               </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">3.3. Conteúdo das Notificações</h3>
+              <h3 className="text-xl font-semibold mt-8 mb-4">Conteúdo das Notificações</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Todas as notificações de manutenção incluem:
               </p>
