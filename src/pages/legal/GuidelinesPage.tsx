@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { 
   Shield, Lock, Cookie, FileCheck, Database, Headphones, 
   RefreshCw, Eye, Copyright, Scale, FileWarning, XCircle, 
-  CreditCard, AlertTriangle, ChevronLeft, Menu, X
+  CreditCard, AlertTriangle, ChevronLeft, Menu, X, BadgeCheck
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
@@ -26,6 +26,7 @@ const guidelines = [
   { id: "cancelamento", name: "Cancelamento", icon: XCircle },
   { id: "reembolso", name: "Reembolso", icon: CreditCard },
   { id: "denuncias", name: "Canal de Denúncias", icon: AlertTriangle },
+  { id: "termos-verificacao", name: "Termos de Verificação", icon: BadgeCheck },
 ];
 
 // Conteúdo completo de cada diretriz
@@ -44,6 +45,7 @@ const guidelineContent: Record<string, React.ReactNode> = {
   "cancelamento": <CancelamentoContent />,
   "reembolso": <ReembolsoContent />,
   "denuncias": <DenunciasContent />,
+  "termos-verificacao": <TermosVerificacaoContent />,
 };
 
 const GuidelinesPage = () => {
@@ -1218,6 +1220,174 @@ function DenunciasContent() {
         <h3 className="text-xl font-semibold mb-4 text-foreground">6. Processo de Investigação</h3>
         <p className="text-muted-foreground leading-relaxed">
           Todas as denúncias são analisadas por equipe independente. Investigações são conduzidas de forma sigilosa e imparcial, com prazo médio de conclusão de 30 a 60 dias, dependendo da complexidade. O denunciante será informado sobre a conclusão da investigação, respeitadas as limitações de confidencialidade.
+        </p>
+      </section>
+    </>
+  );
+}
+
+function TermosVerificacaoContent() {
+  return (
+    <>
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">Introdução</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          O Programa de Verificação e Parcerias da Cheetah Solutions Network estabelece diretrizes institucionais para projetos tecnológicos que desejam manter vínculo público, institucional ou reputacional com a organização.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          A participação no Programa é facultativa, revogável e não gera qualquer direito adquirido, societário, contratual ou comercial.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">1. Natureza Institucional do Programa</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          A verificação concedida possui caráter institucional e reputacional, não constituindo:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Certificação técnica</li>
+          <li>Avaliação jurídica formal</li>
+          <li>Garantia de segurança</li>
+          <li>Endosso irrestrito</li>
+          <li>Parceria comercial automática</li>
+        </ul>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          A Cheetah Solutions Network não se responsabiliza por operações, condutas, decisões técnicas ou legais dos projetos verificados.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">2. Temporalidade e Reavaliação</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          A verificação não é permanente e poderá ser:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Reavaliada</li>
+          <li>Suspensa</li>
+          <li>Indeferida</li>
+          <li>Encerrada</li>
+        </ul>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          A qualquer momento, mediante análise técnica, institucional ou reputacional, sem necessidade de aviso prévio.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">3. Decisões Preventivas</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          Decisões tomadas no âmbito do Programa podem ter caráter preventivo, sem que isso represente:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Acusação formal</li>
+          <li>Penalidade</li>
+          <li>Julgamento público</li>
+          <li>Juízo de mérito pessoal ou institucional</li>
+        </ul>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          O Programa atua com foco na proteção do ecossistema, da reputação institucional e da confiança pública.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">4. Critérios de Avaliação Global</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          A avaliação considera um conjunto amplo e integrado de fatores, incluindo, mas não se limitando a:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Governança e conformidade institucional</li>
+          <li>Segurança técnica e operacional</li>
+          <li>Transparência e confiabilidade</li>
+          <li>Histórico público e institucional</li>
+          <li>Impacto reputacional potencial</li>
+          <li>Alinhamento com valores da Cheetah Solutions Network</li>
+        </ul>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          Nenhum critério isolado garante aprovação ou permanência.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">5. Autonomia, Sigilo e Não Divulgação</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          A Cheetah Solutions Network:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Não é obrigada a divulgar relatórios internos</li>
+          <li>Não fornece provas, evidências ou critérios específicos</li>
+          <li>Não realiza julgamentos públicos</li>
+          <li>Não responde a pressões externas</li>
+        </ul>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          Comunicações formais de parceiros do ecossistema podem ser consideradas internamente, sem necessidade de divulgação.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">6. Uso de Marca, Nome e Identidade Visual</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          O uso de qualquer elemento institucional da Cheetah Solutions Network é estritamente restrito a projetos com:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Verificação ativa</li>
+          <li>Autorização vigente</li>
+          <li>Conformidade com estes termos</li>
+        </ul>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          Inclui-se, mas não se limita a:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Nome da instituição</li>
+          <li>Logotipo</li>
+          <li>Selos</li>
+          <li>Menções públicas</li>
+          <li>Páginas, textos, banners, materiais promocionais</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">7. Obrigação de Remoção em Caso de Encerramento</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          Em caso de indeferimento, suspensão, encerramento ou desvinculação voluntária, o projeto deverá remover imediatamente qualquer referência direta ou indireta à Cheetah Solutions Network, em todos os ambientes, incluindo:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Websites</li>
+          <li>Redes sociais</li>
+          <li>Repositórios</li>
+          <li>Materiais gráficos</li>
+          <li>Documentações</li>
+          <li>Comunicações públicas</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">8. Descumprimento das Diretrizes</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          O descumprimento destes termos poderá resultar em medidas administrativas e institucionais proporcionais, incluindo a revogação imediata da verificação e comunicação interna ao ecossistema, quando necessário.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">9. Nova Submissão</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          O indeferimento ou encerramento não impede nova submissão futura, desde que:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
+          <li>Os critérios vigentes à época sejam integralmente atendidos</li>
+          <li>Não haja tentativa de uso indevido da marca após encerramento anterior</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">10. Independência do Programa</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          O Programa de Verificação atua de forma independente, sem obrigação de alinhamento a interesses externos, públicos ou privados, preservando sua autonomia institucional.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">Encerramento</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          A submissão ao Programa implica aceitação integral e irrestrita destes termos, em sua versão vigente no momento da avaliação.
         </p>
       </section>
     </>
