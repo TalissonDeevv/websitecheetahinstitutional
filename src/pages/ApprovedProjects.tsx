@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { ExternalLink, Award, Bot, Globe, CreditCard, Code2, LayoutGrid, FileText } from "lucide-react";
+import { ExternalLink, Award, Bot, Globe, CreditCard, Code2, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { WebPageJsonLd } from "@/components/JsonLd";
@@ -224,32 +223,6 @@ const ApprovedProjects = () => {
           )}
         </div>
       </section>
-
-      {/* Termos de Verificação */}
-      <AnimatedSection animation="fade-up">
-        <section className="py-16 px-4 border-t border-border/50">
-          <div className="container mx-auto max-w-3xl">
-            <div className="bg-card/50 border border-border/50 rounded-xl p-8 text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-xl mb-6">
-                <FileText className="w-6 h-6 text-primary" />
-              </div>
-              <h2 className="text-xl font-bold mb-4">Termos do Programa de Verificação</h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                A participação no Programa de Verificação e Parcerias da Cheetah Solutions Network 
-                está sujeita a diretrizes institucionais específicas. Conheça os termos, critérios 
-                de avaliação e condições para manutenção do vínculo institucional.
-              </p>
-              <Link 
-                to="/diretrizes/termos-verificacao"
-                className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-medium transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                Ler Termos Completos
-              </Link>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
 
       <Footer />
     </div>
