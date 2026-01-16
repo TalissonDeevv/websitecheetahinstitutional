@@ -51,14 +51,6 @@ const getCategoryIcon = (category: ProjectCategory) => {
 // Lista centralizada de projetos aprovados
 const approvedProjects: ApprovedProject[] = [
   {
-    id: "nex-dev",
-    name: "NexDev",
-    description: "A NexDev é uma rede social de conexões entre desenvolvedores, projetada para unir pessoas dos mesmos interesses e criar pontes de comunicação. Com ele, você pode conversar por meio de posts por meio de uma rede social robusta de pessoas que são apaixonadas por programação.",
-    category: "Plataforma",
-    link: "https://nexdev.social",
-    image: "https://i.ibb.co/yctNJzWQ/image.png",
-  },
-  {
     id: "quack-pay",
     name: "Quack Pay",
     description: "A Quack Pay é um gateway de pagamento criado para oferecer eficiência e transparência, com taxa fixa de R$ 0,80 por transação via PIX (entrada e saída), garantindo previsibilidade e controle financeiro para o seu negócio.",
@@ -74,15 +66,6 @@ const approvedProjects: ApprovedProject[] = [
     category: "Bot",
     link: "https://brixbot.xyz",
     image: "https://i.ibb.co/N63z0jt3/image.png",
-  },
-  {
-    id: "azura-js",
-    name: "Azura JS",
-    description: "O AzuraJS é um framework moderno para criação de APIs, TypeScript-first e zero dependências, criado com foco total em performance, segurança e experiência do desenvolvedor.",
-    category: "Framework",
-    link: "https://azura.js.org/",
-    image: "https://i.ibb.co/svp2w6sV/image.png",
-    featured: true,
   },
 ];
 
