@@ -2,8 +2,9 @@ import {
   Users, Code, Brain, Database, Globe, Smartphone, 
   Shield, Bot, Server, Cog, BookOpen, MessageCircle,
   Lightbulb, Award, Target, Heart, Zap, GraduationCap,
-  ArrowRight, ExternalLink, FileText
+  ArrowRight, ExternalLink, FileText, HelpCircle, ChevronDown
 } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
@@ -142,9 +143,36 @@ const Developers = () => {
     },
   ];
 
+  // FAQ Item Component
+  const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    
+    return (
+      <div className="border border-border rounded-lg overflow-hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-full flex items-center justify-between p-5 text-left bg-card hover:bg-secondary/30 transition-colors"
+        >
+          <div className="flex items-center gap-3">
+            <HelpCircle className="h-5 w-5 text-primary flex-shrink-0" />
+            <span className="font-medium">{question}</span>
+          </div>
+          <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        </button>
+        {isOpen && (
+          <div className="px-5 pb-5 pt-0 bg-card">
+            <p className="text-muted-foreground leading-relaxed pl-8">
+              {answer}
+            </p>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SEO 
+      <SEO
         title="Cheetah Solutions | Cheetah Developers Brasil"
         description="Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia."
         ogTitle="Cheetah Developers Brasil | Cheetah Solutions"
@@ -576,6 +604,90 @@ const Developers = () => {
               </a>
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* FAQ - Perguntas Frequentes */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <AnimatedSection>
+            <div className="max-w-xl mb-12">
+              <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
+                Perguntas Frequentes
+              </p>
+              <h2 className="text-2xl md:text-3xl font-bold mt-3">
+                Dúvidas sobre o Programa<br />
+                de Verificação.
+              </h2>
+              <p className="text-muted-foreground mt-4 leading-relaxed">
+                Respostas para as questões mais comuns sobre participação, critérios 
+                e funcionamento do programa de verificação de projetos.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="max-w-3xl">
+            <AnimatedSection animation="fade-up">
+              <div className="space-y-4">
+                <FAQItem 
+                  question="O que é o Programa de Verificação de Projetos?"
+                  answer="O Programa de Verificação é uma iniciativa institucional da Cheetah Solutions Network que avalia e destaca projetos tecnológicos desenvolvidos por membros da comunidade. Projetos verificados recebem visibilidade na página de Projetos Aprovados e podem utilizar elementos institucionais da Cheetah."
+                />
+                <FAQItem 
+                  question="Quem pode submeter um projeto para verificação?"
+                  answer="Qualquer pessoa ou equipe que tenha desenvolvido um projeto tecnológico pode submeter para avaliação. Não é necessário ter vínculo formal com a Cheetah Solutions Network, mas é recomendado participar da comunidade Cheetah Developers Brasil."
+                />
+                <FAQItem 
+                  question="A verificação é permanente?"
+                  answer="Não. A verificação pode ser reavaliada, suspensa ou encerrada a qualquer momento, mediante análise técnica, institucional ou reputacional. A participação no programa é discricionária e não gera direito adquirido."
+                />
+                <FAQItem 
+                  question="Quais critérios são avaliados?"
+                  answer="A avaliação é global e considera múltiplos fatores: segurança técnica, governança, conformidade institucional, confiabilidade, impacto reputacional e alinhamento com os valores da Cheetah Solutions Network. Nenhum critério isolado garante aprovação."
+                />
+                <FAQItem 
+                  question="Posso usar a marca Cheetah no meu projeto?"
+                  answer="O uso do nome, logotipo, selos ou menções à Cheetah Solutions Network só é permitido enquanto o projeto estiver com verificação ativa e autorização vigente. Em caso de encerramento, todas as referências devem ser removidas imediatamente."
+                />
+                <FAQItem 
+                  question="O que acontece se meu projeto for indeferido?"
+                  answer="O indeferimento não impede nova submissão futura. Você pode se candidatar novamente desde que atenda integralmente aos critérios vigentes no momento e tenha sanado as questões que motivaram o indeferimento anterior."
+                />
+                <FAQItem 
+                  question="A Cheetah divulga os motivos de indeferimento?"
+                  answer="A Cheetah Solutions Network não é obrigada a divulgar relatórios internos, critérios específicos ou fundamentos detalhados sobre decisões. As comunicações são feitas exclusivamente por canais oficiais."
+                />
+                <FAQItem 
+                  question="Onde encontro os termos completos do programa?"
+                  answer="Os termos completos estão disponíveis na página de Diretrizes e Governança, no documento 'Programa Cheetah Developers Brasil'. A submissão ao programa implica aceitação integral de todas as disposições."
+                />
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fade-up" delay={200}>
+              <div className="mt-8 p-6 bg-card border border-border rounded-xl">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+                    <FileText className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Diretrizes Completas</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      Consulte o documento institucional completo com todas as diretrizes, 
+                      critérios de avaliação, uso de marca e disposições do programa.
+                    </p>
+                    <Link 
+                      to="/diretrizes/programa-developers"
+                      className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium transition-colors"
+                    >
+                      Acessar Diretrizes e Governança
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
