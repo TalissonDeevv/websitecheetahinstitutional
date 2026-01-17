@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ExternalLink, Award, Bot, Globe, CreditCard, Code2, LayoutGrid } from "lucide-react";
+import { ExternalLink, Award, Bot, Globe, CreditCard, Code2, LayoutGrid, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
@@ -126,12 +127,19 @@ const ApprovedProjects = () => {
                   Soluções desenvolvidas<br />
                   pela comunidade.
                 </h2>
-                <p className="text-muted-foreground mt-4 leading-relaxed">
-                  Cada projeto listado passou por um processo de aprovação interno, 
-                  garantindo qualidade técnica e alinhamento com os valores da 
-                  Cheetah Solutions Network.
-                </p>
-              </div>
+              <p className="text-muted-foreground mt-4 leading-relaxed">
+                Cada projeto listado passou por um processo de aprovação interno, 
+                garantindo qualidade técnica e alinhamento com os valores da 
+                Cheetah Solutions Network.
+              </p>
+              <Link 
+                to="/diretrizes/programa-developers"
+                className="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
+              >
+                <FileText className="h-4 w-4" />
+                Diretrizes e Governança do Programa
+              </Link>
+            </div>
 
               {/* Filtros por categoria */}
               <div className="flex flex-wrap gap-2">
