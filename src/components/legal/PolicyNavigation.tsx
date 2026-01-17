@@ -17,6 +17,8 @@ const policies = [
   { name: "Política de Cancelamento", path: "/diretrizes/cancelamento" },
   { name: "Política de Reembolso", path: "/diretrizes/reembolso" },
   { name: "Canal de Denúncias", path: "/diretrizes/denuncia" },
+  { name: "Termos de Verificação", path: "/diretrizes/termos-verificacao" },
+  { name: "Programa Cheetah Developers Brasil", path: "/diretrizes/programa-developers" },
 ];
 
 const PolicyNavigation = () => {

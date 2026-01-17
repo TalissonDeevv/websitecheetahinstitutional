@@ -2,7 +2,7 @@ import {
   Users, Code, Brain, Database, Globe, Smartphone, 
   Shield, Bot, Server, Cog, BookOpen, MessageCircle,
   Lightbulb, Award, Target, Heart, Zap, GraduationCap,
-  ArrowRight, ExternalLink
+  ArrowRight, ExternalLink, FileText
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -199,6 +199,16 @@ const Developers = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
+                  <Link to="/diretrizes/programa-developers">
+                    <Button 
+                      size="lg" 
+                      variant="outline"
+                      className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground font-medium"
+                    >
+                      Diretrizes e Governança
+                      <FileText className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               
