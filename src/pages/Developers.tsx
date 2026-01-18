@@ -227,7 +227,7 @@ const Developers = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
-                  <Link to="/diretrizes/programa-developers">
+                  <Link to="/developers/diretrizes">
                     <Button 
                       size="lg" 
                       variant="outline"
@@ -677,7 +677,7 @@ const Developers = () => {
                       critérios de avaliação, uso de marca e disposições do programa.
                     </p>
                     <Link 
-                      to="/diretrizes/programa-developers"
+                      to="/developers/diretrizes"
                       className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium transition-colors"
                     >
                       Acessar Diretrizes e Governança
