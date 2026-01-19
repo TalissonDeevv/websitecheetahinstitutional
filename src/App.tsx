@@ -36,7 +36,7 @@ import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
 import GuidelinesPage from "./pages/legal/GuidelinesPage";
 import Developers from "./pages/Developers";
-import DevelopersGuidelines from "./pages/DevelopersGuidelines";
+
 import ApprovedProjects from "./pages/ApprovedProjects";
 import TrabalheConosco from "./pages/TrabalheConosco";
 
@@ -79,7 +79,7 @@ const App = () => (
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
             <Route path="/sugestoes" element={<Suggestions />} />
             <Route path="/developers" element={<Developers />} />
-            <Route path="/developers/diretrizes" element={<DevelopersGuidelines />} />
+            
             <Route path="/developers/projetos" element={<ApprovedProjects />} />
             <Route path="/inscricoes" element={<TrabalheConosco />} />
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
@@ -99,7 +99,7 @@ const App = () => (
             <Route path="/transparencia" element={<Navigate to="/diretrizes/transparencia" replace />} />
             <Route path="/isencao" element={<Navigate to="/diretrizes/isencao" replace />} />
             <Route path="/denuncia" element={<Navigate to="/diretrizes/denuncias" replace />} />
-            <Route path="/diretrizes/programa-developers" element={<Navigate to="/developers/diretrizes" replace />} />
+            
 
             <Route path="*" element={<NotFound />} />
           </Routes>
