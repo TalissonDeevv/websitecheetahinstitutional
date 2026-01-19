@@ -228,7 +228,7 @@ const Developers = () => {
                     </Button>
                   </a>
                   <a 
-                    href="#" 
+                    href="https://docs.google.com/document/d/1_hUIFpu63zlttl4XpNdp2Q7mrlCSmMBeX21cIJD-ldg/edit?usp=sharing" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
