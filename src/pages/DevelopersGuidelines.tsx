@@ -1,12 +1,386 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ChevronLeft, FileText, ExternalLink } from "lucide-react";
+import { 
+  ChevronLeft, 
+  FileText, 
+  ExternalLink, 
+  ChevronDown,
+  Shield,
+  ScrollText,
+  ClipboardCheck,
+  Scale,
+  Eye,
+  Stamp,
+  Unlink,
+  RefreshCw,
+  Gavel,
+  FileCheck,
+  Mail,
+  AlertTriangle
+} from "lucide-react";
+
+interface GuidelineSection {
+  id: string;
+  title: string;
+  icon: React.ElementType;
+  content: React.ReactNode;
+}
 
 const DevelopersGuidelines = () => {
+  const [openSections, setOpenSections] = useState<string[]>(["intro"]);
+
+  const toggleSection = (id: string) => {
+    setOpenSections(prev => 
+      prev.includes(id) 
+        ? prev.filter(s => s !== id) 
+        : [...prev, id]
+    );
+  };
+
+  const sections: GuidelineSection[] = [
+    {
+      id: "intro",
+      title: "1. Introdução",
+      icon: ScrollText,
+      content: (
+        <div className="space-y-4">
+          <p>
+            O Programa Cheetah Developers Brasil foi criado com o objetivo de fortalecer o ecossistema tecnológico brasileiro, oferecendo visibilidade institucional, apoio técnico e reconhecimento público a projetos que atendam a padrões rigorosos de qualidade, segurança, transparência e ética.
+          </p>
+          <p>
+            A participação no Programa representa um diferencial competitivo e reputacional para projetos que buscam credibilidade junto ao mercado, investidores, parceiros e usuários finais. No entanto, tal participação está condicionada ao cumprimento integral das diretrizes aqui estabelecidas e à manutenção contínua dos padrões exigidos.
+          </p>
+          <p>
+            O Programa opera sob os princípios de meritocracia, transparência, independência institucional e proteção do ecossistema, não constituindo certificação técnica formal, endosso comercial irrestrito ou garantia de resultados específicos.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "natureza",
+      title: "2. Natureza do Programa",
+      icon: FileText,
+      content: (
+        <div className="space-y-4">
+          <p>
+            A participação no Programa Cheetah Developers Brasil possui natureza discricionária, revogável e não permanente. A verificação ou aprovação concedida a qualquer projeto:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Não constitui certificação técnica formal ou auditoria completa</li>
+            <li>Não representa avaliação jurídica, contábil ou regulatória</li>
+            <li>Não implica garantia de segurança absoluta ou ausência de vulnerabilidades</li>
+            <li>Não configura endosso comercial, societário ou financeiro</li>
+            <li>Não cria vínculo empregatício, societário ou contratual automático</li>
+            <li>Não gera direito adquirido à permanência ou renovação</li>
+          </ul>
+          <p>
+            A Cheetah Solutions Network reserva-se o direito de aceitar, recusar, suspender ou encerrar a participação de qualquer projeto, a qualquer momento, com base em critérios técnicos, institucionais, reputacionais ou estratégicos, sem necessidade de justificativa pública.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "inscricao",
+      title: "3. Processo de Inscrição",
+      icon: ClipboardCheck,
+      content: (
+        <div className="space-y-4">
+          <p>
+            A submissão de projetos ao Programa é voluntária e deve seguir os procedimentos estabelecidos pela Cheetah Solutions Network. O processo de inscrição observa os seguintes princípios:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>A submissão não garante aprovação ou qualquer forma de reconhecimento</li>
+            <li>O projeto deve fornecer informações precisas, completas e verificáveis</li>
+            <li>Omissões, inconsistências ou informações falsas podem resultar em indeferimento imediato ou encerramento posterior</li>
+            <li>A inscrição não cria vínculo contratual, obrigacional ou expectativa de direito</li>
+            <li>O prazo de análise é variável e depende da complexidade do projeto e da disponibilidade institucional</li>
+          </ul>
+          <p>
+            Ao submeter um projeto, o responsável declara expressamente que leu, compreendeu e aceita integralmente todas as disposições deste documento, comprometendo-se a cumpri-las durante todo o período de participação.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "avaliacao",
+      title: "4. Critérios de Avaliação",
+      icon: Shield,
+      content: (
+        <div className="space-y-6">
+          <p>
+            A avaliação de projetos pelo Programa Cheetah Developers Brasil é global, multidimensional e não se limita a aspectos técnicos isolados.
+          </p>
+          
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="bg-secondary/50 rounded-lg p-4 border border-border">
+              <h4 className="font-semibold mb-2 text-sm">Segurança e Proteção de Dados</h4>
+              <ul className="text-sm space-y-1 text-muted-foreground">
+                <li>• Práticas de segurança da informação</li>
+                <li>• Conformidade LGPD/GDPR</li>
+                <li>• Gestão de vulnerabilidades</li>
+              </ul>
+            </div>
+            <div className="bg-secondary/50 rounded-lg p-4 border border-border">
+              <h4 className="font-semibold mb-2 text-sm">Governança e Conformidade</h4>
+              <ul className="text-sm space-y-1 text-muted-foreground">
+                <li>• Estrutura organizacional clara</li>
+                <li>• Políticas de ética e conduta</li>
+                <li>• Transparência operacional</li>
+              </ul>
+            </div>
+            <div className="bg-secondary/50 rounded-lg p-4 border border-border">
+              <h4 className="font-semibold mb-2 text-sm">Qualidade Técnica</h4>
+              <ul className="text-sm space-y-1 text-muted-foreground">
+                <li>• Arquitetura robusta e escalável</li>
+                <li>• Boas práticas de desenvolvimento</li>
+                <li>• Documentação adequada</li>
+              </ul>
+            </div>
+            <div className="bg-secondary/50 rounded-lg p-4 border border-border">
+              <h4 className="font-semibold mb-2 text-sm">Confiabilidade e Reputação</h4>
+              <ul className="text-sm space-y-1 text-muted-foreground">
+                <li>• Histórico do projeto</li>
+                <li>• Avaliações da comunidade</li>
+                <li>• Alinhamento ético</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p className="text-sm italic">
+            Nenhum critério isolado garante aprovação ou permanência no Programa. A avaliação é holística e considera o conjunto de fatores de forma integrada.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "governanca",
+      title: "5. Governança e Independência",
+      icon: Scale,
+      content: (
+        <div className="space-y-4">
+          <p>
+            O Programa Cheetah Developers Brasil opera de forma independente, preservando sua autonomia institucional. Esta independência implica:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Não há obrigação de alinhamento a interesses externos, públicos ou privados</li>
+            <li>Decisões não são influenciadas por pressões comerciais, políticas ou midiáticas</li>
+            <li>O Programa pode considerar comunicações formais de parceiros do ecossistema</li>
+            <li>Não há obrigação de contraditório público ou exposição de fundamentos internos</li>
+            <li>A governança do Programa é de responsabilidade exclusiva da Cheetah Solutions Network</li>
+          </ul>
+          <p>
+            A independência institucional é condição essencial para a credibilidade e efetividade do Programa.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "reavaliacao",
+      title: "6. Reavaliação, Suspensão e Indeferimento",
+      icon: AlertTriangle,
+      content: (
+        <div className="space-y-4">
+          <p>
+            A participação no Programa não é permanente e está sujeita a reavaliação contínua. A Cheetah Solutions Network pode, a qualquer momento:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Reavaliar a adequação do projeto aos critérios do Programa</li>
+            <li>Suspender temporariamente a participação para investigação ou ajustes</li>
+            <li>Indeferir novas solicitações com base em análise técnica ou institucional</li>
+            <li>Encerrar definitivamente a participação de projetos</li>
+          </ul>
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mt-4">
+            <p className="text-sm">
+              <strong>Nota:</strong> Decisões preventivas não constituem acusação formal, penalidade ou julgamento público de mérito.
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: "transparencia",
+      title: "7. Transparência e Limites de Informação",
+      icon: Eye,
+      content: (
+        <div className="space-y-4">
+          <p>
+            Embora o Programa valorize a transparência como princípio fundamental, existem limites legítimos à divulgação de informações internas. A Cheetah Solutions Network:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Não é obrigada a divulgar relatórios internos de avaliação</li>
+            <li>Não fornece provas, evidências ou documentos técnicos específicos</li>
+            <li>Não detalha publicamente os critérios aplicados em casos individuais</li>
+            <li>Não realiza julgamentos públicos ou exposições de projetos</li>
+            <li>Não responde a questionamentos públicos sobre decisões específicas</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      id: "marca",
+      title: "8. Uso de Marca e Identidade Visual",
+      icon: Stamp,
+      content: (
+        <div className="space-y-4">
+          <p>
+            O uso de qualquer elemento institucional da Cheetah Solutions Network é estritamente controlado e condicionado a:
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-3">
+              <h4 className="font-semibold text-sm text-green-600 dark:text-green-400 mb-2">✓ Uso Autorizado</h4>
+              <ul className="text-sm space-y-1 text-muted-foreground">
+                <li>• Selo de verificação em websites</li>
+                <li>• Menção em materiais institucionais</li>
+                <li>• Assets gráficos fornecidos</li>
+              </ul>
+            </div>
+            <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">
+              <h4 className="font-semibold text-sm text-red-600 dark:text-red-400 mb-2">✗ Uso Proibido</h4>
+              <ul className="text-sm space-y-1 text-muted-foreground">
+                <li>• Distorção ou alteração</li>
+                <li>• Uso após desvinculação</li>
+                <li>• Indução ao erro do público</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-sm">
+            Qualquer uso não autorizado pode resultar em medidas administrativas e legais.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "desvinculacao",
+      title: "9. Desvinculação e Obrigação de Remoção",
+      icon: Unlink,
+      content: (
+        <div className="space-y-4">
+          <p>
+            Em caso de indeferimento, suspensão, encerramento ou desvinculação voluntária, o projeto deve proceder imediatamente à remoção completa de qualquer referência à Cheetah. A obrigação abrange:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Websites, landing pages e aplicações web</li>
+            <li>Aplicativos móveis e software desktop</li>
+            <li>Repositórios de código (GitHub, GitLab, etc.)</li>
+            <li>Redes sociais e perfis públicos</li>
+            <li>Materiais promocionais e documentos</li>
+            <li>Vídeos, podcasts e conteúdos audiovisuais</li>
+          </ul>
+          <div className="bg-orange-500/10 border border-orange-500/20 rounded-lg p-4 mt-4">
+            <p className="text-sm font-medium text-orange-600 dark:text-orange-400">
+              ⏱ Prazo: 48 horas a partir da comunicação formal de desvinculação
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: "novo-envio",
+      title: "10. Novo Envio de Projeto",
+      icon: RefreshCw,
+      content: (
+        <div className="space-y-4">
+          <p>
+            O indeferimento ou encerramento não implica bloqueio definitivo. Projetos podem submeter nova solicitação, desde que:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Atendam integralmente aos critérios vigentes</li>
+            <li>Tenham sanado as questões que motivaram o encerramento anterior</li>
+            <li>Não tenham incorrido em uso indevido da marca após desvinculação</li>
+            <li>Demonstrem mudanças substanciais que justifiquem reavaliação</li>
+            <li>Respeitem eventual período de carência estabelecido</li>
+          </ul>
+          <p>
+            A nova submissão será analisada de forma independente, sem prejuízo ou favorecimento.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "medidas",
+      title: "11. Medidas Administrativas",
+      icon: Gavel,
+      content: (
+        <div className="space-y-4">
+          <p>
+            O descumprimento das diretrizes pode resultar em medidas proporcionais à gravidade:
+          </p>
+          <div className="space-y-2">
+            <div className="flex items-center gap-3 p-3 bg-secondary/50 rounded-lg">
+              <span className="text-yellow-500 font-bold text-sm">1</span>
+              <span className="text-sm">Advertência formal com prazo para correção</span>
+            </div>
+            <div className="flex items-center gap-3 p-3 bg-secondary/50 rounded-lg">
+              <span className="text-orange-500 font-bold text-sm">2</span>
+              <span className="text-sm">Suspensão temporária da participação</span>
+            </div>
+            <div className="flex items-center gap-3 p-3 bg-secondary/50 rounded-lg">
+              <span className="text-red-500 font-bold text-sm">3</span>
+              <span className="text-sm">Revogação imediata da verificação</span>
+            </div>
+            <div className="flex items-center gap-3 p-3 bg-secondary/50 rounded-lg">
+              <span className="text-red-700 font-bold text-sm">4</span>
+              <span className="text-sm">Medidas judiciais para proteção de direitos</span>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: "disposicoes",
+      title: "12. Disposições Finais",
+      icon: FileCheck,
+      content: (
+        <div className="space-y-4">
+          <p>
+            A Cheetah Solutions Network reserva-se o direito de modificar estas diretrizes a qualquer momento, sem aviso prévio. As alterações entram em vigor imediatamente após publicação.
+          </p>
+          <p>
+            Estas diretrizes são complementadas pelas demais políticas institucionais:
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Política de Privacidade</li>
+            <li>Termos de Uso</li>
+            <li>Política de Segurança</li>
+            <li>Política de Propriedade Intelectual</li>
+          </ul>
+          <p>
+            A submissão ao Programa implica aceitação integral de todas as disposições deste documento.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "contato",
+      title: "Contato Institucional",
+      icon: Mail,
+      content: (
+        <div className="space-y-4">
+          <p>
+            Para questões relacionadas ao Programa Cheetah Developers Brasil:
+          </p>
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
+            <p className="font-medium">📧 E-mail:</p>
+            <a 
+              href="mailto:contatocheetahsolutions@gmail.com" 
+              className="text-primary hover:underline"
+            >
+              contatocheetahsolutions@gmail.com
+            </a>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Solicitações de participação, dúvidas sobre critérios e outras questões serão respondidas exclusivamente por canais oficiais.
+          </p>
+        </div>
+      ),
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
@@ -39,314 +413,66 @@ const DevelopersGuidelines = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Programa Cheetah Developers <span className="text-primary">Brasil</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground mb-4">
               Diretrizes, Governança e Termos de Participação
+            </p>
+            <p className="text-muted-foreground leading-relaxed max-w-3xl">
+              O Programa Cheetah Developers Brasil é uma iniciativa institucional da Cheetah Solutions Network voltada ao reconhecimento, curadoria e apoio a projetos tecnológicos que demonstram alinhamento com os valores de excelência técnica, governança responsável e segurança operacional.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="py-16 px-4">
+      {/* Content - Accordion Style */}
+      <section className="py-12 px-4">
         <div className="container mx-auto max-w-4xl">
           <AnimatedSection>
-            <article className="prose prose-lg max-w-none">
-              <div className="space-y-12">
+            <div className="space-y-3">
+              {sections.map((section, index) => {
+                const isOpen = openSections.includes(section.id);
+                const Icon = section.icon;
                 
-                <section>
-                  <p className="text-lg text-muted-foreground leading-relaxed italic border-l-4 border-primary/30 pl-4 mb-8">
-                    Diretrizes, Governança e Termos de Participação
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    O Programa Cheetah Developers Brasil é uma iniciativa institucional da Cheetah Solutions Network voltada ao reconhecimento, curadoria e apoio a projetos tecnológicos que demonstram alinhamento com os valores de excelência técnica, governança responsável, segurança operacional e compromisso com a comunidade de desenvolvimento de software.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Este documento estabelece as diretrizes, critérios, procedimentos e responsabilidades aplicáveis a todos os projetos que desejam participar ou que já integram o Programa. A leitura integral e a aceitação expressa destes termos são condições obrigatórias para qualquer forma de participação.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">1. Introdução</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    O Programa Cheetah Developers Brasil foi criado com o objetivo de fortalecer o ecossistema tecnológico brasileiro, oferecendo visibilidade institucional, apoio técnico e reconhecimento público a projetos que atendam a padrões rigorosos de qualidade, segurança, transparência e ética.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    A participação no Programa representa um diferencial competitivo e reputacional para projetos que buscam credibilidade junto ao mercado, investidores, parceiros e usuários finais. No entanto, tal participação está condicionada ao cumprimento integral das diretrizes aqui estabelecidas e à manutenção contínua dos padrões exigidos.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    O Programa opera sob os princípios de meritocracia, transparência, independência institucional e proteção do ecossistema, não constituindo certificação técnica formal, endosso comercial irrestrito ou garantia de resultados específicos.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">2. Natureza do Programa</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    A participação no Programa Cheetah Developers Brasil possui natureza discricionária, revogável e não permanente. A verificação ou aprovação concedida a qualquer projeto:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Não constitui certificação técnica formal ou auditoria completa</li>
-                    <li>Não representa avaliação jurídica, contábil ou regulatória</li>
-                    <li>Não implica garantia de segurança absoluta ou ausência de vulnerabilidades</li>
-                    <li>Não configura endosso comercial, societário ou financeiro</li>
-                    <li>Não cria vínculo empregatício, societário ou contratual automático</li>
-                    <li>Não gera direito adquirido à permanência ou renovação</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    A Cheetah Solutions Network reserva-se o direito de aceitar, recusar, suspender ou encerrar a participação de qualquer projeto, a qualquer momento, com base em critérios técnicos, institucionais, reputacionais ou estratégicos, sem necessidade de justificativa pública.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">3. Processo de Inscrição de Projetos</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    A submissão de projetos ao Programa é voluntária e deve seguir os procedimentos estabelecidos pela Cheetah Solutions Network. O processo de inscrição observa os seguintes princípios:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>A submissão não garante aprovação ou qualquer forma de reconhecimento</li>
-                    <li>O projeto deve fornecer informações precisas, completas e verificáveis</li>
-                    <li>Omissões, inconsistências ou informações falsas podem resultar em indeferimento imediato ou encerramento posterior</li>
-                    <li>A inscrição não cria vínculo contratual, obrigacional ou expectativa de direito</li>
-                    <li>O prazo de análise é variável e depende da complexidade do projeto e da disponibilidade institucional</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Ao submeter um projeto, o responsável declara expressamente que leu, compreendeu e aceita integralmente todas as disposições deste documento, comprometendo-se a cumpri-las durante todo o período de participação.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">4. Critérios de Avaliação</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    A avaliação de projetos pelo Programa Cheetah Developers Brasil é global, multidimensional e não se limita a aspectos técnicos isolados. Os critérios considerados incluem, mas não se restringem a:
-                  </p>
-                  
-                  <h3 className="text-xl font-medium mt-6 mb-3 text-foreground">4.1. Segurança e Proteção de Dados</h3>
-                  <ul className="list-disc pl-6 mt-2 space-y-2 text-muted-foreground">
-                    <li>Implementação de práticas de segurança da informação</li>
-                    <li>Conformidade com legislações de proteção de dados (LGPD, GDPR)</li>
-                    <li>Gestão adequada de vulnerabilidades e incidentes</li>
-                    <li>Proteção contra ameaças cibernéticas e vazamentos</li>
-                  </ul>
-                  
-                  <h3 className="text-xl font-medium mt-6 mb-3 text-foreground">4.2. Governança e Conformidade</h3>
-                  <ul className="list-disc pl-6 mt-2 space-y-2 text-muted-foreground">
-                    <li>Estrutura organizacional clara e documentada</li>
-                    <li>Políticas internas de ética, conduta e compliance</li>
-                    <li>Transparência nas operações e tomada de decisões</li>
-                    <li>Conformidade com regulamentações setoriais aplicáveis</li>
-                  </ul>
-                  
-                  <h3 className="text-xl font-medium mt-6 mb-3 text-foreground">4.3. Qualidade Técnica</h3>
-                  <ul className="list-disc pl-6 mt-2 space-y-2 text-muted-foreground">
-                    <li>Arquitetura de software robusta e escalável</li>
-                    <li>Boas práticas de desenvolvimento e manutenção</li>
-                    <li>Documentação técnica adequada</li>
-                    <li>Processos de teste e garantia de qualidade</li>
-                  </ul>
-                  
-                  <h3 className="text-xl font-medium mt-6 mb-3 text-foreground">4.4. Confiabilidade e Reputação</h3>
-                  <ul className="list-disc pl-6 mt-2 space-y-2 text-muted-foreground">
-                    <li>Histórico público do projeto e de seus responsáveis</li>
-                    <li>Avaliações de usuários e comunidade</li>
-                    <li>Ausência de envolvimento em controvérsias graves</li>
-                    <li>Alinhamento com valores éticos e institucionais</li>
-                  </ul>
-                  
-                  <h3 className="text-xl font-medium mt-6 mb-3 text-foreground">4.5. Impacto Reputacional</h3>
-                  <ul className="list-disc pl-6 mt-2 space-y-2 text-muted-foreground">
-                    <li>Potencial de benefício ou dano à imagem institucional</li>
-                    <li>Alinhamento com a missão e valores da Cheetah Solutions Network</li>
-                    <li>Contribuição positiva para o ecossistema tecnológico</li>
-                  </ul>
-                  
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Nenhum critério isolado garante aprovação ou permanência no Programa. A avaliação é holística e considera o conjunto de fatores de forma integrada e contextualizada.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">5. Governança e Independência</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    O Programa Cheetah Developers Brasil opera de forma independente, preservando sua autonomia institucional e sua capacidade de tomar decisões baseadas exclusivamente em critérios técnicos, éticos e reputacionais. Esta independência implica:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Não há obrigação de alinhamento a interesses externos, públicos ou privados</li>
-                    <li>Decisões não são influenciadas por pressões comerciais, políticas ou midiáticas</li>
-                    <li>O Programa pode considerar comunicações formais de parceiros do ecossistema</li>
-                    <li>Não há obrigação de contraditório público ou exposição de fundamentos internos</li>
-                    <li>A governança do Programa é de responsabilidade exclusiva da Cheetah Solutions Network</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    A independência institucional é condição essencial para a credibilidade e efetividade do Programa, garantindo que as decisões sejam tomadas com base em mérito e alinhamento institucional.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">6. Reavaliação, Suspensão e Indeferimento</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    A participação no Programa não é permanente e está sujeita a reavaliação contínua. A Cheetah Solutions Network pode, a qualquer momento e de forma preventiva:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Reavaliar a adequação do projeto aos critérios do Programa</li>
-                    <li>Suspender temporariamente a participação para investigação ou ajustes</li>
-                    <li>Indeferir novas solicitações com base em análise técnica ou institucional</li>
-                    <li>Encerrar definitivamente a participação de projetos</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Decisões preventivas não constituem:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Acusação formal ou imputação de responsabilidade</li>
-                    <li>Penalidade ou sanção disciplinar</li>
-                    <li>Julgamento público de mérito</li>
-                    <li>Juízo pessoal sobre os responsáveis pelo projeto</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    O Programa atua com foco na proteção do ecossistema, da reputação institucional e da confiança pública depositada na marca Cheetah.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">7. Transparência e Limites de Informação</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Embora o Programa valorize a transparência como princípio fundamental, existem limites legítimos à divulgação de informações internas. A Cheetah Solutions Network:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Não é obrigada a divulgar relatórios internos de avaliação</li>
-                    <li>Não fornece provas, evidências ou documentos técnicos específicos</li>
-                    <li>Não detalha publicamente os critérios aplicados em casos individuais</li>
-                    <li>Não realiza julgamentos públicos ou exposições de projetos</li>
-                    <li>Não responde a questionamentos públicos sobre decisões específicas</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Comunicações formais de parceiros do ecossistema, comunidade ou autoridades podem ser consideradas internamente, porém não geram obrigação de resposta pública ou modificação de decisões.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">8. Uso de Marca e Identidade Visual</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    O uso de qualquer elemento institucional da Cheetah Solutions Network, incluindo nome, logotipo, selos, identidade visual e menções públicas, é estritamente controlado e condicionado a:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Aprovação ativa e vigente no Programa</li>
-                    <li>Autorização expressa para uso específico</li>
-                    <li>Conformidade integral com estas diretrizes</li>
-                    <li>Respeito ao manual de identidade visual, quando aplicável</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    O uso autorizado inclui, mas não se limita a:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Exibição de selo de verificação em websites e aplicações</li>
-                    <li>Menção à participação no Programa em materiais institucionais</li>
-                    <li>Referência ao vínculo em comunicações oficiais</li>
-                    <li>Utilização de assets gráficos fornecidos pela Cheetah</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Qualquer uso não autorizado, distorcido ou que possa induzir o público a erro constitui violação grave e pode resultar em medidas administrativas e legais.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">9. Desvinculação e Obrigação de Remoção</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Em caso de indeferimento, suspensão, encerramento ou desvinculação voluntária do Programa, o projeto deve proceder imediatamente à remoção completa de qualquer referência à Cheetah Solutions Network, Cheetah Developers Brasil ou quaisquer ativos institucionais associados.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    A obrigação de remoção abrange todos os meios e plataformas, incluindo:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Websites, landing pages e aplicações web</li>
-                    <li>Aplicativos móveis e software desktop</li>
-                    <li>Repositórios de código (GitHub, GitLab, Bitbucket, etc.)</li>
-                    <li>Redes sociais e perfis públicos</li>
-                    <li>Materiais promocionais, apresentações e documentos</li>
-                    <li>Comunicações por e-mail, newsletters e notificações</li>
-                    <li>Materiais impressos, banners e sinalizações</li>
-                    <li>Vídeos, podcasts e conteúdos audiovisuais</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    O prazo para remoção completa é de 48 (quarenta e oito) horas a partir da comunicação formal de desvinculação. O descumprimento desta obrigação constitui violação grave e pode resultar em medidas legais.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">10. Novo Envio de Projeto</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    O indeferimento ou encerramento da participação no Programa não implica bloqueio definitivo. Projetos podem submeter nova solicitação de participação, desde que:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Atendam integralmente aos critérios vigentes no momento da nova submissão</li>
-                    <li>Tenham sanado as questões que motivaram o indeferimento ou encerramento anterior</li>
-                    <li>Não tenham incorrido em uso indevido da marca após desvinculação</li>
-                    <li>Demonstrem mudanças substanciais que justifiquem reavaliação</li>
-                    <li>Respeitem eventual período de carência estabelecido</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    A nova submissão será analisada de forma independente, sem prejuízo ou favorecimento em razão de participações anteriores.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">11. Medidas Administrativas</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    O descumprimento das diretrizes estabelecidas neste documento pode resultar em medidas administrativas e institucionais proporcionais à gravidade da violação, incluindo:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Advertência formal com prazo para correção</li>
-                    <li>Suspensão temporária da participação</li>
-                    <li>Revogação imediata da verificação</li>
-                    <li>Comunicação interna ao ecossistema de parceiros</li>
-                    <li>Notificação extrajudicial para cessação de uso indevido</li>
-                    <li>Medidas judiciais para proteção de direitos de propriedade intelectual</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    A aplicação de medidas observará os princípios de proporcionalidade e razoabilidade, considerando a natureza, gravidade e reincidência das violações.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">12. Disposições Finais</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    A Cheetah Solutions Network reserva-se o direito de modificar, atualizar ou substituir estas diretrizes a qualquer momento, sem aviso prévio. As alterações entram em vigor imediatamente após sua publicação.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    A continuidade da participação no Programa após a publicação de alterações implica aceitação integral dos novos termos. Projetos que discordem das modificações devem solicitar desvinculação formal.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Estas diretrizes são complementadas pelas demais políticas institucionais da Cheetah Solutions Network, incluindo, mas não se limitando a:
-                  </p>
-                  <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-                    <li>Política de Privacidade</li>
-                    <li>Termos de Uso</li>
-                    <li>Política de Segurança</li>
-                    <li>Política de Propriedade Intelectual</li>
-                    <li>Termos do Programa de Verificação</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Em caso de conflito entre documentos, prevalecerá a interpretação que melhor proteja os interesses institucionais e a integridade do ecossistema.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    A submissão ao Programa implica aceitação integral, irrestrita e incondicional de todas as disposições deste documento, em sua versão vigente no momento da avaliação.
-                  </p>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-foreground">Contato Institucional</h2>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Para questões relacionadas ao Programa Cheetah Developers Brasil, entre em contato através do e-mail institucional: <strong className="text-primary">contatocheetahsolutions@gmail.com</strong>
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mt-4">
-                    Solicitações de participação, dúvidas sobre critérios e outras questões serão respondidas exclusivamente por canais oficiais.
-                  </p>
-                </section>
-              </div>
-            </article>
+                return (
+                  <AnimatedSection key={section.id} animation="fade-up" delay={index * 30}>
+                    <div className="border border-border rounded-xl overflow-hidden bg-card">
+                      <button
+                        onClick={() => toggleSection(section.id)}
+                        className="w-full flex items-center justify-between p-5 text-left hover:bg-secondary/30 transition-colors"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <Icon className="h-5 w-5 text-primary" />
+                          </div>
+                          <span className="font-semibold">{section.title}</span>
+                        </div>
+                        <ChevronDown 
+                          className={`h-5 w-5 text-muted-foreground transition-transform duration-200 ${
+                            isOpen ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </button>
+                      
+                      <div 
+                        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                          isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                        }`}
+                      >
+                        <div className="px-5 pb-5 pt-0 text-muted-foreground leading-relaxed">
+                          <div className="pl-14">
+                            {section.content}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                );
+              })}
+            </div>
           </AnimatedSection>
 
           {/* CTA */}
           <AnimatedSection animation="fade-up" delay={200}>
-            <div className="mt-16 p-8 bg-card border border-border rounded-xl text-center">
+            <div className="mt-12 p-8 bg-card border border-border rounded-xl text-center">
               <h3 className="text-xl font-semibold mb-4">Pronto para participar?</h3>
               <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
                 Entre para a comunidade Cheetah Developers Brasil e faça parte de um ecossistema 
