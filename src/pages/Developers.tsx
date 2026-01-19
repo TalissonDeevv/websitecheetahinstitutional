@@ -227,16 +227,20 @@ const Developers = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
-                  <Link to="/developers/diretrizes">
+                  <a 
+                    href="#" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
                     <Button 
                       size="lg" 
                       variant="outline"
                       className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground font-medium"
                     >
                       Diretrizes e Governança
-                      <FileText className="ml-2 h-4 w-4" />
+                      <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
               
