@@ -55,7 +55,7 @@ const BellaSection = () => {
               </p>
               
               <a 
-                href="https://discord.gg/bella" 
+                href="https://discord.gg/ErNPrZGwmy" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
