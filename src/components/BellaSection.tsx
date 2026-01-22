@@ -1,7 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
-import bellaImage from "@/assets/bella.png";
 
 const BellaSection = () => {
   return (
@@ -75,7 +74,7 @@ const BellaSection = () => {
             <div className="flex items-center justify-center lg:justify-end relative">
               <div className="relative">
                 <img 
-                  src={bellaImage} 
+                  src="/images/bella.png" 
                   alt="Bella - Bot de Apostas Interativas"
                   className="w-full max-w-sm lg:max-w-md h-auto object-contain"
                   loading="lazy"
