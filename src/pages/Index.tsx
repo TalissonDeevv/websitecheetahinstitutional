@@ -34,7 +34,6 @@ import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 import pairProgrammingSvg from "@/assets/pair-programming.svg";
 import FounderHero from "@/components/FounderHero";
-import BellaSection from "@/components/BellaSection";
 
 const Index = () => {
   const services = [
@@ -505,9 +504,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Bella Ultra Support Section */}
-      <BellaSection />
 
       {/* Cheetah Developers Brasil Section */}
       <section className="py-16 px-4 lg:px-8">
