@@ -93,15 +93,6 @@ const BellaBot = () => {
                     loading="eager"
                     fetchPriority="high"
                   />
-                  
-                  {/* Floating name tags */}
-                  <div className="absolute bottom-24 md:bottom-32 left-4 md:left-8 z-30 bg-card/90 backdrop-blur-sm border border-border rounded-full px-3 py-1.5 shadow-lg">
-                    <span className="text-xs font-medium">Bella</span>
-                  </div>
-                  <div className="absolute bottom-24 md:bottom-32 right-4 md:right-8 z-30 bg-card/90 backdrop-blur-sm border border-border rounded-full px-3 py-1.5 shadow-lg">
-                    <span className="text-xs font-medium">Cheezinho</span>
-                  </div>
-                  
                   {/* Fade gradient at bottom */}
                   <div 
                     className="absolute bottom-0 left-0 right-0 h-32 md:h-40 lg:h-48 z-20 pointer-events-none"
