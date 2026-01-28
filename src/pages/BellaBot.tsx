@@ -84,7 +84,7 @@ const BellaBot = () => {
             
             {/* Image with fade effect */}
             <AnimatedSection delay={100} animation="fade">
-              <div className="relative flex flex-col items-center lg:items-end">
+              <div className="relative flex justify-center lg:justify-end">
                 <div className="relative max-w-md lg:max-w-lg xl:max-w-xl">
                   <img 
                     src={bellaCheezinho} 
@@ -93,6 +93,15 @@ const BellaBot = () => {
                     loading="eager"
                     fetchPriority="high"
                   />
+                  
+                  {/* Floating name tags */}
+                  <div className="absolute bottom-24 md:bottom-32 left-4 md:left-8 z-30 bg-card/90 backdrop-blur-sm border border-border rounded-full px-3 py-1.5 shadow-lg">
+                    <span className="text-xs font-medium">Bella</span>
+                  </div>
+                  <div className="absolute bottom-24 md:bottom-32 right-4 md:right-8 z-30 bg-card/90 backdrop-blur-sm border border-border rounded-full px-3 py-1.5 shadow-lg">
+                    <span className="text-xs font-medium">Cheezinho</span>
+                  </div>
+                  
                   {/* Fade gradient at bottom */}
                   <div 
                     className="absolute bottom-0 left-0 right-0 h-32 md:h-40 lg:h-48 z-20 pointer-events-none"
@@ -100,28 +109,6 @@ const BellaBot = () => {
                       background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background)) 100%)'
                     }}
                   />
-                </div>
-                
-                {/* Character Cards */}
-                <div className="grid grid-cols-2 gap-4 w-full max-w-md lg:max-w-lg mt-4">
-                  <div className="bg-card border border-border rounded-xl p-4 text-center">
-                    <div className="w-10 h-10 bg-rose-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-lg">🎀</span>
-                    </div>
-                    <h3 className="text-sm font-semibold mb-1">Bella</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      A anfitriã carismática que comanda a diversão e conecta a comunidade.
-                    </p>
-                  </div>
-                  <div className="bg-card border border-border rounded-xl p-4 text-center">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-lg">🐆</span>
-                    </div>
-                    <h3 className="text-sm font-semibold mb-1">Cheezinho</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      O mascote oficial da Cheetah Solutions Network.
-                    </p>
-                  </div>
                 </div>
               </div>
             </AnimatedSection>
