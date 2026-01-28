@@ -59,11 +59,11 @@ const BellaBot = () => {
                   Projeto Cheetah Solutions
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
-                  Bella Bot
+                  Bella e Cheezinho
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-                  Um projeto inovador para Discord que transforma a forma como comunidades 
-                  interagem. Partidas, competição e engajamento — tudo criado pelos próprios usuários.
+                  Bella Bot Um projeto inovador para Discord que transforma a forma como comunidades 
+                  interagem. Partidas, competição e engajamento tudo criado pelos próprios usuários.
                 </p>
                 <a 
                   href="https://discord.gg/ArbAtkw3Ug" 
