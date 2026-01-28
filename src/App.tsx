@@ -39,6 +39,7 @@ import Developers from "./pages/Developers";
 
 import ApprovedProjects from "./pages/ApprovedProjects";
 import TrabalheConosco from "./pages/TrabalheConosco";
+import BellaBot from "./pages/BellaBot";
 
 const queryClient = new QueryClient();
 
@@ -83,6 +84,7 @@ const App = () => (
             <Route path="/developers/projetos" element={<ApprovedProjects />} />
             <Route path="/inscricoes" element={<TrabalheConosco />} />
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
+            <Route path="/bellabot" element={<BellaBot />} />
 
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />

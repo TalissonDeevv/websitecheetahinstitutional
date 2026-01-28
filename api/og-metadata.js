@@ -117,6 +117,11 @@ export const routes = {
     description: 'Diretrizes, políticas de privacidade e conformidade da Cheetah Solutions Network. Transparência e governança corporativa.',
     ogTitle: 'Diretrizes e Privacidade | Cheetah Solutions Network',
   },
+  '/bellabot': {
+    title: 'Bella Bot | Cheetah Solutions Network',
+    description: 'Conheça a Bella Bot, o bot inovador para Discord desenvolvido pela Cheetah Solutions Network. Interação social, partidas entre usuários e experiência dinâmica para comunidades.',
+    ogTitle: 'Bella Bot | Cheetah Solutions Network',
+  },
 };
 
 export const BASE_URL = 'https://www.cheetahsolutions.com.br';
