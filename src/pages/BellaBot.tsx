@@ -62,7 +62,7 @@ const BellaBot = () => {
                   Bella e Cheezinho
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-                  Bella Bot Um projeto inovador para Discord que transforma a forma como comunidades 
+                  Bella Bot é um projeto inovador para Discord que transforma a forma como comunidades 
                   interagem. Partidas, competição e engajamento tudo criado pelos próprios usuários.
                 </p>
                 <a 
