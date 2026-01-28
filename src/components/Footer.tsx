@@ -26,6 +26,12 @@ const Footer = () => {
     { name: "Contato", path: "/contato" },
   ];
 
+  const projects = [
+    { name: "Bella Bot", path: "/bellabot" },
+    { name: "Developers Brasil", path: "/developers" },
+    { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
+  ];
+
   const legal = [
     { name: "Termos de Uso", path: "/diretrizes/termos-uso" },
     { name: "Privacidade", path: "/diretrizes/privacidade" },
@@ -47,7 +53,7 @@ const Footer = () => {
 
       <div className="container mx-auto px-4 py-16">
         {/* Main Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-10">
           
           {/* Brand */}
           <div className="col-span-2">
@@ -116,6 +122,25 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2.5">
               {company.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path}
+                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Projetos */}
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">
+              Projetos
+            </h4>
+            <ul className="space-y-2.5">
+              {projects.map((item) => (
                 <li key={item.path}>
                   <Link 
                     to={item.path}

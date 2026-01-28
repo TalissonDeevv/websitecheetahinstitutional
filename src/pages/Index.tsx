@@ -33,6 +33,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 import pairProgrammingSvg from "@/assets/pair-programming.svg";
+import bellaCheezinho from "@/assets/bella-cheezinho.png";
 import FounderHero from "@/components/FounderHero";
 
 const Index = () => {
@@ -552,6 +553,58 @@ const Index = () => {
                   alt="Pair programming illustration" 
                   className="w-full max-w-md h-auto"
                 />
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Bella Bot Section */}
+      <section className="py-16 px-4 lg:px-8 bg-secondary/30">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <AnimatedSection animation="fade-right" delay={100}>
+              <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1">
+                <div className="relative max-w-xs lg:max-w-sm">
+                  <img 
+                    src={bellaCheezinho} 
+                    alt="Ilustração oficial da Bella Bot com o mascote Cheezinho"
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                  />
+                  <div 
+                    className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+                    style={{
+                      background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--secondary) / 0.3) 100%)'
+                    }}
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection animation="fade-left" className="order-1 lg:order-2">
+              <div>
+                <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs font-medium text-primary">
+                  <Bot className="h-3.5 w-3.5" />
+                  Projeto Cheetah
+                </div>
+                <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                  Bella <span className="text-primary">Bot</span>
+                </h2>
+                <p className="text-lg text-muted-foreground mb-4 font-medium">
+                  Interação, competição e engajamento no Discord.
+                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Um projeto inovador que transforma comunidades no Discord. Partidas criadas por usuários, sistema de progressão e experiências dinâmicas que conectam pessoas.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link to="/bellabot">
+                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      Conheça a Bella Bot
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </AnimatedSection>
           </div>
