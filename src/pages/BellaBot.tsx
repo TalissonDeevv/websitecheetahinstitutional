@@ -84,7 +84,7 @@ const BellaBot = () => {
             
             {/* Image with fade effect */}
             <AnimatedSection delay={100} animation="fade">
-              <div className="relative flex justify-center lg:justify-end">
+              <div className="relative flex flex-col items-center lg:items-end">
                 <div className="relative max-w-md lg:max-w-lg xl:max-w-xl">
                   <img 
                     src={bellaCheezinho} 
@@ -100,6 +100,28 @@ const BellaBot = () => {
                       background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background)) 100%)'
                     }}
                   />
+                </div>
+                
+                {/* Character Cards */}
+                <div className="grid grid-cols-2 gap-4 w-full max-w-md lg:max-w-lg mt-4">
+                  <div className="bg-card border border-border rounded-xl p-4 text-center">
+                    <div className="w-10 h-10 bg-rose-500/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-lg">🎀</span>
+                    </div>
+                    <h3 className="text-sm font-semibold mb-1">Bella</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      A anfitriã carismática que comanda a diversão e conecta a comunidade.
+                    </p>
+                  </div>
+                  <div className="bg-card border border-border rounded-xl p-4 text-center">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-lg">🐆</span>
+                    </div>
+                    <h3 className="text-sm font-semibold mb-1">Cheezinho</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      O mascote oficial da Cheetah Solutions Network.
+                    </p>
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
