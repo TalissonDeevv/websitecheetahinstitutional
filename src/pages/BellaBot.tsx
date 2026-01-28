@@ -129,7 +129,7 @@ const BellaBot = () => {
               <div className="space-y-8">
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   A Bella Bot nasceu da visão de criar algo diferente para comunidades no Discord. 
-                  Não é apenas mais um bot com comandos básicos — é uma plataforma de interação 
+                  Não é apenas mais um bot com comandos básicos é uma plataforma de interação 
                   onde os próprios usuários são protagonistas.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
