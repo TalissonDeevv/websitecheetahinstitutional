@@ -290,28 +290,31 @@ const Index = () => {
       </section>
 
       {/* Trusted Companies Section */}
-      <section className="py-12 px-4 lg:px-8">
+      <section className="py-16 px-4 lg:px-8 bg-secondary/20">
         <div className="container mx-auto max-w-6xl">
           <AnimatedSection>
-            <div className="text-center mb-10">
-              <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium">
-                Empresas que confiam em nosso trabalho
+            <div className="text-center mb-12">
+              <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-foreground">
+                Empresas que <span className="text-primary">Confiam</span> em Nós
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Parcerias que impulsionam resultados
               </p>
             </div>
           </AnimatedSection>
           
           <AnimatedSection delay={100}>
-            <div className="flex flex-wrap items-center justify-center gap-12 lg:gap-20">
+            <div className="flex flex-wrap items-center justify-center gap-16 lg:gap-24">
               <a 
                 href="https://quackpay.com.br" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="opacity-60 hover:opacity-100 transition-opacity duration-300"
               >
                 <img 
                   src={quackPayLogo} 
                   alt="Quack Pay" 
-                  className="h-10 w-auto object-contain"
+                  className="h-14 lg:h-16 w-auto object-contain"
                   loading="lazy"
                 />
               </a>
@@ -319,12 +322,12 @@ const Index = () => {
                 href="https://squarecloud.app" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="opacity-60 hover:opacity-100 transition-opacity duration-300"
               >
                 <img 
                   src={squareCloudLogo} 
                   alt="Square Cloud" 
-                  className="h-10 w-auto object-contain"
+                  className="h-14 lg:h-16 w-auto object-contain"
                   loading="lazy"
                 />
               </a>
@@ -611,17 +614,17 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="fade-right" delay={100}>
               <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1">
-                <div className="relative max-w-xs lg:max-w-sm">
+                <div className="relative max-w-[280px] lg:max-w-xs">
                   <img 
                     src={bellaFeliz} 
                     alt="Ilustração oficial da Bella Bot"
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain relative z-10"
                     loading="lazy"
                   />
                   <div 
-                    className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
+                    className="absolute bottom-0 left-0 right-0 h-24 lg:h-32 z-20 pointer-events-none"
                     style={{
-                      background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--secondary) / 0.3) 70%, hsl(var(--secondary) / 0.3) 100%)'
+                      background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--secondary) / 0.3) 100%)'
                     }}
                   />
                 </div>

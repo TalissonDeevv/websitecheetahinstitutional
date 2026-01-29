@@ -85,7 +85,7 @@ const BellaBot = () => {
             {/* Image with fade effect */}
             <AnimatedSection delay={100} animation="fade">
               <div className="relative flex justify-center lg:justify-end">
-                <div className="relative max-w-md lg:max-w-lg xl:max-w-xl">
+                <div className="relative max-w-xs lg:max-w-sm xl:max-w-md">
                   <img 
                     src={bellaFeliz} 
                     alt="Ilustração oficial da Bella Bot da Cheetah Solutions Network"
@@ -95,7 +95,7 @@ const BellaBot = () => {
                   />
                   {/* Fade gradient at bottom */}
                   <div 
-                    className="absolute bottom-0 left-0 right-0 h-32 md:h-40 lg:h-48 z-20 pointer-events-none"
+                    className="absolute bottom-0 left-0 right-0 h-28 md:h-36 lg:h-40 z-20 pointer-events-none"
                     style={{
                       background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background)) 100%)'
                     }}
