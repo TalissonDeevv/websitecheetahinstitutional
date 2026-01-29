@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
-import bellaCheezinho from "@/assets/bella-cheezinho.png";
+import bellaFeliz from "@/assets/bella-feliz.png";
 
 const BellaBot = () => {
   const features = [
@@ -87,8 +87,8 @@ const BellaBot = () => {
               <div className="relative flex justify-center lg:justify-end">
                 <div className="relative max-w-md lg:max-w-lg xl:max-w-xl">
                   <img 
-                    src={bellaCheezinho} 
-                    alt="Ilustração oficial da Bella Bot com o mascote Cheezinho da Cheetah Solutions Network"
+                    src={bellaFeliz} 
+                    alt="Ilustração oficial da Bella Bot da Cheetah Solutions Network"
                     className="w-full h-auto object-contain relative z-10"
                     loading="eager"
                     fetchPriority="high"
