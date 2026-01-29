@@ -33,7 +33,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 import pairProgrammingSvg from "@/assets/pair-programming.svg";
-import bellaCheezinho from "@/assets/bella-cheezinho.png";
+import bellaFeliz from "@/assets/bella-feliz.png";
+import quackPayLogo from "@/assets/quack-pay-logo.png";
+import squareCloudLogo from "@/assets/square-cloud-logo-white.png";
 import FounderHero from "@/components/FounderHero";
 
 const Index = () => {
@@ -282,6 +284,50 @@ const Index = () => {
                   <span className="text-sm text-muted-foreground">{stat.label}</span>
                 </div>
               ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Trusted Companies Section */}
+      <section className="py-12 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium">
+                Empresas que confiam em nosso trabalho
+              </p>
+            </div>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={100}>
+            <div className="flex flex-wrap items-center justify-center gap-12 lg:gap-20">
+              <a 
+                href="https://quackpay.com.br" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="opacity-70 hover:opacity-100 transition-opacity duration-300"
+              >
+                <img 
+                  src={quackPayLogo} 
+                  alt="Quack Pay" 
+                  className="h-10 w-auto object-contain"
+                  loading="lazy"
+                />
+              </a>
+              <a 
+                href="https://squarecloud.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="opacity-70 hover:opacity-100 transition-opacity duration-300"
+              >
+                <img 
+                  src={squareCloudLogo} 
+                  alt="Square Cloud" 
+                  className="h-10 w-auto object-contain"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </AnimatedSection>
         </div>
@@ -567,15 +613,15 @@ const Index = () => {
               <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1">
                 <div className="relative max-w-xs lg:max-w-sm">
                   <img 
-                    src={bellaCheezinho} 
-                    alt="Ilustração oficial da Bella Bot com o mascote Cheezinho"
+                    src={bellaFeliz} 
+                    alt="Ilustração oficial da Bella Bot"
                     className="w-full h-auto object-contain"
                     loading="lazy"
                   />
                   <div 
-                    className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+                    className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
                     style={{
-                      background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--secondary) / 0.3) 100%)'
+                      background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--secondary) / 0.3) 70%, hsl(var(--secondary) / 0.3) 100%)'
                     }}
                   />
                 </div>
