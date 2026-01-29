@@ -6,46 +6,28 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { OrganizationJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 import bellaFeliz from "@/assets/bella-feliz.png";
-
 const BellaBot = () => {
-  const features = [
-    {
-      icon: Users,
-      title: "Interação Social",
-      description: "Conecte-se com outros membros através de experiências interativas e dinâmicas."
-    },
-    {
-      icon: Gamepad2,
-      title: "Partidas entre Usuários",
-      description: "Crie e participe de partidas criadas pela própria comunidade."
-    },
-    {
-      icon: Trophy,
-      title: "Sistema de Progressão",
-      description: "Evolua, conquiste e destaque-se com um sistema próprio de economia e ranking."
-    },
-    {
-      icon: Sparkles,
-      title: "Experiência Dinâmica",
-      description: "Funcionalidades que tornam cada interação única e competitiva."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      <SEO
-        title="Bella Bot | Cheetah Solutions Network"
-        description="Conheça a Bella Bot, o bot inovador para Discord desenvolvido pela Cheetah Solutions Network. Interação social, partidas entre usuários e uma experiência dinâmica para comunidades."
-        ogTitle="Bella Bot | Cheetah Solutions Network"
-        ogDescription="Bot inovador para Discord com foco em interação social, partidas criadas por usuários e experiência competitiva para comunidades engajadas."
-        ogUrl="/bellabot"
-      />
+  const features = [{
+    icon: Users,
+    title: "Interação Social",
+    description: "Conecte-se com outros membros através de experiências interativas e dinâmicas."
+  }, {
+    icon: Gamepad2,
+    title: "Partidas entre Usuários",
+    description: "Crie e participe de partidas criadas pela própria comunidade."
+  }, {
+    icon: Trophy,
+    title: "Sistema de Progressão",
+    description: "Evolua, conquiste e destaque-se com um sistema próprio de economia e ranking."
+  }, {
+    icon: Sparkles,
+    title: "Experiência Dinâmica",
+    description: "Funcionalidades que tornam cada interação única e competitiva."
+  }];
+  return <div className="min-h-screen bg-background text-foreground">
+      <SEO title="Bella Bot | Cheetah Solutions Network" description="Conheça a Bella Bot, o bot inovador para Discord desenvolvido pela Cheetah Solutions Network. Interação social, partidas entre usuários e uma experiência dinâmica para comunidades." ogTitle="Bella Bot | Cheetah Solutions Network" ogDescription="Bot inovador para Discord com foco em interação social, partidas criadas por usuários e experiência competitiva para comunidades engajadas." ogUrl="/bellabot" />
       <OrganizationJsonLd />
-      <WebPageJsonLd 
-        title="Bella Bot | Cheetah Solutions Network"
-        description="Bot inovador para Discord com foco em interação social, partidas entre usuários e experiência dinâmica para comunidades."
-        url="/bellabot"
-      />
+      <WebPageJsonLd title="Bella Bot | Cheetah Solutions Network" description="Bot inovador para Discord com foco em interação social, partidas entre usuários e experiência dinâmica para comunidades." url="/bellabot" />
       <Header />
       
       {/* Hero Section */}
@@ -58,22 +40,13 @@ const BellaBot = () => {
                 <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
                   Projeto Cheetah Solutions
                 </p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
-                  Bella e Cheezinho
-                </h1>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">Bella Bot</h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
                   Bella Bot é um projeto inovador para Discord que transforma a forma como comunidades 
                   interagem. Partidas, competição e engajamento tudo criado pelos próprios usuários.
                 </p>
-                <a 
-                  href="https://discord.gg/ArbAtkw3Ug" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <Button 
-                    size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
-                  >
+                <a href="https://discord.gg/ArbAtkw3Ug" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     Servidor de Suporte
                     <ExternalLink className="ml-2 h-4 w-4" />
@@ -86,20 +59,11 @@ const BellaBot = () => {
             <AnimatedSection delay={100} animation="fade">
               <div className="relative flex justify-center lg:justify-end">
                 <div className="relative max-w-xs lg:max-w-sm xl:max-w-md">
-                  <img 
-                    src={bellaFeliz} 
-                    alt="Ilustração oficial da Bella Bot da Cheetah Solutions Network"
-                    className="w-full h-auto object-contain relative z-10"
-                    loading="eager"
-                    fetchPriority="high"
-                  />
+                  <img src={bellaFeliz} alt="Ilustração oficial da Bella Bot da Cheetah Solutions Network" className="w-full h-auto object-contain relative z-10" loading="eager" fetchPriority="high" />
                   {/* Fade gradient at bottom */}
-                  <div 
-                    className="absolute bottom-0 left-0 right-0 h-28 md:h-36 lg:h-40 z-20 pointer-events-none"
-                    style={{
-                      background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background)) 100%)'
-                    }}
-                  />
+                  <div className="absolute bottom-0 left-0 right-0 h-28 md:h-36 lg:h-40 z-20 pointer-events-none" style={{
+                  background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background)) 100%)'
+                }} />
                 </div>
               </div>
             </AnimatedSection>
@@ -164,8 +128,7 @@ const BellaBot = () => {
           </AnimatedSection>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
+            {features.map((feature, index) => <AnimatedSection key={index} delay={index * 100}>
                 <div className="bg-card border border-border rounded-xl p-8 h-full">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
                     <feature.icon className="h-5 w-5 text-primary" />
@@ -175,8 +138,7 @@ const BellaBot = () => {
                     {feature.description}
                   </p>
                 </div>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
         </div>
       </section>
@@ -198,15 +160,8 @@ const BellaBot = () => {
                 Entre no servidor de suporte para acompanhar as atualizações e fazer parte 
                 dessa jornada desde o início.
               </p>
-              <a 
-                href="https://discord.gg/ArbAtkw3Ug" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8"
-                >
+              <a href="https://discord.gg/ArbAtkw3Ug" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Acompanhar no Discord
                   <ExternalLink className="ml-2 h-4 w-4" />
@@ -239,8 +194,6 @@ const BellaBot = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BellaBot;
