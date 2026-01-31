@@ -40,6 +40,9 @@ import Developers from "./pages/Developers";
 import ApprovedProjects from "./pages/ApprovedProjects";
 import TrabalheConosco from "./pages/TrabalheConosco";
 import BellaBot from "./pages/BellaBot";
+import WhyCheetah from "./pages/institutional/WhyCheetah";
+import BlueIdentity from "./pages/institutional/BlueIdentity";
+import FoundingYear from "./pages/institutional/FoundingYear";
 
 const queryClient = new QueryClient();
 
@@ -85,6 +88,11 @@ const App = () => (
             <Route path="/inscricoes" element={<TrabalheConosco />} />
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
             <Route path="/bellabot" element={<BellaBot />} />
+
+            {/* Institutional Articles */}
+            <Route path="/por-que-usamos-guepardo" element={<WhyCheetah />} />
+            <Route path="/identidade-azul-cheetah" element={<BlueIdentity />} />
+            <Route path="/fundacao-cheetah-solutions-network" element={<FoundingYear />} />
 
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />
