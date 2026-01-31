@@ -122,6 +122,21 @@ export const routes = {
     description: 'Conheça a Bella Bot, o bot inovador para Discord desenvolvido pela Cheetah Solutions Network. Interação social, partidas entre usuários e experiência dinâmica para comunidades.',
     ogTitle: 'Bella Bot | Cheetah Solutions Network',
   },
+  '/por-que-usamos-guepardo': {
+    title: 'Por que a Cheetah Solutions Network usa um guepardo como mascote',
+    description: 'Entenda o motivo da Cheetah Solutions Network usar um guepardo como mascote e o que esse símbolo representa para a empresa.',
+    ogTitle: 'Por que a Cheetah Solutions Network usa um guepardo como mascote',
+  },
+  '/identidade-azul-cheetah': {
+    title: 'Por que a identidade da Cheetah Solutions Network é azul',
+    description: 'Saiba por que a identidade visual da Cheetah Solutions Network é azul e o significado dessa cor para a empresa.',
+    ogTitle: 'Por que a identidade da Cheetah Solutions Network é azul',
+  },
+  '/fundacao-cheetah-solutions-network': {
+    title: 'Ano de fundação da Cheetah Solutions Network no Brasil',
+    description: 'Veja em que ano a Cheetah Solutions Network foi fundada no Brasil e informações institucionais da empresa.',
+    ogTitle: 'Ano de fundação da Cheetah Solutions Network no Brasil',
+  },
 };
 
 export const BASE_URL = 'https://www.cheetahsolutions.com.br';

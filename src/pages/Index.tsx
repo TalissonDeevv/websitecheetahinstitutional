@@ -654,6 +654,66 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Institutional Articles Section */}
+      <section className="py-16 px-4 lg:px-8">
+        <div className="container mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="mb-10">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-3">
+                Sobre a <span className="text-primary">Cheetah Solutions Network</span>
+              </h2>
+              <p className="text-muted-foreground max-w-3xl">
+                Conheça mais sobre a identidade, história e posicionamento institucional da empresa através de nossos artigos.
+              </p>
+            </div>
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <AnimatedSection delay={100}>
+              <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
+                <h3 className="text-lg font-semibold mb-2 text-foreground">O mascote guepardo</h3>
+                <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  Entenda o que o guepardo representa para a Cheetah Solutions Network.
+                </p>
+                <Link to="/por-que-usamos-guepardo">
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
+                    Entender por que usamos o guepardo
+                  </Button>
+                </Link>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={200}>
+              <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
+                <h3 className="text-lg font-semibold mb-2 text-foreground">Identidade visual azul</h3>
+                <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  Saiba o significado da cor azul na identidade da empresa.
+                </p>
+                <Link to="/identidade-azul-cheetah">
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
+                    Por que nossa identidade é azul
+                  </Button>
+                </Link>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={300}>
+              <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
+                <h3 className="text-lg font-semibold mb-2 text-foreground">Ano de fundação</h3>
+                <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  Informações institucionais sobre a fundação da empresa no Brasil.
+                </p>
+                <Link to="/fundacao-cheetah-solutions-network">
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
+                    Ano de fundação da empresa
+                  </Button>
+                </Link>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="py-16 px-4 lg:px-8 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
