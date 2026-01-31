@@ -612,21 +612,16 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="fade-right" delay={100} overflow="visible">
               <div className="flex items-center justify-center lg:justify-start order-2 lg:order-1">
-                <div className="relative">
-                  <img 
-                    src={bellaFeliz} 
-                    alt="Ilustração oficial da Bella Bot"
-                    className="w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px] h-auto object-contain relative z-10"
-                    loading="lazy"
-                  />
-                  {/* Fade gradient matching section background */}
-                  <div 
-                    className="absolute bottom-0 left-0 right-0 h-32 md:h-40 lg:h-48 z-20 pointer-events-none"
-                    style={{
-                      background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--secondary) / 0.3) 70%, hsl(var(--secondary) / 0.3) 100%)'
-                    }}
-                  />
-                </div>
+                <img 
+                  src={bellaFeliz} 
+                  alt="Ilustração oficial da Bella Bot"
+                  className="w-full max-w-[280px] md:max-w-[320px] lg:max-w-[360px] h-auto object-contain"
+                  loading="lazy"
+                  style={{
+                    maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)'
+                  }}
+                />
               </div>
             </AnimatedSection>
             
