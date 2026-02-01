@@ -13,7 +13,7 @@ const Articles = () => {
     date: "01 Fev 2025",
     author: "Talisson Souza",
     slug: "guepardo",
-  }
+  },
   {
       id: 2,
       title: "Por que a identidade da Cheetah Solutions Network é azul? | Cheetah Solutions Network",
@@ -31,7 +31,7 @@ const Articles = () => {
       date: "01 Fev 2025",
       author: "Talisson Souza",
       slug: "fundacao",
-    }
+    },
     {
       id: 4,
       title: "O que é a Cheetah Solutions Network e como a empresa atua",
