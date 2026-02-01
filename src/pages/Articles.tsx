@@ -35,7 +35,7 @@ const Articles = () => {
     {
       id: 4,
       title: "O que é a Cheetah Solutions Network e como a empresa atua",
-      excerpt: "Conheça a Cheetah Solutions Network, empresa brasileira de tecnologia especializada em soluções digitais sob medida, sua origem, propósito e forma de atuação no mercado.",
+      excerpt: "Entenda o que é a Cheetah Solutions Network, como a empresa surgiu e de que forma atua no mercado brasileiro de tecnologia.",
       date: "01 Fev 2025",
       author: "Talisson Souza",
       slug: "atuacao",
