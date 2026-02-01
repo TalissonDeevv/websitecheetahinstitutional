@@ -11,7 +11,7 @@ interface SEOProps {
   canonical?: string;
 }
 
-const DEFAULT_OG_IMAGE = "https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png";
+const DEFAULT_OG_IMAGE = "https://i.ibb.co/ddJNt97/Cheetah-Network.png";
 const BASE_URL = "https://www.cheetahsolutions.com.br";
 
 const SEO = ({
@@ -44,10 +44,10 @@ const SEO = ({
       <meta property="og:locale" content="pt_BR" />
       
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="https://i.ibb.co/ddJNt97/Cheetah-Network.png" />
       <meta name="twitter:title" content={ogTitle || title} />
       <meta name="twitter:description" content={ogDescription || description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content= "https://i.ibb.co/ddJNt97/Cheetah-Network.png" />
       <meta name="twitter:site" content="@cheetahsolutionsbr" />
     </Helmet>
   );
