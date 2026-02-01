@@ -14,7 +14,8 @@ import Services from "./pages/Services";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Team from "./pages/Team";
-import Blog from "./pages/Blog";
+import Articles from "./pages/Articles";
+import ArticlePost from "./pages/ArticlePost";
 import Budget from "./pages/Budget";
 import Numbers from "./pages/Numbers";
 import ServiceBots from "./pages/ServiceBots";
@@ -40,9 +41,6 @@ import Developers from "./pages/Developers";
 import ApprovedProjects from "./pages/ApprovedProjects";
 import TrabalheConosco from "./pages/TrabalheConosco";
 import BellaBot from "./pages/BellaBot";
-import WhyCheetah from "./pages/institutional/WhyCheetah";
-import BlueIdentity from "./pages/institutional/BlueIdentity";
-import FoundingYear from "./pages/institutional/FoundingYear";
 
 const queryClient = new QueryClient();
 
@@ -74,8 +72,15 @@ const App = () => (
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contato" element={<Contact />} />
             <Route path="/equipe" element={<Team />} />
-            <Route path="/blog" element={<Blog />} />
+            
+            {/* Articles (renamed from Blog) */}
+            <Route path="/artigos" element={<Articles />} />
+            <Route path="/artigos/:slug" element={<ArticlePost />} />
+            
+            {/* Legacy blog redirects */}
+            <Route path="/blog" element={<Navigate to="/artigos" replace />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            
             <Route path="/orcamento" element={<Budget />} />
             <Route path="/gestao" element={<Management />} />
             <Route path="/verificacao-equipe" element={<TeamVerification />} />
@@ -89,10 +94,10 @@ const App = () => (
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
             <Route path="/bellabot" element={<BellaBot />} />
 
-            {/* Institutional Articles */}
-            <Route path="/por-que-usamos-guepardo" element={<WhyCheetah />} />
-            <Route path="/identidade-azul-cheetah" element={<BlueIdentity />} />
-            <Route path="/fundacao-cheetah-solutions-network" element={<FoundingYear />} />
+            {/* Institutional Articles - Direct URLs */}
+            <Route path="/por-que-usamos-guepardo" element={<Navigate to="/artigos/por-que-usamos-guepardo" replace />} />
+            <Route path="/identidade-azul-cheetah" element={<Navigate to="/artigos/identidade-azul-cheetah" replace />} />
+            <Route path="/fundacao-cheetah-solutions-network" element={<Navigate to="/artigos/fundacao-cheetah-solutions-network" replace />} />
 
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />

@@ -14,11 +14,11 @@ const BlogHeader = ({ title, date, author, readTime }: BlogHeaderProps) => {
     <div className="pt-28 pb-12 px-4 animate-fade-in">
       <div className="container mx-auto max-w-4xl">
         <Link 
-          to="/blog" 
+          to="/artigos" 
           className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6 text-sm font-medium"
         >
           <ArrowLeft className="h-4 w-4" />
-          Voltar ao Blog
+          Voltar aos Artigos
         </Link>
         
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">

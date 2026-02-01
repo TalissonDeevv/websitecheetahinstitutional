@@ -663,7 +663,7 @@ const Index = () => {
                 Sobre a <span className="text-primary">Cheetah Solutions Network</span>
               </h2>
               <p className="text-muted-foreground max-w-3xl">
-                Conheça mais sobre a identidade, história e posicionamento institucional da empresa através de nossos artigos.
+                A Cheetah Solutions Network publica artigos institucionais que esclarecem dúvidas frequentes sobre sua identidade, história e posicionamento no mercado de tecnologia.
               </p>
             </div>
           </AnimatedSection>
@@ -675,7 +675,7 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mb-4 flex-grow">
                   Entenda o que o guepardo representa para a Cheetah Solutions Network.
                 </p>
-                <Link to="/por-que-usamos-guepardo">
+                <Link to="/artigos/por-que-usamos-guepardo">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
                     Entender por que usamos o guepardo
                   </Button>
@@ -689,7 +689,7 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mb-4 flex-grow">
                   Saiba o significado da cor azul na identidade da empresa.
                 </p>
-                <Link to="/identidade-azul-cheetah">
+                <Link to="/artigos/identidade-azul-cheetah">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
                     Por que nossa identidade é azul
                   </Button>
@@ -703,7 +703,7 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mb-4 flex-grow">
                   Informações institucionais sobre a fundação da empresa no Brasil.
                 </p>
-                <Link to="/fundacao-cheetah-solutions-network">
+                <Link to="/artigos/fundacao-cheetah-solutions-network">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
                     Ano de fundação da empresa
                   </Button>

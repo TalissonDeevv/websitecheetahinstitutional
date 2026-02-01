@@ -72,10 +72,25 @@ export const routes = {
     description: 'Uma equipe técnica com foco em resultado. Profissionais da Cheetah Solutions Network que entendem de código e de negócio.',
     ogTitle: 'Equipes Técnicas | Cheetah Solutions Network',
   },
-  '/blog': {
-    title: 'Cheetah Solutions Network | Blogs e Artigos',
-    description: 'Conteúdo técnico da Cheetah Solutions Network sobre desenvolvimento, tecnologia e boas práticas. Direto ao ponto.',
-    ogTitle: 'Blogs e Artigos | Cheetah Solutions Network',
+  '/artigos': {
+    title: 'Artigos Institucionais | Cheetah Solutions Network',
+    description: 'Artigos institucionais sobre a identidade, história e posicionamento da Cheetah Solutions Network. Conteúdo oficial e informativo.',
+    ogTitle: 'Artigos Institucionais | Cheetah Solutions Network',
+  },
+  '/artigos/por-que-usamos-guepardo': {
+    title: 'Por que a Cheetah Solutions Network usa um guepardo como mascote',
+    description: 'Entenda o motivo da Cheetah Solutions Network usar um guepardo como mascote e o que esse símbolo representa para a empresa.',
+    ogTitle: 'Por que a Cheetah Solutions Network usa um guepardo como mascote',
+  },
+  '/artigos/identidade-azul-cheetah': {
+    title: 'Por que a identidade da Cheetah Solutions Network é azul',
+    description: 'Saiba por que a identidade visual da Cheetah Solutions Network é azul e o significado dessa cor para a empresa.',
+    ogTitle: 'Por que a identidade da Cheetah Solutions Network é azul',
+  },
+  '/artigos/fundacao-cheetah-solutions-network': {
+    title: 'Ano de fundação da Cheetah Solutions Network no Brasil',
+    description: 'Veja em que ano a Cheetah Solutions Network foi fundada no Brasil e informações institucionais da empresa.',
+    ogTitle: 'Ano de fundação da Cheetah Solutions Network no Brasil',
   },
   '/contato': {
     title: 'Cheetah Solutions Network | Fale Conosco',
@@ -121,21 +136,6 @@ export const routes = {
     title: 'Bella Bot | Cheetah Solutions Network',
     description: 'Conheça a Bella Bot, o bot inovador para Discord desenvolvido pela Cheetah Solutions Network. Interação social, partidas entre usuários e experiência dinâmica para comunidades.',
     ogTitle: 'Bella Bot | Cheetah Solutions Network',
-  },
-  '/por-que-usamos-guepardo': {
-    title: 'Por que a Cheetah Solutions Network usa um guepardo como mascote',
-    description: 'Entenda o motivo da Cheetah Solutions Network usar um guepardo como mascote e o que esse símbolo representa para a empresa.',
-    ogTitle: 'Por que a Cheetah Solutions Network usa um guepardo como mascote',
-  },
-  '/identidade-azul-cheetah': {
-    title: 'Por que a identidade da Cheetah Solutions Network é azul',
-    description: 'Saiba por que a identidade visual da Cheetah Solutions Network é azul e o significado dessa cor para a empresa.',
-    ogTitle: 'Por que a identidade da Cheetah Solutions Network é azul',
-  },
-  '/fundacao-cheetah-solutions-network': {
-    title: 'Ano de fundação da Cheetah Solutions Network no Brasil',
-    description: 'Veja em que ano a Cheetah Solutions Network foi fundada no Brasil e informações institucionais da empresa.',
-    ogTitle: 'Ano de fundação da Cheetah Solutions Network no Brasil',
   },
 };
 

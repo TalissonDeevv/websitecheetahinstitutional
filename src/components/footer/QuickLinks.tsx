@@ -6,7 +6,7 @@ const QuickLinks = () => {
     { name: "Sobre", path: "/sobre" },
     { name: "Serviços", path: "/servicos" },
     { name: "Equipe", path: "/equipe" },
-    { name: "Blog", path: "/blog" },
+    { name: "Artigos", path: "/artigos" },
     { name: "Contato", path: "/contato" },
     { name: "FAQ", path: "/faq" },
   ];
