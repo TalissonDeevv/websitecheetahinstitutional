@@ -37,7 +37,7 @@ const SEO = ({
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content= "https://i.ibb.co/ddJNt97/Cheetah-Network.png" />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:site_name" content="Cheetah Solutions Network" />
