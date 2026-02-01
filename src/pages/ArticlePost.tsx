@@ -18,7 +18,7 @@ const ArticlePost = () => {
     seoDescription: string;
     content: React.ReactNode;
   }> = {
-    "por-que-usamos-guepardo": {
+    "guepardo": {
       title: "Por que a Cheetah Solutions Network usa um guepardo como mascote?",
       date: "01 de Fevereiro, 2025",
       author: "Talisson Souza",
@@ -72,7 +72,7 @@ const ArticlePost = () => {
         </>
       )
     },
-    "identidade-azul-cheetah": {
+    "identidade": {
       title: "Por que a identidade da Cheetah Solutions Network é azul?",
       date: "01 de Fevereiro, 2025",
       author: "Talisson Souza",
@@ -123,7 +123,7 @@ const ArticlePost = () => {
         </>
       )
     },
-    "fundacao-cheetah-solutions-network": {
+    "fundacao": {
       title: "Em que ano a Cheetah Solutions Network foi fundada no Brasil?",
       date: "01 de Fevereiro, 2025",
       author: "Talisson Souza",
