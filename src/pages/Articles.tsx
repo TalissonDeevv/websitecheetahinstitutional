@@ -38,7 +38,7 @@ const Articles = () => {
       excerpt: "Conheça a Cheetah Solutions Network, empresa brasileira de tecnologia especializada em soluções digitais sob medida, sua origem, propósito e forma de atuação no mercado.",
       date: "01 Fev 2025",
       author: "Talisson Souza",
-      slug: "fundacao",
+      slug: "atuacao",
     }
   ];
 
