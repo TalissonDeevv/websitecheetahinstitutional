@@ -11,7 +11,7 @@ const Articles = () => {
     title: "Por que a Cheetah Solutions Network usa um guepardo como mascote?",
     excerpt: "Entenda o motivo da Cheetah Solutions Network adotar o guepardo como símbolo institucional e o que esse animal representa para a empresa.",
     date: "01 Fev 2025",
-    author: "Equipe Cheetah",
+    author: "Talisson Souza",
     slug: "por-que-usamos-guepardo",
   };
 
@@ -21,7 +21,7 @@ const Articles = () => {
       title: "Por que a identidade da Cheetah Solutions Network é azul?",
       excerpt: "Saiba o significado da cor azul na identidade visual da empresa e como ela representa confiança, segurança e profissionalismo.",
       date: "01 Fev 2025",
-      author: "Cheetah Solutions Network",
+      author: "Talisson Souza",
       slug: "identidade-azul-cheetah",
     },
     {
@@ -29,7 +29,7 @@ const Articles = () => {
       title: "Em que ano a Cheetah Solutions Network foi fundada no Brasil?",
       excerpt: "Informações institucionais sobre a fundação da empresa e o contexto de sua criação no mercado brasileiro.",
       date: "01 Fev 2025",
-      author: "Cheetah Solutions Network",
+      author: "Talisson Souza",
       slug: "fundacao-cheetah-solutions-network",
     }
   ];
