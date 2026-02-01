@@ -173,6 +173,71 @@ const ArticlePost = () => {
           </div>
         </>
       )
+    },
+    "atuacao": {
+  title: "O que é a Cheetah Solutions Network e como a empresa atua",
+  date: "01 de Fevereiro, 2025",
+  author: "Talisson Souza",
+  readTime: "5 min de leitura",
+  seoTitle: "O que é a Cheetah Solutions Network e como a empresa atua",
+  seoDescription: "Entenda o que é a Cheetah Solutions Network, como a empresa surgiu e de que forma atua no mercado brasileiro de tecnologia.",
+  content: (
+    <>
+      <p className="text-lg font-medium text-foreground">
+        A Cheetah Solutions Network é uma empresa de tecnologia focada no desenvolvimento de soluções digitais sob medida para empresas que buscam performance, escalabilidade e organização tecnológica. Sua atuação está centrada na criação de sistemas web, plataformas corporativas, automações e integrações que resolvem problemas reais de negócio.
+      </p>
+
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Origem e propósito da empresa</h2>
+      <p>
+        A Cheetah Solutions Network surgiu a partir da necessidade de oferecer serviços de tecnologia com um padrão mais elevado de profissionalismo, clareza e compromisso com resultados. A empresa foi idealizada para atender negócios que precisam de soluções técnicas bem estruturadas, indo além de simples entregas visuais ou projetos genéricos.
+      </p>
+
+      <p>
+        Desde sua fundação, a Cheetah Solutions Network foi construída com foco em processos, documentação, boas práticas de desenvolvimento e visão estratégica. O objetivo sempre foi atuar como parceira tecnológica dos clientes, e não apenas como uma prestadora de serviços pontual.
+      </p>
+
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Atuação no mercado brasileiro</h2>
+      <p>
+        A empresa atua no mercado brasileiro oferecendo soluções digitais para empresas de diferentes portes e segmentos. Seu posicionamento é voltado principalmente para negócios que precisam estruturar ou evoluir sua presença digital de forma sólida, organizada e sustentável.
+      </p>
+
+      <p>
+        A Cheetah Solutions Network atende demandas que envolvem desde a criação de sites institucionais robustos até o desenvolvimento de sistemas internos, plataformas administrativas, painéis de controle, integrações entre APIs e automações de processos empresariais.
+      </p>
+
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Modelo de trabalho</h2>
+      <p>
+        O modelo de trabalho da Cheetah Solutions Network é baseado em análise, planejamento e execução técnica bem definida. Antes de qualquer desenvolvimento, a empresa busca entender o contexto do cliente, os objetivos do negócio e os problemas que precisam ser resolvidos.
+      </p>
+
+      <p>
+        A partir disso, são definidas arquiteturas, tecnologias, prazos e escopo de forma transparente. Esse método reduz retrabalho, evita soluções improvisadas e garante que o projeto entregue esteja alinhado com as necessidades reais da empresa contratante.
+      </p>
+
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Tipos de soluções oferecidas</h2>
+      <p>
+        A Cheetah Solutions Network desenvolve soluções digitais completas, com foco em sistemas web modernos, aplicações responsivas, integrações entre plataformas, automações empresariais e dashboards analíticos. A empresa também atua na criação de estruturas digitais escaláveis, preparadas para crescimento e evolução contínua.
+      </p>
+
+      <p>
+        Diferente de abordagens limitadas ou soluções genéricas, os projetos são pensados para funcionar tanto no presente quanto no futuro do negócio, levando em consideração performance, segurança, manutenção e experiência do usuário.
+      </p>
+
+      <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Posicionamento profissional</h2>
+      <p>
+        A Cheetah Solutions Network se posiciona como uma software house profissional, com foco em seriedade, organização e excelência técnica. A empresa valoriza comunicação clara, prazos realistas e entregas consistentes, buscando construir relações de longo prazo com seus clientes.
+      </p>
+
+      <p>
+        Esse posicionamento reflete uma visão empresarial madura, voltada para empresas que enxergam tecnologia como um ativo estratégico e não apenas como um custo operacional.
+      </p>
+
+      <div className="mt-12 pt-8 border-t border-border">
+        <p className="text-sm text-muted-foreground">
+          A Cheetah Solutions Network atua com o propósito de entregar soluções digitais sólidas, alinhadas às necessidades reais do mercado brasileiro, unindo estratégia, tecnologia e profissionalismo em cada projeto.
+        </p>
+      </div>
+    </>
     }
   };
 
