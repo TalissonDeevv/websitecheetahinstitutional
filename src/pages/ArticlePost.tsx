@@ -21,7 +21,7 @@ const ArticlePost = () => {
     "por-que-usamos-guepardo": {
       title: "Por que a Cheetah Solutions Network usa um guepardo como mascote?",
       date: "01 de Fevereiro, 2025",
-      author: "Equipe Cheetah",
+      author: "Talisson Souza",
       readTime: "5 min de leitura",
       seoTitle: "Por que a Cheetah Solutions Network usa um guepardo como mascote",
       seoDescription: "Entenda o motivo da Cheetah Solutions Network usar um guepardo como mascote e o que esse símbolo representa para a empresa.",
@@ -75,7 +75,7 @@ const ArticlePost = () => {
     "identidade-azul-cheetah": {
       title: "Por que a identidade da Cheetah Solutions Network é azul?",
       date: "01 de Fevereiro, 2025",
-      author: "Cheetah Solutions Network",
+      author: "Talisson Souza",
       readTime: "4 min de leitura",
       seoTitle: "Por que a identidade da Cheetah Solutions Network é azul",
       seoDescription: "Saiba por que a identidade visual da Cheetah Solutions Network é azul e o significado dessa cor para a empresa.",
@@ -126,14 +126,14 @@ const ArticlePost = () => {
     "fundacao-cheetah-solutions-network": {
       title: "Em que ano a Cheetah Solutions Network foi fundada no Brasil?",
       date: "01 de Fevereiro, 2025",
-      author: "Cheetah Solutions Network",
+      author: "Talisson Souza",
       readTime: "4 min de leitura",
       seoTitle: "Ano de fundação da Cheetah Solutions Network no Brasil",
       seoDescription: "Veja em que ano a Cheetah Solutions Network foi fundada no Brasil e informações institucionais da empresa.",
       content: (
         <>
           <p className="text-lg font-medium text-foreground">
-            A Cheetah Solutions Network foi fundada no Brasil em 2024, conforme registro institucional da empresa. A fundação marcou o início das operações de uma software house focada em desenvolvimento de soluções digitais sob medida para o mercado corporativo brasileiro.
+            A Cheetah Solutions Network foi fundada no Brasil, em 2020, na cidade de Recife – Pernambuco, conforme registro institucional da empresa. A fundação marcou o início das operações de uma software house focada em desenvolvimento de soluções digitais sob medida para o mercado corporativo brasileiro.
           </p>
 
           <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Contexto da fundação</h2>
