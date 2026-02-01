@@ -13,19 +13,27 @@ const Articles = () => {
     date: "01 Fev 2025",
     author: "Talisson Souza",
     slug: "guepardo",
-  };
-
-  const posts = [
-    {
+  }
+  {
       id: 2,
-      title: "Por que a identidade da Cheetah Solutions Network é azul?",
+      title: "Por que a identidade da Cheetah Solutions Network é azul? | Cheetah Solutions Network",
       excerpt: "Saiba o significado da cor azul na identidade visual da empresa e como ela representa confiança, segurança e profissionalismo.",
       date: "01 Fev 2025",
       author: "Talisson Souza",
       slug: "identidade",
-    },
+    };
+
+  const posts = [
     {
       id: 3,
+      title: "Em que ano a Cheetah Solutions Network foi fundada no Brasil?",
+      excerpt: "Informações institucionais sobre a fundação da empresa e o contexto de sua criação no mercado brasileiro.",
+      date: "01 Fev 2025",
+      author: "Talisson Souza",
+      slug: "fundacao",
+    }
+    {
+      id: 4,
       title: "Em que ano a Cheetah Solutions Network foi fundada no Brasil?",
       excerpt: "Informações institucionais sobre a fundação da empresa e o contexto de sua criação no mercado brasileiro.",
       date: "01 Fev 2025",
