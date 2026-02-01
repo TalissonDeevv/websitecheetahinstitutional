@@ -12,7 +12,7 @@ const Articles = () => {
     excerpt: "Entenda o motivo da Cheetah Solutions Network adotar o guepardo como símbolo institucional e o que esse animal representa para a empresa.",
     date: "01 Fev 2025",
     author: "Talisson Souza",
-    slug: "por-que-usamos-guepardo",
+    slug: "guepardo",
   };
 
   const posts = [
@@ -22,7 +22,7 @@ const Articles = () => {
       excerpt: "Saiba o significado da cor azul na identidade visual da empresa e como ela representa confiança, segurança e profissionalismo.",
       date: "01 Fev 2025",
       author: "Talisson Souza",
-      slug: "identidade-azul-cheetah",
+      slug: "identidade",
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const Articles = () => {
       excerpt: "Informações institucionais sobre a fundação da empresa e o contexto de sua criação no mercado brasileiro.",
       date: "01 Fev 2025",
       author: "Talisson Souza",
-      slug: "fundacao-cheetah-solutions-network",
+      slug: "fundacao",
     }
   ];
 
