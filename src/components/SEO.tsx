@@ -11,8 +11,9 @@ interface SEOProps {
   canonical?: string;
 }
 
-const DEFAULT_OG_IMAGE = "https://i.ibb.co/gFfPkTZ7/Cheetah-Solutions-Network.png";
+const DEFAULT_OG_IMAGE = "https://i.ibb.co/ddJNt97/Cheetah-Network.png";
 const BASE_URL = "https://www.cheetahsolutions.com.br";
+const BASE_URL = "https://cheetahsolutions.com.br";
 
 const SEO = ({
   title,
