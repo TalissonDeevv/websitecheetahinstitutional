@@ -8,38 +8,70 @@ import SEO from "@/components/SEO";
 const Articles = () => {
   const featuredPost = {
     id: 1,
-    title: "Por que a Cheetah Solutions Network usa um guepardo como mascote?",
-    excerpt: "Entenda o motivo da Cheetah Solutions Network adotar o guepardo como símbolo institucional e o que esse animal representa para a empresa.",
+    title: "O que é a Cheetah Solutions Network e como a empresa atua",
+    excerpt: "Entenda o que é a Cheetah Solutions Network, como a empresa surgiu e de que forma atua no mercado brasileiro de tecnologia.",
     date: "01 Fev 2025",
     author: "Talisson Souza",
-    slug: "guepardo",
-  },
-  {
-      id: 2,
-      title: "Por que a identidade da Cheetah Solutions Network é azul? | Cheetah Solutions Network",
-      excerpt: "Saiba o significado da cor azul na identidade visual da empresa e como ela representa confiança, segurança e profissionalismo.",
-      date: "01 Fev 2025",
-      author: "Talisson Souza",
-      slug: "identidade",
-    };
+    slug: "atuacao",
+  };
 
   const posts = [
     {
+      id: 2,
+      title: "Qual é a missão, visão e valores da Cheetah Solutions Network",
+      excerpt: "Conheça os princípios que orientam a atuação da empresa no mercado de tecnologia.",
+      date: "01 Fev 2025",
+      author: "Talisson Souza",
+      slug: "missao",
+    },
+    {
       id: 3,
+      title: "Como funciona o ecossistema de projetos da Cheetah Solutions Network",
+      excerpt: "Entenda como a empresa organiza seus projetos próprios, experimentações e soluções internas.",
+      date: "01 Fev 2025",
+      author: "Talisson Souza",
+      slug: "ecossistema",
+    },
+    {
+      id: 4,
+      title: "Qual é o posicionamento da Cheetah Solutions Network no mercado",
+      excerpt: "Saiba como a empresa se posiciona no mercado de tecnologia brasileiro.",
+      date: "01 Fev 2025",
+      author: "Talisson Souza",
+      slug: "posicionamento",
+    },
+    {
+      id: 5,
+      title: "Por que a Cheetah Solutions Network não atua como agência tradicional",
+      excerpt: "Entenda as diferenças entre uma software house e uma agência tradicional.",
+      date: "01 Fev 2025",
+      author: "Talisson Souza",
+      slug: "agencia-tradicional",
+    },
+    {
+      id: 6,
+      title: "Por que a Cheetah Solutions Network usa um guepardo como mascote?",
+      excerpt: "Entenda o motivo da Cheetah Solutions Network adotar o guepardo como símbolo institucional.",
+      date: "01 Fev 2025",
+      author: "Talisson Souza",
+      slug: "guepardo",
+    },
+    {
+      id: 7,
+      title: "Por que a identidade da Cheetah Solutions Network é azul?",
+      excerpt: "Saiba o significado da cor azul na identidade visual da empresa.",
+      date: "01 Fev 2025",
+      author: "Talisson Souza",
+      slug: "identidade",
+    },
+    {
+      id: 8,
       title: "Em que ano a Cheetah Solutions Network foi fundada no Brasil?",
-      excerpt: "Informações institucionais sobre a fundação da empresa e o contexto de sua criação no mercado brasileiro.",
+      excerpt: "Informações institucionais sobre a fundação da empresa no mercado brasileiro.",
       date: "01 Fev 2025",
       author: "Talisson Souza",
       slug: "fundacao",
     },
-    {
-      id: 4,
-      title: "O que é a Cheetah Solutions Network e como a empresa atua",
-      excerpt: "Entenda o que é a Cheetah Solutions Network, como a empresa surgiu e de que forma atua no mercado brasileiro de tecnologia.",
-      date: "01 Fev 2025",
-      author: "Talisson Souza",
-      slug: "atuacao",
-    }
   ];
 
   return (

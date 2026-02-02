@@ -11,7 +11,7 @@ interface SEOProps {
   canonical?: string;
 }
 
-const DEFAULT_OG_IMAGE = "https://i.ibb.co/ddJNt97/Cheetah-Network.png";
+const DEFAULT_OG_IMAGE = "https://i.ibb.co/gFfPkTZ7/Cheetah-Solutions-Network.png";
 const BASE_URL = "https://www.cheetahsolutions.com.br";
 
 const SEO = ({
@@ -37,17 +37,19 @@ const SEO = ({
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:image" content= "https://i.ibb.co/ddJNt97/Cheetah-Network.png" />
+      <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:site_name" content="Cheetah Solutions Network" />
       <meta property="og:locale" content="pt_BR" />
       
       {/* Twitter Card */}
-      <meta name="twitter:card" content="https://i.ibb.co/ddJNt97/Cheetah-Network.png" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={ogTitle || title} />
       <meta name="twitter:description" content={ogDescription || description} />
-      <meta name="twitter:image" content= "https://i.ibb.co/ddJNt97/Cheetah-Network.png" />
+      <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
       <meta name="twitter:site" content="@cheetahsolutionsbr" />
     </Helmet>
   );

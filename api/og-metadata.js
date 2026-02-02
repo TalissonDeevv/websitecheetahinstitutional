@@ -77,17 +77,42 @@ export const routes = {
     description: 'Artigos institucionais sobre a identidade, história e posicionamento da Cheetah Solutions Network. Conteúdo oficial e informativo.',
     ogTitle: 'Artigos Institucionais | Cheetah Solutions Network',
   },
-  '/artigos/por-que-usamos-guepardo': {
+  '/artigos/atuacao': {
+    title: 'O que é a Cheetah Solutions Network e como a empresa atua',
+    description: 'Entenda o que é a Cheetah Solutions Network, como a empresa surgiu e de que forma atua no mercado brasileiro de tecnologia.',
+    ogTitle: 'O que é a Cheetah Solutions Network e como a empresa atua',
+  },
+  '/artigos/missao': {
+    title: 'Missão, visão e valores da Cheetah Solutions Network',
+    description: 'Conheça a missão, visão e valores da Cheetah Solutions Network. Princípios que orientam a atuação da empresa no mercado de tecnologia.',
+    ogTitle: 'Missão, visão e valores da Cheetah Solutions Network',
+  },
+  '/artigos/ecossistema': {
+    title: 'Ecossistema de projetos da Cheetah Solutions Network',
+    description: 'Entenda como funciona o ecossistema de projetos da Cheetah Solutions Network, incluindo projetos próprios, experimentações e governança técnica.',
+    ogTitle: 'Ecossistema de projetos da Cheetah Solutions Network',
+  },
+  '/artigos/posicionamento': {
+    title: 'Posicionamento da Cheetah Solutions Network no mercado',
+    description: 'Saiba como a Cheetah Solutions Network se posiciona no mercado de tecnologia brasileiro, com foco técnico e soluções sob medida.',
+    ogTitle: 'Posicionamento da Cheetah Solutions Network no mercado',
+  },
+  '/artigos/agencia-tradicional': {
+    title: 'Por que a Cheetah Solutions Network não é uma agência',
+    description: 'Entenda por que a Cheetah Solutions Network não atua como agência tradicional e quais são as diferenças entre software house e agência.',
+    ogTitle: 'Por que a Cheetah Solutions Network não é uma agência',
+  },
+  '/artigos/guepardo': {
     title: 'Por que a Cheetah Solutions Network usa um guepardo como mascote',
     description: 'Entenda o motivo da Cheetah Solutions Network usar um guepardo como mascote e o que esse símbolo representa para a empresa.',
     ogTitle: 'Por que a Cheetah Solutions Network usa um guepardo como mascote',
   },
-  '/artigos/identidade-azul-cheetah': {
+  '/artigos/identidade': {
     title: 'Por que a identidade da Cheetah Solutions Network é azul',
     description: 'Saiba por que a identidade visual da Cheetah Solutions Network é azul e o significado dessa cor para a empresa.',
     ogTitle: 'Por que a identidade da Cheetah Solutions Network é azul',
   },
-  '/artigos/fundacao-cheetah-solutions-network': {
+  '/artigos/fundacao': {
     title: 'Ano de fundação da Cheetah Solutions Network no Brasil',
     description: 'Veja em que ano a Cheetah Solutions Network foi fundada no Brasil e informações institucionais da empresa.',
     ogTitle: 'Ano de fundação da Cheetah Solutions Network no Brasil',
