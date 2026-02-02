@@ -668,16 +668,30 @@ const Index = () => {
             </div>
           </AnimatedSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <AnimatedSection delay={100}>
               <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
-                <h3 className="text-lg font-semibold mb-2 text-foreground">O mascote guepardo</h3>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">O que é a Cheetah</h3>
                 <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                  Entenda o que o guepardo representa para a Cheetah Solutions Network.
+                  Entenda o que é a empresa e como atua no mercado de tecnologia.
                 </p>
-                <Link to="/artigos/por-que-usamos-guepardo">
+                <Link to="/artigos/atuacao">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
-                    Entender por que usamos o guepardo
+                    Conhecer a atuação
+                  </Button>
+                </Link>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={150}>
+              <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
+                <h3 className="text-lg font-semibold mb-2 text-foreground">Missão, visão e valores</h3>
+                <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  Princípios que orientam a atuação da empresa.
+                </p>
+                <Link to="/artigos/missao">
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
+                    Ver missão e valores
                   </Button>
                 </Link>
               </div>
@@ -685,13 +699,27 @@ const Index = () => {
             
             <AnimatedSection delay={200}>
               <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
-                <h3 className="text-lg font-semibold mb-2 text-foreground">Identidade visual azul</h3>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">Ecossistema de projetos</h3>
                 <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                  Saiba o significado da cor azul na identidade da empresa.
+                  Como funcionam os projetos próprios e experimentações.
                 </p>
-                <Link to="/artigos/identidade-azul-cheetah">
+                <Link to="/artigos/ecossistema">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
-                    Por que nossa identidade é azul
+                    Entender o ecossistema
+                  </Button>
+                </Link>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={250}>
+              <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
+                <h3 className="text-lg font-semibold mb-2 text-foreground">Posicionamento</h3>
+                <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                  Como a empresa se posiciona no mercado de tecnologia.
+                </p>
+                <Link to="/artigos/posicionamento">
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
+                    Ver posicionamento
                   </Button>
                 </Link>
               </div>
@@ -699,18 +727,29 @@ const Index = () => {
             
             <AnimatedSection delay={300}>
               <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
-                <h3 className="text-lg font-semibold mb-2 text-foreground">Ano de fundação</h3>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">Por que não somos agência</h3>
                 <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                  Informações institucionais sobre a fundação da empresa no Brasil.
+                  Diferenças entre software house e agência tradicional.
                 </p>
-                <Link to="/artigos/fundacao-cheetah-solutions-network">
+                <Link to="/artigos/agencia-tradicional">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
-                    Ano de fundação da empresa
+                    Entender a diferença
                   </Button>
                 </Link>
               </div>
             </AnimatedSection>
           </div>
+          
+          <AnimatedSection delay={350}>
+            <div className="text-center">
+              <Link to="/artigos">
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  Ver todos os artigos
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

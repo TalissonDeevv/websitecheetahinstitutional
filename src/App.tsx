@@ -94,10 +94,15 @@ const App = () => (
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
             <Route path="/bellabot" element={<BellaBot />} />
 
-            {/* Institutional Articles - Direct URLs */}
-            <Route path="/por-que-usamos-guepardo" element={<Navigate to="/artigos/por-que-usamos-guepardo" replace />} />
-            <Route path="/identidade-azul-cheetah" element={<Navigate to="/artigos/identidade-azul-cheetah" replace />} />
-            <Route path="/fundacao-cheetah-solutions-network" element={<Navigate to="/artigos/fundacao-cheetah-solutions-network" replace />} />
+            {/* Institutional Articles - Direct URL Redirects */}
+            <Route path="/atuacao" element={<Navigate to="/artigos/atuacao" replace />} />
+            <Route path="/missao" element={<Navigate to="/artigos/missao" replace />} />
+            <Route path="/ecossistema" element={<Navigate to="/artigos/ecossistema" replace />} />
+            <Route path="/posicionamento" element={<Navigate to="/artigos/posicionamento" replace />} />
+            <Route path="/agencia-tradicional" element={<Navigate to="/artigos/agencia-tradicional" replace />} />
+            <Route path="/por-que-usamos-guepardo" element={<Navigate to="/artigos/guepardo" replace />} />
+            <Route path="/identidade-azul-cheetah" element={<Navigate to="/artigos/identidade" replace />} />
+            <Route path="/fundacao-cheetah-solutions-network" element={<Navigate to="/artigos/fundacao" replace />} />
 
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />
