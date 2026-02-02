@@ -62,7 +62,7 @@ export const WebPageJsonLd = ({ title, description, url }: WebPageJsonLdProps) =
       name: "Cheetah Solutions Network",
       logo: {
         "@type": "ImageObject",
-        url: "https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png"
+        url: "https://i.ibb.co/ddJNt97/Cheetah-Network.png"
       }
     }
   };
