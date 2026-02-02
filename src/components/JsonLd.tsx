@@ -11,9 +11,9 @@ export const OrganizationJsonLd = ({ type = "Organization" }: OrganizationJsonLd
     name: "Cheetah Solutions Network",
     alternateName: "Cheetah Solutions",
     url: "https://www.cheetahsolutions.com.br",
-    logo: "https://i.ibb.co/wrrLs7jQ/Cheetah-Solutions.png",
+    logo: "https://i.ibb.co/ddJNt97/Cheetah-Network.png",
     description: "Software house especializada em desenvolvimento de software sob medida, sistemas web, aplicativos mobile, bots e automação.",
-    foundingDate: "2023",
+    foundingDate: "2020",
     sameAs: [
       "https://www.instagram.com/cheetahsolutionsbr",
       "https://www.linkedin.com/company/cheetahsolutionsbr",
