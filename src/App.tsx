@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "@/components/ScrollToTop";
 import OverflowDebugGate from "@/components/debug/OverflowDebugGate";
 
+import DiscordPopup from "./components/DiscordPopup";
 import CheetahSolidaria from "./pages/CheetahSolidaria";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -53,6 +54,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <OverflowDebugGate />
+          <DiscordPopup />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/sobre" element={<About />} />
