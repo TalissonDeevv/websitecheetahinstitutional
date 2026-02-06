@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,47 +16,69 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 );
 
 const DiscordPopup = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 300);
+  };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 max-w-sm">
+    <div 
+      className={`fixed bottom-4 right-4 z-50 w-[320px] max-w-[calc(100vw-2rem)] transition-all duration-300 ease-out ${
+        isClosing 
+          ? "opacity-0 translate-y-2" 
+          : "opacity-100 translate-y-0"
+      }`}
+    >
       <Card className="relative border-primary/20 bg-card/95 backdrop-blur-sm shadow-lg shadow-primary/5">
         <button
-          onClick={() => setIsVisible(false)}
-          className="absolute top-3 right-3 text-muted-foreground hover:text-foreground transition-colors p-1 rounded-full hover:bg-muted"
+          onClick={handleClose}
+          className="absolute top-2.5 right-2.5 text-muted-foreground hover:text-foreground transition-colors p-1 rounded-full hover:bg-muted"
           aria-label="Fechar"
         >
-          <X className="h-4 w-4" />
+          <X className="h-3.5 w-3.5" />
         </button>
         
-        <CardContent className="pt-6 pr-10">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="p-2 rounded-lg bg-primary/10">
-              <DiscordIcon className="h-5 w-5 text-primary" />
+        <CardContent className="p-4 pr-8">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="p-1.5 rounded-md bg-primary/10">
+              <DiscordIcon className="h-4 w-4 text-primary" />
             </div>
-            <h3 className="text-lg font-semibold text-foreground">
+            <h3 className="text-sm font-semibold text-foreground">
               Gosta de Programação e Tecnologia?
             </h3>
           </div>
           
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-            Faça parte da nossa comunidade oficial voltada para quem se interessa por programação, tecnologia e desenvolvimento de software. Um espaço para aprender, trocar experiências, acompanhar projetos reais e evoluir junto com outros profissionais da área.
+          <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
+            Participe da comunidade oficial da Cheetah Solutions Network e conecte-se com pessoas que vivem tecnologia, programação e projetos reais.
           </p>
           
-          <Button asChild className="w-full mb-3 gap-2">
+          <Button asChild size="sm" className="w-full gap-2">
             <a 
               href="https://discord.gg/H82XM7saMR" 
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <DiscordIcon className="h-4 w-4" />
+              <DiscordIcon className="h-3.5 w-3.5" />
               Entrar no Discord
             </a>
           </Button>
           
-          <p className="text-xs text-muted-foreground text-center opacity-70">
+          <p className="text-[10px] text-muted-foreground text-center mt-2 opacity-60">
             Comunidade oficial da Cheetah Solutions Network
           </p>
         </CardContent>
