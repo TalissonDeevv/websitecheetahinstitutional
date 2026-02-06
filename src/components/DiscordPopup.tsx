@@ -17,11 +17,16 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 
 const DiscordPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
+      // Trigger animation after mount
+      requestAnimationFrame(() => {
+        setIsAnimating(true);
+      });
     }, 1500);
 
     return () => clearTimeout(timer);
@@ -31,55 +36,69 @@ const DiscordPopup = () => {
     setIsClosing(true);
     setTimeout(() => {
       setIsVisible(false);
-    }, 300);
+    }, 350);
   };
 
   if (!isVisible) return null;
 
   return (
     <div 
-      className={`fixed bottom-4 right-4 z-50 w-[320px] max-w-[calc(100vw-2rem)] transition-all duration-300 ease-out ${
+      className={`fixed bottom-4 right-4 z-50 w-[340px] max-w-[calc(100vw-2rem)] transform transition-all duration-[350ms] ease-out ${
         isClosing 
-          ? "opacity-0 translate-y-2" 
-          : "opacity-100 translate-y-0"
+          ? "opacity-0 translate-y-4 scale-95" 
+          : isAnimating 
+            ? "opacity-100 translate-y-0 scale-100" 
+            : "opacity-0 translate-y-6 scale-95"
       }`}
     >
-      <Card className="relative border-primary/20 bg-card/95 backdrop-blur-sm shadow-lg shadow-primary/5">
+      {/* Glow effect behind card */}
+      <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-xl blur-xl opacity-50" />
+      
+      <Card className="relative overflow-hidden border-primary/15 bg-card/98 backdrop-blur-md shadow-2xl shadow-black/20">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
+        
+        {/* Top accent line */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        
         <button
           onClick={handleClose}
-          className="absolute top-2.5 right-2.5 text-muted-foreground hover:text-foreground transition-colors p-1 rounded-full hover:bg-muted"
+          className="absolute top-3 right-3 text-muted-foreground/60 hover:text-foreground transition-all duration-200 p-1.5 rounded-full hover:bg-muted/50 z-10"
           aria-label="Fechar"
         >
-          <X className="h-3.5 w-3.5" />
+          <X className="h-4 w-4" />
         </button>
         
-        <CardContent className="p-4 pr-8">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="p-1.5 rounded-md bg-primary/10">
-              <DiscordIcon className="h-4 w-4 text-primary" />
+        <CardContent className="relative p-5 pr-10">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/30 rounded-lg blur-md" />
+              <div className="relative p-2 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20">
+                <DiscordIcon className="h-5 w-5 text-primary" />
+              </div>
             </div>
-            <h3 className="text-sm font-semibold text-foreground">
+            <h3 className="text-base font-semibold text-foreground tracking-tight">
               Gosta de Programação e Tecnologia?
             </h3>
           </div>
           
-          <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
-            Participe da comunidade oficial da Cheetah Solutions Network e conecte-se com pessoas que vivem tecnologia, programação e projetos reais.
+          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+            Participe da comunidade oficial da Cheetah Solutions Network e conecte-se com pessoas que vivem tecnologia e projetos reais.
           </p>
           
-          <Button asChild size="sm" className="w-full gap-2">
+          <Button asChild className="w-full gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow">
             <a 
               href="https://discord.gg/H82XM7saMR" 
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <DiscordIcon className="h-3.5 w-3.5" />
+              <DiscordIcon className="h-4 w-4" />
               Entrar no Discord
             </a>
           </Button>
           
-          <p className="text-[10px] text-muted-foreground text-center mt-2 opacity-60">
-            Comunidade oficial da Cheetah Solutions Network
+          <p className="text-[11px] text-muted-foreground/50 text-center mt-3 tracking-wide">
+            Comunidade oficial
           </p>
         </CardContent>
       </Card>
