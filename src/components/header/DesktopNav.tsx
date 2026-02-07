@@ -24,7 +24,7 @@ const DesktopNav = () => {
     { name: "Início", path: "/" },
     { name: "Bella Bot", path: "/bellabot" },
     { name: "Trabalhe Conosco", path: "/inscricoes" },
-    { name: "Developers Brasil", path: "/developers" },
+    { name: "Comunidade", path: "/comunidade" },
     { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
     { name: "FAQ", path: "/faq" },
     { name: "Sugestões", path: "/sugestoes" },

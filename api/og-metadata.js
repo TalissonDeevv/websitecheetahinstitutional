@@ -127,10 +127,10 @@ export const routes = {
     description: 'Preencha o formulário com as informações do seu projeto. A Cheetah Solutions Network retorna em até 48 horas com uma proposta detalhada.',
     ogTitle: 'Solicite Orçamento | Cheetah Solutions Network',
   },
-  '/developers': {
-    title: 'Cheetah Solutions Network | Cheetah Developers Brasil',
-    description: 'Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia.',
-    ogTitle: 'Cheetah Developers Brasil | Cheetah Solutions Network',
+  '/comunidade': {
+    title: 'Comunidade de Programação e Tecnologia | Cheetah Solutions Network',
+    description: 'Participe da comunidade de desenvolvedores da Cheetah Solutions Network. Um espaço aberto para quem gosta de programação, tecnologia e desenvolvimento de software no Brasil.',
+    ogTitle: 'Comunidade de Programação e Tecnologia | Cheetah Solutions Network',
   },
   '/inscricoes': {
     title: 'Trabalhe Conosco | Cheetah Solutions Network',
