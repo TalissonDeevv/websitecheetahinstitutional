@@ -37,7 +37,7 @@ import TermsExplained from "./pages/TermsExplained";
 import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
 import GuidelinesPage from "./pages/legal/GuidelinesPage";
-import Developers from "./pages/Developers";
+import Comunidade from "./pages/Comunidade";
 
 import ApprovedProjects from "./pages/ApprovedProjects";
 import TrabalheConosco from "./pages/TrabalheConosco";
@@ -89,9 +89,13 @@ const App = () => (
             <Route path="/termos-explicados" element={<TermsExplained />} />
             <Route path="/cheetah-solidaria" element={<CheetahSolidaria />} />
             <Route path="/sugestoes" element={<Suggestions />} />
-            <Route path="/developers" element={<Developers />} />
+            <Route path="/comunidade" element={<Comunidade />} />
             
-            <Route path="/developers/projetos" element={<ApprovedProjects />} />
+            {/* Legacy redirect */}
+            <Route path="/developers" element={<Navigate to="/comunidade" replace />} />
+            <Route path="/developers/projetos" element={<Navigate to="/comunidade/projetos" replace />} />
+            
+            <Route path="/comunidade/projetos" element={<ApprovedProjects />} />
             <Route path="/inscricoes" element={<TrabalheConosco />} />
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
             <Route path="/bellabot" element={<BellaBot />} />

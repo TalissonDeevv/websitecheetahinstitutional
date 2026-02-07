@@ -80,17 +80,17 @@ const ApprovedProjects = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
-        title="Projetos Aprovados | Cheetah Solutions Network"
-        description="Conheça os projetos aprovados e desenvolvidos dentro da Cheetah Solutions Network, com soluções digitais focadas em performance, escalabilidade e inovação."
-        ogTitle="Projetos Aprovados | Cheetah Solutions Network"
-        ogDescription="Conheça os projetos aprovados e desenvolvidos dentro da Cheetah Solutions Network, com soluções digitais focadas em performance, escalabilidade e inovação."
-        ogUrl="/developers/projetos"
-        canonical="/developers/projetos"
+        title="Projetos da Comunidade | Cheetah Solutions Network"
+        description="Conheça os projetos desenvolvidos por membros da comunidade de desenvolvedores da Cheetah Solutions Network. Soluções digitais focadas em performance, escalabilidade e inovação."
+        ogTitle="Projetos da Comunidade | Cheetah Solutions Network"
+        ogDescription="Conheça os projetos desenvolvidos por membros da comunidade de desenvolvedores da Cheetah Solutions Network. Soluções digitais focadas em performance, escalabilidade e inovação."
+        ogUrl="/comunidade/projetos"
+        canonical="/comunidade/projetos"
       />
       <WebPageJsonLd 
-        title="Projetos Aprovados | Cheetah Solutions Network"
-        description="Conheça os projetos aprovados e desenvolvidos dentro da Cheetah Solutions Network, com soluções digitais focadas em performance, escalabilidade e inovação."
-        url="/developers/projetos"
+        title="Projetos da Comunidade | Cheetah Solutions Network"
+        description="Conheça os projetos desenvolvidos por membros da comunidade de desenvolvedores da Cheetah Solutions Network. Soluções digitais focadas em performance, escalabilidade e inovação."
+        url="/comunidade/projetos"
       />
       
       <Header />
@@ -101,15 +101,15 @@ const ApprovedProjects = () => {
           <div className="container mx-auto">
             <div className="max-w-3xl">
               <span className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium block">
-                Cheetah Developers Brasil
+                Comunidade de Desenvolvedores
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
-                Projetos<br />
-                <span className="text-primary">Aprovados</span>
+                Projetos da<br />
+                <span className="text-primary">Comunidade</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                Conheça os projetos que foram aprovados dentro da Cheetah Solutions Network. 
-                Soluções digitais desenvolvidas por membros da nossa comunidade, com foco em 
+                Conheça os projetos desenvolvidos por membros da comunidade de desenvolvedores 
+                da Cheetah Solutions Network. Soluções digitais com foco em 
                 performance, escalabilidade e inovação técnica.
               </p>
             </div>

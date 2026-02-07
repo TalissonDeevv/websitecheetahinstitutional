@@ -41,7 +41,7 @@ const communityProjects: CommunityProject[] = [
   },
 ];
 
-const Developers = () => {
+const Comunidade = () => {
   const technicalAreas = [
     {
       title: "Inteligência Artificial",
@@ -112,8 +112,8 @@ const Developers = () => {
       icon: Lightbulb,
     },
     {
-      title: "Mentorias Informais",
-      description: "Orientação de membros mais experientes para acelerar seu desenvolvimento técnico.",
+      title: "Conversas Técnicas",
+      description: "Discussões entre membros mais experientes para acelerar seu desenvolvimento técnico.",
       icon: GraduationCap,
     },
     {
@@ -173,12 +173,12 @@ const Developers = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | Cheetah Developers Brasil"
-        description="Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia."
-        ogTitle="Cheetah Developers Brasil | Cheetah Solutions"
-        ogDescription="Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia."
-        ogUrl="/developers"
-        canonical="/developers"
+        title="Comunidade de Programação e Tecnologia | Cheetah Solutions Network"
+        description="Participe da comunidade de desenvolvedores da Cheetah Solutions Network. Um espaço aberto para quem gosta de programação, tecnologia e desenvolvimento de software no Brasil."
+        ogTitle="Comunidade de Programação e Tecnologia | Cheetah Solutions Network"
+        ogDescription="Participe da comunidade de desenvolvedores da Cheetah Solutions Network. Um espaço aberto para quem gosta de programação, tecnologia e desenvolvimento de software no Brasil."
+        ogUrl="/comunidade"
+        canonical="/comunidade"
       />
       <Header />
       
@@ -189,19 +189,19 @@ const Developers = () => {
             <div className="flex items-center justify-between gap-8">
               <div className="max-w-3xl">
                 <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-                  Programa de Comunidade Oficial
+                  Comunidade Oficial
                 </p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6">
                   Cheetah Developers<br />
                   <span className="text-primary">Brasil</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-6 font-medium">
-                  Onde desenvolvedores evoluem juntos.
+                  A comunidade de programação e tecnologia da Cheetah Solutions Network.
                 </p>
                 <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-10">
-                  Um programa de comunidade oficial da Cheetah Solutions Network, criado para reunir 
-                  pessoas apaixonadas por programação, tecnologia e inovação em um ambiente público, 
-                  colaborativo e orientado ao aprendizado contínuo e à evolução técnica coletiva.
+                  Um espaço aberto para pessoas que gostam de programação, desenvolvimento de software e 
+                  tecnologia. Independentemente do seu nível técnico, aqui você encontra networking, 
+                  troca de conhecimento e aprendizado coletivo em um ambiente colaborativo.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a 
@@ -213,7 +213,7 @@ const Developers = () => {
                       size="lg" 
                       className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
                     >
-                      Entrar para a Comunidade
+                      Participar da Comunidade
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
@@ -237,7 +237,7 @@ const Developers = () => {
                       variant="outline"
                       className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground font-medium"
                     >
-                      Diretrizes e Governança
+                      Diretrizes da Comunidade
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
@@ -273,11 +273,11 @@ const Developers = () => {
             <AnimatedSection className="lg:col-span-4">
               <div className="sticky top-32">
                 <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
-                  Sobre a Comunidade
+                  O que é
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
-                  Um espaço público<br />
-                  para evoluir junto.
+                  Uma comunidade aberta<br />
+                  para quem ama tecnologia.
                 </h2>
               </div>
             </AnimatedSection>
@@ -285,27 +285,24 @@ const Developers = () => {
             <AnimatedSection delay={100} className="lg:col-span-8">
               <div className="space-y-8">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  A Cheetah Developers Brasil é um programa de comunidade oficial da Cheetah Solutions Network, 
-                  criado para fortalecer o ecossistema de tecnologia no Brasil por meio da colaboração, do 
-                  aprendizado contínuo e do desenvolvimento de talentos em programação e inovação digital.
+                  A Cheetah Developers Brasil é a comunidade oficial de desenvolvedores da Cheetah Solutions Network. 
+                  Aqui, pessoas que compartilham interesse por programação, tecnologia e desenvolvimento de software 
+                  se encontram para trocar experiências, aprender juntas e crescer profissionalmente.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Trata-se de uma comunidade pública e acessível, aberta a qualquer pessoa interessada em 
-                  tecnologia, independentemente de vínculo com a empresa ou nível de experiência. Nosso 
-                  objetivo é criar um ambiente seguro, organizado e colaborativo, onde o conhecimento é 
-                  compartilhado de forma genuína e o aprendizado acontece de maneira prática e orientada.
+                  Não é um curso, não é uma plataforma educacional formal. É um espaço colaborativo onde 
+                  a troca de conhecimento acontece de forma natural entre os membros. Você pode tirar dúvidas, 
+                  compartilhar descobertas, discutir projetos e encontrar pessoas com interesses similares.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Acreditamos que a evolução técnica é potencializada quando acontece em grupo. Por isso, 
-                  incentivamos a troca de experiências reais, a discussão de desafios do dia a dia e a 
-                  construção coletiva de soluções. Cada membro contribui e aprende, formando um ciclo 
-                  virtuoso de crescimento técnico e profissional.
+                  A comunidade é organizada pela Cheetah Solutions Network, que mantém o ambiente organizado, 
+                  seguro e produtivo. Mas o conteúdo e as interações vêm dos próprios membros. Cada pessoa 
+                  contribui com o que sabe e aprende com o que os outros compartilham.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  A comunidade é estruturada em torno de áreas técnicas específicas, permitindo que cada 
-                  participante encontre seu espaço de interesse e se aprofunde nos temas que mais fazem 
-                  sentido para sua trajetória. Não há barreiras de entrada: basta interesse genuíno em 
-                  aprender e vontade de contribuir para um ambiente saudável e produtivo.
+                  Não há barreiras de entrada ou exigência de nível técnico. Se você gosta de programação 
+                  e tecnologia, seja iniciante, estudante ou profissional experiente, a comunidade está 
+                  aberta para você.
                 </p>
                 
                 <div className="pt-8 border-t border-border">
@@ -316,7 +313,7 @@ const Developers = () => {
                     </div>
                     <div>
                       <span className="text-3xl font-bold text-primary">100%</span>
-                      <p className="text-sm text-muted-foreground mt-1">público e gratuito</p>
+                      <p className="text-sm text-muted-foreground mt-1">aberta e gratuita</p>
                     </div>
                     <div>
                       <span className="text-3xl font-bold text-primary">24/7</span>
@@ -340,11 +337,11 @@ const Developers = () => {
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
                 Encontre seu espaço<br />
-                e aprofunde-se.
+                e conecte-se.
               </h2>
               <p className="text-muted-foreground mt-4 leading-relaxed">
-                A comunidade é organizada em áreas técnicas específicas, permitindo que você 
-                se conecte com pessoas que compartilham os mesmos interesses.
+                A comunidade de desenvolvedores é organizada por áreas de interesse, permitindo que você 
+                encontre pessoas que trabalham com as mesmas tecnologias e desafios.
               </p>
             </div>
           </AnimatedSection>
@@ -367,7 +364,7 @@ const Developers = () => {
         </div>
       </section>
 
-      {/* O que a Comunidade Oferece */}
+      {/* O que acontece na Comunidade */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-12 gap-12">
@@ -375,15 +372,15 @@ const Developers = () => {
               <AnimatedSection animation="fade-right">
                 <div className="sticky top-32">
                   <p className="text-xs text-primary uppercase tracking-[0.15em] font-medium">
-                    Benefícios
+                    O que acontece
                   </p>
                   <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
-                    O que a comunidade<br />
-                    oferece.
+                    Dentro da<br />
+                    comunidade.
                   </h2>
                   <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
-                    Um ambiente completo para você evoluir como desenvolvedor, 
-                    com recursos, eventos e oportunidades de aprendizado contínuo.
+                    Atividades, discussões e oportunidades de aprendizado 
+                    que acontecem no dia a dia da comunidade de programação.
                   </p>
                 </div>
               </AnimatedSection>
@@ -420,8 +417,8 @@ const Developers = () => {
                   Para Quem
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                  Uma comunidade<br />
-                  para todos os níveis.
+                  A comunidade é<br />
+                  para todo mundo.
                 </h2>
               </div>
               
@@ -429,9 +426,9 @@ const Developers = () => {
                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10">
                   <div className="border-l-2 border-primary/30 pl-6">
                     <GraduationCap className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Iniciantes</h3>
+                    <h3 className="font-semibold mb-2">Quem está começando</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Começando na programação? Aqui você encontra orientação, 
+                      Começando a programar? Aqui você encontra orientação, 
                       materiais de estudo e suporte de quem já passou pelo mesmo caminho.
                     </p>
                   </div>
@@ -449,7 +446,7 @@ const Developers = () => {
                     <Code className="h-5 w-5 text-primary mb-3" />
                     <h3 className="font-semibold mb-2">Profissionais</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Já atua no mercado? Troque experiências com outros devs, 
+                      Já atua no mercado? Troque experiências com outros desenvolvedores, 
                       mantenha-se atualizado e contribua com seu conhecimento.
                     </p>
                   </div>
@@ -458,8 +455,8 @@ const Developers = () => {
                     <Heart className="h-5 w-5 text-primary mb-3" />
                     <h3 className="font-semibold mb-2">Entusiastas</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Apaixonado por tecnologia? Participe, aprenda e faça parte 
-                      de uma comunidade que valoriza curiosidade e inovação.
+                      Curte tecnologia e programação? Participe, aprenda e faça parte 
+                      de uma comunidade que valoriza curiosidade e colaboração.
                     </p>
                   </div>
                 </div>
@@ -470,11 +467,11 @@ const Developers = () => {
                       <Users className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2">Comunidade Pública e Acessível</h4>
+                      <h4 className="font-semibold mb-2">Sem barreiras de entrada</h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">
-                        Não há barreiras de entrada, exigência de vínculo com a empresa ou nível 
-                        técnico mínimo. Qualquer pessoa interessada em tecnologia pode participar. 
-                        O foco é aprendizado contínuo e evolução coletiva.
+                        Não exigimos vínculo com a empresa, nível técnico mínimo ou qualquer tipo de 
+                        pré-requisito. A comunidade de desenvolvedores é aberta para qualquer pessoa 
+                        interessada em tecnologia e desenvolvimento de software.
                       </p>
                     </div>
                   </div>
@@ -494,12 +491,12 @@ const Developers = () => {
                 Projetos em Destaque
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                Soluções reais criadas<br />
-                por membros da comunidade.
+                Soluções criadas por<br />
+                membros da comunidade.
               </h2>
               <p className="text-muted-foreground mt-4 leading-relaxed">
-                Projetos selecionados e aprovados que demonstram o talento e a capacidade 
-                técnica dos desenvolvedores da Cheetah Developers Brasil.
+                Projetos desenvolvidos por pessoas que fazem parte da comunidade de 
+                desenvolvedores da Cheetah Solutions Network.
               </p>
             </div>
           </AnimatedSection>
@@ -518,7 +515,7 @@ const Developers = () => {
                     <div className="aspect-video overflow-hidden bg-secondary/50">
                       <img 
                         src={project.image} 
-                        alt={`${project.name} - Projeto da Cheetah Developers Brasil`}
+                        alt={`${project.name} - Projeto da comunidade`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
@@ -549,13 +546,13 @@ const Developers = () => {
           {/* CTA para ver todos os projetos */}
           <AnimatedSection animation="fade-up" delay={300}>
             <div className="flex justify-center mt-10">
-              <Link to="/developers/projetos">
+              <Link to="/comunidade/projetos">
                 <Button 
                   size="lg"
                   variant="outline"
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-medium"
                 >
-                  Ver todos os projetos aprovados
+                  Ver todos os projetos
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -576,9 +573,9 @@ const Developers = () => {
                 Entre para a comunidade.
               </h2>
               <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-                A Cheetah Developers Brasil está presente no Discord. É simples: basta entrar no 
-                servidor, escolher suas áreas de interesse e começar a interagir com outros membros. 
-                Sem burocracia, sem formulários longos.
+                A comunidade de desenvolvedores da Cheetah Solutions Network está no Discord. 
+                É simples: basta entrar no servidor, escolher suas áreas de interesse e começar 
+                a interagir com outros membros. Sem burocracia, sem formulários longos.
               </p>
               
               <div className="bg-card border border-border rounded-xl p-8 mb-8">
@@ -602,7 +599,7 @@ const Developers = () => {
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
                 >
-                  Entrar no Discord
+                  Entrar na Comunidade
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </a>
@@ -620,12 +617,12 @@ const Developers = () => {
                 Perguntas Frequentes
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                Dúvidas sobre o Programa<br />
-                de Verificação.
+                Dúvidas sobre a<br />
+                comunidade.
               </h2>
               <p className="text-muted-foreground mt-4 leading-relaxed">
-                Respostas para as questões mais comuns sobre participação, critérios 
-                e funcionamento do programa de verificação de projetos.
+                Respostas para as questões mais comuns sobre participação e 
+                funcionamento da comunidade de desenvolvedores.
               </p>
             </div>
           </AnimatedSection>
@@ -634,36 +631,36 @@ const Developers = () => {
             <AnimatedSection animation="fade-up">
               <div className="space-y-4">
                 <FAQItem 
-                  question="O que é o Programa de Verificação de Projetos?"
-                  answer="O Programa de Verificação é uma iniciativa institucional da Cheetah Solutions Network que avalia e destaca projetos tecnológicos desenvolvidos por membros da comunidade. Projetos verificados recebem visibilidade na página de Projetos Aprovados e podem utilizar elementos institucionais da Cheetah."
+                  question="Preciso pagar para participar da comunidade?"
+                  answer="Não. A comunidade de programação e tecnologia da Cheetah Solutions Network é completamente gratuita e aberta. Não há taxas, mensalidades ou qualquer tipo de cobrança para participar."
                 />
                 <FAQItem 
-                  question="Quem pode submeter um projeto para verificação?"
-                  answer="Qualquer pessoa ou equipe que tenha desenvolvido um projeto tecnológico pode submeter para avaliação. Não é necessário ter vínculo formal com a Cheetah Solutions Network, mas é recomendado participar da comunidade Cheetah Developers Brasil."
+                  question="Preciso ter experiência em programação?"
+                  answer="Não. A comunidade de desenvolvedores é aberta para todos os níveis, desde quem está dando os primeiros passos até profissionais experientes. O objetivo é justamente essa troca entre pessoas com diferentes níveis de conhecimento."
                 />
                 <FAQItem 
-                  question="A verificação é permanente?"
-                  answer="Não. A verificação pode ser reavaliada, suspensa ou encerrada a qualquer momento, mediante análise técnica, institucional ou reputacional. A participação no programa é discricionária e não gera direito adquirido."
+                  question="Preciso ter algum vínculo com a Cheetah Solutions Network?"
+                  answer="Não. Qualquer pessoa interessada em tecnologia e desenvolvimento de software pode participar. Não exigimos vínculo profissional, comercial ou de qualquer outra natureza com a empresa."
                 />
                 <FAQItem 
-                  question="Quais critérios são avaliados?"
-                  answer="A avaliação é global e considera múltiplos fatores: segurança técnica, governança, conformidade institucional, confiabilidade, impacto reputacional e alinhamento com os valores da Cheetah Solutions Network. Nenhum critério isolado garante aprovação."
+                  question="O que é o selo de projeto verificado?"
+                  answer="Projetos desenvolvidos por membros da comunidade podem passar por uma avaliação técnica e institucional. Se aprovados, recebem visibilidade na página de projetos e podem utilizar elementos institucionais da Cheetah Solutions Network."
                 />
                 <FAQItem 
-                  question="Posso usar a marca Cheetah no meu projeto?"
-                  answer="O uso do nome, logotipo, selos ou menções à Cheetah Solutions Network só é permitido enquanto o projeto estiver com verificação ativa e autorização vigente. Em caso de encerramento, todas as referências devem ser removidas imediatamente."
+                  question="Como funciona a verificação de projetos?"
+                  answer="É uma avaliação que considera segurança técnica, governança, conformidade e alinhamento com os valores da comunidade. Projetos verificados ganham destaque, mas a verificação não é permanente e pode ser reavaliada."
                 />
                 <FAQItem 
-                  question="O que acontece se meu projeto for indeferido?"
-                  answer="O indeferimento não impede nova submissão futura. Você pode se candidatar novamente desde que atenda integralmente aos critérios vigentes no momento e tenha sanado as questões que motivaram o indeferimento anterior."
+                  question="A comunidade é moderada?"
+                  answer="Sim. A Cheetah Solutions Network mantém o ambiente organizado, seguro e produtivo. Existem diretrizes de convivência e comportamento que todos os membros devem seguir."
                 />
                 <FAQItem 
-                  question="A Cheetah divulga os motivos de indeferimento?"
-                  answer="A Cheetah Solutions Network não é obrigada a divulgar relatórios internos, critérios específicos ou fundamentos detalhados sobre decisões. As comunicações são feitas exclusivamente por canais oficiais."
+                  question="Posso divulgar meus projetos na comunidade?"
+                  answer="Sim, desde que respeite as diretrizes da comunidade. Existem canais específicos para compartilhar projetos, pedir feedback e mostrar seu trabalho para outros desenvolvedores."
                 />
                 <FAQItem 
-                  question="Onde encontro os termos completos do programa?"
-                  answer="Os termos completos estão disponíveis na página de Diretrizes e Governança, no documento 'Programa Cheetah Developers Brasil'. A submissão ao programa implica aceitação integral de todas as disposições."
+                  question="Onde encontro as diretrizes da comunidade?"
+                  answer="As diretrizes completas estão disponíveis no documento de governança. Ao participar da comunidade, você concorda em seguir todas as disposições estabelecidas."
                 />
               </div>
             </AnimatedSection>
@@ -675,18 +672,20 @@ const Developers = () => {
                     <FileText className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Diretrizes Completas</h4>
+                    <h4 className="font-semibold mb-2">Diretrizes da Comunidade</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      Consulte o documento institucional completo com todas as diretrizes, 
-                      critérios de avaliação, uso de marca e disposições do programa.
+                      Consulte o documento com as diretrizes de convivência, 
+                      critérios de verificação de projetos e regras de uso.
                     </p>
-                    <Link 
-                      to="/developers/diretrizes"
+                    <a 
+                      href="https://docs.google.com/document/d/1_hUIFpu63zlttl4XpNdp2Q7mrlCSmMBeX21cIJD-ldg/edit?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center text-sm text-primary hover:text-primary/80 font-medium transition-colors"
                     >
-                      Acessar Diretrizes e Governança
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                      Acessar Diretrizes
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -701,14 +700,14 @@ const Developers = () => {
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-muted-foreground leading-relaxed text-lg mb-6">
-                Faça parte de um programa de comunidade público, estruturado e mantido por uma 
-                empresa de tecnologia, onde o aprendizado é contínuo e a evolução acontece de forma coletiva.
+                Faça parte de uma comunidade de programação e tecnologia organizada 
+                pela Cheetah Solutions Network, onde a troca de conhecimento e a evolução acontecem coletivamente.
               </p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Cheetah Developers Brasil
               </h2>
               <p className="text-xl text-primary font-medium mb-10">
-                Onde desenvolvedores evoluem juntos.
+                Onde desenvolvedores se conectam.
               </p>
               <a 
                 href="https://discord.gg/rY3HUQpECS" 
@@ -719,7 +718,7 @@ const Developers = () => {
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"
                 >
-                  Entrar para a Comunidade (Discord)
+                  Participar da Comunidade
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </a>
@@ -733,4 +732,4 @@ const Developers = () => {
   );
 };
 
-export default Developers;
+export default Comunidade;

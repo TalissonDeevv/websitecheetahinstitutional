@@ -28,7 +28,7 @@ const Footer = () => {
 
   const projects = [
     { name: "Bella Bot", path: "/bellabot" },
-    { name: "Developers Brasil", path: "/developers" },
+    { name: "Comunidade", path: "/comunidade" },
     { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
   ];
 
