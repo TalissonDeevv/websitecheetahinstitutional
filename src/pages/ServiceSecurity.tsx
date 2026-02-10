@@ -35,9 +35,9 @@ const ServiceSecurity = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | Segurança Digital"
+        title="Cheetah Solutions Network | Segurança Digital"
         description="Desenvolvemos sistemas com autenticação robusta, proteção contra ataques e conformidade com LGPD desde o primeiro dia."
-        ogTitle="Segurança Digital | Cheetah Solutions"
+        ogTitle="Segurança Digital | Cheetah Solutions Network"
         ogDescription="Proteção que você pode confiar. Autenticação robusta, proteção contra ataques e conformidade LGPD."
         ogUrl="/servicos/seguranca"
       />

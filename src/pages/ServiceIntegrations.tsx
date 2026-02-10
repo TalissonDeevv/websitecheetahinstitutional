@@ -19,9 +19,9 @@ const ServiceIntegrations = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | APIs e Integrações"
+        title="Cheetah Solutions Network | APIs e Integrações"
         description="Conectamos diferentes sistemas e automatizamos fluxos complexos. Eliminamos silos de dados e criamos processos integrados e eficientes."
-        ogTitle="APIs e Integrações | Cheetah Solutions"
+        ogTitle="APIs e Integrações | Cheetah Solutions Network"
         ogDescription="Sistemas que conversam. Conectamos diferentes sistemas e automatizamos fluxos complexos."
         ogUrl="/servicos/integracoes"
       />

@@ -32,9 +32,9 @@ const ServiceAI = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | Inteligência Artificial"
+        title="Cheetah Solutions Network | Inteligência Artificial"
         description="Implementamos soluções de IA focadas em resultados práticos. Chatbots, automação e análise de dados com tecnologia de ponta."
-        ogTitle="Inteligência Artificial | Cheetah Solutions"
+        ogTitle="Inteligência Artificial | Cheetah Solutions Network"
         ogDescription="IA que resolve problemas reais. Chatbots inteligentes, assistentes virtuais e análise preditiva."
         ogUrl="/servicos/ia"
       />

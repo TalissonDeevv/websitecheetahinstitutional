@@ -10,9 +10,9 @@ const ServiceWeb = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | Desenvolvimento Web"
+        title="Cheetah Solutions Network | Desenvolvimento Web"
         description="Desenvolvemos websites modernos, rápidos e otimizados para SEO. Do site institucional ao e-commerce, criamos soluções que geram resultados reais."
-        ogTitle="Desenvolvimento Web | Cheetah Solutions"
+        ogTitle="Desenvolvimento Web | Cheetah Solutions Network"
         ogDescription="Websites que funcionam e convertem. Desenvolvemos soluções web modernas, rápidas e otimizadas para SEO."
         ogUrl="/servicos/web"
       />

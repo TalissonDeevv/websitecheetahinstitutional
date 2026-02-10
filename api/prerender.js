@@ -98,10 +98,10 @@ const routes = {
       "Uma equipe técnica com foco em resultado. Profissionais da Cheetah Solutions Network que entendem de código e de negócio.",
     ogTitle: "Equipes Técnicas | Cheetah Solutions Network",
   },
-  "/blog": {
-    title: "Cheetah Solutions Network | Blogs e Artigos",
-    description: "Conteúdo técnico da Cheetah Solutions Network sobre desenvolvimento, tecnologia e boas práticas. Direto ao ponto.",
-    ogTitle: "Blogs e Artigos | Cheetah Solutions Network",
+  "/artigos": {
+    title: "Artigos Institucionais | Cheetah Solutions Network",
+    description: "Artigos institucionais sobre a identidade, história e posicionamento da Cheetah Solutions Network. Conteúdo oficial e informativo.",
+    ogTitle: "Artigos Institucionais | Cheetah Solutions Network",
   },
   "/contato": {
     title: "Cheetah Solutions Network | Fale Conosco",
@@ -115,11 +115,17 @@ const routes = {
       "Preencha o formulário com as informações do seu projeto. A Cheetah Solutions Network retorna em até 48 horas com uma proposta detalhada.",
     ogTitle: "Solicite Orçamento | Cheetah Solutions Network",
   },
-  "/developers": {
-    title: "Cheetah Solutions Network | Cheetah Developers Brasil",
+  "/comunidade": {
+    title: "Comunidade de Programação e Tecnologia | Cheetah Solutions Network",
     description:
-      "Comunidade oficial de desenvolvedores da Cheetah Solutions Network. Aprenda, colabore e evolua com outros profissionais de tecnologia.",
-    ogTitle: "Cheetah Developers Brasil | Cheetah Solutions Network",
+      "Participe da comunidade de desenvolvedores da Cheetah Solutions Network. Um espaço aberto para quem gosta de programação, tecnologia e desenvolvimento de software no Brasil.",
+    ogTitle: "Comunidade de Programação e Tecnologia | Cheetah Solutions Network",
+  },
+  "/inscricoes": {
+    title: "Trabalhe Conosco | Cheetah Solutions Network",
+    description:
+      "Junte-se à equipe da Cheetah Solutions Network. Vagas remotas para desenvolvedores, designers e profissionais de tecnologia. Projetos reais, remuneração justa e crescimento técnico.",
+    ogTitle: "Trabalhe Conosco | Cheetah Solutions Network",
   },
   "/inscricoes": {
     title: "Cheetah Solutions Network | Trabalhe Conosco",

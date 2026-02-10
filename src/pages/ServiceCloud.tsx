@@ -68,9 +68,9 @@ const ServiceCloud = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <SEO
-        title="Cheetah Solutions | Cloud e Deploy"
+        title="Cheetah Solutions Network | Cloud e Deploy"
         description="Deploy em AWS, Vercel, Firebase, Railway e outros. Monitoramento contínuo, escalabilidade e segurança avançada."
-        ogTitle="Cloud e Deploy | Cheetah Solutions"
+        ogTitle="Cloud e Deploy | Cheetah Solutions Network"
         ogDescription="Cloud Solutions & Deploy. Publique suas aplicações com facilidade, performance otimizada e segurança garantida."
         ogUrl="/servicos/cloud"
       />
