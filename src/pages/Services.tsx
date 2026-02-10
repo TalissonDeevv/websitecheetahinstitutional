@@ -81,14 +81,14 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | Nossos Serviços"
+        title="Cheetah Solutions Network | Nossos Serviços"
         description="Desenvolvimento de software sob medida: bots, websites, sistemas web, integrações, apps mobile e e-commerce. Soluções personalizadas para sua empresa."
-        ogTitle="Nossos Serviços | Cheetah Solutions"
+        ogTitle="Nossos Serviços | Cheetah Solutions Network"
         ogDescription="Desenvolvimento de software sob medida para empresas. Bots, websites, sistemas web, integrações, apps mobile e e-commerce."
         ogUrl="/servicos"
       />
       <WebPageJsonLd 
-        title="Nossos Serviços | Cheetah Solutions"
+        title="Nossos Serviços | Cheetah Solutions Network"
         description="Desenvolvimento de software sob medida para empresas."
         url="/servicos"
       />

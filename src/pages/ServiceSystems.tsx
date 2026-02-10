@@ -43,9 +43,9 @@ const ServiceSystems = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | Sistemas Personalizados"
+        title="Cheetah Solutions Network | Sistemas Personalizados"
         description="Desenvolvemos sistemas sob medida: CRM, ERP, gestão de estoque, dashboards e portais. Soluções completas para seu negócio."
-        ogTitle="Sistemas Personalizados | Cheetah Solutions"
+        ogTitle="Sistemas Personalizados | Cheetah Solutions Network"
         ogDescription="Sistemas sob medida para empresas. CRM, ERP, gestão de estoque, dashboards analíticos e portais de clientes."
         ogUrl="/servicos/sistemas"
       />

@@ -68,9 +68,9 @@ const ServiceDashboards = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <SEO
-        title="Cheetah Solutions | Dashboards e BI"
+        title="Cheetah Solutions Network | Dashboards e BI"
         description="Dashboards interativos e personalizados. Visualização de dados com React, Chart.js, Power BI e Superset."
-        ogTitle="Dashboards e Business Intelligence | Cheetah Solutions"
+        ogTitle="Dashboards e Business Intelligence | Cheetah Solutions Network"
         ogDescription="Transforme dados em decisões. Dashboards interativos, KPIs em tempo real e relatórios automatizados."
         ogUrl="/servicos/dashboards"
       />

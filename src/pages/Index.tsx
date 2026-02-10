@@ -312,7 +312,7 @@ const Index = () => {
                 <img 
                   src={quackPayLogo} 
                   alt="Quack Pay" 
-                  className="h-12 md:h-14 lg:h-16 w-auto object-contain opacity-50 group-hover:opacity-90 transition-all duration-300 grayscale group-hover:grayscale-0"
+                  className="h-12 md:h-14 lg:h-16 w-auto object-contain opacity-50 group-hover:opacity-90 transition-all duration-300 grayscale group-hover:grayscale-0 dark:invert-0 invert"
                   loading="lazy"
                 />
               </a>
@@ -325,7 +325,7 @@ const Index = () => {
                 <img 
                   src={squareCloudLogo} 
                   alt="Square Cloud" 
-                  className="h-12 md:h-14 lg:h-16 w-auto object-contain opacity-50 group-hover:opacity-90 transition-all duration-300 grayscale group-hover:grayscale-0"
+                  className="h-12 md:h-14 lg:h-16 w-auto object-contain opacity-50 group-hover:opacity-90 transition-all duration-300 grayscale group-hover:grayscale-0 dark:invert-0 invert"
                   loading="lazy"
                 />
               </a>

@@ -78,15 +78,15 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
-        title="Cheetah Solutions | Perguntas Frequentes"
+        title="Cheetah Solutions Network | Perguntas Frequentes"
         description="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico."
-        ogTitle="Perguntas Frequentes | Cheetah Solutions"
+        ogTitle="Perguntas Frequentes | Cheetah Solutions Network"
         ogDescription="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico."
         ogUrl="/faq"
         canonical="/faq"
       />
       <WebPageJsonLd 
-        title="Perguntas Frequentes | Cheetah Solutions"
+        title="Perguntas Frequentes | Cheetah Solutions Network"
         description="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network."
         url="/faq"
       />

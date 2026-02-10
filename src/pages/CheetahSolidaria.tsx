@@ -21,10 +21,10 @@ const CheetahSolidaria = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
-        title="Cheetah Solutions | Cheetah Solidária"
-        description="Conheça a Cheetah Solidária, nossa iniciativa de responsabilidade social em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas."
-        ogTitle="Cheetah Solidária | Cheetah Solutions"
-        ogDescription="Conheça a Cheetah Solidária, nossa iniciativa de responsabilidade social em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas."
+        title="Cheetah Solutions Network | Cheetah Solidária"
+        description="Conheça a Cheetah Solidária, iniciativa de responsabilidade social da Cheetah Solutions Network em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas."
+        ogTitle="Cheetah Solidária | Cheetah Solutions Network"
+        ogDescription="Conheça a Cheetah Solidária, iniciativa de responsabilidade social da Cheetah Solutions Network em parceria com a AACD Teleton. Tecnologia e solidariedade transformando vidas."
         ogUrl="/cheetah-solidaria"
         canonical="/cheetah-solidaria"
       />

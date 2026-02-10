@@ -43,10 +43,10 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | Fale Conosco"
-        description="Entre em contato com a Cheetah Solutions. Fale sobre seu projeto sem compromisso. Respondemos em até 24 horas."
-        ogTitle="Fale Conosco | Cheetah Solutions"
-        ogDescription="Entre em contato com a Cheetah Solutions. Sem compromisso. Conte o que precisa e avaliamos se faz sentido trabalharmos juntos."
+        title="Cheetah Solutions Network | Fale Conosco"
+        description="Entre em contato com a Cheetah Solutions Network. Fale sobre seu projeto sem compromisso. Respondemos em até 24 horas."
+        ogTitle="Fale Conosco | Cheetah Solutions Network"
+        ogDescription="Entre em contato com a Cheetah Solutions Network. Sem compromisso. Conte o que precisa e avaliamos se faz sentido trabalharmos juntos."
         ogUrl="/contato"
       />
       <WebPageJsonLd 

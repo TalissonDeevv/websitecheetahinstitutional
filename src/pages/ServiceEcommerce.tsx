@@ -10,9 +10,9 @@ const ServiceEcommerce = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | E-commerce"
+        title="Cheetah Solutions Network | E-commerce"
         description="Desenvolvemos e-commerces completos, otimizados para conversão e preparados para escalar. Da loja básica ao marketplace."
-        ogTitle="E-commerce | Cheetah Solutions"
+        ogTitle="E-commerce | Cheetah Solutions Network"
         ogDescription="Lojas virtuais que vendem. E-commerces completos, otimizados para conversão e preparados para escalar."
         ogUrl="/servicos/ecommerce"
       />

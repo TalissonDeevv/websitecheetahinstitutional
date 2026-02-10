@@ -36,9 +36,9 @@ const ServiceBots = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions | Bots e Automação"
+        title="Cheetah Solutions Network | Bots e Automação"
         description="Desenvolvemos bots inteligentes para Discord, Telegram e WhatsApp. Automatize tarefas, modere comunidades e melhore a experiência dos usuários."
-        ogTitle="Bots e Automação | Cheetah Solutions"
+        ogTitle="Bots e Automação | Cheetah Solutions Network"
         ogDescription="Bots que trabalham por você. Desenvolvemos bots inteligentes para Discord, Telegram e WhatsApp."
         ogUrl="/servicos/bots"
       />

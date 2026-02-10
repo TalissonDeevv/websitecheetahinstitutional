@@ -46,9 +46,9 @@ const Suggestions = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
-        title="Cheetah Solutions | Sugestões e Melhorias"
+        title="Cheetah Solutions Network | Sugestões e Melhorias"
         description="Envie suas sugestões para a Cheetah Solutions Network. Sua opinião é fundamental para nossa evolução e melhoria contínua dos serviços."
-        ogTitle="Sugestões e Melhorias | Cheetah Solutions"
+        ogTitle="Sugestões e Melhorias | Cheetah Solutions Network"
         ogDescription="Envie suas sugestões para a Cheetah Solutions Network. Sua opinião é fundamental para nossa evolução e melhoria contínua dos serviços."
         ogUrl="/sugestoes"
         canonical="/sugestoes"

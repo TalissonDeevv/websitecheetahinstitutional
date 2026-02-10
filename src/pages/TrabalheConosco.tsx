@@ -159,16 +159,16 @@ const FAQ_CATEGORIES = [
 ];
 
 const TrabalheConosco = () => {
-  const title = "Trabalhe Conosco | Cheetah Solutions - Vagas para Desenvolvedores";
+  const title = "Trabalhe Conosco | Cheetah Solutions Network";
   const description =
-    "Junte-se à equipe da Cheetah Solutions. Vagas remotas para desenvolvedores, designers e profissionais de tecnologia. Projetos reais, remuneração justa e crescimento técnico. Inscreva-se no banco de talentos.";
+    "Junte-se à equipe da Cheetah Solutions Network. Vagas remotas para desenvolvedores, designers e profissionais de tecnologia. Projetos reais, remuneração justa e crescimento técnico. Inscreva-se no banco de talentos.";
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <SEO
         title={title}
         description={description}
-        ogTitle="Trabalhe Conosco | Cheetah Solutions"
+        ogTitle="Trabalhe Conosco | Cheetah Solutions Network"
         ogDescription="Vagas remotas para desenvolvedores e profissionais de tecnologia. Projetos reais, remuneração por projeto e crescimento técnico."
         ogUrl="/inscricoes"
         canonical="/inscricoes"
