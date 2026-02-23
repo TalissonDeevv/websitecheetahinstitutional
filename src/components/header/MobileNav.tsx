@@ -18,7 +18,7 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
     { name: "Serviços", path: "/servicos" },
     { name: "Equipe", path: "/equipe" },
     { name: "Artigos", path: "/artigos" },
-    { name: "Contato", path: "/contato" },
+    { name: "Atendimento", path: "/contato" },
   ];
 
   const secondaryMenuItems = [

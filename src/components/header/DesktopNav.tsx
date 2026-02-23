@@ -16,7 +16,7 @@ const DesktopNav = () => {
     { name: "Serviços", path: "/servicos" },
     { name: "Equipe", path: "/equipe" },
     { name: "Artigos", path: "/artigos" },
-    { name: "Contato", path: "/contato" },
+    { name: "Atendimento", path: "/contato" },
     { name: "Orçamento", path: "/orcamento" },
   ];
 
