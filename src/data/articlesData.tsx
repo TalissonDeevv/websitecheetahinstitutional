@@ -439,5 +439,208 @@ export const articlesData: Record<string, ArticleData> = {
         </div>
       </>
     )
+  },
+  "arquitetura-sob-medida": {
+    title: "Arquitetura de software sob medida: quando e por que investir",
+    date: "23 de Fevereiro, 2025",
+    author: "Talisson Souza",
+    readTime: "7 min de leitura",
+    seoTitle: "Arquitetura de software sob medida: quando e por que investir | Cheetah Solutions Network",
+    seoDescription: "Como decisões arquiteturais no início de um projeto impactam escalabilidade, manutenção e custo operacional. Análise técnica da Cheetah Solutions Network.",
+    content: (
+      <>
+        <p className="text-lg font-medium text-foreground">
+          A arquitetura de um software define como seus componentes se organizam, se comunicam e evoluem ao longo do tempo. Investir em uma arquitetura sob medida significa projetar a estrutura técnica de um sistema com base nas necessidades reais do negócio, evitando soluções genéricas que comprometem a escalabilidade e a manutenção futura.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">O que define uma boa arquitetura</h2>
+        <p>
+          Uma boa arquitetura de software é aquela que equilibra complexidade técnica com as necessidades do projeto. Não se trata de utilizar as tecnologias mais recentes ou os padrões mais sofisticados, mas de fazer escolhas adequadas ao contexto. Um sistema interno para uma empresa de 50 colaboradores exige decisões diferentes de uma plataforma que atenderá milhares de usuários simultâneos.
+        </p>
+        <p className="mt-4">
+          A Cheetah Solutions Network avalia cada projeto individualmente, considerando volume de dados, número de usuários, integrações necessárias, requisitos de performance e expectativas de crescimento. Essas variáveis determinam a estrutura técnica mais adequada.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Quando investir em arquitetura sob medida</h2>
+        <p>
+          O investimento em arquitetura sob medida faz sentido quando o projeto possui requisitos específicos que soluções prontas não atendem adequadamente. Sistemas com regras de negócio complexas, integrações com múltiplas plataformas, necessidade de alta disponibilidade ou requisitos rigorosos de segurança são candidatos naturais para essa abordagem.
+        </p>
+        <p className="mt-4">
+          Projetos que utilizam arquiteturas genéricas frequentemente enfrentam limitações técnicas à medida que crescem. O custo de refatoração ou reconstrução posterior costuma ser significativamente maior do que o investimento inicial em uma arquitetura bem planejada.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Impacto no custo operacional</h2>
+        <p>
+          Decisões arquiteturais tomadas no início de um projeto impactam diretamente o custo de manutenção ao longo de sua vida útil. Código bem estruturado, com separação clara de responsabilidades e documentação adequada, reduz o tempo necessário para implementar novas funcionalidades e corrigir problemas.
+        </p>
+        <p className="mt-4">
+          A Cheetah Solutions Network prioriza arquiteturas que facilitem a evolução do sistema sem necessidade de reescritas completas. Essa abordagem protege o investimento do cliente e garante que o software continue relevante à medida que o negócio evolui.
+        </p>
+
+        <div className="mt-12 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            A escolha da arquitetura é uma das decisões mais importantes em qualquer projeto de software. A Cheetah Solutions Network trata essa etapa com o rigor técnico que ela exige.
+          </p>
+        </div>
+      </>
+    )
+  },
+  "performance-web": {
+    title: "Performance em aplicações web: fundamentos e boas práticas",
+    date: "23 de Fevereiro, 2025",
+    author: "Talisson Souza",
+    readTime: "6 min de leitura",
+    seoTitle: "Performance em aplicações web: fundamentos e boas práticas | Cheetah Solutions Network",
+    seoDescription: "Técnicas de otimização de performance em aplicações web. Carregamento, renderização e interações otimizadas pela Cheetah Solutions Network.",
+    content: (
+      <>
+        <p className="text-lg font-medium text-foreground">
+          A performance de uma aplicação web afeta diretamente a experiência do usuário, as taxas de conversão e o posicionamento em mecanismos de busca. Otimizar performance não é um luxo técnico, mas uma necessidade de negócio que impacta resultados mensuráveis.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Métricas que importam</h2>
+        <p>
+          Core Web Vitals, tempo de carregamento inicial, tempo até a primeira interação e estabilidade visual são métricas fundamentais para avaliar a performance de uma aplicação. A Cheetah Solutions Network monitora essas métricas em todos os projetos, garantindo que cada entrega atenda aos padrões esperados pelo mercado.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Otimização no desenvolvimento</h2>
+        <p>
+          Performance não é algo que se adiciona ao final de um projeto. Decisões tomadas durante o desenvolvimento, como a escolha de bibliotecas, estratégias de carregamento de dados e estrutura de componentes, determinam o desempenho final da aplicação.
+        </p>
+        <p className="mt-4">
+          A empresa aplica técnicas como lazy loading, code splitting, otimização de imagens, cache estratégico e renderização eficiente em cada projeto. Essas práticas são parte do processo de desenvolvimento, não etapas adicionais.
+        </p>
+
+        <div className="mt-12 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            Performance é um compromisso técnico que a Cheetah Solutions Network assume em cada projeto, garantindo aplicações rápidas e confiáveis.
+          </p>
+        </div>
+      </>
+    )
+  },
+  "integracao-sistemas": {
+    title: "Integração de sistemas: desafios e abordagens técnicas",
+    date: "23 de Fevereiro, 2025",
+    author: "Talisson Souza",
+    readTime: "6 min de leitura",
+    seoTitle: "Integração de sistemas: desafios e abordagens técnicas | Cheetah Solutions Network",
+    seoDescription: "Como conectar sistemas distintos de forma confiável e escalável. Abordagens técnicas da Cheetah Solutions Network para integração de sistemas.",
+    content: (
+      <>
+        <p className="text-lg font-medium text-foreground">
+          A integração entre sistemas é uma das demandas mais frequentes no mercado de tecnologia corporativa. Empresas operam com múltiplas ferramentas que precisam trocar dados de forma confiável, segura e em tempo adequado para suportar suas operações.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Tipos de integração</h2>
+        <p>
+          Integrações podem ser síncronas ou assíncronas, em tempo real ou em lotes, ponto a ponto ou mediadas por um barramento. A escolha do modelo depende do volume de dados, da criticidade da operação e dos sistemas envolvidos. A Cheetah Solutions Network avalia cada cenário para definir a abordagem mais adequada.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Segurança e confiabilidade</h2>
+        <p>
+          Integrações mal implementadas representam riscos de segurança e perda de dados. A empresa aplica autenticação robusta, criptografia em trânsito, validação de dados e mecanismos de retry para garantir que cada integração opere de forma confiável mesmo em cenários adversos.
+        </p>
+
+        <div className="mt-12 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            Integrar sistemas de forma técnica e segura é parte fundamental do trabalho da Cheetah Solutions Network.
+          </p>
+        </div>
+      </>
+    )
+  },
+  "cloud-computing-empresas": {
+    title: "Cloud computing para empresas: infraestrutura e decisões técnicas",
+    date: "23 de Fevereiro, 2025",
+    author: "Talisson Souza",
+    readTime: "6 min de leitura",
+    seoTitle: "Cloud computing para empresas: infraestrutura e decisões técnicas | Cheetah Solutions Network",
+    seoDescription: "Critérios técnicos para escolha de infraestrutura cloud e impacto no desempenho e custo operacional. Análise da Cheetah Solutions Network.",
+    content: (
+      <>
+        <p className="text-lg font-medium text-foreground">
+          A adoção de infraestrutura cloud é uma decisão estratégica que afeta performance, custos e capacidade de escala de qualquer operação digital. Escolher a plataforma, o modelo de serviço e a configuração adequados exige análise técnica criteriosa.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Modelos de serviço</h2>
+        <p>
+          IaaS, PaaS e SaaS oferecem diferentes níveis de controle e responsabilidade. A escolha entre esses modelos depende da maturidade técnica da equipe, dos requisitos de personalização e do orçamento disponível. A Cheetah Solutions Network orienta seus clientes sobre qual modelo atende melhor suas necessidades específicas.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Otimização de custos</h2>
+        <p>
+          Infraestrutura cloud mal dimensionada gera custos desnecessários. A empresa aplica práticas de monitoramento, auto-scaling e revisão periódica de recursos para garantir que cada cliente utilize apenas o necessário para sua operação.
+        </p>
+
+        <div className="mt-12 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            Cloud computing é uma ferramenta estratégica quando bem implementada. A Cheetah Solutions Network garante que cada decisão de infraestrutura esteja alinhada com os objetivos do negócio.
+          </p>
+        </div>
+      </>
+    )
+  },
+  "governanca-tecnica": {
+    title: "Governança técnica em projetos de software",
+    date: "23 de Fevereiro, 2025",
+    author: "Talisson Souza",
+    readTime: "5 min de leitura",
+    seoTitle: "Governança técnica em projetos de software | Cheetah Solutions Network",
+    seoDescription: "Como estruturar padrões, documentação e processos para manter qualidade em projetos de software de longa duração.",
+    content: (
+      <>
+        <p className="text-lg font-medium text-foreground">
+          Governança técnica é o conjunto de práticas, padrões e processos que garantem a qualidade e a consistência de um projeto de software ao longo do tempo. Sem governança, projetos tendem a acumular débito técnico e perder qualidade progressivamente.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Padrões e documentação</h2>
+        <p>
+          A Cheetah Solutions Network estabelece padrões de código, convenções de nomenclatura e práticas de documentação em cada projeto. Esses padrões facilitam a manutenção, reduzem o tempo de onboarding de novos desenvolvedores e garantem consistência ao longo do ciclo de vida do software.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Revisão e evolução contínua</h2>
+        <p>
+          Governança não é um documento estático. A empresa revisa periodicamente as práticas adotadas, incorporando aprendizados de projetos anteriores e adaptando-se a novas necessidades do mercado.
+        </p>
+
+        <div className="mt-12 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            Governança técnica é um diferencial que separa projetos sustentáveis de projetos que se tornam inviáveis com o tempo.
+          </p>
+        </div>
+      </>
+    )
+  },
+  "sob-medida-vs-prontas": {
+    title: "Desenvolvimento sob medida vs. soluções prontas: análise técnica",
+    date: "23 de Fevereiro, 2025",
+    author: "Talisson Souza",
+    readTime: "6 min de leitura",
+    seoTitle: "Desenvolvimento sob medida vs. soluções prontas | Cheetah Solutions Network",
+    seoDescription: "Comparação técnica entre software personalizado e plataformas prontas. Análise objetiva para diferentes contextos de negócio.",
+    content: (
+      <>
+        <p className="text-lg font-medium text-foreground">
+          A escolha entre desenvolver software sob medida ou utilizar soluções prontas é uma decisão que depende de fatores técnicos, financeiros e estratégicos. Não existe uma resposta universal, mas critérios objetivos que ajudam a tomar a decisão correta para cada contexto.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Quando soluções prontas atendem</h2>
+        <p>
+          Plataformas prontas são adequadas quando o negócio se encaixa em fluxos padronizados, sem necessidade de personalização significativa. Lojas virtuais simples, sites institucionais básicos e ferramentas de gestão genéricas são exemplos onde soluções prontas podem ser suficientes.
+        </p>
+
+        <h2 className="text-xl sm:text-2xl font-bold text-foreground mt-8 mb-4">Quando o sob medida é necessário</h2>
+        <p>
+          Quando o negócio possui regras específicas, integrações complexas, requisitos de segurança elevados ou necessidade de escalar de forma controlada, o desenvolvimento sob medida oferece vantagens significativas. A Cheetah Solutions Network ajuda seus clientes a identificar qual abordagem faz sentido para sua realidade.
+        </p>
+
+        <div className="mt-12 pt-8 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            A decisão entre sob medida e soluções prontas deve ser técnica e estratégica, não emocional. A Cheetah Solutions Network orienta cada cliente com transparência.
+          </p>
+        </div>
+      </>
+    )
   }
 };
