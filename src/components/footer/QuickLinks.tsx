@@ -7,7 +7,7 @@ const QuickLinks = () => {
     { name: "Serviços", path: "/servicos" },
     { name: "Equipe", path: "/equipe" },
     { name: "Artigos", path: "/artigos" },
-    { name: "Contato", path: "/contato" },
+    { name: "Atendimento", path: "/atendimento" },
     { name: "FAQ", path: "/faq" },
   ];
 

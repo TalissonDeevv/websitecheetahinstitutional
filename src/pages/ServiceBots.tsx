@@ -244,7 +244,7 @@ const ServiceBots = () => {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Link to="/contato">
+                <Link to="/atendimento">
                   <Button variant="outline" className="border-border text-foreground hover:bg-secondary">
                     Falar com Especialista
                   </Button>

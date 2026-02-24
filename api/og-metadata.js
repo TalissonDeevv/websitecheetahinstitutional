@@ -117,10 +117,10 @@ export const routes = {
     description: 'Veja em que ano a Cheetah Solutions Network foi fundada no Brasil e informações institucionais da empresa.',
     ogTitle: 'Ano de fundação da Cheetah Solutions Network no Brasil',
   },
-  '/contato': {
-    title: 'Cheetah Solutions Network | Fale Conosco',
-    description: 'Entre em contato com a Cheetah Solutions Network. Sem compromisso. Conte o que precisa e avaliamos se faz sentido trabalharmos juntos.',
-    ogTitle: 'Fale Conosco | Cheetah Solutions Network',
+  '/atendimento': {
+    title: 'Central de Atendimento | Cheetah Solutions Network',
+    description: 'Central de atendimento da Cheetah Solutions Network. Suporte técnico especializado, acompanhamento de projetos e atendimento para clientes ativos.',
+    ogTitle: 'Central de Atendimento | Cheetah Solutions Network',
   },
   '/orcamento': {
     title: 'Cheetah Solutions Network | Solicite Orçamento',

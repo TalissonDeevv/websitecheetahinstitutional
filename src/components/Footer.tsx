@@ -23,7 +23,7 @@ const Footer = () => {
     { name: "Trabalhe Conosco", path: "/inscricoes" },
     { name: "Artigos", path: "/artigos" },
     { name: "FAQ", path: "/faq" },
-    { name: "Atendimento", path: "/contato" },
+    { name: "Atendimento", path: "/atendimento" },
   ];
 
   const projects = [

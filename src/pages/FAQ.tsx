@@ -160,7 +160,7 @@ const FAQ = () => {
               <p className="text-muted-foreground mb-6">
                 Fale diretamente com nossa equipe. Respondemos em até 24h.
               </p>
-              <Link to="/contato">
+              <Link to="/atendimento">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
                   <MessageCircle className="mr-2 h-4 w-4" />
                   Entrar em contato

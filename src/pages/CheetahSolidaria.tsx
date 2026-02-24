@@ -400,7 +400,7 @@ const CheetahSolidaria = () => {
                     Doar para AACD
                   </Button>
                 </a>
-                <Link to="/contato">
+                <Link to="/atendimento">
                   <Button 
                     size="lg" 
                     variant="outline"

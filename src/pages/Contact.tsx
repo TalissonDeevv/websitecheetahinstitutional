@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Mail, Clock, Send, MessageCircle, Wrench, FolderKanban, CreditCard, AlertTriangle } from "lucide-react";
+import { MapPin, Mail, Clock, Send, MessageCircle, Wrench, FolderKanban, CreditCard, AlertTriangle, Shield, CheckCircle, ArrowRight, FileText, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -66,17 +66,17 @@ const Contact = () => {
         description="Central de atendimento da Cheetah Solutions Network. Suporte técnico especializado, acompanhamento de projetos e atendimento para clientes ativos."
         ogTitle="Central de Atendimento | Cheetah Solutions Network"
         ogDescription="Suporte técnico especializado e acompanhamento de projetos para clientes ativos da Cheetah Solutions Network."
-        ogUrl="/contato"
+        ogUrl="/atendimento"
       />
       <WebPageJsonLd 
         title="Central de Atendimento | Cheetah Solutions Network"
         description="Central de atendimento digital da Cheetah Solutions Network. Suporte técnico e acompanhamento de projetos."
-        url="/contato"
+        url="/atendimento"
       />
       <BreadcrumbJsonLd 
         items={[
           { name: "Home", url: "/" },
-          { name: "Central de Atendimento", url: "/contato" }
+          { name: "Central de Atendimento", url: "/atendimento" }
         ]}
       />
       <Header />
@@ -102,7 +102,7 @@ const Contact = () => {
         </section>
       </AnimatedSection>
 
-      {/* Orientação inicial */}
+      {/* Introdução institucional */}
       <AnimatedSection animation="fade-up" delay={50}>
         <section className="px-4 pb-12">
           <div className="container mx-auto">
@@ -127,6 +127,30 @@ const Contact = () => {
         </section>
       </AnimatedSection>
 
+      {/* Como funciona o suporte */}
+      <AnimatedSection animation="fade-up" delay={75}>
+        <section className="px-4 pb-16">
+          <div className="container mx-auto">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-6">
+              Como funciona o suporte
+            </h2>
+            <div className="max-w-2xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <p>
+                O suporte da Cheetah Solutions Network é organizado para garantir agilidade 
+                e eficiência na resolução de demandas. Cada solicitação é classificada por nível 
+                de criticidade, permitindo que incidentes que afetam sistemas em produção sejam 
+                tratados com prioridade imediata.
+              </p>
+              <p>
+                A comunicação entre cliente e equipe técnica é direta, objetiva e registrada 
+                para garantir rastreabilidade. Toda interação segue critérios internos de qualidade, 
+                com foco em resolução real e alinhamento contínuo sobre o andamento das entregas.
+              </p>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
       {/* Categorias de atendimento */}
       <AnimatedSection animation="fade-up" delay={100}>
         <section className="px-4 pb-16">
@@ -142,6 +166,104 @@ const Contact = () => {
                   <p className="text-xs text-muted-foreground leading-relaxed">{cat.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Como abrir um chamado */}
+      <AnimatedSection animation="fade-up" delay={125}>
+        <section className="px-4 pb-16">
+          <div className="container mx-auto">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-6">
+              Como abrir um chamado
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-card border border-border rounded-xl p-5">
+                <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm mb-3">1</div>
+                <h3 className="text-sm font-semibold mb-2">Identifique o projeto</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">Informe qual projeto está relacionado à sua solicitação.</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-5">
+                <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm mb-3">2</div>
+                <h3 className="text-sm font-semibold mb-2">Descreva com clareza</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">Detalhe o problema, comportamento esperado e o que está acontecendo.</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-5">
+                <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm mb-3">3</div>
+                <h3 className="text-sm font-semibold mb-2">Envie evidências</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">Prints, links ou logs ajudam na análise e aceleram a resolução.</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-5">
+                <div className="bg-primary/10 text-primary w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm mb-3">4</div>
+                <h3 className="text-sm font-semibold mb-2">Aguarde a triagem</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">A equipe classifica a prioridade e inicia o atendimento conforme o SLA.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* SLA Highlight */}
+      <AnimatedSection animation="fade-up" delay={150}>
+        <section className="px-4 pb-16">
+          <div className="container mx-auto">
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-8">
+              <div className="flex items-start gap-4">
+                <Shield className="h-6 w-6 text-primary mt-1 shrink-0" />
+                <div className="space-y-3">
+                  <h2 className="text-lg font-semibold">Política de Nível de Serviço (SLA)</h2>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
+                    O atendimento da Cheetah Solutions Network segue critérios definidos de prioridade, 
+                    com prazos estabelecidos para primeira resposta e resolução. Cada solicitação é 
+                    classificada por nível de criticidade para garantir eficiência no tratamento.
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
+                    O detalhamento completo dos prazos, níveis de criticidade e processo de escalonamento 
+                    está disponível em nossas Diretrizes institucionais.
+                  </p>
+                  <Link to="/diretrizes/atendimento">
+                    <Button variant="outline" className="mt-2 border-primary/30 text-primary hover:bg-primary/10">
+                      <FileText className="mr-2 h-4 w-4" />
+                      Ver Política de SLA
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Canais de atendimento */}
+      <AnimatedSection animation="fade-up" delay={175}>
+        <section className="px-4 pb-16">
+          <div className="container mx-auto">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-6">
+              Canais de atendimento
+            </h2>
+            <div className="grid sm:grid-cols-3 gap-4">
+              <div className="bg-card border border-border rounded-xl p-6">
+                <Mail className="h-5 w-5 text-primary mb-3" />
+                <h3 className="text-sm font-semibold mb-2">E-mail</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-2">Canal principal para solicitações formais e registro de demandas.</p>
+                <p className="text-xs text-primary font-medium">contatocheetahsolutions@gmail.com</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-6">
+                <MessageCircle className="h-5 w-5 text-primary mb-3" />
+                <h3 className="text-sm font-semibold mb-2">Discord</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-2">Servidor oficial para suporte em tempo real e acompanhamento técnico.</p>
+                <a href="https://discord.gg/63qjkQwKmf" target="_blank" rel="noopener noreferrer" className="text-xs text-primary font-medium hover:underline">
+                  Acessar servidor
+                </a>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-6">
+                <Send className="h-5 w-5 text-primary mb-3" />
+                <h3 className="text-sm font-semibold mb-2">Formulário</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-2">Abra uma solicitação diretamente pelo formulário abaixo nesta página.</p>
+                <p className="text-xs text-primary font-medium">Disponível 24h</p>
+              </div>
             </div>
           </div>
         </section>
@@ -302,6 +424,39 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Compromisso com qualidade */}
+      <AnimatedSection animation="fade-up" delay={200}>
+        <section className="px-4 pb-16">
+          <div className="container mx-auto">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-6">
+              Compromisso com qualidade
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-card border border-border rounded-xl p-5">
+                <CheckCircle className="h-5 w-5 text-primary mb-3" />
+                <h3 className="text-sm font-semibold mb-2">Transparência</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">Informamos o status real de cada demanda, sem omissões ou promessas fora do escopo.</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-5">
+                <Lightbulb className="h-5 w-5 text-primary mb-3" />
+                <h3 className="text-sm font-semibold mb-2">Comunicação clara</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">Toda interação é objetiva e documentada, facilitando o acompanhamento por ambas as partes.</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-5">
+                <Shield className="h-5 w-5 text-primary mb-3" />
+                <h3 className="text-sm font-semibold mb-2">Critérios definidos</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">Prazos e prioridades seguem diretrizes internas que garantem previsibilidade no atendimento.</p>
+              </div>
+              <div className="bg-card border border-border rounded-xl p-5">
+                <Wrench className="h-5 w-5 text-primary mb-3" />
+                <h3 className="text-sm font-semibold mb-2">Melhoria contínua</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">Avaliamos cada atendimento para identificar oportunidades de evolução nos processos internos.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </AnimatedSection>
 
       <Footer />
     </div>
