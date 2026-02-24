@@ -72,7 +72,8 @@ const App = () => (
             <Route path="/campanha/:id" element={<Campaign />} />
             <Route path="/numeros" element={<Numbers />} />
             <Route path="/faq" element={<FAQ />} />
-            <Route path="/contato" element={<Contact />} />
+            <Route path="/atendimento" element={<Contact />} />
+            <Route path="/contato" element={<Navigate to="/atendimento" replace />} />
             <Route path="/equipe" element={<Team />} />
             
             {/* Articles (renamed from Blog) */}

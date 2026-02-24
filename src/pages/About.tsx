@@ -577,7 +577,7 @@ const About = () => {
                 se faz sentido trabalharmos juntos.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/contato">
+                <Link to="/atendimento">
                   <Button 
                     size="lg" 
                     className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium"

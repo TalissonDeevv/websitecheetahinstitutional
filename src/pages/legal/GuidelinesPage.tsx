@@ -585,68 +585,198 @@ function AtendimentoContent() {
       <section>
         <h3 className="text-xl font-semibold mb-4 text-foreground">1. Introdução</h3>
         <p className="text-muted-foreground leading-relaxed">
-          A Cheetah Solutions Network está comprometida em fornecer um atendimento de excelência a todos os seus clientes, parceiros e usuários. Esta Diretriz de Atendimento estabelece os padrões, procedimentos e compromissos que norteiam nossa relação de suporte e atendimento, garantindo respostas ágeis, precisas e soluções efetivas para todas as demandas.
+          A Cheetah Solutions Network mantém um modelo de atendimento organizado, com foco em eficiência, rastreabilidade e resolução técnica. Esta diretriz descreve como o suporte opera, quais são os critérios de priorização e os prazos praticados para cada tipo de demanda.
         </p>
         <p className="text-muted-foreground leading-relaxed mt-4">
-          Nosso time de atendimento é formado por profissionais qualificados, treinados continuamente nas melhores práticas de suporte técnico e atendimento ao cliente, sempre focados em proporcionar a melhor experiência possível.
+          O atendimento é destinado exclusivamente a clientes com projetos ativos. Solicitações comerciais e novos orçamentos devem ser feitas pela página Iniciar Projeto.
         </p>
       </section>
 
       <section>
         <h3 className="text-xl font-semibold mb-4 text-foreground">2. Canais de Atendimento</h3>
         <p className="text-muted-foreground leading-relaxed">
-          Disponibilizamos múltiplos canais de atendimento para melhor atender às necessidades de nossos clientes:
+          As solicitações podem ser registradas pelos seguintes canais oficiais:
         </p>
         <ul className="list-disc pl-6 mt-4 space-y-3 text-muted-foreground">
-          <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com - Atendimento em até 24 horas úteis</li>
-          <li><strong>WhatsApp:</strong> (81) 99396-4261 - Segunda a sexta, das 9h às 18h</li>
-          <li><strong>Portal do Cliente:</strong> Chamados técnicos e acompanhamento de solicitações</li>
+          <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
+          <li><strong>WhatsApp:</strong> (81) 99396-4261</li>
+          <li><strong>Discord:</strong> Servidor oficial de suporte</li>
+          <li><strong>Formulário:</strong> Disponível na Central de Atendimento do site</li>
         </ul>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          Independentemente do canal utilizado, toda demanda recebe um registro interno para acompanhamento e rastreabilidade.
+        </p>
       </section>
 
       <section>
         <h3 className="text-xl font-semibold mb-4 text-foreground">3. Níveis de Suporte</h3>
         
-        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">3.1. Suporte Nível 1 - Atendimento Inicial</h4>
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">3.1. Suporte Nível 1</h4>
         <p className="text-muted-foreground leading-relaxed">
-          Primeiro contato com o cliente, triagem de demandas, resolução de questões básicas, orientações de uso e encaminhamento para níveis especializados quando necessário.
+          Primeiro contato com o cliente. Triagem da solicitação, orientações de uso, resolução de questões básicas e encaminhamento para níveis especializados quando necessário.
         </p>
 
-        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">3.2. Suporte Nível 2 - Suporte Técnico</h4>
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">3.2. Suporte Nível 2</h4>
         <p className="text-muted-foreground leading-relaxed">
-          Análise e resolução de problemas técnicos de média complexidade, configurações avançadas, diagnóstico de falhas e implementação de soluções técnicas.
+          Análise técnica de problemas de média complexidade. Diagnóstico de falhas, configurações avançadas e implementação de correções pontuais.
         </p>
 
-        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">3.3. Suporte Nível 3 - Especializado</h4>
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">3.3. Suporte Nível 3</h4>
         <p className="text-muted-foreground leading-relaxed">
-          Tratamento de incidentes críticos, problemas complexos que requerem conhecimento especializado, desenvolvimento de correções e melhorias de sistema.
+          Tratamento de incidentes críticos e problemas complexos que exigem intervenção técnica especializada, incluindo análise de infraestrutura, correções em produção e revisão de arquitetura.
         </p>
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-4 text-foreground">4. SLA - Acordos de Nível de Serviço</h3>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">4. O que é SLA</h3>
         <p className="text-muted-foreground leading-relaxed">
-          Os tempos de resposta e resolução variam conforme a criticidade do chamado e o plano contratado:
+          SLA (Service Level Agreement) é um acordo de nível de serviço que define os prazos e padrões de qualidade esperados no atendimento. Na prática, ele estabelece o tempo máximo para que a equipe responda a uma solicitação e o tempo estimado para resolução do problema.
         </p>
-        <ul className="list-disc pl-6 mt-4 space-y-2 text-muted-foreground">
-          <li><strong>Crítico:</strong> Primeira resposta em até 1 hora, resolução em até 4 horas</li>
-          <li><strong>Alto:</strong> Primeira resposta em até 4 horas, resolução em até 24 horas</li>
-          <li><strong>Médio:</strong> Primeira resposta em até 8 horas, resolução em até 48 horas</li>
-          <li><strong>Baixo:</strong> Primeira resposta em até 24 horas, resolução em até 5 dias úteis</li>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          É importante distinguir dois conceitos:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-3 text-muted-foreground">
+          <li><strong>Tempo de resposta:</strong> é o prazo entre a abertura da solicitação e a primeira interação da equipe técnica. Indica que o chamado foi recebido, classificado e está sendo tratado.</li>
+          <li><strong>Tempo de resolução:</strong> é o prazo para que o problema seja efetivamente solucionado ou que uma alternativa viável seja apresentada. Pode variar conforme a complexidade técnica.</li>
         </ul>
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-4 text-foreground">5. Responsabilidades das Partes</h3>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">5. Definição de Prioridade</h3>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Cada solicitação é classificada conforme o impacto e a urgência da situação:
+        </p>
+
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">Crítico</h4>
         <p className="text-muted-foreground leading-relaxed">
-          Para garantir um atendimento eficiente, é fundamental a colaboração mútua. O cliente deve fornecer informações precisas sobre o problema, acesso quando necessário e responder às solicitações do suporte em tempo hábil. A Cheetah Solutions Network se compromete a manter comunicação clara, cumprir os prazos acordados e buscar a melhor solução para cada caso.
+          Sistema em produção fora do ar, falha de segurança ativa, perda de dados ou indisponibilidade total de funcionalidades essenciais para o negócio do cliente.
+        </p>
+
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">Alto</h4>
+        <p className="text-muted-foreground leading-relaxed">
+          Funcionalidade importante com erro que impacta operações, degradação significativa de performance ou falha que impede fluxos críticos, mas com alternativa temporária disponível.
+        </p>
+
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">Médio</h4>
+        <p className="text-muted-foreground leading-relaxed">
+          Erro não crítico, ajuste visual, comportamento inesperado em funcionalidade secundária ou melhoria que não bloqueia a operação do sistema.
+        </p>
+
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">Baixo</h4>
+        <p className="text-muted-foreground leading-relaxed">
+          Dúvidas sobre funcionalidades, sugestões de melhoria, ajustes estéticos menores ou solicitações de informação que não possuem impacto operacional.
         </p>
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold mb-4 text-foreground">6. Escalação e Reclamações</h3>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">6. Prazos de Atendimento (SLA)</h3>
+        <p className="text-muted-foreground leading-relaxed mb-6">
+          Os prazos abaixo são aplicáveis durante o horário comercial (segunda a sexta, das 9h às 18h, horário de Brasília). Solicitações recebidas fora desse período serão processadas no próximo dia útil.
+        </p>
+
+        <div className="overflow-x-auto not-prose">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="text-left py-3 px-4 font-semibold text-foreground">Prioridade</th>
+                <th className="text-left py-3 px-4 font-semibold text-foreground">Primeira resposta</th>
+                <th className="text-left py-3 px-4 font-semibold text-foreground">Resolução estimada</th>
+              </tr>
+            </thead>
+            <tbody className="text-muted-foreground">
+              <tr className="border-b border-border/50">
+                <td className="py-3 px-4">
+                  <span className="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs font-medium">Crítico</span>
+                </td>
+                <td className="py-3 px-4">Até 1 hora</td>
+                <td className="py-3 px-4">Até 4 horas</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-3 px-4">
+                  <span className="bg-orange-500/20 text-orange-400 px-2 py-1 rounded text-xs font-medium">Alto</span>
+                </td>
+                <td className="py-3 px-4">Até 4 horas</td>
+                <td className="py-3 px-4">Até 24 horas</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-3 px-4">
+                  <span className="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs font-medium">Médio</span>
+                </td>
+                <td className="py-3 px-4">Até 8 horas</td>
+                <td className="py-3 px-4">Até 72 horas</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-3 px-4">
+                  <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs font-medium">Baixo</span>
+                </td>
+                <td className="py-3 px-4">Até 24 horas</td>
+                <td className="py-3 px-4">Até 5 dias úteis</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="mt-6 p-5 bg-primary/5 border border-primary/20 rounded-xl not-prose">
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            <strong className="text-foreground">Observação:</strong> Os prazos de resolução podem variar conforme a complexidade técnica do problema. Quando a resolução depende de informações adicionais do cliente, o tempo é pausado até o retorno. A Cheetah Solutions Network se compromete a manter o cliente informado sobre o andamento em todas as etapas.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">7. Horário de Atendimento</h3>
         <p className="text-muted-foreground leading-relaxed">
-          Caso o atendimento não atenda às expectativas ou os prazos não sejam cumpridos, o cliente pode solicitar escalação do caso para a gestão de atendimento. Reclamações formais devem ser direcionadas para: <strong className="text-primary">contatocheetahsolutions@gmail.com</strong>
+          O atendimento padrão da Cheetah Solutions Network funciona de segunda a sexta, das 9h às 18h (horário de Brasília), exceto feriados nacionais.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          Todos os prazos de SLA consideram exclusivamente horas úteis dentro desse período. Solicitações registradas fora do horário comercial, em finais de semana ou feriados terão o prazo contabilizado a partir do próximo dia útil.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          Exceção: incidentes classificados como críticos que envolvam sistemas em produção podem ser tratados fora do horário comercial, mediante avaliação da equipe técnica.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">8. Responsabilidades das Partes</h3>
+        
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">Da Cheetah Solutions Network</h4>
+        <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+          <li>Responder às solicitações dentro dos prazos estabelecidos</li>
+          <li>Manter comunicação clara e objetiva durante todo o atendimento</li>
+          <li>Informar o cliente sobre o andamento e eventuais impedimentos</li>
+          <li>Buscar a resolução mais adequada para cada caso</li>
+          <li>Documentar todas as interações para rastreabilidade</li>
+        </ul>
+
+        <h4 className="text-lg font-medium mt-6 mb-3 text-foreground">Do Cliente</h4>
+        <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+          <li>Fornecer informações precisas e completas sobre o problema</li>
+          <li>Disponibilizar acessos necessários quando solicitados</li>
+          <li>Responder às solicitações da equipe técnica em tempo hábil</li>
+          <li>Manter conduta profissional e respeitosa durante as interações</li>
+          <li>Informar sobre mudanças que possam impactar o projeto</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">9. Escalonamento</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          Caso o atendimento não corresponda às expectativas ou os prazos não estejam sendo cumpridos, o cliente pode solicitar a revisão da prioridade ou o escalonamento do chamado. O processo funciona da seguinte forma:
+        </p>
+        <ul className="list-disc pl-6 mt-4 space-y-3 text-muted-foreground">
+          <li><strong>Reclassificação de prioridade:</strong> o cliente pode solicitar a reavaliação do nível de criticidade, com justificativa. A equipe analisa e, se procedente, ajusta os prazos conforme o novo nível.</li>
+          <li><strong>Escalonamento para gestão:</strong> se a demanda não for resolvida dentro do prazo ou se houver insatisfação com o atendimento, o caso é direcionado à gestão técnica para revisão e acompanhamento direto.</li>
+          <li><strong>Revisão final:</strong> em situações excepcionais, o cliente pode registrar uma reclamação formal pelo e-mail <strong className="text-primary">contatocheetahsolutions@gmail.com</strong>, que será analisada pela liderança da marca.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4 text-foreground">10. Considerações Gerais</h3>
+        <p className="text-muted-foreground leading-relaxed">
+          Esta diretriz reflete o compromisso da Cheetah Solutions Network com um atendimento profissional, organizado e transparente. Os prazos e critérios descritos neste documento são praticados como referência interna de qualidade e podem ser revisados periodicamente para adequação às necessidades operacionais.
+        </p>
+        <p className="text-muted-foreground leading-relaxed mt-4">
+          Para dúvidas sobre esta diretriz ou sobre o andamento de uma solicitação, entre em contato: <strong className="text-primary">contatocheetahsolutions@gmail.com</strong>
         </p>
       </section>
     </>

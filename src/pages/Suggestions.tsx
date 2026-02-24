@@ -236,7 +236,7 @@ const Suggestions = () => {
                 Se sua sugestão for urgente ou precisar de mais contexto, 
                 entre em contato diretamente com nossa equipe.
               </p>
-              <a href="/contato">
+              <a href="/atendimento">
                 <Button 
                   variant="outline"
                   className="border-border text-muted-foreground hover:bg-secondary hover:text-foreground"

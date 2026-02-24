@@ -103,11 +103,11 @@ const routes = {
     description: "Artigos institucionais sobre a identidade, história e posicionamento da Cheetah Solutions Network. Conteúdo oficial e informativo.",
     ogTitle: "Artigos Institucionais | Cheetah Solutions Network",
   },
-  "/contato": {
-    title: "Cheetah Solutions Network | Fale Conosco",
+  "/atendimento": {
+    title: "Central de Atendimento | Cheetah Solutions Network",
     description:
-      "Entre em contato com a Cheetah Solutions Network. Sem compromisso. Conte o que precisa e avaliamos se faz sentido trabalharmos juntos.",
-    ogTitle: "Fale Conosco | Cheetah Solutions Network",
+      "Central de atendimento da Cheetah Solutions Network. Suporte técnico especializado, acompanhamento de projetos e atendimento para clientes ativos.",
+    ogTitle: "Central de Atendimento | Cheetah Solutions Network",
   },
   "/orcamento": {
     title: "Cheetah Solutions Network | Solicite Orçamento",

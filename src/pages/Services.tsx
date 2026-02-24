@@ -289,7 +289,7 @@ const Services = () => {
                     Solicitar orçamento
                   </Button>
                 </Link>
-                <Link to="/contato">
+                <Link to="/atendimento">
                   <Button 
                     size="lg" 
                     variant="outline"
