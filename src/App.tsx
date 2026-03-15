@@ -50,16 +50,16 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/sobre" element={<About />} />
             <Route path="/servicos" element={<Services />} />
-            <Route path="/servicos/bots" element={<ServiceBots />} />
-            <Route path="/servicos/web" element={<ServiceWeb />} />
-            <Route path="/servicos/sistemas" element={<ServiceSystems />} />
-            <Route path="/servicos/integracoes" element={<ServiceIntegrations />} />
-            <Route path="/servicos/seguranca" element={<ServiceSecurity />} />
-            <Route path="/servicos/dashboards" element={<ServiceDashboards />} />
-            <Route path="/servicos/ecommerce" element={<ServiceEcommerce />} />
-            <Route path="/servicos/ia" element={<ServiceAI />} />
-            <Route path="/servicos/cloud" element={<ServiceCloud />} />
-            <Route path="/servicos/mobile" element={<ServiceMobile />} />
+            <Route path="/servicos/bots" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/web" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/sistemas" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/integracoes" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/seguranca" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/dashboards" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/ecommerce" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/ia" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/cloud" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/mobile" element={<Navigate to="/servicos" replace />} />
             <Route path="/campanha/:id" element={<Campaign />} />
             <Route path="/numeros" element={<Numbers />} />
             <Route path="/faq" element={<FAQ />} />

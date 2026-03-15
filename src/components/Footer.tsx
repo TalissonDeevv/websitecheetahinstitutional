@@ -66,8 +66,8 @@ const Footer = () => {
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-xs">
-              Software house focada em soluções digitais sob medida. 
-              Engenharia sólida, entregas consistentes.
+              Engenharia de software orientada à performance operacional.
+              Estruturação tecnológica para empresas em crescimento.
             </p>
             
             <div className="space-y-2">

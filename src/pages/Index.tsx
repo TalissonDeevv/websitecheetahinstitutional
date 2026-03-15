@@ -186,16 +186,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground font-inter overflow-x-hidden">
       <SEO
-        title="Cheetah Solutions Network | Desenvolvimento de Software Sob Medida"
-        description="A Cheetah Solutions Network é uma software house especializada em desenvolvimento de software sob medida, criando sistemas, automações e plataformas digitais escaláveis para empresas que exigem performance e eficiência."
-        ogTitle="Cheetah Solutions Network | Desenvolvimento de Software Sob Medida"
-        ogDescription="A Cheetah Solutions Network cria sistemas, aplicações e plataformas digitais escaláveis, unindo engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais."
+        title="Cheetah Solutions Network | Engenharia de Software para Performance Operacional"
+        description="A Cheetah Solutions Network estrutura operações empresariais por meio de arquitetura tecnológica. Diagnóstico operacional, sistemas sob medida e automação de processos para empresas em crescimento."
+        ogTitle="Cheetah Solutions Network | Engenharia de Software para Performance Operacional"
+        ogDescription="Estruturamos operações empresariais por meio de arquitetura tecnológica. Diagnóstico operacional, sistemas sob medida e automação para empresas que exigem performance."
         ogUrl="/"
       />
       <OrganizationJsonLd />
       <WebPageJsonLd 
-        title="Cheetah Solutions Network | Desenvolvimento de Software Sob Medida"
-        description="A Cheetah Solutions Network é uma software house especializada em desenvolvimento de software sob medida, criando sistemas, automações e plataformas digitais escaláveis para empresas."
+        title="Cheetah Solutions Network | Engenharia de Software para Performance Operacional"
+        description="A Cheetah Solutions Network estrutura operações empresariais por meio de arquitetura tecnológica, desenvolvendo sistemas sob medida para empresas em crescimento."
         url="/"
       />
       <Header />
@@ -206,7 +206,6 @@ const Index = () => {
 
         <GlowLayer className="z-[1]">
           <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] lg:w-[600px] h-[300px] sm:h-[400px] lg:h-[600px] bg-primary/3 rounded-full blur-[120px] pointer-events-none -translate-x-1/4 z-0" />
-          {/* Fade vertical edges so the glow não fique "cortado" no mobile */}
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-background via-transparent to-background z-[1]" />
         </GlowLayer>
         
@@ -217,33 +216,33 @@ const Index = () => {
               className="inline-flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-10 px-4 py-1.5 bg-primary/8 border border-primary/15 rounded-full text-xs font-medium text-primary/80 backdrop-blur-sm animate-fade-in-soft max-w-full"
               style={{ animationDelay: '100ms', animationFillMode: 'both' }}
             >
-              <span>Software</span>
+              <span>Diagnóstico</span>
               <span className="w-1 h-1 bg-primary/50 rounded-full" />
-              <span>Sistemas</span>
+              <span>Arquitetura</span>
               <span className="w-1 h-1 bg-primary/50 rounded-full" />
-              <span>Plataformas Digitais</span>
+              <span>Implementação</span>
             </div>
             
             <h1 
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-[1.08] tracking-tight animate-fade-in-soft"
               style={{ animationDelay: '200ms', animationFillMode: 'both' }}
             >
-              Desenvolvimento de{" "}
+              Estruturação{" "}
               <span className="relative inline-block">
-                <span className="text-primary">software</span>
+                <span className="text-primary">tecnológica</span>
                 <span 
                   className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-primary/40 via-primary to-primary/40 rounded-full origin-left animate-[underlineReveal_0.8s_ease-out_1.2s_forwards]"
                   style={{ transform: 'scaleX(0)' }}
                 />
               </span>{" "}
-              sob medida para negócios que exigem <SubtleHighlight>performance</SubtleHighlight>
+              de operações que exigem <SubtleHighlight>performance</SubtleHighlight>
             </h1>
             
             <p 
               className="text-lg lg:text-xl text-foreground/65 mb-12 max-w-3xl leading-[1.7] animate-fade-in-soft"
               style={{ animationDelay: '350ms', animationFillMode: 'both' }}
             >
-              Criamos sistemas, aplicações e plataformas digitais escaláveis, combinando engenharia de software, automação e design profissional para transformar ideias em soluções tecnológicas reais.
+              Analisamos a operação da sua empresa, identificamos gargalos estruturais e desenvolvemos sistemas sob medida que organizam processos, integram setores e criam base tecnológica preparada para crescimento.
             </p>
             
             <div 
@@ -255,7 +254,7 @@ const Index = () => {
                   size="lg"
                   className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
                 >
-                  Conheça Nossos Serviços
+                  Conheça Nossa Abordagem
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" />
                 </Button>
               </Link>
