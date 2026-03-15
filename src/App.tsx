@@ -19,16 +19,7 @@ import Articles from "./pages/Articles";
 import ArticlePost from "./pages/ArticlePost";
 import Budget from "./pages/Budget";
 import Numbers from "./pages/Numbers";
-import ServiceBots from "./pages/ServiceBots";
-import ServiceWeb from "./pages/ServiceWeb";
-import ServiceSystems from "./pages/ServiceSystems";
-import ServiceIntegrations from "./pages/ServiceIntegrations";
-import ServiceSecurity from "./pages/ServiceSecurity";
-import ServiceDashboards from "./pages/ServiceDashboards";
-import ServiceEcommerce from "./pages/ServiceEcommerce";
-import ServiceAI from "./pages/ServiceAI";
-import ServiceCloud from "./pages/ServiceCloud";
-import ServiceMobile from "./pages/ServiceMobile";
+// Individual service pages consolidated into /servicos
 import Campaign from "./pages/Campaign";
 import BlogPost from "./pages/BlogPost";
 import Management from "./pages/Management";
@@ -59,16 +50,16 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/sobre" element={<About />} />
             <Route path="/servicos" element={<Services />} />
-            <Route path="/servicos/bots" element={<ServiceBots />} />
-            <Route path="/servicos/web" element={<ServiceWeb />} />
-            <Route path="/servicos/sistemas" element={<ServiceSystems />} />
-            <Route path="/servicos/integracoes" element={<ServiceIntegrations />} />
-            <Route path="/servicos/seguranca" element={<ServiceSecurity />} />
-            <Route path="/servicos/dashboards" element={<ServiceDashboards />} />
-            <Route path="/servicos/ecommerce" element={<ServiceEcommerce />} />
-            <Route path="/servicos/ia" element={<ServiceAI />} />
-            <Route path="/servicos/cloud" element={<ServiceCloud />} />
-            <Route path="/servicos/mobile" element={<ServiceMobile />} />
+            <Route path="/servicos/bots" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/web" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/sistemas" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/integracoes" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/seguranca" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/dashboards" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/ecommerce" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/ia" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/cloud" element={<Navigate to="/servicos" replace />} />
+            <Route path="/servicos/mobile" element={<Navigate to="/servicos" replace />} />
             <Route path="/campanha/:id" element={<Campaign />} />
             <Route path="/numeros" element={<Numbers />} />
             <Route path="/faq" element={<FAQ />} />

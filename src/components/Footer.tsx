@@ -9,12 +9,11 @@ const Footer = () => {
   };
 
   const services = [
-    { name: "Websites", path: "/servicos/web" },
-    { name: "Sistemas Web", path: "/servicos/sistemas" },
-    { name: "E-commerce", path: "/servicos/ecommerce" },
-    { name: "Bots Discord/Telegram", path: "/servicos/bots" },
-    { name: "Integrações", path: "/servicos/integracoes" },
-    { name: "Apps Mobile", path: "/servicos/mobile" },
+    { name: "Sistemas Operacionais", path: "/servicos" },
+    { name: "Automação de Processos", path: "/servicos" },
+    { name: "Integração de Sistemas", path: "/servicos" },
+    { name: "Plataformas Escaláveis", path: "/servicos" },
+    { name: "Dashboards e BI", path: "/servicos" },
   ];
 
   const company = [
@@ -67,8 +66,8 @@ const Footer = () => {
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-xs">
-              Software house focada em soluções digitais sob medida. 
-              Engenharia sólida, entregas consistentes.
+              Engenharia de software orientada à performance operacional.
+              Estruturação tecnológica para empresas em crescimento.
             </p>
             
             <div className="space-y-2">
