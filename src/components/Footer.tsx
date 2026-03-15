@@ -9,12 +9,11 @@ const Footer = () => {
   };
 
   const services = [
-    { name: "Websites", path: "/servicos/web" },
-    { name: "Sistemas Web", path: "/servicos/sistemas" },
-    { name: "E-commerce", path: "/servicos/ecommerce" },
-    { name: "Bots Discord/Telegram", path: "/servicos/bots" },
-    { name: "Integrações", path: "/servicos/integracoes" },
-    { name: "Apps Mobile", path: "/servicos/mobile" },
+    { name: "Sistemas Operacionais", path: "/servicos" },
+    { name: "Automação de Processos", path: "/servicos" },
+    { name: "Integração de Sistemas", path: "/servicos" },
+    { name: "Plataformas Escaláveis", path: "/servicos" },
+    { name: "Dashboards e BI", path: "/servicos" },
   ];
 
   const company = [
