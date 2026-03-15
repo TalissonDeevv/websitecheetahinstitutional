@@ -19,16 +19,7 @@ import Articles from "./pages/Articles";
 import ArticlePost from "./pages/ArticlePost";
 import Budget from "./pages/Budget";
 import Numbers from "./pages/Numbers";
-import ServiceBots from "./pages/ServiceBots";
-import ServiceWeb from "./pages/ServiceWeb";
-import ServiceSystems from "./pages/ServiceSystems";
-import ServiceIntegrations from "./pages/ServiceIntegrations";
-import ServiceSecurity from "./pages/ServiceSecurity";
-import ServiceDashboards from "./pages/ServiceDashboards";
-import ServiceEcommerce from "./pages/ServiceEcommerce";
-import ServiceAI from "./pages/ServiceAI";
-import ServiceCloud from "./pages/ServiceCloud";
-import ServiceMobile from "./pages/ServiceMobile";
+// Individual service pages consolidated into /servicos
 import Campaign from "./pages/Campaign";
 import BlogPost from "./pages/BlogPost";
 import Management from "./pages/Management";
