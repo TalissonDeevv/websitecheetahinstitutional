@@ -228,10 +228,10 @@ const About = () => {
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
                   <Cog className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Automações</h3>
+                <h3 className="text-lg font-semibold mb-2">Automação de Processos</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Bots, integrações entre sistemas, workflows automatizados. 
-                  Eliminamos trabalho manual repetitivo.
+                  Automação de rotinas operacionais, integração de dados entre sistemas 
+                  e eliminação de trabalho manual repetitivo.
                 </p>
               </div>
             </AnimatedSection>
