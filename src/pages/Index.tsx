@@ -662,7 +662,7 @@ const Index = () => {
                 Sobre a <span className="text-primary">Cheetah Solutions Network</span>
               </h2>
               <p className="text-muted-foreground max-w-3xl">
-                A Cheetah Solutions Network publica artigos institucionais que esclarecem dúvidas frequentes sobre sua identidade, história e posicionamento no mercado de tecnologia.
+                A Cheetah Solutions Network publica artigos institucionais que detalham sua metodologia, posicionamento e atuação no mercado de engenharia de software.
               </p>
             </div>
           </AnimatedSection>
