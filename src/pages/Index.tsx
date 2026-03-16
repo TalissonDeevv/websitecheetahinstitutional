@@ -566,10 +566,10 @@ const Index = () => {
                   Cheetah <span className="text-primary">Developers</span> Brasil
                 </h2>
                 <p className="text-lg text-muted-foreground mb-4 font-medium">
-                  Onde desenvolvedores evoluem juntos.
+                  Onde profissionais de tecnologia evoluem juntos.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Programa e comunidade oficial da Cheetah Solutions Network voltado ao crescimento técnico, colaboração e formação de desenvolvedores. Participe de discussões, compartilhe conhecimento e evolua junto com outros profissionais.
+                  Comunidade oficial da Cheetah Solutions Network voltada ao crescimento técnico, colaboração e formação de profissionais de engenharia de software. Participe de discussões, compartilhe conhecimento e evolua junto com outros especialistas.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/developers">
