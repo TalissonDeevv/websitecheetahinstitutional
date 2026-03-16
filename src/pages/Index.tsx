@@ -772,7 +772,7 @@ const Index = () => {
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-5 py-2 text-sm font-medium"
                   >
-                    Conheça Nossa História
+                    Conheça Nossa Abordagem
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
