@@ -368,7 +368,7 @@ const Index = () => {
                   variant="outline"
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm font-medium"
                 >
-                  Ver Todos os Serviços
+                  Ver Todas as Capacidades
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
