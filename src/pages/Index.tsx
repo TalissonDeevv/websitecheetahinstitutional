@@ -480,7 +480,7 @@ const Index = () => {
             
             <AnimatedSection delay={200}>
               <div className="bg-card border border-border rounded-lg p-6 h-full">
-                <h3 className="text-lg font-semibold mb-4 text-foreground">Como Trabalhamos</h3>
+                <h3 className="text-lg font-semibold mb-4 text-foreground">Como Estruturamos</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
