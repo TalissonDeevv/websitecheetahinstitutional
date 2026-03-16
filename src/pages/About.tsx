@@ -20,15 +20,15 @@ const About = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Cheetah Solutions Network | Quem Somos"
-        description="Conheça a Cheetah Solutions Network, uma software house especializada em soluções digitais sob medida para empresas que buscam performance, escalabilidade e eficiência."
+        description="A Cheetah Solutions Network é uma empresa de engenharia de software orientada à performance operacional. Estruturamos operações empresariais por meio de arquitetura tecnológica."
         ogTitle="Quem Somos | Cheetah Solutions Network"
-        ogDescription="Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida para empresas que buscam eficiência, performance e escalabilidade."
+        ogDescription="Engenharia de software orientada à performance operacional. Estruturamos operações empresariais por meio de diagnóstico, arquitetura e implementação de sistemas sob medida."
         ogUrl="/sobre"
       />
       <OrganizationJsonLd />
       <WebPageJsonLd 
         title="Quem Somos | Cheetah Solutions Network"
-        description="Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida."
+        description="Engenharia de software orientada à performance operacional. Estruturação tecnológica de operações empresariais."
         url="/sobre"
       />
       <Header />
