@@ -191,8 +191,8 @@ const About = () => {
                 O que fazemos
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                Desenvolvimento sob medida,<br />
-                não templates genéricos.
+                Capacidades estruturais,<br />
+                não catálogo de serviços.
               </h2>
             </div>
           </AnimatedSection>
