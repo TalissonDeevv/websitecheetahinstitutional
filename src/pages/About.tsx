@@ -281,7 +281,8 @@ const About = () => {
                   Como pensamos
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                  Nossos princípios não são decorativos.
+                  Nossos princípios<br />
+                  orientam cada decisão.
                 </h2>
               </div>
               
