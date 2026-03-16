@@ -30,26 +30,26 @@ import SEO from "@/components/SEO";
 const processSteps = [
   {
     step: "01",
-    title: "Solicitação",
-    description: "Você preenche o formulário com os detalhes do seu projeto",
+    title: "Contato Inicial",
+    description: "Você descreve os desafios operacionais da sua empresa",
     icon: FileText
   },
   {
     step: "02",
-    title: "Análise",
-    description: "Nossa equipe avalia os requisitos e complexidade",
+    title: "Diagnóstico",
+    description: "Avaliamos a operação e identificamos gargalos estruturais",
     icon: MessageSquare
   },
   {
     step: "03",
     title: "Proposta",
-    description: "Enviamos um orçamento detalhado em até 48h",
+    description: "Enviamos proposta com arquitetura e cronograma em até 48h",
     icon: Clock
   },
   {
     step: "04",
-    title: "Desenvolvimento",
-    description: "Após aprovação, iniciamos o projeto com acompanhamento",
+    title: "Implementação",
+    description: "Após aprovação, iniciamos a estruturação com acompanhamento",
     icon: Rocket
   }
 ];
