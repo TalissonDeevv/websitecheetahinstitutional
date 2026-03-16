@@ -252,7 +252,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
             <div className="lg:col-span-7">
               <AnimatedSection animation="fade-up" delay={100}>
                 <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
-                  <h2 className="text-lg font-semibold mb-6 text-card-foreground">Dados do projeto</h2>
+                  <h2 className="text-lg font-semibold mb-6 text-card-foreground">Dados da operação</h2>
                   
                   <div className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-4">
