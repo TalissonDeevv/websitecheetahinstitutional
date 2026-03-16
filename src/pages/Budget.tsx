@@ -322,7 +322,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                     </div>
 
                     <div>
-                      <Label htmlFor="description" className="text-xs text-muted-foreground font-medium">Descrição do projeto *</Label>
+                      <Label htmlFor="description" className="text-xs text-muted-foreground font-medium">Desafios operacionais *</Label>
                       <Textarea
                         id="description"
                         value={formData.description}
