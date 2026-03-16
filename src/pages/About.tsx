@@ -570,12 +570,12 @@ const About = () => {
           <AnimatedSection>
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                Tem um projeto em mente?<br />
-                <span className="text-primary">Vamos conversar.</span>
+                Sua operação precisa de<br />
+                <span className="text-primary">estrutura tecnológica?</span>
               </h2>
               <p className="text-muted-foreground mb-8 max-w-lg">
-                Sem compromisso. Conte sobre seu desafio e vamos avaliar 
-                se faz sentido trabalharmos juntos.
+                Conte sobre os desafios operacionais da sua empresa. Vamos avaliar 
+                como a tecnologia pode organizar processos e preparar sua operação para crescer.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/atendimento">
