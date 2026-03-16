@@ -47,10 +47,10 @@ const Team = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions Network | Equipes Técnicas"
-        description="Conheça a equipe técnica da Cheetah Solutions Network: desenvolvedores, liderança e profissionais de suporte comprometidos com excelência."
-        ogTitle="Equipes Técnicas | Cheetah Solutions Network"
-        ogDescription="Uma equipe técnica com foco em resultado. Profissionais que entendem de código e de negócio."
+        title="Cheetah Solutions Network | Equipe de Engenharia"
+        description="Conheça a equipe de engenharia da Cheetah Solutions Network: liderança, desenvolvedores e profissionais comprometidos com estruturação tecnológica de operações."
+        ogTitle="Equipe de Engenharia | Cheetah Solutions Network"
+        ogDescription="Engenheiros de software e especialistas em operações empresariais. Equipe técnica focada em resultado."
         ogUrl="/equipe"
       />
       <Header />
