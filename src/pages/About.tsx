@@ -171,8 +171,8 @@ const About = () => {
                       <Users className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Parceria genuína</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Construção conjunta de soluções</p>
+                      <h4 className="font-medium text-sm">Integração com a operação real</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Tecnologia alinhada aos processos do cliente</p>
                     </div>
                   </div>
                 </div>
