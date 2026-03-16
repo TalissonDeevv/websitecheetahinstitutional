@@ -449,7 +449,7 @@ const Index = () => {
                 Nossa <span className="text-primary">Abordagem</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Engenharia de software com foco em qualidade, performance e escalabilidade
+                Engenharia de software orientada à operação do cliente, com foco em resultado mensurável
               </p>
             </div>
           </AnimatedSection>
