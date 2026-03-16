@@ -99,7 +99,7 @@ const About = () => {
                     </div>
                     <div>
                       <span className="text-3xl font-bold text-primary">5+</span>
-                      <p className="text-sm text-muted-foreground mt-1">anos de mercado</p>
+                      <p className="text-sm text-muted-foreground mt-1">anos de operação</p>
                     </div>
                     <div>
                       <span className="text-3xl font-bold text-primary">99.9%</span>
