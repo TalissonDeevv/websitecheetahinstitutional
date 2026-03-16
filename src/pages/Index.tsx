@@ -339,10 +339,10 @@ const Index = () => {
           <AnimatedSection>
             <div className="mb-10">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-                Nossos <span className="text-primary">Serviços</span>
+                Nossas <span className="text-primary">Capacidades</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Soluções tecnológicas completas para impulsionar seu negócio
+                Capacidades estruturais para organizar, automatizar e escalar operações empresariais
               </p>
             </div>
           </AnimatedSection>
