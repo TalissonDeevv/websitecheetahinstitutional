@@ -805,10 +805,10 @@ const Index = () => {
           <AnimatedSection animation="scale">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-                Vamos construir sua <span className="text-primary">próxima solução</span>?
+                Sua operação precisa de <span className="text-primary">estrutura tecnológica</span>?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Entre em contato para discutir seu projeto. Nossa equipe está pronta para entender suas necessidades e propor a melhor abordagem técnica.
+                Conte sobre os desafios operacionais da sua empresa. Vamos avaliar como a tecnologia pode organizar processos e preparar sua operação para crescer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/orcamento">
