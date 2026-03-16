@@ -23,8 +23,8 @@ const FounderHero = () => {
                   : 'opacity-0 sm:translate-y-6'
               }`}
             >
-              <span className="text-primary">Resultado real</span>{" "}
-              com software sob medida
+              <span className="text-primary">Estruturação tecnológica</span>{" "}
+              para operações que exigem performance
             </h2>
             
             <p 
