@@ -71,7 +71,7 @@ const BENEFICIOS = [
   {
     icon: Zap,
     title: "Projetos Reais",
-    description: "Atue em projetos diversos: sistemas web, APIs, automações, e-commerces e apps mobile."
+    description: "Atue em projetos de estruturação operacional: sistemas internos, automações, integrações e dashboards."
   },
   {
     icon: MessageCircle,
