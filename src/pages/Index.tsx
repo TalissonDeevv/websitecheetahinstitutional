@@ -816,7 +816,7 @@ const Index = () => {
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all"
                   >
-                    Solicitar Orçamento
+                    Iniciar Diagnóstico
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
