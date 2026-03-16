@@ -75,19 +75,20 @@ const About = () => {
             <AnimatedSection delay={100} className="lg:col-span-8">
               <div className="space-y-8">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  A Cheetah Solutions Network é uma software house focada na criação de soluções digitais 
-                  sob medida para empresas que buscam eficiência, performance e escalabilidade.
+                  A Cheetah Solutions Network é uma empresa de engenharia de software orientada à 
+                  performance operacional. Atuamos na estruturação tecnológica de empresas, analisando 
+                  operações, identificando gargalos e desenvolvendo sistemas que organizam processos.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Desenvolvemos sistemas, aplicações e plataformas digitais, com forte atuação em automação 
-                  de processos e integração de tecnologias. Cada projeto é construído com base em engenharia 
-                  sólida, arquitetura bem definida e foco total na qualidade do software entregue.
+                  Cada projeto começa com diagnóstico operacional, não com código. Entendemos como a 
+                  empresa funciona, onde estão os pontos de ineficiência e quais sistemas são necessários 
+                  para resolver problemas reais. O desenvolvimento é consequência da arquitetura definida.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nossa atuação é guiada pelo compromisso de transformar necessidades reais de negócio em 
-                  soluções tecnológicas eficientes, utilizando automação e inovação de forma estratégica 
-                  para impulsionar resultados e simplificar operações. Trabalhamos com rapidez e organização, 
-                  sem abrir mão da estabilidade, da segurança e da confiabilidade dos sistemas desenvolvidos.
+                  Nossa atuação é guiada pelo Cheetah OPS Framework, uma metodologia proprietária que 
+                  combina diagnóstico, definição de arquitetura e implementação estruturada. O resultado 
+                  são sistemas que eliminam retrabalho, integram setores e preparam a base tecnológica 
+                  da empresa para crescer.
                 </p>
                 
                 <div className="pt-8 border-t border-border">
