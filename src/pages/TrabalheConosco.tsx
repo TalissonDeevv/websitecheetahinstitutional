@@ -86,7 +86,7 @@ const BENEFICIOS = [
   {
     icon: TrendingUp,
     title: "Crescimento Técnico",
-    description: "Trabalhe com tecnologias modernas: React, Node.js, TypeScript, AWS, Docker e mais."
+    description: "Trabalhe com tecnologias consolidadas: React, Node.js, TypeScript, AWS, Docker e PostgreSQL."
   }
 ];
 
