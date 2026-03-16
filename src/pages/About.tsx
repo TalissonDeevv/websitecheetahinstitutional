@@ -290,10 +290,10 @@ const About = () => {
                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10">
                   <div className="border-l-2 border-primary/30 pl-6">
                     <Zap className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Agilidade real</h3>
+                    <h3 className="font-semibold mb-2">Diagnóstico antes do código</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Sprints curtos, comunicação constante, entregas frequentes. 
-                      Você acompanha o progresso, não fica esperando surpresas.
+                      Entendemos a operação primeiro. Definimos arquitetura depois. 
+                      O desenvolvimento é consequência, não ponto de partida.
                     </p>
                   </div>
                   
