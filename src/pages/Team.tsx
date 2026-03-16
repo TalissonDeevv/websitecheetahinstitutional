@@ -64,12 +64,12 @@ const Team = () => {
                 Quem faz acontecer
               </p>
               <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-8">
-                Uma equipe técnica<br />
-                <span className="text-primary">com foco em resultado.</span>
+                Engenharia de software<br />
+                <span className="text-primary">com visão operacional.</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                Profissionais que entendem de código e de negócio. 
-                Sem hierarquia desnecessária, com comunicação direta.
+                Profissionais que entendem de código e de operação empresarial. 
+                Comunicação direta, foco em resultado.
               </p>
             </div>
           </div>
