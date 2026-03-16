@@ -101,26 +101,26 @@ const Index = () => {
     {
       icon: FileSearch,
       step: "01",
-      title: "Descoberta e Análise",
-      description: "Entendemos seu negócio, objetivos e requisitos técnicos para criar um plano de projeto detalhado."
+      title: "Diagnóstico Operacional",
+      description: "Mapeamos a operação da empresa, identificamos gargalos estruturais e processos que geram retrabalho."
     },
     {
       icon: Cog,
       step: "02",
-      title: "Desenvolvimento",
-      description: "Codificamos com metodologias ágeis, entregas incrementais e comunicação constante."
+      title: "Arquitetura Tecnológica",
+      description: "Definimos a estrutura de sistemas, integrações e fluxos de dados que a operação precisa."
     },
     {
       icon: TestTube,
       step: "03",
-      title: "Testes e Qualidade",
-      description: "Validamos cada funcionalidade com testes automatizados e revisões de código rigorosas."
+      title: "Implementação Estruturada",
+      description: "Desenvolvemos e implantamos os sistemas com entregas incrementais e validação contínua."
     },
     {
       icon: Rocket,
       step: "04",
-      title: "Entrega e Suporte",
-      description: "Implantamos a solução e oferecemos acompanhamento técnico contínuo."
+      title: "Acompanhamento e Evolução",
+      description: "Monitoramos a operação, ajustamos o sistema e preparamos a base para o próximo ciclo de crescimento."
     }
   ];
 
