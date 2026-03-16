@@ -328,7 +328,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                         value={formData.description}
                         onChange={(e) => updateField("description", e.target.value)}
                         className="bg-secondary border-border mt-1.5 min-h-[100px] resize-none text-secondary-foreground placeholder:text-muted-foreground/60"
-                        placeholder="Descreva o que você precisa..."
+                        placeholder="Descreva os gargalos e desafios da sua operação..."
                       />
                       {descriptionValidation.message && (
                         <p className="text-xs text-muted-foreground mt-1.5 flex items-center gap-1">
