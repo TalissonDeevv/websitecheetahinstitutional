@@ -383,10 +383,10 @@ const Index = () => {
           <AnimatedSection>
             <div className="mb-10">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-                Como <span className="text-primary">Trabalhamos</span>
+                Cheetah <span className="text-primary">OPS Framework</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Processo estruturado para garantir qualidade e previsibilidade em cada projeto
+                Metodologia proprietária de diagnóstico, arquitetura e implementação para estruturar operações empresariais
               </p>
             </div>
           </AnimatedSection>
