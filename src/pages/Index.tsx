@@ -68,10 +68,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { number: "120+", label: "Projetos Entregues" },
-    { number: "50+", label: "Clientes Ativos" },
-    { number: "99.9%", label: "Uptime" },
-    { number: "24/7", label: "Suporte" }
+    { number: "120+", label: "Operações Estruturadas" },
+    { number: "50+", label: "Empresas Atendidas" },
+    { number: "99.9%", label: "Disponibilidade" },
+    { number: "24/7", label: "Monitoramento" }
   ];
 
   const values = [
