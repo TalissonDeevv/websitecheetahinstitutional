@@ -308,10 +308,10 @@ const About = () => {
                   
                   <div className="border-l-2 border-primary/30 pl-6">
                     <Heart className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Compromisso genuíno</h3>
+                    <h3 className="font-semibold mb-2">Compromisso com resultado</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       Não abandonamos projetos, não sumimos. 
-                      Estamos junto até a entrega — e depois dela.
+                      Acompanhamos a operação até a empresa estar rodando com autonomia.
                     </p>
                   </div>
                   
