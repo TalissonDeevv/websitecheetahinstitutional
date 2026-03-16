@@ -122,8 +122,8 @@ const About = () => {
                 Como trabalhamos
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                Processos bem definidos,<br />
-                resultados consistentes.
+                Metodologia estruturada,<br />
+                resultados previsíveis.
               </h2>
             </div>
           </AnimatedSection>
