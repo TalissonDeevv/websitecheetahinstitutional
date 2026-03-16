@@ -65,8 +65,8 @@ const About = () => {
                   Quem Somos
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
-                  Uma equipe técnica<br />
-                  que entende de negócio.
+                  Engenharia de software<br />
+                  orientada à operação.
                 </h2>
               </div>
             </AnimatedSection>
