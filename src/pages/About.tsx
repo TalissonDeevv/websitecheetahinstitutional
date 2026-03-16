@@ -373,12 +373,12 @@ const About = () => {
                   
                   <div className="space-y-8">
                     {[
-                      { year: "2020", text: "Fundação. Foco inicial em automações e bots para Discord." },
-                      { year: "2021", text: "Expansão para desenvolvimento web. Primeiros sistemas completos." },
-                      { year: "2022", text: "50 projetos entregues. Consolidação como software house." },
+                      { year: "2020", text: "Fundação. Primeiros projetos de automação e estruturação de processos." },
+                      { year: "2021", text: "Expansão para sistemas web. Primeiras entregas de sistemas operacionais completos." },
+                      { year: "2022", text: "50 operações estruturadas. Consolidação da metodologia de diagnóstico." },
                       { year: "2023", text: "Lançamento de produtos próprios. Equipe técnica expandida." },
-                      { year: "2024", text: "100+ projetos. Reconhecimento no mercado B2B." },
-                      { year: "2025", text: "Expansão de serviços. Foco em empresas em crescimento." },
+                      { year: "2024", text: "100+ operações. Reconhecimento em estruturação tecnológica B2B." },
+                      { year: "2025", text: "Formalização do Cheetah OPS Framework. Foco em empresas em crescimento." },
                     ].map((item, index) => (
                       <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
                         <div className="flex gap-6 items-start">
