@@ -131,15 +131,15 @@ const Budget = () => {
 
   const features = [
     "Dashboard Administrativo",
-    "Sistema de Pagamento",
-    "Sistema de Usuários",
-    "Relatórios",
-    "SEO Otimizado",
-    "Design Responsivo",
-    "Integração WhatsApp",
-    "Chat ao Vivo",
-    "Multi-idioma",
-    "Analytics"
+    "Automação de Processos",
+    "Integração entre Sistemas",
+    "Relatórios Operacionais",
+    "Controle de Usuários",
+    "Painel de Métricas",
+    "Integração com APIs",
+    "Notificações Automáticas",
+    "Multi-departamento",
+    "Monitoramento em Tempo Real"
   ];
 
   const suggestedFeatures = getSuggestedFeatures();
