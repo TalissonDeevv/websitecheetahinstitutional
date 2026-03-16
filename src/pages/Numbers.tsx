@@ -28,8 +28,8 @@ const Numbers = () => {
       value: counts.projects,
       target: finalValues.projects,
       suffix: '+',
-      label: 'Projetos Entregues',
-      description: 'Soluções desenvolvidas com excelência técnica'
+      label: 'Operações Estruturadas',
+      description: 'Operações empresariais estruturadas com tecnologia'
     },
     {
       key: 'products',
@@ -46,8 +46,8 @@ const Numbers = () => {
       value: counts.clients,
       target: finalValues.clients,
       suffix: '+',
-      label: 'Clientes Atendidos',
-      description: 'Empresas que confiam em nosso trabalho'
+      label: 'Empresas Atendidas',
+      description: 'Empresas que confiam na nossa engenharia'
     },
     {
       key: 'countries',
