@@ -158,28 +158,28 @@ const Index = () => {
 
   const whyChooseUs = [
     {
-      title: "Código Limpo e Documentado",
-      description: "Desenvolvemos seguindo as melhores práticas da indústria, com código legível, testável e bem documentado para facilitar manutenção futura."
+      title: "Diagnóstico antes do código",
+      description: "Antes de desenvolver qualquer sistema, analisamos a operação da empresa para garantir que a tecnologia resolva o problema certo."
     },
     {
-      title: "Comunicação Transparente",
-      description: "Mantemos você informado em cada etapa do projeto com relatórios semanais, acesso ao repositório e canais diretos com a equipe técnica."
+      title: "Comunicação Técnica Direta",
+      description: "Relatórios objetivos, acesso ao repositório e canais diretos com a equipe de engenharia. Sem intermediários."
     },
     {
-      title: "Escalabilidade Planejada",
-      description: "Arquitetamos soluções pensando no crescimento do seu negócio, garantindo que o sistema suporte aumento de demanda sem retrabalho."
+      title: "Arquitetura Preparada para Crescimento",
+      description: "Cada sistema é projetado para absorver aumento de demanda, complexidade e volume de dados sem necessidade de reconstrução."
     },
     {
-      title: "Segurança em Primeiro Lugar",
-      description: "Implementamos práticas de segurança desde o início do desenvolvimento, protegendo dados e garantindo conformidade com regulamentações."
+      title: "Segurança Estrutural",
+      description: "Práticas de segurança integradas desde a definição da arquitetura, protegendo dados e garantindo conformidade regulatória."
     },
     {
-      title: "Suporte Técnico Dedicado",
-      description: "Após a entrega, oferecemos acompanhamento contínuo para garantir o funcionamento perfeito e evolução da solução."
+      title: "Acompanhamento Pós-implantação",
+      description: "Após a entrega, monitoramos a operação do sistema e ajustamos conforme a empresa evolui."
     },
     {
-      title: "Metodologia Ágil Comprovada",
-      description: "Utilizamos Scrum e entregas incrementais para garantir que você veja progresso real e possa ajustar prioridades durante o desenvolvimento."
+      title: "Cheetah OPS Framework",
+      description: "Metodologia proprietária de diagnóstico, arquitetura e implementação que garante previsibilidade e resultado em cada projeto."
     }
   ];
 
