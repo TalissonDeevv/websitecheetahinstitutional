@@ -11,65 +11,65 @@ import { FAQJsonLd, WebPageJsonLd } from "@/components/JsonLd";
 const FAQ = () => {
   const faqCategories = [
     {
-      title: "Projetos e Prazos",
+      title: "Metodologia e Processo",
       items: [
         {
-          question: "Qual é o prazo médio para desenvolvimento?",
-          answer: "Depende do escopo. Bots simples: 3-7 dias. Websites: 1-3 semanas. Sistemas complexos: 3-6 semanas. Sempre enviamos cronograma detalhado antes de começar."
+          question: "Como funciona o Cheetah OPS Framework?",
+          answer: "O Cheetah OPS Framework é nossa metodologia proprietária dividida em três etapas: diagnóstico operacional, definição de arquitetura tecnológica e implementação estruturada. Antes de qualquer desenvolvimento, mapeamos a operação da empresa para identificar gargalos e definir a melhor abordagem."
+        },
+        {
+          question: "Qual é o prazo médio de um projeto?",
+          answer: "Depende da complexidade operacional. Automações e integrações simples: 1-2 semanas. Sistemas operacionais completos: 4-8 semanas. Estruturações de maior escopo: 8-16 semanas. Sempre enviamos cronograma detalhado após o diagnóstico."
+        },
+        {
+          question: "O desenvolvimento começa imediatamente?",
+          answer: "Não. Todo projeto inicia com diagnóstico operacional. Mapeamos processos, identificamos gargalos e definimos a arquitetura antes de escrever qualquer código. Isso garante que o sistema resolva o problema certo."
+        },
+        {
+          question: "Posso solicitar alterações durante o projeto?",
+          answer: "Sim, dentro do escopo definido na arquitetura. Ajustes menores são incorporados naturalmente. Mudanças de escopo significativas são avaliadas e comunicadas antes da implementação."
+        }
+      ]
+    },
+    {
+      title: "Tecnologia e Infraestrutura",
+      items: [
+        {
+          question: "Quais tecnologias vocês utilizam?",
+          answer: "React, Node.js, Python, TypeScript, PostgreSQL, MongoDB, AWS, entre outras. A escolha de tecnologia é feita com base no diagnóstico operacional, priorizando a melhor solução para cada cenário."
+        },
+        {
+          question: "Os sistemas se integram com ferramentas existentes?",
+          answer: "Sim. Integração entre sistemas é uma de nossas capacidades centrais. Conectamos ERPs, CRMs, bancos de dados, APIs e qualquer plataforma que a operação da empresa utilize."
+        },
+        {
+          question: "Como garantem segurança e estabilidade?",
+          answer: "Segurança é definida na etapa de arquitetura, não adicionada depois. Criptografia, backups, controle de acesso e conformidade com LGPD fazem parte da estrutura de cada sistema."
+        },
+        {
+          question: "Posso hospedar nos meus próprios servidores?",
+          answer: "Sim. Configuramos a infraestrutura conforme a necessidade da empresa, seja em servidores próprios, cloud gerenciado ou hospedagem dedicada."
+        }
+      ]
+    },
+    {
+      title: "Comercial e Suporte",
+      items: [
+        {
+          question: "Como funciona o pagamento?",
+          answer: "O modelo de pagamento é estruturado conforme o projeto. Geralmente trabalhamos com entrada na aprovação e parcelas conforme entregas. Aceitamos PIX, transferência e cartão."
         },
         {
           question: "Oferecem suporte após a entrega?",
-          answer: "Sim. 30 dias de suporte gratuito após entrega. Depois disso, temos planos de manutenção com valores acessíveis."
-        },
-        {
-          question: "Como funciona o pagamento?",
-          answer: "50% na entrada, 50% na entrega. Projetos acima de R$ 5.000 podem ser parcelados em até 3x. Aceitamos PIX, transferência e cartão."
-        },
-        {
-          question: "Posso pedir alterações durante o desenvolvimento?",
-          answer: "Sim, dentro do escopo acordado. Alterações pequenas são incluídas. Mudanças significativas geram custos adicionais, sempre comunicados antes."
-        }
-      ]
-    },
-    {
-      title: "Tecnologia",
-      items: [
-        {
-          question: "Quais tecnologias vocês usam?",
-          answer: "React, Node.js, Python, TypeScript, PostgreSQL, MongoDB, entre outras. Escolhemos a melhor tecnologia para cada projeto, não usamos sempre a mesma."
-        },
-        {
-          question: "Fazem integração com outros sistemas?",
-          answer: "Sim. APIs REST, GraphQL, webhooks, CRM, ERP, sistemas de pagamento, redes sociais. Se tem API, conseguimos integrar."
-        },
-        {
-          question: "Como garantem a segurança dos dados?",
-          answer: "Criptografia, servidores seguros, backups regulares, compliance com LGPD. Seguimos as melhores práticas de segurança do mercado."
-        },
-        {
-          question: "Posso hospedar em meus próprios servidores?",
-          answer: "Sim. Oferecemos hospedagem própria ou configuramos nos seus servidores. Orientamos sobre a melhor opção para cada caso."
-        }
-      ]
-    },
-    {
-      title: "Suporte",
-      items: [
-        {
-          question: "Oferecem treinamento para usar os sistemas?",
-          answer: "Sim. Treinamento básico e documentação estão inclusos na entrega. Treinamentos avançados podem ser contratados separadamente."
-        },
-        {
-          question: "Como funciona o suporte técnico?",
-          answer: "Durante o projeto: comunicação direta via WhatsApp ou Discord. Após entrega: suporte via ticket ou plano de manutenção."
+          answer: "Sim. 30 dias de acompanhamento inclusos após cada implantação. Planos de manutenção contínua estão disponíveis para monitoramento e evolução do sistema."
         },
         {
           question: "O que acontece se algo parar de funcionar?",
-          answer: "Se for bug do desenvolvimento, corrigimos sem custo. Se for alteração externa ou novo requisito, avaliamos e orçamos a correção."
+          answer: "Se for falha do desenvolvimento, corrigimos sem custo. Se for alteração externa ou novo requisito operacional, avaliamos e orçamos a correção com transparência."
         },
         {
-          question: "Vocês fazem manutenção de projetos existentes?",
-          answer: "Depende. Avaliamos o código e a documentação existente. Se estiver em condições de manutenção, podemos assumir. Caso contrário, sugerimos refatoração."
+          question: "Vocês assumem projetos iniciados por outras empresas?",
+          answer: "Depende. Avaliamos a base de código e a documentação existente. Se estiver em condições de manutenção, podemos assumir. Caso contrário, recomendamos refatoração com base em diagnóstico operacional."
         }
       ]
     }
@@ -79,9 +79,9 @@ const FAQ = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEO 
         title="Cheetah Solutions Network | Perguntas Frequentes"
-        description="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico."
+        description="Respostas sobre a metodologia, processos e forma de trabalho da Cheetah Solutions Network. Diagnóstico operacional, tecnologias, prazos e suporte técnico."
         ogTitle="Perguntas Frequentes | Cheetah Solutions Network"
-        ogDescription="Respostas para as dúvidas mais comuns sobre os serviços da Cheetah Solutions Network. Prazos, tecnologias, pagamentos e suporte técnico."
+        ogDescription="Respostas sobre a metodologia, processos e forma de trabalho da Cheetah Solutions Network. Diagnóstico operacional, tecnologias, prazos e suporte."
         ogUrl="/faq"
         canonical="/faq"
       />
@@ -109,8 +109,8 @@ const FAQ = () => {
                 <span className="text-primary">frequentes.</span>
               </h1>
               <p className="text-muted-foreground leading-relaxed">
-                Respostas diretas para as dúvidas mais comuns sobre 
-                nossos serviços e forma de trabalho.
+                Respostas diretas sobre nossa metodologia, processo de trabalho 
+                e forma de estruturar operações empresariais.
               </p>
             </div>
           </div>

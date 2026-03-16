@@ -41,59 +41,59 @@ import FounderHero from "@/components/FounderHero";
 const Index = () => {
   const services = [
     {
-      icon: Code,
-      title: "Desenvolvimento de Software Personalizado",
-      description: "Soluções sob medida focadas em desempenho, segurança e escalabilidade."
-    },
-    {
-      icon: Globe,
-      title: "Websites e Aplicações Web",
-      description: "Projetos modernos, rápidos e com excelente experiência do usuário."
-    },
-    {
       icon: Layers,
-      title: "Sistemas e Plataformas Digitais",
-      description: "Soluções completas para gestão, operação e crescimento de negócios."
+      title: "Estruturação de Sistemas Operacionais",
+      description: "Sistemas internos sob medida para organizar fluxos críticos e eliminar dependência de processos manuais."
     },
     {
       icon: Settings,
-      title: "Automação de Processos",
-      description: "Fluxos inteligentes que reduzem custos e aumentam eficiência."
+      title: "Automação de Processos Estratégicos",
+      description: "Automação de rotinas operacionais e integração de dados para reduzir retrabalho e aumentar eficiência."
+    },
+    {
+      icon: Globe,
+      title: "Integração de Sistemas e Departamentos",
+      description: "Conexão entre plataformas, bancos de dados e ferramentas para fluxo consistente de informação."
+    },
+    {
+      icon: Code,
+      title: "Plataformas Digitais Escaláveis",
+      description: "Aplicações web preparadas para suportar crescimento de usuários, dados e complexidade operacional."
     },
     {
       icon: Bot,
-      title: "Bots e Integrações",
-      description: "Soluções inteligentes para Discord, Telegram, atendimento e integração de sistemas."
+      title: "Inteligência Operacional e Dashboards",
+      description: "Centralização de dados estratégicos em painéis para tomada de decisão baseada em informação confiável."
     }
   ];
 
   const stats = [
-    { number: "120+", label: "Projetos Entregues" },
-    { number: "50+", label: "Clientes Ativos" },
-    { number: "99.9%", label: "Uptime" },
-    { number: "24/7", label: "Suporte" }
+    { number: "120+", label: "Operações Estruturadas" },
+    { number: "50+", label: "Empresas Atendidas" },
+    { number: "99.9%", label: "Disponibilidade" },
+    { number: "24/7", label: "Monitoramento" }
   ];
 
   const values = [
     {
       icon: Zap,
-      title: "Agilidade",
-      description: "Entregas rápidas sem comprometer a qualidade técnica."
+      title: "Eficiência Operacional",
+      description: "Eliminação de gargalos e retrabalho por meio de arquitetura bem definida."
     },
     {
       icon: Shield,
       title: "Confiabilidade",
-      description: "Compromisso com prazos, segurança e resultados consistentes."
+      description: "Sistemas estáveis, seguros e preparados para a operação real da empresa."
     },
     {
       icon: Heart,
-      title: "Paixão",
-      description: "Dedicação genuína em cada linha de código que escrevemos."
+      title: "Compromisso Técnico",
+      description: "Engenharia rigorosa aplicada a cada componente do sistema."
     },
     {
       icon: Users,
-      title: "Colaboração",
-      description: "Parceria real com nossos clientes em todas as etapas."
+      title: "Parceria Estratégica",
+      description: "Atuação integrada com a operação do cliente em todas as etapas."
     }
   ];
 
@@ -101,26 +101,26 @@ const Index = () => {
     {
       icon: FileSearch,
       step: "01",
-      title: "Descoberta e Análise",
-      description: "Entendemos seu negócio, objetivos e requisitos técnicos para criar um plano de projeto detalhado."
+      title: "Diagnóstico Operacional",
+      description: "Mapeamos a operação da empresa, identificamos gargalos estruturais e processos que geram retrabalho."
     },
     {
       icon: Cog,
       step: "02",
-      title: "Desenvolvimento",
-      description: "Codificamos com metodologias ágeis, entregas incrementais e comunicação constante."
+      title: "Arquitetura Tecnológica",
+      description: "Definimos a estrutura de sistemas, integrações e fluxos de dados que a operação precisa."
     },
     {
       icon: TestTube,
       step: "03",
-      title: "Testes e Qualidade",
-      description: "Validamos cada funcionalidade com testes automatizados e revisões de código rigorosas."
+      title: "Implementação Estruturada",
+      description: "Desenvolvemos e implantamos os sistemas com entregas incrementais e validação contínua."
     },
     {
       icon: Rocket,
       step: "04",
-      title: "Entrega e Suporte",
-      description: "Implantamos a solução e oferecemos acompanhamento técnico contínuo."
+      title: "Acompanhamento e Evolução",
+      description: "Monitoramos a operação, ajustamos o sistema e preparamos a base para o próximo ciclo de crescimento."
     }
   ];
 
@@ -137,49 +137,49 @@ const Index = () => {
 
   const useCases = [
     {
-      category: "E-commerce",
-      title: "Plataforma de Vendas Online",
-      description: "Sistema completo de e-commerce com gestão de produtos, pagamentos integrados e painel administrativo.",
-      results: ["Aumento de 40% nas conversões", "Integração com 5 gateways de pagamento"]
+      category: "Operações",
+      title: "Estruturação de Gestão Interna",
+      description: "Sistema sob medida para controle de operações, integração entre departamentos e automação de processos críticos.",
+      results: ["Redução de 60% no retrabalho operacional", "Dados centralizados em tempo real"]
     },
     {
-      category: "Gestão Empresarial",
-      title: "Sistema de Gestão Interna",
-      description: "Plataforma personalizada para controle de operações, relatórios em tempo real e automação de processos.",
-      results: ["Redução de 60% no tempo operacional", "Dashboard com métricas em tempo real"]
+      category: "Processos",
+      title: "Automação de Fluxos Comerciais",
+      description: "Eliminação de processos manuais em vendas, faturamento e relacionamento com clientes por meio de sistemas integrados.",
+      results: ["Ciclo de venda 40% mais rápido", "Integração com 5 plataformas existentes"]
     },
     {
-      category: "Comunidades",
-      title: "Bot de Moderação Discord",
-      description: "Bot inteligente para gestão de comunidades com moderação automática, comandos personalizados e integrações.",
-      results: ["+50.000 usuários gerenciados", "Sistema de tickets automatizado"]
+      category: "Inteligência",
+      title: "Dashboard de Performance Operacional",
+      description: "Painel centralizado com métricas de operação, financeiro e produtividade para tomada de decisão baseada em dados.",
+      results: ["Visibilidade completa da operação", "Previsibilidade de resultados"]
     }
   ];
 
   const whyChooseUs = [
     {
-      title: "Código Limpo e Documentado",
-      description: "Desenvolvemos seguindo as melhores práticas da indústria, com código legível, testável e bem documentado para facilitar manutenção futura."
+      title: "Diagnóstico antes do código",
+      description: "Antes de desenvolver qualquer sistema, analisamos a operação da empresa para garantir que a tecnologia resolva o problema certo."
     },
     {
-      title: "Comunicação Transparente",
-      description: "Mantemos você informado em cada etapa do projeto com relatórios semanais, acesso ao repositório e canais diretos com a equipe técnica."
+      title: "Comunicação Técnica Direta",
+      description: "Relatórios objetivos, acesso ao repositório e canais diretos com a equipe de engenharia. Sem intermediários."
     },
     {
-      title: "Escalabilidade Planejada",
-      description: "Arquitetamos soluções pensando no crescimento do seu negócio, garantindo que o sistema suporte aumento de demanda sem retrabalho."
+      title: "Arquitetura Preparada para Crescimento",
+      description: "Cada sistema é projetado para absorver aumento de demanda, complexidade e volume de dados sem necessidade de reconstrução."
     },
     {
-      title: "Segurança em Primeiro Lugar",
-      description: "Implementamos práticas de segurança desde o início do desenvolvimento, protegendo dados e garantindo conformidade com regulamentações."
+      title: "Segurança Estrutural",
+      description: "Práticas de segurança integradas desde a definição da arquitetura, protegendo dados e garantindo conformidade regulatória."
     },
     {
-      title: "Suporte Técnico Dedicado",
-      description: "Após a entrega, oferecemos acompanhamento contínuo para garantir o funcionamento perfeito e evolução da solução."
+      title: "Acompanhamento Pós-implantação",
+      description: "Após a entrega, monitoramos a operação do sistema e ajustamos conforme a empresa evolui."
     },
     {
-      title: "Metodologia Ágil Comprovada",
-      description: "Utilizamos Scrum e entregas incrementais para garantir que você veja progresso real e possa ajustar prioridades durante o desenvolvimento."
+      title: "Cheetah OPS Framework",
+      description: "Metodologia proprietária de diagnóstico, arquitetura e implementação que garante previsibilidade e resultado em cada projeto."
     }
   ];
 
@@ -339,10 +339,10 @@ const Index = () => {
           <AnimatedSection>
             <div className="mb-10">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-                Nossos <span className="text-primary">Serviços</span>
+                Nossas <span className="text-primary">Capacidades</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Soluções tecnológicas completas para impulsionar seu negócio
+                Capacidades estruturais para organizar, automatizar e escalar operações empresariais
               </p>
             </div>
           </AnimatedSection>
@@ -368,7 +368,7 @@ const Index = () => {
                   variant="outline"
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm font-medium"
                 >
-                  Ver Todos os Serviços
+                  Ver Todas as Capacidades
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -383,10 +383,10 @@ const Index = () => {
           <AnimatedSection>
             <div className="mb-10">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-                Como <span className="text-primary">Trabalhamos</span>
+                Cheetah <span className="text-primary">OPS Framework</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Processo estruturado para garantir qualidade e previsibilidade em cada projeto
+                Metodologia proprietária de diagnóstico, arquitetura e implementação para estruturar operações empresariais
               </p>
             </div>
           </AnimatedSection>
@@ -419,10 +419,10 @@ const Index = () => {
           <AnimatedSection>
             <div className="mb-10">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-                Tecnologias e <span className="text-primary">Expertise</span>
+                Base <span className="text-primary">Tecnológica</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Stack moderna e ferramentas consolidadas para entregar soluções robustas
+                Stack consolidada para construir sistemas operacionais robustos e escaláveis
               </p>
             </div>
           </AnimatedSection>
@@ -449,7 +449,7 @@ const Index = () => {
                 Nossa <span className="text-primary">Abordagem</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Engenharia de software com foco em qualidade, performance e escalabilidade
+                Engenharia de software orientada à operação do cliente, com foco em resultado mensurável
               </p>
             </div>
           </AnimatedSection>
@@ -458,21 +458,21 @@ const Index = () => {
             <AnimatedSection delay={100}>
               <div className="space-y-6">
                 <div className="p-5 border-l-2 border-primary bg-card/50">
-                  <h3 className="text-base font-semibold mb-2 text-foreground">Arquitetura Pensada para Crescer</h3>
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Diagnóstico Antes do Código</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Cada projeto é planejado considerando o crescimento futuro. Utilizamos padrões de arquitetura modernos que permitem escalar sem reescrever o sistema.
+                    Antes de qualquer desenvolvimento, mapeamos a operação da empresa para identificar onde a tecnologia gera mais impacto.
                   </p>
                 </div>
                 <div className="p-5 border-l-2 border-primary bg-card/50">
-                  <h3 className="text-base font-semibold mb-2 text-foreground">Código Testado e Documentado</h3>
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Arquitetura Orientada à Operação</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Implementamos testes automatizados e documentação técnica clara. Isso garante manutenibilidade e facilita futuras evoluções do sistema.
+                    A estrutura de cada sistema é definida com base nos fluxos reais da empresa, garantindo que a tecnologia se integre à operação.
                   </p>
                 </div>
                 <div className="p-5 border-l-2 border-primary bg-card/50">
-                  <h3 className="text-base font-semibold mb-2 text-foreground">Performance como Prioridade</h3>
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Implementação com Previsibilidade</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Otimizamos cada aspecto da aplicação: tempo de carregamento, consumo de recursos e experiência do usuário final.
+                    Entregas incrementais com validação contínua, garantindo que cada etapa esteja alinhada com as necessidades operacionais.
                   </p>
                 </div>
               </div>
@@ -480,15 +480,15 @@ const Index = () => {
             
             <AnimatedSection delay={200}>
               <div className="bg-card border border-border rounded-lg p-6 h-full">
-                <h3 className="text-lg font-semibold mb-4 text-foreground">Como Trabalhamos</h3>
+                <h3 className="text-lg font-semibold mb-4 text-foreground">Como Estruturamos</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <span className="text-xs font-bold text-primary">1</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">Entendimento profundo do negócio</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Antes de qualquer código, entendemos seu contexto, objetivos e desafios técnicos.</p>
+                      <h4 className="text-sm font-medium text-foreground">Mapeamento da operação</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Entendemos os fluxos, gargalos e interdependências antes de definir qualquer sistema.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -496,8 +496,8 @@ const Index = () => {
                       <span className="text-xs font-bold text-primary">2</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">Desenvolvimento iterativo</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Entregas incrementais com feedback constante, garantindo alinhamento em cada etapa.</p>
+                      <h4 className="text-sm font-medium text-foreground">Definição de arquitetura</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Estruturamos a base tecnológica com foco na operação real, não em suposições.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -505,8 +505,8 @@ const Index = () => {
                       <span className="text-xs font-bold text-primary">3</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">Revisão técnica rigorosa</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Code review, testes automatizados e validação de segurança antes de cada release.</p>
+                      <h4 className="text-sm font-medium text-foreground">Implementação validada</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Desenvolvimento com entregas incrementais, testes automatizados e validação contínua.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -514,8 +514,8 @@ const Index = () => {
                       <span className="text-xs font-bold text-primary">4</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">Suporte técnico contínuo</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Acompanhamento pós-entrega para garantir estabilidade e evolução do sistema.</p>
+                      <h4 className="text-sm font-medium text-foreground">Evolução contínua</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Monitoramento pós-implantação e ajustes conforme a operação da empresa evolui.</p>
                     </div>
                   </div>
                 </div>
@@ -534,7 +534,7 @@ const Index = () => {
                 Por que escolher a <span className="text-primary">Cheetah Network</span>?
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Diferenciais que fazem a diferença no resultado do seu projeto
+                Diferenciais que garantem resultado na estruturação tecnológica da sua operação
               </p>
             </div>
           </AnimatedSection>
@@ -566,10 +566,10 @@ const Index = () => {
                   Cheetah <span className="text-primary">Developers</span> Brasil
                 </h2>
                 <p className="text-lg text-muted-foreground mb-4 font-medium">
-                  Onde desenvolvedores evoluem juntos.
+                  Onde profissionais de tecnologia evoluem juntos.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Programa e comunidade oficial da Cheetah Solutions Network voltado ao crescimento técnico, colaboração e formação de desenvolvedores. Participe de discussões, compartilhe conhecimento e evolua junto com outros profissionais.
+                  Comunidade oficial da Cheetah Solutions Network voltada ao crescimento técnico, colaboração e formação de profissionais de engenharia de software. Participe de discussões, compartilhe conhecimento e evolua junto com outros especialistas.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/developers">
@@ -637,7 +637,7 @@ const Index = () => {
                   Interação, competição e engajamento no Discord.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Um projeto inovador que transforma comunidades no Discord. Partidas criadas por usuários, sistema de progressão e experiências dinâmicas que conectam pessoas.
+                  Projeto da Cheetah Solutions Network que transforma comunidades no Discord. Partidas criadas por usuários, sistema de progressão e experiências dinâmicas que conectam pessoas.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/bellabot">
@@ -662,7 +662,7 @@ const Index = () => {
                 Sobre a <span className="text-primary">Cheetah Solutions Network</span>
               </h2>
               <p className="text-muted-foreground max-w-3xl">
-                A Cheetah Solutions Network publica artigos institucionais que esclarecem dúvidas frequentes sobre sua identidade, história e posicionamento no mercado de tecnologia.
+                A Cheetah Solutions Network publica artigos institucionais que detalham sua metodologia, posicionamento e atuação no mercado de engenharia de software.
               </p>
             </div>
           </AnimatedSection>
@@ -672,7 +672,7 @@ const Index = () => {
               <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
                 <h3 className="text-lg font-semibold mb-2 text-foreground">O que é a Cheetah</h3>
                 <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                  Entenda o que é a empresa e como atua no mercado de tecnologia.
+                  Entenda o que é a empresa e como atua na estruturação tecnológica de operações.
                 </p>
                 <Link to="/artigos/atuacao">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
@@ -762,17 +762,17 @@ const Index = () => {
                   Sobre a <span className="text-primary">Cheetah Network</span>
                 </h2>
                 <p className="text-muted-foreground mb-5 leading-relaxed">
-                  Somos uma software house especializada em desenvolvimento de soluções tecnológicas sob medida. Nossa equipe combina expertise técnica com visão de negócio para entregar resultados que realmente impactam.
+                  Somos uma empresa de engenharia de software orientada à performance operacional. Analisamos a operação de cada empresa, identificamos gargalos estruturais e desenvolvemos sistemas sob medida que organizam processos e integram setores.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Com experiência em projetos de diferentes portes e segmentos, trabalhamos lado a lado com nossos clientes, desde a concepção até o suporte contínuo, garantindo que cada solução atenda às necessidades específicas do negócio.
+                  Com experiência em operações de diferentes portes e segmentos, trabalhamos lado a lado com nossos clientes na estruturação tecnológica que sustenta o crescimento do negócio.
                 </p>
                 <Link to="/sobre">
                   <Button 
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-5 py-2 text-sm font-medium"
                   >
-                    Conheça Nossa História
+                    Conheça Nossa Abordagem
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -805,10 +805,10 @@ const Index = () => {
           <AnimatedSection animation="scale">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-                Vamos construir sua <span className="text-primary">próxima solução</span>?
+                Sua operação precisa de <span className="text-primary">estrutura tecnológica</span>?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Entre em contato para discutir seu projeto. Nossa equipe está pronta para entender suas necessidades e propor a melhor abordagem técnica.
+                Conte sobre os desafios operacionais da sua empresa. Vamos avaliar como a tecnologia pode organizar processos e preparar sua operação para crescer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/orcamento">
@@ -816,7 +816,7 @@ const Index = () => {
                     size="lg"
                     className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all"
                   >
-                    Solicitar Orçamento
+                    Iniciar Diagnóstico
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>

@@ -23,8 +23,8 @@ const FounderHero = () => {
                   : 'opacity-0 sm:translate-y-6'
               }`}
             >
-              <span className="text-primary">Resultado real</span>{" "}
-              com software sob medida
+              <span className="text-primary">Estruturação tecnológica</span>{" "}
+              para operações que exigem performance
             </h2>
             
             <p 
@@ -34,10 +34,9 @@ const FounderHero = () => {
                   : 'opacity-0 sm:translate-y-6'
               }`}
             >
-              Desenvolvemos <strong className="text-foreground/90 font-medium">soluções digitais escaláveis</strong>{" "}
-              com foco em <strong className="text-foreground/90 font-medium">performance</strong> e{" "}
-              <strong className="text-foreground/90 font-medium">eficiência</strong>. Código limpo, arquitetura sólida 
-              e tecnologia para negócios que precisam crescer.
+              Analisamos operações empresariais, identificamos <strong className="text-foreground/90 font-medium">gargalos estruturais</strong>{" "}
+              e desenvolvemos <strong className="text-foreground/90 font-medium">sistemas sob medida</strong> que organizam processos, 
+              integram setores e criam <strong className="text-foreground/90 font-medium">base tecnológica preparada para crescimento</strong>.
             </p>
             
             {/* Founder signature block */}

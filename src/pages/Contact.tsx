@@ -95,7 +95,7 @@ const Contact = () => {
               </h1>
               <p className="text-muted-foreground leading-relaxed">
                 Canal oficial para clientes com projetos ativos. Suporte técnico, 
-                acompanhamento de entregas e resolução de demandas operacionais.
+                acompanhamento de implantações e resolução de demandas operacionais.
               </p>
             </div>
           </div>

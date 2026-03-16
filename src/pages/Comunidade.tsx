@@ -174,9 +174,9 @@ const Comunidade = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Comunidade de Programação e Tecnologia | Cheetah Solutions Network"
-        description="Participe da comunidade de desenvolvedores da Cheetah Solutions Network. Um espaço aberto para quem gosta de programação, tecnologia e desenvolvimento de software no Brasil."
+        description="Participe da comunidade de profissionais de tecnologia da Cheetah Solutions Network. Um espaço aberto para quem trabalha com engenharia de software, automação e operações tecnológicas."
         ogTitle="Comunidade de Programação e Tecnologia | Cheetah Solutions Network"
-        ogDescription="Participe da comunidade de desenvolvedores da Cheetah Solutions Network. Um espaço aberto para quem gosta de programação, tecnologia e desenvolvimento de software no Brasil."
+        ogDescription="Participe da comunidade de profissionais de tecnologia da Cheetah Solutions Network. Engenharia de software, automação e operações tecnológicas."
         ogUrl="/comunidade"
         canonical="/comunidade"
       />

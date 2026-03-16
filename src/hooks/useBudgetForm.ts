@@ -18,12 +18,12 @@ export type LeadQualification = "exploratório" | "médio" | "avançado";
 
 // Mapeamento de serviços para recursos relacionados
 const serviceFeatureMap: Record<string, string[]> = {
-  "Bot Discord/Telegram": ["Integração WhatsApp", "Chat ao Vivo"],
-  "Website": ["SEO Otimizado", "Design Responsivo", "Analytics"],
-  "Sistema Web": ["Dashboard Administrativo", "Sistema de Usuários", "Relatórios"],
-  "E-commerce": ["Sistema de Pagamento", "Dashboard Administrativo", "SEO Otimizado", "Analytics"],
-  "Integração API": ["Dashboard Administrativo", "Relatórios"],
-  "App Mobile": ["Sistema de Usuários", "Design Responsivo", "Analytics"]
+  "Estruturação de Sistemas": ["Dashboard Administrativo", "Controle de Usuários", "Relatórios Operacionais"],
+  "Automação de Processos": ["Automação de Processos", "Integração com APIs", "Notificações Automáticas"],
+  "Integração de Sistemas": ["Integração entre Sistemas", "Integração com APIs", "Monitoramento em Tempo Real"],
+  "Plataforma Digital": ["Dashboard Administrativo", "Controle de Usuários", "Painel de Métricas", "Multi-departamento"],
+  "Dashboard Operacional": ["Painel de Métricas", "Relatórios Operacionais", "Monitoramento em Tempo Real"],
+  "Diagnóstico Operacional": ["Relatórios Operacionais", "Painel de Métricas"]
 };
 
 const initialFormData: BudgetFormData = {

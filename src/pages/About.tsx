@@ -20,15 +20,15 @@ const About = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Cheetah Solutions Network | Quem Somos"
-        description="Conheça a Cheetah Solutions Network, uma software house especializada em soluções digitais sob medida para empresas que buscam performance, escalabilidade e eficiência."
+        description="A Cheetah Solutions Network é uma empresa de engenharia de software orientada à performance operacional. Estruturamos operações empresariais por meio de arquitetura tecnológica."
         ogTitle="Quem Somos | Cheetah Solutions Network"
-        ogDescription="Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida para empresas que buscam eficiência, performance e escalabilidade."
+        ogDescription="Engenharia de software orientada à performance operacional. Estruturamos operações empresariais por meio de diagnóstico, arquitetura e implementação de sistemas sob medida."
         ogUrl="/sobre"
       />
       <OrganizationJsonLd />
       <WebPageJsonLd 
         title="Quem Somos | Cheetah Solutions Network"
-        description="Uma equipe técnica que entende de negócio. A Cheetah Solutions Network é uma software house focada na criação de soluções digitais sob medida."
+        description="Engenharia de software orientada à performance operacional. Estruturação tecnológica de operações empresariais."
         url="/sobre"
       />
       <Header />
@@ -39,15 +39,15 @@ const About = () => {
           <AnimatedSection>
             <div className="max-w-5xl">
               <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-                Software House desde 2020
+                Engenharia de Software desde 2020
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
-                Construímos software<br />
-                <span className="text-primary">que funciona.</span>
+                Estruturamos operações<br />
+                <span className="text-primary">com tecnologia.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Eficiência, performance e escalabilidade. 
-                Soluções digitais sob medida para empresas que buscam resultados.
+                Engenharia de software orientada à performance operacional. 
+                Sistemas sob medida para empresas que exigem resultado.
               </p>
             </div>
           </AnimatedSection>
@@ -65,8 +65,8 @@ const About = () => {
                   Quem Somos
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3 leading-tight">
-                  Uma equipe técnica<br />
-                  que entende de negócio.
+                  Engenharia de software<br />
+                  orientada à operação.
                 </h2>
               </div>
             </AnimatedSection>
@@ -75,34 +75,35 @@ const About = () => {
             <AnimatedSection delay={100} className="lg:col-span-8">
               <div className="space-y-8">
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  A Cheetah Solutions Network é uma software house focada na criação de soluções digitais 
-                  sob medida para empresas que buscam eficiência, performance e escalabilidade.
+                  A Cheetah Solutions Network é uma empresa de engenharia de software orientada à 
+                  performance operacional. Atuamos na estruturação tecnológica de empresas, analisando 
+                  operações, identificando gargalos e desenvolvendo sistemas que organizam processos.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Desenvolvemos sistemas, aplicações e plataformas digitais, com forte atuação em automação 
-                  de processos e integração de tecnologias. Cada projeto é construído com base em engenharia 
-                  sólida, arquitetura bem definida e foco total na qualidade do software entregue.
+                  Cada projeto começa com diagnóstico operacional, não com código. Entendemos como a 
+                  empresa funciona, onde estão os pontos de ineficiência e quais sistemas são necessários 
+                  para resolver problemas reais. O desenvolvimento é consequência da arquitetura definida.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nossa atuação é guiada pelo compromisso de transformar necessidades reais de negócio em 
-                  soluções tecnológicas eficientes, utilizando automação e inovação de forma estratégica 
-                  para impulsionar resultados e simplificar operações. Trabalhamos com rapidez e organização, 
-                  sem abrir mão da estabilidade, da segurança e da confiabilidade dos sistemas desenvolvidos.
+                  Nossa atuação é guiada pelo Cheetah OPS Framework, uma metodologia proprietária que 
+                  combina diagnóstico, definição de arquitetura e implementação estruturada. O resultado 
+                  são sistemas que eliminam retrabalho, integram setores e preparam a base tecnológica 
+                  da empresa para crescer.
                 </p>
                 
                 <div className="pt-8 border-t border-border">
                   <div className="grid sm:grid-cols-3 gap-8">
                     <div>
                       <span className="text-3xl font-bold text-primary">120+</span>
-                      <p className="text-sm text-muted-foreground mt-1">projetos entregues</p>
+                      <p className="text-sm text-muted-foreground mt-1">operações estruturadas</p>
                     </div>
                     <div>
                       <span className="text-3xl font-bold text-primary">5+</span>
-                      <p className="text-sm text-muted-foreground mt-1">anos de mercado</p>
+                      <p className="text-sm text-muted-foreground mt-1">anos de operação</p>
                     </div>
                     <div>
                       <span className="text-3xl font-bold text-primary">99.9%</span>
-                      <p className="text-sm text-muted-foreground mt-1">uptime médio</p>
+                      <p className="text-sm text-muted-foreground mt-1">disponibilidade</p>
                     </div>
                   </div>
                 </div>
@@ -121,8 +122,8 @@ const About = () => {
                 Como trabalhamos
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                Processos bem definidos,<br />
-                resultados consistentes.
+                Metodologia estruturada,<br />
+                resultados previsíveis.
               </h2>
             </div>
           </AnimatedSection>
@@ -131,30 +132,29 @@ const About = () => {
             <AnimatedSection delay={100}>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  Acreditamos que software bem feito nasce de processos bem definidos, comunicação clara 
-                  e colaboração constante. Por isso, atuamos de forma integrada com nossos clientes, 
-                  valorizando a parceria, o entendimento do contexto e a construção conjunta de soluções duradouras.
+                  Acreditamos que sistemas eficientes nascem de diagnóstico preciso, arquitetura bem 
+                  definida e implementação disciplinada. Atuamos de forma integrada com a operação dos 
+                  clientes, entendendo o contexto real antes de definir qualquer solução tecnológica.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nossa equipe é formada por profissionais qualificados e comprometidos com excelência técnica. 
-                  Contamos também com designers internos, garantindo que cada solução entregue tenha não apenas 
-                  alto desempenho, mas também uma experiência de uso consistente, intuitiva e alinhada à 
-                  identidade do negócio.
+                  Nossa equipe é formada por engenheiros de software com experiência em operações 
+                  empresariais. Cada sistema entregue reflete o entendimento profundo do negócio 
+                  do cliente, com foco em eliminar gargalos e criar base para crescimento.
                 </p>
               </div>
             </AnimatedSection>
             
             <AnimatedSection delay={200}>
               <div className="bg-card border border-border rounded-xl p-8">
-                <h3 className="text-lg font-semibold mb-6">Nosso compromisso</h3>
+                <h3 className="text-lg font-semibold mb-6">Como atuamos</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                       <Zap className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Rapidez sem sacrificar qualidade</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Entregas ágeis com padrão técnico elevado</p>
+                      <h4 className="font-medium text-sm">Diagnóstico operacional preciso</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Mapeamos fluxos e gargalos antes de definir sistemas</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -162,8 +162,8 @@ const About = () => {
                       <Shield className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Estabilidade e segurança</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Sistemas confiáveis e protegidos</p>
+                      <h4 className="font-medium text-sm">Arquitetura preparada para crescimento</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Sistemas que absorvem aumento de demanda sem reconstrução</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -171,8 +171,8 @@ const About = () => {
                       <Users className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Parceria genuína</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Construção conjunta de soluções</p>
+                      <h4 className="font-medium text-sm">Integração com a operação real</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Tecnologia alinhada aos processos do cliente</p>
                     </div>
                   </div>
                 </div>
@@ -191,8 +191,8 @@ const About = () => {
                 O que fazemos
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                Desenvolvimento sob medida,<br />
-                não templates genéricos.
+                Capacidades estruturais,<br />
+                não catálogo de serviços.
               </h2>
             </div>
           </AnimatedSection>
@@ -206,10 +206,10 @@ const About = () => {
                     <Code className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Sistemas e Aplicações Web</h3>
+                    <h3 className="text-lg font-semibold mb-2">Sistemas Operacionais Sob Medida</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Plataformas completas, painéis administrativos, ERPs customizados. 
-                      Arquitetura escalável, código documentado, deploy automatizado.
+                      Plataformas internas, painéis de gestão, sistemas de controle operacional. 
+                      Arquitetura definida pela operação da empresa, não por templates.
                     </p>
                   </div>
                 </div>
@@ -228,10 +228,10 @@ const About = () => {
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
                   <Cog className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Automações</h3>
+                <h3 className="text-lg font-semibold mb-2">Automação de Processos</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Bots, integrações entre sistemas, workflows automatizados. 
-                  Eliminamos trabalho manual repetitivo.
+                  Automação de rotinas operacionais, integração de dados entre sistemas 
+                  e eliminação de trabalho manual repetitivo.
                 </p>
               </div>
             </AnimatedSection>
@@ -242,10 +242,10 @@ const About = () => {
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
                   <Shield className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">APIs e Integrações</h3>
+                <h3 className="text-lg font-semibold mb-2">Integração de Sistemas</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Conectamos sistemas legados, ERPs, CRMs e qualquer ferramenta 
-                  que sua operação precise usar.
+                  Conexão entre plataformas, bancos de dados e ferramentas para 
+                  fluxo consistente de informação entre departamentos.
                 </p>
               </div>
             </AnimatedSection>
@@ -258,10 +258,10 @@ const About = () => {
                     <Target className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Consultoria Técnica</h3>
+                    <h3 className="text-lg font-semibold mb-2">Diagnóstico e Consultoria Operacional</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Análise de arquitetura, code review, mentoria de equipes. 
-                      Ajudamos a corrigir o rumo antes que o projeto vire um problema.
+                      Mapeamento de operações, identificação de gargalos estruturais e 
+                      definição da arquitetura tecnológica necessária para a empresa crescer.
                     </p>
                   </div>
                 </div>
@@ -281,7 +281,8 @@ const About = () => {
                   Como pensamos
                 </p>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                  Nossos princípios não são decorativos.
+                  Nossos princípios<br />
+                  orientam cada decisão.
                 </h2>
               </div>
               
@@ -289,37 +290,37 @@ const About = () => {
                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-10">
                   <div className="border-l-2 border-primary/30 pl-6">
                     <Zap className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Agilidade real</h3>
+                    <h3 className="font-semibold mb-2">Diagnóstico antes do código</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Sprints curtos, comunicação constante, entregas frequentes. 
-                      Você acompanha o progresso, não fica esperando surpresas.
+                      Entendemos a operação primeiro. Definimos arquitetura depois. 
+                      O desenvolvimento é consequência, não ponto de partida.
                     </p>
                   </div>
                   
                   <div className="border-l-2 border-primary/30 pl-6">
                     <Shield className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Código que dura</h3>
+                    <h3 className="font-semibold mb-2">Sistemas que duram</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Documentação, testes, arquitetura pensada. 
-                      Seu sistema não vai virar um pesadelo de manutenção.
+                      Documentação, testes, arquitetura pensada para absorver crescimento. 
+                      Sistemas preparados para a operação real da empresa.
                     </p>
                   </div>
                   
                   <div className="border-l-2 border-primary/30 pl-6">
                     <Heart className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Compromisso genuíno</h3>
+                    <h3 className="font-semibold mb-2">Compromisso com resultado</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       Não abandonamos projetos, não sumimos. 
-                      Estamos junto até a entrega — e depois dela.
+                      Acompanhamos a operação até a empresa estar rodando com autonomia.
                     </p>
                   </div>
                   
                   <div className="border-l-2 border-primary/30 pl-6">
                     <Users className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Transparência total</h3>
+                    <h3 className="font-semibold mb-2">Transparência operacional</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Acesso ao código, updates regulares, sem surpresas no orçamento. 
-                      Você sabe exatamente onde está seu investimento.
+                      Acesso ao código, relatórios objetivos, sem surpresas no orçamento. 
+                      O cliente sabe exatamente como a operação está sendo estruturada.
                     </p>
                   </div>
                 </div>
@@ -338,13 +339,13 @@ const About = () => {
                 Nossa visão
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3 mb-8">
-                Software preparado para crescer.
+                Operações preparadas para crescer.
               </h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Buscamos evoluir continuamente, desenvolvendo software preparado para crescer junto 
-                com nossos clientes. Nosso objetivo é ser reconhecidos como uma referência em desenvolvimento 
-                de software personalizado, sendo a escolha natural de empresas que valorizam tecnologia 
-                bem construída, confiável e orientada a resultados.
+                Buscamos evoluir continuamente, estruturando operações empresariais preparadas para 
+                absorver crescimento. Nosso objetivo é ser reconhecidos como referência em engenharia 
+                de software orientada à performance operacional, sendo a escolha natural de empresas 
+                que precisam de base tecnológica sólida para crescer com previsibilidade.
               </p>
             </div>
           </AnimatedSection>
@@ -361,7 +362,7 @@ const About = () => {
                   Trajetória
                 </span>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                  5 anos construindo software sério.
+                  5 anos estruturando operações.
                 </h2>
               </div>
               
@@ -372,12 +373,12 @@ const About = () => {
                   
                   <div className="space-y-8">
                     {[
-                      { year: "2020", text: "Fundação. Foco inicial em automações e bots para Discord." },
-                      { year: "2021", text: "Expansão para desenvolvimento web. Primeiros sistemas completos." },
-                      { year: "2022", text: "50 projetos entregues. Consolidação como software house." },
+                      { year: "2020", text: "Fundação. Primeiros projetos de automação e estruturação de processos." },
+                      { year: "2021", text: "Expansão para sistemas web. Primeiras entregas de sistemas operacionais completos." },
+                      { year: "2022", text: "50 operações estruturadas. Consolidação da metodologia de diagnóstico." },
                       { year: "2023", text: "Lançamento de produtos próprios. Equipe técnica expandida." },
-                      { year: "2024", text: "100+ projetos. Reconhecimento no mercado B2B." },
-                      { year: "2025", text: "Expansão de serviços. Foco em empresas em crescimento." },
+                      { year: "2024", text: "100+ operações. Reconhecimento em estruturação tecnológica B2B." },
+                      { year: "2025", text: "Formalização do Cheetah OPS Framework. Foco em empresas em crescimento." },
                     ].map((item, index) => (
                       <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
                         <div className="flex gap-6 items-start">
@@ -421,7 +422,7 @@ const About = () => {
                 <div className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
                     Trabalhamos com parceiros estratégicos que garantem estabilidade, performance 
-                    e previsibilidade para as soluções que desenvolvemos.
+                    e previsibilidade para os sistemas que desenvolvemos.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     A Cheetah Solutions Network é parceira da{" "}
@@ -433,8 +434,8 @@ const About = () => {
                     >
                       Square Cloud
                     </a>
-                    , uma plataforma moderna de hospedagem focada em aplicações, bots, sites e 
-                    bancos de dados, oferecendo uma base sólida para projetos escaláveis e confiáveis.
+                    , uma plataforma de hospedagem focada em aplicações e bancos de dados, 
+                    oferecendo base sólida para operações que exigem alta disponibilidade.
                   </p>
                 </div>
                 <div className="mt-6 pt-6 border-t border-border">
@@ -569,12 +570,12 @@ const About = () => {
           <AnimatedSection>
             <div className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                Tem um projeto em mente?<br />
-                <span className="text-primary">Vamos conversar.</span>
+                Sua operação precisa de<br />
+                <span className="text-primary">estrutura tecnológica?</span>
               </h2>
               <p className="text-muted-foreground mb-8 max-w-lg">
-                Sem compromisso. Conte sobre seu desafio e vamos avaliar 
-                se faz sentido trabalharmos juntos.
+                Conte sobre os desafios operacionais da sua empresa. Vamos avaliar 
+                como a tecnologia pode organizar processos e preparar sua operação para crescer.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/atendimento">

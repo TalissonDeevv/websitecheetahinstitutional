@@ -47,10 +47,10 @@ const Team = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions Network | Equipes Técnicas"
-        description="Conheça a equipe técnica da Cheetah Solutions Network: desenvolvedores, liderança e profissionais de suporte comprometidos com excelência."
-        ogTitle="Equipes Técnicas | Cheetah Solutions Network"
-        ogDescription="Uma equipe técnica com foco em resultado. Profissionais que entendem de código e de negócio."
+        title="Cheetah Solutions Network | Equipe de Engenharia"
+        description="Conheça a equipe de engenharia da Cheetah Solutions Network: liderança, desenvolvedores e profissionais comprometidos com estruturação tecnológica de operações."
+        ogTitle="Equipe de Engenharia | Cheetah Solutions Network"
+        ogDescription="Engenheiros de software e especialistas em operações empresariais. Equipe técnica focada em resultado."
         ogUrl="/equipe"
       />
       <Header />
@@ -64,12 +64,12 @@ const Team = () => {
                 Quem faz acontecer
               </p>
               <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-8">
-                Uma equipe técnica<br />
-                <span className="text-primary">com foco em resultado.</span>
+                Engenharia de software<br />
+                <span className="text-primary">com visão operacional.</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                Profissionais que entendem de código e de negócio. 
-                Sem hierarquia desnecessária, com comunicação direta.
+                Profissionais que entendem de código e de operação empresarial. 
+                Comunicação direta, foco em resultado.
               </p>
             </div>
           </div>
@@ -130,8 +130,8 @@ const Team = () => {
                   Equipe técnica.
                 </h2>
                 <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
-                  Desenvolvedores especializados em diferentes stacks 
-                  para atender qualquer tipo de projeto.
+                  Engenheiros de software especializados em diferentes stacks 
+                  para estruturar qualquer tipo de operação.
                 </p>
               </AnimatedSection>
             </div>
@@ -205,8 +205,8 @@ const Team = () => {
                 Quer fazer parte?
               </h2>
               <p className="text-muted-foreground mb-6">
-                Estamos sempre procurando pessoas qualificadas que compartilham 
-                nosso compromisso com qualidade técnica.
+                Buscamos profissionais com excelência técnica e visão operacional 
+                que compartilham nosso compromisso com resultado.
               </p>
               <Link to="/inscricoes">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">

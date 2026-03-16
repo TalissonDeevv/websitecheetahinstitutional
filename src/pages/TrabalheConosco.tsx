@@ -71,7 +71,7 @@ const BENEFICIOS = [
   {
     icon: Zap,
     title: "Projetos Reais",
-    description: "Atue em projetos diversos: sistemas web, APIs, automações, e-commerces e apps mobile."
+    description: "Atue em projetos de estruturação operacional: sistemas internos, automações, integrações e dashboards."
   },
   {
     icon: MessageCircle,
@@ -86,7 +86,7 @@ const BENEFICIOS = [
   {
     icon: TrendingUp,
     title: "Crescimento Técnico",
-    description: "Trabalhe com tecnologias modernas: React, Node.js, TypeScript, AWS, Docker e mais."
+    description: "Trabalhe com tecnologias consolidadas: React, Node.js, TypeScript, AWS, Docker e PostgreSQL."
   }
 ];
 
@@ -195,9 +195,9 @@ const TrabalheConosco = () => {
                     <span className="text-primary">Conosco</span>
                   </h1>
                   <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                    Somos uma software house focada na criação de soluções digitais sob medida para negócios que exigem
-                    eficiência, performance e escalabilidade. Buscamos profissionais alinhados com excelência técnica,
-                    organização e visão de produto.
+                    Somos uma empresa de engenharia de software orientada à performance operacional. Estruturamos 
+                    operações empresariais por meio de arquitetura tecnológica. Buscamos profissionais alinhados 
+                    com excelência técnica, visão operacional e compromisso com resultado.
                   </p>
                 </div>
               </div>

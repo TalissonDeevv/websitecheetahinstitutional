@@ -30,77 +30,77 @@ import SEO from "@/components/SEO";
 const processSteps = [
   {
     step: "01",
-    title: "Solicitação",
-    description: "Você preenche o formulário com os detalhes do seu projeto",
+    title: "Contato Inicial",
+    description: "Você descreve os desafios operacionais da sua empresa",
     icon: FileText
   },
   {
     step: "02",
-    title: "Análise",
-    description: "Nossa equipe avalia os requisitos e complexidade",
+    title: "Diagnóstico",
+    description: "Avaliamos a operação e identificamos gargalos estruturais",
     icon: MessageSquare
   },
   {
     step: "03",
     title: "Proposta",
-    description: "Enviamos um orçamento detalhado em até 48h",
+    description: "Enviamos proposta com arquitetura e cronograma em até 48h",
     icon: Clock
   },
   {
     step: "04",
-    title: "Desenvolvimento",
-    description: "Após aprovação, iniciamos o projeto com acompanhamento",
+    title: "Implementação",
+    description: "Após aprovação, iniciamos a estruturação com acompanhamento",
     icon: Rocket
   }
 ];
 
 const benefits = [
   {
-    title: "Código proprietário",
-    description: "Você recebe 100% do código-fonte ao final do projeto",
+    title: "Diagnóstico incluso",
+    description: "Mapeamento operacional antes de qualquer desenvolvimento",
     icon: Code
   },
   {
-    title: "Suporte dedicado",
-    description: "Acompanhamento durante todo o desenvolvimento",
+    title: "Acompanhamento dedicado",
+    description: "Comunicação direta com a equipe de engenharia",
     icon: Headphones
   },
   {
-    title: "Entrega garantida",
-    description: "Compromisso com prazos e qualidade acordados",
+    title: "Entrega estruturada",
+    description: "Compromisso com prazos, qualidade e resultado operacional",
     icon: Shield
   },
   {
-    title: "Performance otimizada",
-    description: "Aplicações rápidas, seguras e escaláveis",
+    title: "Sistemas preparados para crescer",
+    description: "Arquitetura escalável definida desde o diagnóstico",
     icon: Zap
   }
 ];
 
 const faqItems = [
   {
-    question: "O orçamento é gratuito?",
-    answer: "Sim, a elaboração do orçamento é totalmente gratuita e sem compromisso. Você decide se quer prosseguir após receber nossa proposta."
+    question: "O diagnóstico é gratuito?",
+    answer: "A análise inicial e proposta são gratuitas e sem compromisso. Você decide se quer prosseguir após receber nossa avaliação e cronograma."
   },
   {
-    question: "Qual o prazo para receber o orçamento?",
-    answer: "Retornamos em até 48 horas úteis com uma proposta detalhada. Projetos mais complexos podem necessitar de prazo adicional para análise."
+    question: "Qual o prazo para receber a proposta?",
+    answer: "Retornamos em até 48 horas úteis com uma proposta que inclui diagnóstico preliminar, arquitetura sugerida e cronograma. Operações mais complexas podem necessitar de prazo adicional."
   },
   {
     question: "Como funciona o pagamento?",
-    answer: "Trabalhamos com pagamento parcelado: uma entrada para início do projeto e parcelas conforme entregas. Aceitamos PIX, boleto e cartão."
+    answer: "Trabalhamos com pagamento estruturado: entrada na aprovação e parcelas conforme entregas. Aceitamos PIX, boleto e cartão."
   },
   {
-    question: "Vocês oferecem suporte após a entrega?",
-    answer: "Sim, oferecemos garantia de 30 dias para correções e opções de contrato de manutenção mensal para suporte contínuo."
+    question: "Oferecem acompanhamento após a implantação?",
+    answer: "Sim, 30 dias de acompanhamento incluso para ajustes e validação. Planos de manutenção contínua estão disponíveis para monitoramento e evolução."
   },
   {
-    question: "Posso acompanhar o desenvolvimento?",
-    answer: "Sim, você terá acesso a um ambiente de homologação para acompanhar o progresso e validar cada etapa antes da entrega final."
+    question: "Posso acompanhar o andamento?",
+    answer: "Sim, você terá acesso a ambiente de homologação para acompanhar o progresso e validar cada etapa antes da implantação final."
   },
   {
-    question: "E se eu precisar de alterações no escopo?",
-    answer: "Mudanças de escopo são comuns e tratadas de forma transparente. Avaliamos o impacto e apresentamos um adendo ao orçamento original."
+    question: "E se o escopo precisar mudar?",
+    answer: "Mudanças de escopo são avaliadas com base no impacto na arquitetura. Apresentamos um adendo transparente antes de qualquer alteração."
   }
 ];
 
@@ -121,25 +121,25 @@ const Budget = () => {
   } = useBudgetForm();
 
   const services = [
-    { name: "Bot Discord/Telegram", price: "A partir de R$ 500" },
-    { name: "Website", price: "A partir de R$ 800" },
-    { name: "Sistema Web", price: "A partir de R$ 2.500" },
-    { name: "E-commerce", price: "A partir de R$ 2.000" },
-    { name: "Integração API", price: "A partir de R$ 600" },
-    { name: "App Mobile", price: "A partir de R$ 3.000" }
+    { name: "Estruturação de Sistemas", price: "A partir de R$ 2.500" },
+    { name: "Automação de Processos", price: "A partir de R$ 1.500" },
+    { name: "Integração de Sistemas", price: "A partir de R$ 1.000" },
+    { name: "Plataforma Digital", price: "A partir de R$ 3.000" },
+    { name: "Dashboard Operacional", price: "A partir de R$ 2.000" },
+    { name: "Diagnóstico Operacional", price: "A partir de R$ 800" }
   ];
 
   const features = [
     "Dashboard Administrativo",
-    "Sistema de Pagamento",
-    "Sistema de Usuários",
-    "Relatórios",
-    "SEO Otimizado",
-    "Design Responsivo",
-    "Integração WhatsApp",
-    "Chat ao Vivo",
-    "Multi-idioma",
-    "Analytics"
+    "Automação de Processos",
+    "Integração entre Sistemas",
+    "Relatórios Operacionais",
+    "Controle de Usuários",
+    "Painel de Métricas",
+    "Integração com APIs",
+    "Notificações Automáticas",
+    "Multi-departamento",
+    "Monitoramento em Tempo Real"
   ];
 
   const suggestedFeatures = getSuggestedFeatures();
@@ -207,10 +207,10 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SEO
-        title="Cheetah Solutions Network | Solicite Orçamento"
-        description="Solicite um orçamento gratuito para seu projeto. Retornamos em até 48 horas com uma proposta detalhada."
-        ogTitle="Solicite Orçamento | Cheetah Solutions Network"
-        ogDescription="Preencha o formulário com as informações do seu projeto. Retornamos em até 48 horas com uma proposta detalhada."
+        title="Cheetah Solutions Network | Iniciar Projeto"
+        description="Descreva os desafios operacionais da sua empresa. Retornamos em até 48 horas com diagnóstico preliminar e proposta de estruturação."
+        ogTitle="Iniciar Projeto | Cheetah Solutions Network"
+        ogDescription="Descreva os desafios operacionais da sua empresa. Retornamos em até 48 horas com diagnóstico preliminar e proposta estruturada."
         ogUrl="/orcamento"
       />
       <Header />
@@ -232,12 +232,12 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                 Orçamento
               </p>
               <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
-                Solicite uma<br />
-                <span className="text-primary">proposta.</span>
+                Iniciar<br />
+                <span className="text-primary">projeto.</span>
               </h1>
               <p className="text-muted-foreground leading-relaxed">
-                Preencha o formulário com as informações do seu projeto. 
-                Retornamos em até 48 horas com uma proposta detalhada.
+                Descreva os desafios operacionais da sua empresa. 
+                Retornamos em até 48 horas com diagnóstico preliminar e proposta.
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
             <div className="lg:col-span-7">
               <AnimatedSection animation="fade-up" delay={100}>
                 <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
-                  <h2 className="text-lg font-semibold mb-6 text-card-foreground">Dados do projeto</h2>
+                  <h2 className="text-lg font-semibold mb-6 text-card-foreground">Dados da operação</h2>
                   
                   <div className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -303,7 +303,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                     </div>
 
                     <div>
-                      <Label className="text-xs text-muted-foreground font-medium">Tipo de serviço *</Label>
+                      <Label className="text-xs text-muted-foreground font-medium">Tipo de estruturação *</Label>
                       <Select 
                         value={formData.service} 
                         onValueChange={(value) => updateField("service", value)}
@@ -322,13 +322,13 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                     </div>
 
                     <div>
-                      <Label htmlFor="description" className="text-xs text-muted-foreground font-medium">Descrição do projeto *</Label>
+                      <Label htmlFor="description" className="text-xs text-muted-foreground font-medium">Desafios operacionais *</Label>
                       <Textarea
                         id="description"
                         value={formData.description}
                         onChange={(e) => updateField("description", e.target.value)}
                         className="bg-secondary border-border mt-1.5 min-h-[100px] resize-none text-secondary-foreground placeholder:text-muted-foreground/60"
-                        placeholder="Descreva o que você precisa..."
+                        placeholder="Descreva os gargalos e desafios da sua operação..."
                       />
                       {descriptionValidation.message && (
                         <p className="text-xs text-muted-foreground mt-1.5 flex items-center gap-1">
@@ -470,8 +470,8 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                 <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg border border-border">
                   <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm font-medium text-foreground">Orçamento gratuito</p>
-                    <p className="text-xs text-muted-foreground">Sem compromisso. Você decide se quer prosseguir.</p>
+                    <p className="text-sm font-medium text-foreground">Diagnóstico gratuito</p>
+                    <p className="text-xs text-muted-foreground">Sem compromisso. Avaliamos sua operação antes de qualquer proposta.</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -520,7 +520,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                 Diferenciais
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Por que escolher a Cheetah
+                Diferenciais da abordagem
               </h2>
             </div>
           </AnimatedSection>
