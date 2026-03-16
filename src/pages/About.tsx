@@ -206,10 +206,10 @@ const About = () => {
                     <Code className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Sistemas e Aplicações Web</h3>
+                    <h3 className="text-lg font-semibold mb-2">Sistemas Operacionais Sob Medida</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Plataformas completas, painéis administrativos, ERPs customizados. 
-                      Arquitetura escalável, código documentado, deploy automatizado.
+                      Plataformas internas, painéis de gestão, sistemas de controle operacional. 
+                      Arquitetura definida pela operação da empresa, não por templates.
                     </p>
                   </div>
                 </div>
