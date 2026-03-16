@@ -487,8 +487,8 @@ const Index = () => {
                       <span className="text-xs font-bold text-primary">1</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">Entendimento profundo do negócio</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Antes de qualquer código, entendemos seu contexto, objetivos e desafios técnicos.</p>
+                      <h4 className="text-sm font-medium text-foreground">Mapeamento da operação</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Entendemos os fluxos, gargalos e interdependências antes de definir qualquer sistema.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
