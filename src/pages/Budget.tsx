@@ -470,8 +470,8 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                 <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-lg border border-border">
                   <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm font-medium text-foreground">Orçamento gratuito</p>
-                    <p className="text-xs text-muted-foreground">Sem compromisso. Você decide se quer prosseguir.</p>
+                    <p className="text-sm font-medium text-foreground">Diagnóstico gratuito</p>
+                    <p className="text-xs text-muted-foreground">Sem compromisso. Avaliamos sua operação antes de qualquer proposta.</p>
                   </div>
                 </div>
               </AnimatedSection>
