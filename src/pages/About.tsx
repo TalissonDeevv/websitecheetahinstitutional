@@ -299,10 +299,10 @@ const About = () => {
                   
                   <div className="border-l-2 border-primary/30 pl-6">
                     <Shield className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Código que dura</h3>
+                    <h3 className="font-semibold mb-2">Sistemas que duram</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Documentação, testes, arquitetura pensada. 
-                      Seu sistema não vai virar um pesadelo de manutenção.
+                      Documentação, testes, arquitetura pensada para absorver crescimento. 
+                      Sistemas preparados para a operação real da empresa.
                     </p>
                   </div>
                   
