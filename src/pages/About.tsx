@@ -132,15 +132,14 @@ const About = () => {
             <AnimatedSection delay={100}>
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  Acreditamos que software bem feito nasce de processos bem definidos, comunicação clara 
-                  e colaboração constante. Por isso, atuamos de forma integrada com nossos clientes, 
-                  valorizando a parceria, o entendimento do contexto e a construção conjunta de soluções duradouras.
+                  Acreditamos que sistemas eficientes nascem de diagnóstico preciso, arquitetura bem 
+                  definida e implementação disciplinada. Atuamos de forma integrada com a operação dos 
+                  clientes, entendendo o contexto real antes de definir qualquer solução tecnológica.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nossa equipe é formada por profissionais qualificados e comprometidos com excelência técnica. 
-                  Contamos também com designers internos, garantindo que cada solução entregue tenha não apenas 
-                  alto desempenho, mas também uma experiência de uso consistente, intuitiva e alinhada à 
-                  identidade do negócio.
+                  Nossa equipe é formada por engenheiros de software com experiência em operações 
+                  empresariais. Cada sistema entregue reflete o entendimento profundo do negócio 
+                  do cliente, com foco em eliminar gargalos e criar base para crescimento.
                 </p>
               </div>
             </AnimatedSection>
