@@ -41,29 +41,29 @@ import FounderHero from "@/components/FounderHero";
 const Index = () => {
   const services = [
     {
-      icon: Code,
-      title: "Desenvolvimento de Software Personalizado",
-      description: "Soluções sob medida focadas em desempenho, segurança e escalabilidade."
-    },
-    {
-      icon: Globe,
-      title: "Websites e Aplicações Web",
-      description: "Projetos modernos, rápidos e com excelente experiência do usuário."
-    },
-    {
       icon: Layers,
-      title: "Sistemas e Plataformas Digitais",
-      description: "Soluções completas para gestão, operação e crescimento de negócios."
+      title: "Estruturação de Sistemas Operacionais",
+      description: "Sistemas internos sob medida para organizar fluxos críticos e eliminar dependência de processos manuais."
     },
     {
       icon: Settings,
-      title: "Automação de Processos",
-      description: "Fluxos inteligentes que reduzem custos e aumentam eficiência."
+      title: "Automação de Processos Estratégicos",
+      description: "Automação de rotinas operacionais e integração de dados para reduzir retrabalho e aumentar eficiência."
+    },
+    {
+      icon: Globe,
+      title: "Integração de Sistemas e Departamentos",
+      description: "Conexão entre plataformas, bancos de dados e ferramentas para fluxo consistente de informação."
+    },
+    {
+      icon: Code,
+      title: "Plataformas Digitais Escaláveis",
+      description: "Aplicações web preparadas para suportar crescimento de usuários, dados e complexidade operacional."
     },
     {
       icon: Bot,
-      title: "Bots e Integrações",
-      description: "Soluções inteligentes para Discord, Telegram, atendimento e integração de sistemas."
+      title: "Inteligência Operacional e Dashboards",
+      description: "Centralização de dados estratégicos em painéis para tomada de decisão baseada em informação confiável."
     }
   ];
 
