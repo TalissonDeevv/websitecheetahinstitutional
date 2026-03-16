@@ -496,8 +496,8 @@ const Index = () => {
                       <span className="text-xs font-bold text-primary">2</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">Desenvolvimento iterativo</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Entregas incrementais com feedback constante, garantindo alinhamento em cada etapa.</p>
+                      <h4 className="text-sm font-medium text-foreground">Definição de arquitetura</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Estruturamos a base tecnológica com foco na operação real, não em suposições.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
