@@ -77,23 +77,23 @@ const Index = () => {
   const values = [
     {
       icon: Zap,
-      title: "Agilidade",
-      description: "Entregas rápidas sem comprometer a qualidade técnica."
+      title: "Eficiência Operacional",
+      description: "Eliminação de gargalos e retrabalho por meio de arquitetura bem definida."
     },
     {
       icon: Shield,
       title: "Confiabilidade",
-      description: "Compromisso com prazos, segurança e resultados consistentes."
+      description: "Sistemas estáveis, seguros e preparados para a operação real da empresa."
     },
     {
       icon: Heart,
-      title: "Paixão",
-      description: "Dedicação genuína em cada linha de código que escrevemos."
+      title: "Compromisso Técnico",
+      description: "Engenharia rigorosa aplicada a cada componente do sistema."
     },
     {
       icon: Users,
-      title: "Colaboração",
-      description: "Parceria real com nossos clientes em todas as etapas."
+      title: "Parceria Estratégica",
+      description: "Atuação integrada com a operação do cliente em todas as etapas."
     }
   ];
 
