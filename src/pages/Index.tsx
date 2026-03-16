@@ -514,8 +514,8 @@ const Index = () => {
                       <span className="text-xs font-bold text-primary">4</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">Suporte técnico contínuo</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Acompanhamento pós-entrega para garantir estabilidade e evolução do sistema.</p>
+                      <h4 className="text-sm font-medium text-foreground">Evolução contínua</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Monitoramento pós-implantação e ajustes conforme a operação da empresa evolui.</p>
                     </div>
                   </div>
                 </div>
