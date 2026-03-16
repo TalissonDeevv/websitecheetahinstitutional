@@ -672,7 +672,7 @@ const Index = () => {
               <div className="p-6 bg-card border border-border rounded-lg h-full flex flex-col">
                 <h3 className="text-lg font-semibold mb-2 text-foreground">O que é a Cheetah</h3>
                 <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                  Entenda o que é a empresa e como atua no mercado de tecnologia.
+                  Entenda o que é a empresa e como atua na estruturação tecnológica de operações.
                 </p>
                 <Link to="/artigos/atuacao">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm">
