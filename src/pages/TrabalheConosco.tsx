@@ -195,9 +195,9 @@ const TrabalheConosco = () => {
                     <span className="text-primary">Conosco</span>
                   </h1>
                   <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                    Somos uma software house focada na criação de soluções digitais sob medida para negócios que exigem
-                    eficiência, performance e escalabilidade. Buscamos profissionais alinhados com excelência técnica,
-                    organização e visão de produto.
+                    Somos uma empresa de engenharia de software orientada à performance operacional. Estruturamos 
+                    operações empresariais por meio de arquitetura tecnológica. Buscamos profissionais alinhados 
+                    com excelência técnica, visão operacional e compromisso com resultado.
                   </p>
                 </div>
               </div>
