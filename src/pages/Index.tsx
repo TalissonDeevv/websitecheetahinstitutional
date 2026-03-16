@@ -505,8 +505,8 @@ const Index = () => {
                       <span className="text-xs font-bold text-primary">3</span>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-foreground">Revisão técnica rigorosa</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Code review, testes automatizados e validação de segurança antes de cada release.</p>
+                      <h4 className="text-sm font-medium text-foreground">Implementação validada</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Desenvolvimento com entregas incrementais, testes automatizados e validação contínua.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
