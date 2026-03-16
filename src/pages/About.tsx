@@ -362,7 +362,7 @@ const About = () => {
                   Trajetória
                 </span>
                 <h2 className="text-2xl md:text-3xl font-bold mt-3">
-                  5 anos construindo software sério.
+                  5 anos estruturando operações.
                 </h2>
               </div>
               
