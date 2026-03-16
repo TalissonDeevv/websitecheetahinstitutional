@@ -422,7 +422,7 @@ const About = () => {
                 <div className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">
                     Trabalhamos com parceiros estratégicos que garantem estabilidade, performance 
-                    e previsibilidade para as soluções que desenvolvemos.
+                    e previsibilidade para os sistemas que desenvolvemos.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     A Cheetah Solutions Network é parceira da{" "}
@@ -434,8 +434,8 @@ const About = () => {
                     >
                       Square Cloud
                     </a>
-                    , uma plataforma moderna de hospedagem focada em aplicações, bots, sites e 
-                    bancos de dados, oferecendo uma base sólida para projetos escaláveis e confiáveis.
+                    , uma plataforma de hospedagem focada em aplicações e bancos de dados, 
+                    oferecendo base sólida para operações que exigem alta disponibilidade.
                   </p>
                 </div>
                 <div className="mt-6 pt-6 border-t border-border">
