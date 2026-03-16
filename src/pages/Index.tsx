@@ -137,22 +137,22 @@ const Index = () => {
 
   const useCases = [
     {
-      category: "E-commerce",
-      title: "Plataforma de Vendas Online",
-      description: "Sistema completo de e-commerce com gestão de produtos, pagamentos integrados e painel administrativo.",
-      results: ["Aumento de 40% nas conversões", "Integração com 5 gateways de pagamento"]
+      category: "Operações",
+      title: "Estruturação de Gestão Interna",
+      description: "Sistema sob medida para controle de operações, integração entre departamentos e automação de processos críticos.",
+      results: ["Redução de 60% no retrabalho operacional", "Dados centralizados em tempo real"]
     },
     {
-      category: "Gestão Empresarial",
-      title: "Sistema de Gestão Interna",
-      description: "Plataforma personalizada para controle de operações, relatórios em tempo real e automação de processos.",
-      results: ["Redução de 60% no tempo operacional", "Dashboard com métricas em tempo real"]
+      category: "Processos",
+      title: "Automação de Fluxos Comerciais",
+      description: "Eliminação de processos manuais em vendas, faturamento e relacionamento com clientes por meio de sistemas integrados.",
+      results: ["Ciclo de venda 40% mais rápido", "Integração com 5 plataformas existentes"]
     },
     {
-      category: "Comunidades",
-      title: "Bot de Moderação Discord",
-      description: "Bot inteligente para gestão de comunidades com moderação automática, comandos personalizados e integrações.",
-      results: ["+50.000 usuários gerenciados", "Sistema de tickets automatizado"]
+      category: "Inteligência",
+      title: "Dashboard de Performance Operacional",
+      description: "Painel centralizado com métricas de operação, financeiro e produtividade para tomada de decisão baseada em dados.",
+      results: ["Visibilidade completa da operação", "Previsibilidade de resultados"]
     }
   ];
 
