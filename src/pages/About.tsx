@@ -103,7 +103,7 @@ const About = () => {
                     </div>
                     <div>
                       <span className="text-3xl font-bold text-primary">99.9%</span>
-                      <p className="text-sm text-muted-foreground mt-1">uptime médio</p>
+                      <p className="text-sm text-muted-foreground mt-1">disponibilidade</p>
                     </div>
                   </div>
                 </div>
