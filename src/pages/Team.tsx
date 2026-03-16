@@ -205,8 +205,8 @@ const Team = () => {
                 Quer fazer parte?
               </h2>
               <p className="text-muted-foreground mb-6">
-                Estamos sempre procurando pessoas qualificadas que compartilham 
-                nosso compromisso com qualidade técnica.
+                Buscamos profissionais com excelência técnica e visão operacional 
+                que compartilham nosso compromisso com resultado.
               </p>
               <Link to="/inscricoes">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
