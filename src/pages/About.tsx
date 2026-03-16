@@ -146,7 +146,7 @@ const About = () => {
             
             <AnimatedSection delay={200}>
               <div className="bg-card border border-border rounded-xl p-8">
-                <h3 className="text-lg font-semibold mb-6">Nosso compromisso</h3>
+                <h3 className="text-lg font-semibold mb-6">Como atuamos</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
