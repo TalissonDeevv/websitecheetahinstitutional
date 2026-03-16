@@ -520,7 +520,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                 Diferenciais
               </p>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Por que escolher a Cheetah
+                Diferenciais da abordagem
               </h2>
             </div>
           </AnimatedSection>
