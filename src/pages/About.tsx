@@ -39,15 +39,15 @@ const About = () => {
           <AnimatedSection>
             <div className="max-w-5xl">
               <p className="text-xs text-primary uppercase tracking-[0.2em] mb-6 font-medium">
-                Software House desde 2020
+                Engenharia de Software desde 2020
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8">
-                Construímos software<br />
-                <span className="text-primary">que funciona.</span>
+                Estruturamos operações<br />
+                <span className="text-primary">com tecnologia.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                Eficiência, performance e escalabilidade. 
-                Soluções digitais sob medida para empresas que buscam resultados.
+                Engenharia de software orientada à performance operacional. 
+                Sistemas sob medida para empresas que exigem resultado.
               </p>
             </div>
           </AnimatedSection>
