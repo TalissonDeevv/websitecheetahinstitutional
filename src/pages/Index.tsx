@@ -534,7 +534,7 @@ const Index = () => {
                 Por que escolher a <span className="text-primary">Cheetah Network</span>?
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Diferenciais que fazem a diferença no resultado do seu projeto
+                Diferenciais que garantem resultado na estruturação tecnológica da sua operação
               </p>
             </div>
           </AnimatedSection>
