@@ -162,8 +162,8 @@ const About = () => {
                       <Shield className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Estabilidade e segurança</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Sistemas confiáveis e protegidos</p>
+                      <h4 className="font-medium text-sm">Arquitetura preparada para crescimento</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Sistemas que absorvem aumento de demanda sem reconstrução</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
