@@ -109,8 +109,8 @@ const FAQ = () => {
                 <span className="text-primary">frequentes.</span>
               </h1>
               <p className="text-muted-foreground leading-relaxed">
-                Respostas diretas para as dúvidas mais comuns sobre 
-                nossos serviços e forma de trabalho.
+                Respostas diretas sobre nossa metodologia, processo de trabalho 
+                e forma de estruturar operações empresariais.
               </p>
             </div>
           </div>
