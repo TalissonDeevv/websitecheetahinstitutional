@@ -153,8 +153,8 @@ const About = () => {
                       <Zap className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-sm">Rapidez sem sacrificar qualidade</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Entregas ágeis com padrão técnico elevado</p>
+                      <h4 className="font-medium text-sm">Diagnóstico operacional preciso</h4>
+                      <p className="text-xs text-muted-foreground mt-1">Mapeamos fluxos e gargalos antes de definir sistemas</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
