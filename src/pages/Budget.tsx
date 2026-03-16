@@ -303,7 +303,7 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                     </div>
 
                     <div>
-                      <Label className="text-xs text-muted-foreground font-medium">Tipo de serviço *</Label>
+                      <Label className="text-xs text-muted-foreground font-medium">Tipo de estruturação *</Label>
                       <Select 
                         value={formData.service} 
                         onValueChange={(value) => updateField("service", value)}
