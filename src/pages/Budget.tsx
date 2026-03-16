@@ -121,12 +121,12 @@ const Budget = () => {
   } = useBudgetForm();
 
   const services = [
-    { name: "Bot Discord/Telegram", price: "A partir de R$ 500" },
-    { name: "Website", price: "A partir de R$ 800" },
-    { name: "Sistema Web", price: "A partir de R$ 2.500" },
-    { name: "E-commerce", price: "A partir de R$ 2.000" },
-    { name: "Integração API", price: "A partir de R$ 600" },
-    { name: "App Mobile", price: "A partir de R$ 3.000" }
+    { name: "Estruturação de Sistemas", price: "A partir de R$ 2.500" },
+    { name: "Automação de Processos", price: "A partir de R$ 1.500" },
+    { name: "Integração de Sistemas", price: "A partir de R$ 1.000" },
+    { name: "Plataforma Digital", price: "A partir de R$ 3.000" },
+    { name: "Dashboard Operacional", price: "A partir de R$ 2.000" },
+    { name: "Diagnóstico Operacional", price: "A partir de R$ 800" }
   ];
 
   const features = [
