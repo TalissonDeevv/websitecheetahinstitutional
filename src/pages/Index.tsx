@@ -762,10 +762,10 @@ const Index = () => {
                   Sobre a <span className="text-primary">Cheetah Network</span>
                 </h2>
                 <p className="text-muted-foreground mb-5 leading-relaxed">
-                  Somos uma software house especializada em desenvolvimento de soluções tecnológicas sob medida. Nossa equipe combina expertise técnica com visão de negócio para entregar resultados que realmente impactam.
+                  Somos uma empresa de engenharia de software orientada à performance operacional. Analisamos a operação de cada empresa, identificamos gargalos estruturais e desenvolvemos sistemas sob medida que organizam processos e integram setores.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Com experiência em projetos de diferentes portes e segmentos, trabalhamos lado a lado com nossos clientes, desde a concepção até o suporte contínuo, garantindo que cada solução atenda às necessidades específicas do negócio.
+                  Com experiência em operações de diferentes portes e segmentos, trabalhamos lado a lado com nossos clientes na estruturação tecnológica que sustenta o crescimento do negócio.
                 </p>
                 <Link to="/sobre">
                   <Button 
