@@ -242,10 +242,10 @@ const About = () => {
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
                   <Shield className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">APIs e Integrações</h3>
+                <h3 className="text-lg font-semibold mb-2">Integração de Sistemas</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Conectamos sistemas legados, ERPs, CRMs e qualquer ferramenta 
-                  que sua operação precise usar.
+                  Conexão entre plataformas, bancos de dados e ferramentas para 
+                  fluxo consistente de informação entre departamentos.
                 </p>
               </div>
             </AnimatedSection>
