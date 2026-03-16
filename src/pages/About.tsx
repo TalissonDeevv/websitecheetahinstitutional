@@ -317,10 +317,10 @@ const About = () => {
                   
                   <div className="border-l-2 border-primary/30 pl-6">
                     <Users className="h-5 w-5 text-primary mb-3" />
-                    <h3 className="font-semibold mb-2">Transparência total</h3>
+                    <h3 className="font-semibold mb-2">Transparência operacional</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Acesso ao código, updates regulares, sem surpresas no orçamento. 
-                      Você sabe exatamente onde está seu investimento.
+                      Acesso ao código, relatórios objetivos, sem surpresas no orçamento. 
+                      O cliente sabe exatamente como a operação está sendo estruturada.
                     </p>
                   </div>
                 </div>
