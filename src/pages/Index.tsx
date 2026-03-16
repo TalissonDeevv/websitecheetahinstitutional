@@ -637,7 +637,7 @@ const Index = () => {
                   Interação, competição e engajamento no Discord.
                 </p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Um projeto inovador que transforma comunidades no Discord. Partidas criadas por usuários, sistema de progressão e experiências dinâmicas que conectam pessoas.
+                  Projeto da Cheetah Solutions Network que transforma comunidades no Discord. Partidas criadas por usuários, sistema de progressão e experiências dinâmicas que conectam pessoas.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link to="/bellabot">
