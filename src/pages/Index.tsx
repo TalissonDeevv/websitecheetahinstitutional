@@ -419,10 +419,10 @@ const Index = () => {
           <AnimatedSection>
             <div className="mb-10">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3">
-                Tecnologias e <span className="text-primary">Expertise</span>
+                Base <span className="text-primary">Tecnológica</span>
               </h2>
               <p className="text-muted-foreground max-w-2xl">
-                Stack moderna e ferramentas consolidadas para entregar soluções robustas
+                Stack consolidada para construir sistemas operacionais robustos e escaláveis
               </p>
             </div>
           </AnimatedSection>
