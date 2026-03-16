@@ -339,13 +339,13 @@ const About = () => {
                 Nossa visão
               </p>
               <h2 className="text-2xl md:text-3xl font-bold mt-3 mb-8">
-                Software preparado para crescer.
+                Operações preparadas para crescer.
               </h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                Buscamos evoluir continuamente, desenvolvendo software preparado para crescer junto 
-                com nossos clientes. Nosso objetivo é ser reconhecidos como uma referência em desenvolvimento 
-                de software personalizado, sendo a escolha natural de empresas que valorizam tecnologia 
-                bem construída, confiável e orientada a resultados.
+                Buscamos evoluir continuamente, estruturando operações empresariais preparadas para 
+                absorver crescimento. Nosso objetivo é ser reconhecidos como referência em engenharia 
+                de software orientada à performance operacional, sendo a escolha natural de empresas 
+                que precisam de base tecnológica sólida para crescer com previsibilidade.
               </p>
             </div>
           </AnimatedSection>
