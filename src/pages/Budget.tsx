@@ -79,28 +79,28 @@ const benefits = [
 
 const faqItems = [
   {
-    question: "O orçamento é gratuito?",
-    answer: "Sim, a elaboração do orçamento é totalmente gratuita e sem compromisso. Você decide se quer prosseguir após receber nossa proposta."
+    question: "O diagnóstico é gratuito?",
+    answer: "A análise inicial e proposta são gratuitas e sem compromisso. Você decide se quer prosseguir após receber nossa avaliação e cronograma."
   },
   {
-    question: "Qual o prazo para receber o orçamento?",
-    answer: "Retornamos em até 48 horas úteis com uma proposta detalhada. Projetos mais complexos podem necessitar de prazo adicional para análise."
+    question: "Qual o prazo para receber a proposta?",
+    answer: "Retornamos em até 48 horas úteis com uma proposta que inclui diagnóstico preliminar, arquitetura sugerida e cronograma. Operações mais complexas podem necessitar de prazo adicional."
   },
   {
     question: "Como funciona o pagamento?",
-    answer: "Trabalhamos com pagamento parcelado: uma entrada para início do projeto e parcelas conforme entregas. Aceitamos PIX, boleto e cartão."
+    answer: "Trabalhamos com pagamento estruturado: entrada na aprovação e parcelas conforme entregas. Aceitamos PIX, boleto e cartão."
   },
   {
-    question: "Vocês oferecem suporte após a entrega?",
-    answer: "Sim, oferecemos garantia de 30 dias para correções e opções de contrato de manutenção mensal para suporte contínuo."
+    question: "Oferecem acompanhamento após a implantação?",
+    answer: "Sim, 30 dias de acompanhamento incluso para ajustes e validação. Planos de manutenção contínua estão disponíveis para monitoramento e evolução."
   },
   {
-    question: "Posso acompanhar o desenvolvimento?",
-    answer: "Sim, você terá acesso a um ambiente de homologação para acompanhar o progresso e validar cada etapa antes da entrega final."
+    question: "Posso acompanhar o andamento?",
+    answer: "Sim, você terá acesso a ambiente de homologação para acompanhar o progresso e validar cada etapa antes da implantação final."
   },
   {
-    question: "E se eu precisar de alterações no escopo?",
-    answer: "Mudanças de escopo são comuns e tratadas de forma transparente. Avaliamos o impacto e apresentamos um adendo ao orçamento original."
+    question: "E se o escopo precisar mudar?",
+    answer: "Mudanças de escopo são avaliadas com base no impacto na arquitetura. Apresentamos um adendo transparente antes de qualquer alteração."
   }
 ];
 
