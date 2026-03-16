@@ -458,21 +458,21 @@ const Index = () => {
             <AnimatedSection delay={100}>
               <div className="space-y-6">
                 <div className="p-5 border-l-2 border-primary bg-card/50">
-                  <h3 className="text-base font-semibold mb-2 text-foreground">Arquitetura Pensada para Crescer</h3>
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Diagnóstico Antes do Código</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Cada projeto é planejado considerando o crescimento futuro. Utilizamos padrões de arquitetura modernos que permitem escalar sem reescrever o sistema.
+                    Antes de qualquer desenvolvimento, mapeamos a operação da empresa para identificar onde a tecnologia gera mais impacto.
                   </p>
                 </div>
                 <div className="p-5 border-l-2 border-primary bg-card/50">
-                  <h3 className="text-base font-semibold mb-2 text-foreground">Código Testado e Documentado</h3>
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Arquitetura Orientada à Operação</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Implementamos testes automatizados e documentação técnica clara. Isso garante manutenibilidade e facilita futuras evoluções do sistema.
+                    A estrutura de cada sistema é definida com base nos fluxos reais da empresa, garantindo que a tecnologia se integre à operação.
                   </p>
                 </div>
                 <div className="p-5 border-l-2 border-primary bg-card/50">
-                  <h3 className="text-base font-semibold mb-2 text-foreground">Performance como Prioridade</h3>
+                  <h3 className="text-base font-semibold mb-2 text-foreground">Implementação com Previsibilidade</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Otimizamos cada aspecto da aplicação: tempo de carregamento, consumo de recursos e experiência do usuário final.
+                    Entregas incrementais com validação contínua, garantindo que cada etapa esteja alinhada com as necessidades operacionais.
                   </p>
                 </div>
               </div>
