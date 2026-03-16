@@ -56,23 +56,23 @@ const processSteps = [
 
 const benefits = [
   {
-    title: "Código proprietário",
-    description: "Você recebe 100% do código-fonte ao final do projeto",
+    title: "Diagnóstico incluso",
+    description: "Mapeamento operacional antes de qualquer desenvolvimento",
     icon: Code
   },
   {
-    title: "Suporte dedicado",
-    description: "Acompanhamento durante todo o desenvolvimento",
+    title: "Acompanhamento dedicado",
+    description: "Comunicação direta com a equipe de engenharia",
     icon: Headphones
   },
   {
-    title: "Entrega garantida",
-    description: "Compromisso com prazos e qualidade acordados",
+    title: "Entrega estruturada",
+    description: "Compromisso com prazos, qualidade e resultado operacional",
     icon: Shield
   },
   {
-    title: "Performance otimizada",
-    description: "Aplicações rápidas, seguras e escaláveis",
+    title: "Sistemas preparados para crescer",
+    description: "Arquitetura escalável definida desde o diagnóstico",
     icon: Zap
   }
 ];
