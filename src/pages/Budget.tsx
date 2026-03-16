@@ -232,12 +232,12 @@ ${formData.features.length > 0 ? `\nRecursos: ${formData.features.join(', ')}` :
                 Orçamento
               </p>
               <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-6">
-                Solicite uma<br />
-                <span className="text-primary">proposta.</span>
+                Iniciar<br />
+                <span className="text-primary">projeto.</span>
               </h1>
               <p className="text-muted-foreground leading-relaxed">
-                Preencha o formulário com as informações do seu projeto. 
-                Retornamos em até 48 horas com uma proposta detalhada.
+                Descreva os desafios operacionais da sua empresa. 
+                Retornamos em até 48 horas com diagnóstico preliminar e proposta.
               </p>
             </div>
           </div>
