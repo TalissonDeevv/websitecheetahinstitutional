@@ -130,8 +130,8 @@ const Team = () => {
                   Equipe técnica.
                 </h2>
                 <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
-                  Desenvolvedores especializados em diferentes stacks 
-                  para atender qualquer tipo de projeto.
+                  Engenheiros de software especializados em diferentes stacks 
+                  para estruturar qualquer tipo de operação.
                 </p>
               </AnimatedSection>
             </div>
