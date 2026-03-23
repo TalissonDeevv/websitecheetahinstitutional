@@ -7,6 +7,7 @@ const DesktopNav = () => {
   const menuItems = [
     { name: "Sobre", path: "/sobre" },
     { name: "Serviços", path: "/servicos" },
+    { name: "Pesquisa", path: "/pesquisa-desenvolvedores-freelancers" },
     { name: "FAQ", path: "/faq" },
     { name: "Atendimento", path: "/atendimento" },
     { name: "Orçamento", path: "/orcamento" },
