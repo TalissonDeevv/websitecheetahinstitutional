@@ -15,22 +15,27 @@ const DiscordIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Set to true to re-enable the popup
+const POPUP_ENABLED = false;
+
 const DiscordPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
+    if (!POPUP_ENABLED) return;
     const timer = setTimeout(() => {
       setIsVisible(true);
-      // Trigger animation after mount
       requestAnimationFrame(() => {
         setIsAnimating(true);
       });
     }, 1500);
-
     return () => clearTimeout(timer);
   }, []);
+
+  if (!POPUP_ENABLED) return null;
+
 
   const handleClose = () => {
     setIsClosing(true);
