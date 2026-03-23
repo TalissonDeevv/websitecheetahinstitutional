@@ -33,6 +33,7 @@ import Comunidade from "./pages/Comunidade";
 import ApprovedProjects from "./pages/ApprovedProjects";
 import TrabalheConosco from "./pages/TrabalheConosco";
 import BellaBot from "./pages/BellaBot";
+import PesquisaDesenvolvedores from "./pages/PesquisaDesenvolvedores";
 
 const queryClient = new QueryClient();
 
