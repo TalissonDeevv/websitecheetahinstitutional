@@ -15,7 +15,12 @@ const DiscordIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Set to true to re-enable the popup
+const POPUP_ENABLED = false;
+
 const DiscordPopup = () => {
+  if (!POPUP_ENABLED) return null;
+
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
