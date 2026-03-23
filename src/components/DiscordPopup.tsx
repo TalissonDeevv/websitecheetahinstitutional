@@ -23,19 +23,19 @@ const DiscordPopup = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
-  if (!POPUP_ENABLED) return null;
-
   useEffect(() => {
+    if (!POPUP_ENABLED) return;
     const timer = setTimeout(() => {
       setIsVisible(true);
-      // Trigger animation after mount
       requestAnimationFrame(() => {
         setIsAnimating(true);
       });
     }, 1500);
-
     return () => clearTimeout(timer);
   }, []);
+
+  if (!POPUP_ENABLED) return null;
+
 
   const handleClose = () => {
     setIsClosing(true);
