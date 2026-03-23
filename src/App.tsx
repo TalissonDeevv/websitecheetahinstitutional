@@ -92,6 +92,7 @@ const App = () => (
             <Route path="/inscricoes" element={<TrabalheConosco />} />
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
             <Route path="/bellabot" element={<BellaBot />} />
+            <Route path="/pesquisa-desenvolvedores-freelancers" element={<PesquisaDesenvolvedores />} />
 
             {/* Institutional Articles - Direct URL Redirects */}
             <Route path="/atuacao" element={<Navigate to="/artigos/atuacao" replace />} />
