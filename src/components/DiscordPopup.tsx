@@ -19,11 +19,11 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 const POPUP_ENABLED = false;
 
 const DiscordPopup = () => {
-  if (!POPUP_ENABLED) return null;
-
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+
+  if (!POPUP_ENABLED) return null;
 
   useEffect(() => {
     const timer = setTimeout(() => {
