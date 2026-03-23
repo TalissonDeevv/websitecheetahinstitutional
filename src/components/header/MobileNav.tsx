@@ -16,18 +16,9 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
     { name: "Início", path: "/" },
     { name: "Sobre", path: "/sobre" },
     { name: "Serviços", path: "/servicos" },
-    { name: "Equipe", path: "/equipe" },
-    { name: "Artigos", path: "/artigos" },
-    { name: "Atendimento", path: "/atendimento" },
-  ];
-
-  const secondaryMenuItems = [
-    { name: "Bella Bot", path: "/bellabot" },
-    { name: "Trabalhe Conosco", path: "/inscricoes" },
-    { name: "Comunidade", path: "/comunidade" },
-    { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
     { name: "FAQ", path: "/faq" },
-    { name: "Sugestões", path: "/sugestoes" },
+    { name: "Atendimento", path: "/atendimento" },
+    { name: "Orçamento", path: "/orcamento" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
