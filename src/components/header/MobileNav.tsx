@@ -77,30 +77,6 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: MobileNavProps) => {
         ))}
       </div>
 
-      {/* Divider */}
-      <div className="my-6 border-t border-border" />
-
-      {/* Secondary Navigation */}
-      <div className="space-y-1">
-        <p className="text-xs text-muted-foreground uppercase tracking-wider px-4 mb-3 font-medium">
-          Mais opções
-        </p>
-        {secondaryMenuItems.map((item, index) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={`flex items-center py-3 px-4 text-sm font-medium transition-all duration-200 rounded-lg touch-manipulation ${
-              isActive(item.path)
-                ? "text-primary bg-primary/10"
-                : "text-muted-foreground hover:text-foreground hover:bg-accent active:bg-accent"
-            }`}
-            onClick={handleLinkClick}
-          >
-            {item.name}
-          </Link>
-        ))}
-      </div>
-
 
       {/* Spacer */}
       <div className="flex-1" />
