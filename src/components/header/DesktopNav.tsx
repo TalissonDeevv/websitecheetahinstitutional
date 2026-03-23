@@ -1,40 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const DesktopNav = () => {
   const location = useLocation();
 
-  const mainMenuItems = [
+  const menuItems = [
     { name: "Sobre", path: "/sobre" },
     { name: "Serviços", path: "/servicos" },
-    { name: "Equipe", path: "/equipe" },
-    { name: "Artigos", path: "/artigos" },
+    { name: "FAQ", path: "/faq" },
     { name: "Atendimento", path: "/atendimento" },
     { name: "Orçamento", path: "/orcamento" },
-  ];
-
-  const moreMenuItems = [
-    { name: "Início", path: "/" },
-    { name: "Bella Bot", path: "/bellabot" },
-    { name: "Trabalhe Conosco", path: "/inscricoes" },
-    { name: "Comunidade", path: "/comunidade" },
-    { name: "Cheetah Solidária", path: "/cheetah-solidaria" },
-    { name: "FAQ", path: "/faq" },
-    { name: "Sugestões", path: "/sugestoes" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
-      {mainMenuItems.map((item) => (
+      {menuItems.map((item) => (
         <Link
           key={item.path}
           to={item.path}
@@ -47,35 +29,6 @@ const DesktopNav = () => {
           {item.name}
         </Link>
       ))}
-      
-      <DropdownMenu modal={false}>
-        <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 outline-none focus:outline-none focus-visible:outline-none">
-          Mais
-          <ChevronDown className="h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent 
-          align="end" 
-          sideOffset={8}
-          className="min-w-[180px] bg-popover border border-border shadow-lg z-[9999]"
-        >
-          {moreMenuItems.map((item) => (
-            <DropdownMenuItem key={item.path} asChild>
-              <Link
-                to={item.path}
-                className={`w-full cursor-pointer transition-colors duration-200 ${
-                  isActive(item.path) 
-                    ? "text-primary bg-primary/10" 
-                    : "text-foreground hover:text-foreground hover:bg-accent"
-                }`}
-              >
-                {item.name}
-              </Link>
-            </DropdownMenuItem>
-          ))}
-        </DropdownMenuContent>
-      </DropdownMenu>
-
-
       <ThemeToggle />
     </nav>
   );
