@@ -34,6 +34,7 @@ import ApprovedProjects from "./pages/ApprovedProjects";
 import TrabalheConosco from "./pages/TrabalheConosco";
 import BellaBot from "./pages/BellaBot";
 import PesquisaDesenvolvedores from "./pages/PesquisaDesenvolvedores";
+import CheetahOPS from "./pages/CheetahOPS";
 
 const queryClient = new QueryClient();
 
