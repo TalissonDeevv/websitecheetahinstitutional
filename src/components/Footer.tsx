@@ -18,6 +18,7 @@ const Footer = () => {
 
   const company = [
     { name: "Sobre", path: "/sobre" },
+    { name: "Cheetah OPS", path: "/cheetah-ops" },
     { name: "Equipe", path: "/equipe" },
     { name: "Trabalhe Conosco", path: "/inscricoes" },
     { name: "Artigos", path: "/artigos" },
