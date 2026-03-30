@@ -94,6 +94,7 @@ const App = () => (
             <Route path="/trabalhe-conosco" element={<Navigate to="/inscricoes" replace />} />
             <Route path="/bellabot" element={<BellaBot />} />
             <Route path="/pesquisa-desenvolvedores-freelancers" element={<PesquisaDesenvolvedores />} />
+            <Route path="/cheetah-ops" element={<CheetahOPS />} />
 
             {/* Institutional Articles - Direct URL Redirects */}
             <Route path="/atuacao" element={<Navigate to="/artigos/atuacao" replace />} />
