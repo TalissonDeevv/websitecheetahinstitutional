@@ -10,6 +10,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
+import { suggestionSchema } from "@/lib/validations";
+import { useRateLimit } from "@/hooks/useRateLimit";
 
 const Suggestions = () => {
   const [name, setName] = useState("");
@@ -17,10 +19,33 @@ const Suggestions = () => {
   const [category, setCategory] = useState("");
   const [suggestion, setSuggestion] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const { toast } = useToast();
+  const { isLimited, remainingTime, checkLimit } = useRateLimit({ maxAttempts: 3, windowMs: 60000 });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrors({});
+
+    const result = suggestionSchema.safeParse({ name, email, category, suggestion });
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.errors.forEach(err => {
+        if (err.path[0]) fieldErrors[err.path[0] as string] = err.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    if (!checkLimit()) {
+      toast({
+        title: "Limite atingido",
+        description: `Aguarde ${remainingTime}s antes de enviar novamente.`,
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     setTimeout(() => {
       toast({
@@ -92,11 +117,13 @@ const Suggestions = () => {
                       <Input
                         id="name"
                         value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        onChange={(e) => { setName(e.target.value); if (errors.name) setErrors(p => ({ ...p, name: "" })); }}
                         placeholder="Seu nome"
                         className="bg-background border-border"
+                        maxLength={100}
                         required
                       />
+                      {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-sm font-medium">E-mail</Label>
@@ -104,17 +131,19 @@ const Suggestions = () => {
                         id="email"
                         type="email"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => { setEmail(e.target.value); if (errors.email) setErrors(p => ({ ...p, email: "" })); }}
                         placeholder="seu@email.com"
                         className="bg-background border-border"
+                        maxLength={255}
                         required
                       />
+                      {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="category" className="text-sm font-medium">Categoria</Label>
-                    <Select value={category} onValueChange={setCategory} required>
+                    <Select value={category} onValueChange={(v) => { setCategory(v); if (errors.category) setErrors(p => ({ ...p, category: "" })); }} required>
                       <SelectTrigger className="bg-background border-border">
                         <SelectValue placeholder="Selecione uma categoria" />
                       </SelectTrigger>
@@ -126,6 +155,7 @@ const Suggestions = () => {
                         ))}
                       </SelectContent>
                     </Select>
+                    {errors.category && <p className="text-xs text-destructive">{errors.category}</p>}
                   </div>
 
                   <div className="space-y-2">
@@ -133,11 +163,13 @@ const Suggestions = () => {
                     <Textarea
                       id="suggestion"
                       value={suggestion}
-                      onChange={(e) => setSuggestion(e.target.value)}
+                      onChange={(e) => { setSuggestion(e.target.value); if (errors.suggestion) setErrors(p => ({ ...p, suggestion: "" })); }}
                       placeholder="Descreva sua sugestão com o máximo de detalhes possível..."
                       className="bg-background border-border min-h-[160px] resize-none"
+                      maxLength={2000}
                       required
                     />
+                    {errors.suggestion && <p className="text-xs text-destructive">{errors.suggestion}</p>}
                     <p className="text-xs text-muted-foreground">
                       Quanto mais detalhes, melhor poderemos avaliar sua sugestão.
                     </p>
@@ -145,10 +177,10 @@ const Suggestions = () => {
 
                   <Button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || isLimited}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6"
                   >
-                    {isSubmitting ? "Enviando..." : (
+                    {isLimited ? `Aguarde ${remainingTime}s` : isSubmitting ? "Enviando..." : (
                       <>
                         <Send className="h-4 w-4 mr-2" />
                         Enviar Sugestão

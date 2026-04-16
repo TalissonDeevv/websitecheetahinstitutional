@@ -10,6 +10,8 @@ import { MessageSquare, Star, Heart, Send, ThumbsUp, Lightbulb } from "lucide-re
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
+import { feedbackSchema } from "@/lib/validations";
+import { useRateLimit } from "@/hooks/useRateLimit";
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +21,33 @@ const Feedback = () => {
     rating: "",
     message: ""
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const { toast } = useToast();
+  const { isLimited, remainingTime, checkLimit } = useRateLimit({ maxAttempts: 3, windowMs: 60000 });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setErrors({});
+
+    const result = feedbackSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.errors.forEach(err => {
+        if (err.path[0]) fieldErrors[err.path[0] as string] = err.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    if (!checkLimit()) {
+      toast({
+        title: "Limite atingido",
+        description: `Aguarde ${remainingTime}s antes de enviar novamente.`,
+        variant: "destructive",
+      });
+      return;
+    }
+
     toast({
       title: "Feedback enviado!",
       description: "Obrigado pelo seu feedback! Sua opinião é muito importante para nós.",
@@ -199,13 +224,24 @@ const Feedback = () => {
                   />
                 </div>
 
+                {errors.name && <p className="text-xs text-destructive mt-1">{errors.name}</p>}
+                {errors.email && <p className="text-xs text-destructive mt-1">{errors.email}</p>}
+                {errors.type && <p className="text-xs text-destructive mt-1">{errors.type}</p>}
+                {errors.rating && <p className="text-xs text-destructive mt-1">{errors.rating}</p>}
+                {errors.message && <p className="text-xs text-destructive mt-1">{errors.message}</p>}
+
                 <Button 
                   type="submit"
                   size="lg"
+                  disabled={isLimited}
                   className="w-full bg-[#0047ab] hover:bg-[#0047ab]/90 text-white py-4 text-lg font-semibold"
                 >
-                  <Send className="mr-2 h-5 w-5" />
-                  Enviar Feedback
+                  {isLimited ? `Aguarde ${remainingTime}s` : (
+                    <>
+                      <Send className="mr-2 h-5 w-5" />
+                      Enviar Feedback
+                    </>
+                  )}
                 </Button>
               </form>
             </CardContent>

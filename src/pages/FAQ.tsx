@@ -72,6 +72,31 @@ const FAQ = () => {
           answer: "Depende. Avaliamos a base de código e a documentação existente. Se estiver em condições de manutenção, podemos assumir. Caso contrário, recomendamos refatoração com base em diagnóstico operacional."
         }
       ]
+    },
+    {
+      title: "Posicionamento e Metodologia",
+      items: [
+        {
+          question: "A Cheetah vende sites, bots ou sistemas prontos?",
+          answer: "Não trabalhamos com produtos de prateleira ou pacotes fechados. A Cheetah estrutura arquiteturas de software sob medida a partir da operação do cliente, desenvolvendo os sistemas, automações e integrações necessários para eliminar gargalos e aumentar previsibilidade."
+        },
+        {
+          question: "Como a Cheetah define a solução ideal para cada empresa?",
+          answer: "Antes de qualquer linha de código, aplicamos a Cheetah OPS Framework para mapear processos, identificar gargalos críticos e projetar a arquitetura ideal da operação."
+        },
+        {
+          question: "Vocês são uma software house tradicional?",
+          answer: "Não. Nosso foco não é apenas desenvolver software, mas reestruturar operações por meio de engenharia de sistemas orientada à performance."
+        },
+        {
+          question: "O que vocês entregam na prática?",
+          answer: "Dependendo da necessidade operacional, a entrega pode envolver sistemas internos, painéis, automações, apps, integrações, inteligência de dados ou infraestrutura escalável. A tecnologia é definida pelo problema, não por um catálogo."
+        },
+        {
+          question: "Para quais empresas a Cheetah é indicada?",
+          answer: "Empresas em crescimento que enfrentam desorganização operacional, processos desconectados, baixa previsibilidade e gargalos que impedem escala."
+        }
+      ]
     }
   ];
 

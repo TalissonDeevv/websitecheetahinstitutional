@@ -10,6 +10,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SEO from "@/components/SEO";
 import { WebPageJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Link } from "react-router-dom";
+import { contactSchema } from "@/lib/validations";
+import { useRateLimit } from "@/hooks/useRateLimit";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,10 +20,33 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const { toast } = useToast();
+  const { isLimited, remainingTime, checkLimit } = useRateLimit({ maxAttempts: 3, windowMs: 60000 });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setErrors({});
+
+    const result = contactSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.errors.forEach(err => {
+        if (err.path[0]) fieldErrors[err.path[0] as string] = err.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    if (!checkLimit()) {
+      toast({
+        title: "Limite atingido",
+        description: `Aguarde ${remainingTime}s antes de enviar novamente.`,
+        variant: "destructive",
+      });
+      return;
+    }
+
     toast({
       title: "Solicitação enviada",
       description: "Sua demanda foi registrada. Retornaremos em breve.",
@@ -30,10 +55,9 @@ const Contact = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (errors[name]) setErrors(prev => ({ ...prev, [name]: "" }));
   };
 
   const leadership = [
@@ -371,47 +395,70 @@ const Contact = () => {
                   
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <Input
-                        name="name"
-                        placeholder="Seu nome"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="bg-secondary border-border"
-                      />
-                      <Input
-                        name="email"
-                        type="email"
-                        placeholder="seu@email.com"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="bg-secondary border-border"
-                      />
+                      <div>
+                        <Input
+                          name="name"
+                          placeholder="Seu nome"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                          maxLength={100}
+                          className="bg-secondary border-border"
+                        />
+                        {errors.name && <p className="text-xs text-destructive mt-1">{errors.name}</p>}
+                      </div>
+                      <div>
+                        <Input
+                          name="email"
+                          type="email"
+                          placeholder="seu@email.com"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          maxLength={255}
+                          className="bg-secondary border-border"
+                        />
+                        {errors.email && <p className="text-xs text-destructive mt-1">{errors.email}</p>}
+                      </div>
                     </div>
-                    <Input
-                      name="subject"
-                      placeholder="Projeto ou assunto relacionado"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="bg-secondary border-border"
-                    />
-                    <Textarea
-                      name="message"
-                      placeholder="Descreva o problema, ajuste ou solicitação..."
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="bg-secondary border-border resize-none"
-                    />
+                    <div>
+                      <Input
+                        name="subject"
+                        placeholder="Projeto ou assunto relacionado"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        required
+                        maxLength={200}
+                        className="bg-secondary border-border"
+                      />
+                      {errors.subject && <p className="text-xs text-destructive mt-1">{errors.subject}</p>}
+                    </div>
+                    <div>
+                      <Textarea
+                        name="message"
+                        placeholder="Descreva o problema, ajuste ou solicitação..."
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        rows={5}
+                        maxLength={2000}
+                        className="bg-secondary border-border resize-none"
+                      />
+                      {errors.message && <p className="text-xs text-destructive mt-1">{errors.message}</p>}
+                    </div>
                     <Button 
                       type="submit" 
+                      disabled={isLimited}
                       className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                     >
-                      <Send className="mr-2 h-4 w-4" />
-                      Enviar solicitação
+                      {isLimited ? (
+                        `Aguarde ${remainingTime}s`
+                      ) : (
+                        <>
+                          <Send className="mr-2 h-4 w-4" />
+                          Enviar solicitação
+                        </>
+                      )}
                     </Button>
                   </form>
                   
