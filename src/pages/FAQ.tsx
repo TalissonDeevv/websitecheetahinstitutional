@@ -95,6 +95,10 @@ const FAQ = () => {
         {
           question: "Para quais empresas a Cheetah é indicada?",
           answer: "Empresas em crescimento que enfrentam desorganização operacional, processos desconectados, baixa previsibilidade e gargalos que impedem escala."
+        },
+        {
+          question: "A Cheetah oferece mentoria empresarial?",
+          answer: "A Cheetah não opera no modelo de mentoria tradicional. Nossa atuação combina diagnóstico operacional, arquitetura de software e implementação sob medida para resolver gargalos estruturais. Estratégia sem execução não transforma operação — por isso nosso foco está em construir a infraestrutura tecnológica que sustenta crescimento."
         }
       ]
     }
