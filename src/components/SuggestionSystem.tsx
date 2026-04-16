@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { MessageSquare, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { suggestionSystemSchema } from "@/lib/validations";
+import { useRateLimit } from "@/hooks/useRateLimit";
 
 const SuggestionSystem = () => {
   const [name, setName] = useState("");
@@ -15,14 +17,25 @@ const SuggestionSystem = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+  const { isLimited, remainingTime, checkLimit } = useRateLimit({ maxAttempts: 3, windowMs: 60000 });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!suggestion.trim()) {
+    const result = suggestionSystemSchema.safeParse({ name, email, suggestion });
+    if (!result.success) {
       toast({
         title: "Erro",
-        description: "Por favor, escreva uma sugestão.",
+        description: result.error.issues[0]?.message || "Dados inválidos.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!checkLimit()) {
+      toast({
+        title: "Limite atingido",
+        description: `Aguarde ${remainingTime}s antes de enviar novamente.`,
         variant: "destructive",
       });
       return;
@@ -30,7 +43,6 @@ const SuggestionSystem = () => {
 
     setIsSubmitting(true);
     
-    // Simular envio
     setTimeout(() => {
       setIsSubmitted(true);
       setIsSubmitting(false);
@@ -39,7 +51,6 @@ const SuggestionSystem = () => {
         description: "Obrigado pelo seu feedback. Analisaremos sua sugestão.",
       });
       
-      // Reset form after success
       setTimeout(() => {
         setName("");
         setEmail("");
