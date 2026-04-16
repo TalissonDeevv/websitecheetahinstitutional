@@ -26,7 +26,7 @@ const SuggestionSystem = () => {
     if (!result.success) {
       toast({
         title: "Erro",
-        description: result.error.errors[0]?.message || "Dados inválidos.",
+        description: result.error.issues[0]?.message || "Dados inválidos.",
         variant: "destructive",
       });
       return;
