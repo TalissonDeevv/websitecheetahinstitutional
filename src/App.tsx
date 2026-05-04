@@ -109,6 +109,7 @@ const App = () => (
 
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />
+            <Route path="/diretrizes/privacidade" element={<PrivacyPolicyPage />} />
             <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
 
             {/* Redirects for legacy routes */}
