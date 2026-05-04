@@ -52,8 +52,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-top h-20 sm:h-[84px] flex items-center justify-center px-4 sm:px-6">
-        <div className="w-full max-w-7xl h-14 sm:h-[60px] flex items-center justify-between bg-background/80 backdrop-blur-md border border-border/30 rounded-2xl px-5">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm transition-all duration-300 safe-top h-16 sm:h-[68px] border-b border-border/50">
+        <div className="container mx-auto px-4 h-full flex items-center justify-between">
           <Logo />
           <DesktopNav />
 
@@ -96,7 +96,7 @@ const Header = () => {
       {/* Mobile Menu Panel */}
       <div
         id="mobile-menu"
-        className={`fixed top-20 sm:top-[84px] left-0 right-0 bottom-0 z-40 lg:hidden bg-background/98 backdrop-blur-md overflow-y-auto transition-all duration-300 ease-out ${
+        className={`fixed top-16 sm:top-[68px] left-0 right-0 bottom-0 z-40 lg:hidden bg-background/98 backdrop-blur-md overflow-y-auto transition-all duration-300 ease-out ${
           isMenuOpen 
             ? "opacity-100 translate-y-0" 
             : "opacity-0 -translate-y-4 pointer-events-none"
