@@ -52,8 +52,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm transition-all duration-300 safe-top h-16 sm:h-[68px] border-b border-border/50">
-        <div className="container mx-auto px-4 h-full flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-top h-20 sm:h-[84px] flex items-center justify-center">
+        <div className="container mx-auto px-4 h-14 sm:h-[60px] flex items-center justify-between bg-background/80 backdrop-blur-md border border-border/30 rounded-2xl mx-4 px-5">
           <Logo />
           <DesktopNav />
 
