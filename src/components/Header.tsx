@@ -96,7 +96,7 @@ const Header = () => {
       {/* Mobile Menu Panel */}
       <div
         id="mobile-menu"
-        className={`fixed top-16 sm:top-[68px] left-0 right-0 bottom-0 z-40 lg:hidden bg-background/98 backdrop-blur-md overflow-y-auto transition-all duration-300 ease-out ${
+        className={`fixed top-20 sm:top-[84px] left-0 right-0 bottom-0 z-40 lg:hidden bg-background/98 backdrop-blur-md overflow-y-auto transition-all duration-300 ease-out ${
           isMenuOpen 
             ? "opacity-100 translate-y-0" 
             : "opacity-0 -translate-y-4 pointer-events-none"
