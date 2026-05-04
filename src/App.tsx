@@ -28,6 +28,7 @@ import TermsExplained from "./pages/TermsExplained";
 import Suggestions from "./pages/Suggestions";
 import NotFound from "./pages/NotFound";
 import GuidelinesPage from "./pages/legal/GuidelinesPage";
+import PrivacyPolicyPage from "./pages/legal/PrivacyPolicyPage";
 import Comunidade from "./pages/Comunidade";
 
 import ApprovedProjects from "./pages/ApprovedProjects";
@@ -108,6 +109,7 @@ const App = () => (
 
             {/* Guidelines - Single Page with dynamic routing */}
             <Route path="/diretrizes" element={<GuidelinesPage />} />
+            <Route path="/diretrizes/privacidade" element={<PrivacyPolicyPage />} />
             <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
 
             {/* Redirects for legacy routes */}
