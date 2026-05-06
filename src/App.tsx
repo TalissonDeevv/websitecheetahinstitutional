@@ -30,6 +30,7 @@ import NotFound from "./pages/NotFound";
 import GuidelinesPage from "./pages/legal/GuidelinesPage";
 import PrivacyPolicyPage from "./pages/legal/PrivacyPolicyPage";
 import TermsOfUse from "./pages/legal/TermsOfUse";
+import SecurityPolicy from "./pages/legal/SecurityPolicy";
 import Comunidade from "./pages/Comunidade";
 
 import ApprovedProjects from "./pages/ApprovedProjects";
