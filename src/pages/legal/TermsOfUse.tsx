@@ -24,11 +24,11 @@ const TermsOfUse = () => {
           </div>
 
           {/* ============================================================ */}
-          {/* CAPÍTULO I — DISPOSIÇÕES PRELIMINARES                        */}
+          {/* CAPÍTULO I  -  DISPOSIÇÕES PRELIMINARES                        */}
           {/* ============================================================ */}
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo I — Disposições Preliminares</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo I  -  Disposições Preliminares</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 1ª — Objeto e Aceitação</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 1ª  -  Objeto e Aceitação</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               1.1. Os presentes Termos de Uso ("Termos") regulam as condições de acesso, navegação e utilização 
@@ -60,7 +60,7 @@ const TermsOfUse = () => {
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 2ª — Definições</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 2ª  -  Definições</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>2.1. Para os fins destes Termos, consideram-se as seguintes definições, sem prejuízo daquelas previstas na legislação aplicável:</p>
             <div className="space-y-3 ml-4">
@@ -80,13 +80,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO II — CONDIÇÕES DE ACESSO E CADASTRO                 */}
+      {/* CAPÍTULO II  -  CONDIÇÕES DE ACESSO E CADASTRO                 */}
       {/* ============================================================ */}
       <AnimatedSection delay={100}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo II — Condições de Acesso e Cadastro</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo II  -  Condições de Acesso e Cadastro</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 3ª — Capacidade e Elegibilidade</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 3ª  -  Capacidade e Elegibilidade</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               3.1. Os serviços da Cheetah Solutions Network são destinados exclusivamente a pessoas naturais maiores 
@@ -106,7 +106,7 @@ const TermsOfUse = () => {
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 4ª — Cadastro e Credenciais</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 4ª  -  Cadastro e Credenciais</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               4.1. O acesso a determinados serviços e funcionalidades poderá exigir cadastro prévio, mediante 
@@ -136,13 +136,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO III — SERVIÇOS                                       */}
+      {/* CAPÍTULO III  -  SERVIÇOS                                       */}
       {/* ============================================================ */}
       <AnimatedSection delay={200}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo III — Descrição dos Serviços</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo III  -  Descrição dos Serviços</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 5ª — Escopo dos Serviços</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 5ª  -  Escopo dos Serviços</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               5.1. A Cheetah Solutions Network atua na estruturação tecnológica de operações que exigem performance, 
@@ -189,13 +189,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO IV — OBRIGAÇÕES DAS PARTES                          */}
+      {/* CAPÍTULO IV  -  OBRIGAÇÕES DAS PARTES                          */}
       {/* ============================================================ */}
       <AnimatedSection delay={300}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IV — Obrigações das Partes</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IV  -  Obrigações das Partes</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 6ª — Obrigações do Usuário</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 6ª  -  Obrigações do Usuário</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>6.1. Constituem obrigações do Usuário, sem prejuízo de outras previstas nestes Termos e na legislação aplicável:</p>
             <div className="space-y-3 ml-4">
@@ -213,7 +213,7 @@ const TermsOfUse = () => {
             </div>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 7ª — Obrigações da Cheetah Solutions Network</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 7ª  -  Obrigações da Cheetah Solutions Network</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>7.1. Constituem obrigações da Cheetah Solutions Network:</p>
             <div className="space-y-3 ml-4">
@@ -231,13 +231,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO V — PROPRIEDADE INTELECTUAL                         */}
+      {/* CAPÍTULO V  -  PROPRIEDADE INTELECTUAL                         */}
       {/* ============================================================ */}
       <AnimatedSection delay={400}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo V — Propriedade Intelectual</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo V  -  Propriedade Intelectual</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 8ª — Direitos de Propriedade Intelectual</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 8ª  -  Direitos de Propriedade Intelectual</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               8.1. Todos os direitos de Propriedade Intelectual relacionados à Plataforma, aos Serviços e ao 
@@ -282,13 +282,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO VI — CONDIÇÕES COMERCIAIS E PAGAMENTO               */}
+      {/* CAPÍTULO VI  -  CONDIÇÕES COMERCIAIS E PAGAMENTO               */}
       {/* ============================================================ */}
       <AnimatedSection delay={500}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VI — Condições Comerciais e Pagamento</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VI  -  Condições Comerciais e Pagamento</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 9ª — Preços, Pagamento e Tributação</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 9ª  -  Preços, Pagamento e Tributação</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               9.1. Os preços dos serviços serão definidos em propostas comerciais individuais e/ou contratos 
@@ -324,13 +324,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO VII — CONDUTAS PROIBIDAS                             */}
+      {/* CAPÍTULO VII  -  CONDUTAS PROIBIDAS                             */}
       {/* ============================================================ */}
       <AnimatedSection delay={600}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VII — Condutas Proibidas e Sanções</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VII  -  Condutas Proibidas e Sanções</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 10ª — Condutas Vedadas</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 10ª  -  Condutas Vedadas</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>10.1. É expressamente vedado ao Usuário, sem prejuízo de outras proibições previstas na legislação e nestes Termos:</p>
             <div className="space-y-3 ml-4">
@@ -347,7 +347,7 @@ const TermsOfUse = () => {
             </div>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 11ª — Sanções e Consequências</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 11ª  -  Sanções e Consequências</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               11.1. O descumprimento de qualquer disposição destes Termos poderá resultar, a critério exclusivo 
@@ -371,13 +371,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO VIII — LIMITAÇÃO DE RESPONSABILIDADE                */}
+      {/* CAPÍTULO VIII  -  LIMITAÇÃO DE RESPONSABILIDADE                */}
       {/* ============================================================ */}
       <AnimatedSection delay={700}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VIII — Limitação de Responsabilidade e Garantias</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VIII  -  Limitação de Responsabilidade e Garantias</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 12ª — Limitação de Responsabilidade</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 12ª  -  Limitação de Responsabilidade</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               12.1. Na extensão máxima permitida pela legislação aplicável, a Cheetah Solutions Network NÃO 
@@ -414,7 +414,7 @@ const TermsOfUse = () => {
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 13ª — Garantias e Isenções</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 13ª  -  Garantias e Isenções</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               13.1. Os serviços são fornecidos "no estado em que se encontram" (as is) e "conforme 
@@ -439,13 +439,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO IX — VIGÊNCIA, RESCISÃO E DISPOSIÇÕES TRANSITÓRIAS  */}
+      {/* CAPÍTULO IX  -  VIGÊNCIA, RESCISÃO E DISPOSIÇÕES TRANSITÓRIAS  */}
       {/* ============================================================ */}
       <AnimatedSection delay={800}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IX — Vigência, Rescisão e Alterações</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IX  -  Vigência, Rescisão e Alterações</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 14ª — Vigência</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 14ª  -  Vigência</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               14.1. Estes Termos entram em vigor na data de sua publicação e permanecem vigentes por prazo 
@@ -459,7 +459,7 @@ const TermsOfUse = () => {
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 15ª — Rescisão</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 15ª  -  Rescisão</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               15.1. O Usuário poderá rescindir estes Termos a qualquer momento, cessando a utilização dos 
@@ -481,7 +481,7 @@ const TermsOfUse = () => {
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 16ª — Alterações dos Termos</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 16ª  -  Alterações dos Termos</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               16.1. A Cheetah Solutions Network reserva-se o direito de modificar unilateralmente estes 
@@ -507,13 +507,13 @@ const TermsOfUse = () => {
       </AnimatedSection>
 
       {/* ============================================================ */}
-      {/* CAPÍTULO X — DISPOSIÇÕES FINAIS                              */}
+      {/* CAPÍTULO X  -  DISPOSIÇÕES FINAIS                              */}
       {/* ============================================================ */}
       <AnimatedSection delay={900}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo X — Disposições Finais</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo X  -  Disposições Finais</h2>
 
-          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 17ª — Legislação Aplicável e Foro</h3>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 17ª  -  Legislação Aplicável e Foro</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               17.1. Estes Termos de Uso são regidos integralmente pelas leis da República Federativa do 
@@ -528,7 +528,7 @@ const TermsOfUse = () => {
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 18ª — Disposições Gerais</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 18ª  -  Disposições Gerais</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               18.1. <strong className="text-foreground">Independência das Cláusulas (Severability):</strong> Caso qualquer disposição destes 
@@ -567,7 +567,7 @@ const TermsOfUse = () => {
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 19ª — Contato</h3>
+          <h3 className="text-xl font-semibold mb-4 mt-8 text-foreground">Cláusula 19ª  -  Contato</h3>
           <div className="space-y-4 text-muted-foreground">
             <p>
               19.1. Para questões, dúvidas, reclamações ou solicitações relacionadas a estes Termos de Uso, 
@@ -577,7 +577,7 @@ const TermsOfUse = () => {
               <p><strong className="text-foreground">Cheetah Solutions Network</strong></p>
               <p>E-mail Jurídico: <a href="mailto:juridico@cheetahnetwork.com.br" className="text-primary hover:underline">juridico@cheetahnetwork.com.br</a></p>
               <p>E-mail Institucional: <a href="mailto:contatocheetahsolutions@gmail.com" className="text-primary hover:underline">contatocheetahsolutions@gmail.com</a></p>
-              <p>Sede Operacional: Recife, Pernambuco — Brasil</p>
+              <p>Sede Operacional: Recife, Pernambuco  -  Brasil</p>
               <p>Prazo de resposta: até 10 (dez) dias úteis</p>
               <p>Horário de atendimento: segunda a sexta-feira, das 09h às 18h (horário de Brasília)</p>
             </div>
@@ -592,7 +592,7 @@ const TermsOfUse = () => {
             <div className="flex items-start gap-3">
               <FileText className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><strong className="text-foreground">Documento:</strong> Termos de Uso — Cheetah Solutions Network</p>
+                <p><strong className="text-foreground">Documento:</strong> Termos de Uso  -  Cheetah Solutions Network</p>
                 <p><strong className="text-foreground">Versão:</strong> 4.0</p>
                 <p><strong className="text-foreground">Data de Publicação:</strong> 01 de maio de 2026</p>
                 <p><strong className="text-foreground">Próxima Revisão Programada:</strong> Novembro de 2026</p>
