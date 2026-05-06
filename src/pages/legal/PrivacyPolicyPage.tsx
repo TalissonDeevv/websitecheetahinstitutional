@@ -24,7 +24,7 @@ const PrivacyPolicyPage = () => {
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo I — Disposições Preliminares</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo I  -  Disposições Preliminares</h2>
           
           <h3 className="text-xl font-semibold mb-4 text-foreground">1. Introdução e Escopo</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -67,7 +67,7 @@ const PrivacyPolicyPage = () => {
               <p><strong className="text-foreground">c) Tratamento:</strong> Toda operação realizada com dados pessoais, como as que se referem à coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração (art. 5º, X, LGPD).</p>
               <p><strong className="text-foreground">d) Controlador:</strong> Pessoa natural ou jurídica, de direito público ou privado, a quem competem as decisões referentes ao tratamento de dados pessoais (art. 5º, VI, LGPD). Neste contexto, a Cheetah Solutions Network.</p>
               <p><strong className="text-foreground">e) Operador:</strong> Pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do Controlador (art. 5º, VII, LGPD).</p>
-              <p><strong className="text-foreground">f) Encarregado (DPO):</strong> Pessoa indicada pelo Controlador e pelo Operador para atuar como canal de comunicação entre o Controlador, os Titulares dos dados e a Autoridade Nacional de Proteção de Dados — ANPD (art. 5º, VIII, LGPD).</p>
+              <p><strong className="text-foreground">f) Encarregado (DPO):</strong> Pessoa indicada pelo Controlador e pelo Operador para atuar como canal de comunicação entre o Controlador, os Titulares dos dados e a Autoridade Nacional de Proteção de Dados  -  ANPD (art. 5º, VIII, LGPD).</p>
               <p><strong className="text-foreground">g) Titular:</strong> Pessoa natural a quem se referem os dados pessoais que são objeto de tratamento (art. 5º, V, LGPD).</p>
               <p><strong className="text-foreground">h) Consentimento:</strong> Manifestação livre, informada e inequívoca pela qual o Titular concorda com o tratamento de seus dados pessoais para uma finalidade determinada (art. 5º, XII, LGPD).</p>
               <p><strong className="text-foreground">i) Anonimização:</strong> Utilização de meios técnicos razoáveis e disponíveis no momento do tratamento, por meio dos quais um dado perde a possibilidade de associação, direta ou indireta, a um indivíduo (art. 5º, XI, LGPD).</p>
@@ -82,7 +82,7 @@ const PrivacyPolicyPage = () => {
       {/* Controlador e DPO */}
       <AnimatedSection delay={100}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo II — Identificação do Controlador e do Encarregado</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo II  -  Identificação do Controlador e do Encarregado</h2>
           
           <h3 className="text-xl font-semibold mb-4 text-foreground">3. Controlador de Dados</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -93,7 +93,7 @@ const PrivacyPolicyPage = () => {
             </p>
             <div className="p-5 bg-card/50 rounded-lg border border-border/50 space-y-2">
               <p><strong className="text-foreground">Razão Social:</strong> Cheetah Solutions Network</p>
-              <p><strong className="text-foreground">Sede Operacional:</strong> Recife, Pernambuco — Brasil</p>
+              <p><strong className="text-foreground">Sede Operacional:</strong> Recife, Pernambuco  -  Brasil</p>
               <p><strong className="text-foreground">E-mail Institucional:</strong> contatocheetahsolutions@gmail.com</p>
               <p><strong className="text-foreground">Website:</strong> https://cheetahnetwork.com.br</p>
             </div>
@@ -103,7 +103,7 @@ const PrivacyPolicyPage = () => {
           <div className="space-y-4 text-muted-foreground">
             <p>
               4.1. Em cumprimento ao disposto no art. 41 da LGPD, a Cheetah Solutions Network designou um 
-              Encarregado de Proteção de Dados Pessoais (Data Protection Officer — DPO), cuja identidade e 
+              Encarregado de Proteção de Dados Pessoais (Data Protection Officer  -  DPO), cuja identidade e 
               informações de contato são divulgadas publicamente, conforme exigência legal.
             </p>
             <p>
@@ -133,7 +133,7 @@ const PrivacyPolicyPage = () => {
       {/* Dados Coletados */}
       <AnimatedSection delay={200}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo III — Dados Pessoais Objeto de Tratamento</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo III  -  Dados Pessoais Objeto de Tratamento</h2>
           
           <h3 className="text-xl font-semibold mb-4 text-foreground">5. Categorias de Dados Coletados</h3>
           <div className="space-y-6 text-muted-foreground">
@@ -189,7 +189,7 @@ const PrivacyPolicyPage = () => {
                 <ul className="space-y-2 ml-4">
                   <li>• Histórico de contratação de serviços e propostas comerciais</li>
                   <li>• Dados de faturamento e informações fiscais</li>
-                  <li>• Informações de pagamento (processadas exclusivamente por operadores de pagamento certificados PCI-DSS — a Cheetah não armazena dados de cartão de crédito)</li>
+                  <li>• Informações de pagamento (processadas exclusivamente por operadores de pagamento certificados PCI-DSS  -  a Cheetah não armazena dados de cartão de crédito)</li>
                   <li>• Registros de comunicações comerciais, suporte técnico e atendimento</li>
                   <li>• Termos contratuais aceitos e respectivas versões</li>
                 </ul>
@@ -225,7 +225,7 @@ const PrivacyPolicyPage = () => {
       {/* Finalidades e Bases Legais */}
       <AnimatedSection delay={300}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IV — Finalidades e Bases Legais do Tratamento</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IV  -  Finalidades e Bases Legais do Tratamento</h2>
           
           <h3 className="text-xl font-semibold mb-4 text-foreground">6. Finalidades do Tratamento</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -272,7 +272,7 @@ const PrivacyPolicyPage = () => {
               <li><strong className="text-foreground">c) Execução de Contrato ou Procedimentos Preliminares (Art. 7º, V):</strong> Para prestação dos serviços contratados, gestão do relacionamento comercial, elaboração de propostas, negociação de termos contratuais e cumprimento de obrigações decorrentes de contratos celebrados com o Titular.</li>
               <li><strong className="text-foreground">d) Exercício Regular de Direitos (Art. 7º, VI):</strong> Para defesa em processos judiciais, administrativos ou arbitrais, produção de provas e proteção de direitos legítimos da Controladora.</li>
               <li><strong className="text-foreground">e) Proteção do Crédito (Art. 7º, X):</strong> Para análise de crédito, cobrança de valores devidos e proteção dos interesses financeiros da Controladora, nos termos da legislação aplicável.</li>
-              <li><strong className="text-foreground">f) Legítimo Interesse do Controlador (Art. 7º, IX):</strong> Para análises estatísticas e de mercado, melhoria de serviços e plataformas, personalização da experiência do usuário, prevenção de fraudes e garantia da segurança dos sistemas, sempre observados os direitos e liberdades fundamentais do Titular que exijam a proteção de dados pessoais, mediante avaliação de impacto quando necessário (Legitimate Interest Assessment — LIA).</li>
+              <li><strong className="text-foreground">f) Legítimo Interesse do Controlador (Art. 7º, IX):</strong> Para análises estatísticas e de mercado, melhoria de serviços e plataformas, personalização da experiência do usuário, prevenção de fraudes e garantia da segurança dos sistemas, sempre observados os direitos e liberdades fundamentais do Titular que exijam a proteção de dados pessoais, mediante avaliação de impacto quando necessário (Legitimate Interest Assessment  -  LIA).</li>
             </ul>
             <p>
               7.2. A Cheetah Solutions Network mantém registro atualizado das operações de tratamento de dados pessoais 
@@ -286,7 +286,7 @@ const PrivacyPolicyPage = () => {
       {/* Compartilhamento */}
       <AnimatedSection delay={400}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo V — Compartilhamento, Transferência Internacional e Operadores</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo V  -  Compartilhamento, Transferência Internacional e Operadores</h2>
 
           <h3 className="text-xl font-semibold mb-4 text-foreground">8. Compartilhamento de Dados com Terceiros</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -297,7 +297,7 @@ const PrivacyPolicyPage = () => {
             </p>
             <ul className="space-y-4 ml-4">
               <li><strong className="text-foreground">a) Operadores e Suboperadores:</strong> Empresas e profissionais que prestam serviços em nome da Controladora, incluindo, sem limitação: provedores de hospedagem e infraestrutura em nuvem (cloud computing); processadores de pagamento certificados PCI-DSS; ferramentas de análise de dados e business intelligence; plataformas de comunicação e atendimento ao cliente; serviços de e-mail marketing e automação. Esses operadores atuam sob instruções contratuais específicas e estão vinculados por cláusulas de confidencialidade e proteção de dados.</li>
-              <li><strong className="text-foreground">b) Parceiros Comerciais e de Tecnologia:</strong> Quando estritamente necessário para a execução dos serviços contratados pelo cliente, mediante consentimento prévio ou com base em outra hipótese legal aplicável, e sempre sob acordos de proteção de dados (Data Processing Agreements — DPAs).</li>
+              <li><strong className="text-foreground">b) Parceiros Comerciais e de Tecnologia:</strong> Quando estritamente necessário para a execução dos serviços contratados pelo cliente, mediante consentimento prévio ou com base em outra hipótese legal aplicável, e sempre sob acordos de proteção de dados (Data Processing Agreements  -  DPAs).</li>
               <li><strong className="text-foreground">c) Autoridades Públicas e Órgãos Reguladores:</strong> Quando exigido por lei, regulamento, ordem judicial ou determinação de autoridade competente, incluindo a ANPD, Ministério Público, Poder Judiciário, autoridades tributárias e órgãos de fiscalização setorial.</li>
               <li><strong className="text-foreground">d) Assessores Jurídicos e Auditores:</strong> Para fins de assessoria jurídica, auditoria independente, due diligence ou cumprimento de obrigações de compliance, sob sigilo profissional.</li>
               <li><strong className="text-foreground">e) Reorganização Societária:</strong> Em caso de fusão, aquisição, cisão, incorporação ou qualquer outra forma de reorganização societária, os dados pessoais poderão ser transferidos ao sucessor ou adquirente, mantendo-se as garantias de proteção previstas nesta Política e com notificação prévia aos Titulares.</li>
@@ -339,7 +339,7 @@ const PrivacyPolicyPage = () => {
       {/* Segurança e Retenção */}
       <AnimatedSection delay={500}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VI — Segurança, Retenção e Eliminação de Dados</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VI  -  Segurança, Retenção e Eliminação de Dados</h2>
 
           <h3 className="text-xl font-semibold mb-4 text-foreground">10. Medidas de Segurança</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -353,7 +353,7 @@ const PrivacyPolicyPage = () => {
             <p>10.2. Entre as medidas de segurança adotadas, incluem-se:</p>
             <ul className="space-y-2 ml-4">
               <li>• Criptografia de dados em trânsito (TLS 1.2+) e em repouso (AES-256)</li>
-              <li>• Controles de acesso baseados no princípio do menor privilégio (Principle of Least Privilege — PoLP) e autenticação multifator (MFA/2FA)</li>
+              <li>• Controles de acesso baseados no princípio do menor privilégio (Principle of Least Privilege  -  PoLP) e autenticação multifator (MFA/2FA)</li>
               <li>• Segregação de ambientes (desenvolvimento, homologação e produção)</li>
               <li>• Monitoramento contínuo e em tempo real de sistemas, redes e aplicações</li>
               <li>• Testes periódicos de segurança, incluindo análise de vulnerabilidades e penetration testing</li>
@@ -453,7 +453,7 @@ const PrivacyPolicyPage = () => {
       {/* Direitos do Titular */}
       <AnimatedSection delay={600}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VII — Direitos do Titular</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VII  -  Direitos do Titular</h2>
 
           <h3 className="text-xl font-semibold mb-4 text-foreground">12. Direitos Garantidos pela LGPD</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -583,7 +583,7 @@ const PrivacyPolicyPage = () => {
       {/* Decisões Automatizadas */}
       <AnimatedSection delay={700}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VIII — Decisões Automatizadas e Profiling</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo VIII  -  Decisões Automatizadas e Profiling</h2>
 
           <h3 className="text-xl font-semibold mb-4 text-foreground">13. Tratamento Automatizado de Dados</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -618,7 +618,7 @@ const PrivacyPolicyPage = () => {
       {/* Cookies */}
       <AnimatedSection delay={800}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IX — Cookies e Tecnologias de Rastreamento</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IX  -  Cookies e Tecnologias de Rastreamento</h2>
 
           <h3 className="text-xl font-semibold mb-4 text-foreground">14. Utilização de Cookies</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -645,7 +645,7 @@ const PrivacyPolicyPage = () => {
       {/* Alterações */}
       <AnimatedSection delay={900}>
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo X — Alterações, Vigência e Disposições Finais</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo X  -  Alterações, Vigência e Disposições Finais</h2>
 
           <h3 className="text-xl font-semibold mb-4 text-foreground">15. Alterações desta Política</h3>
           <div className="space-y-4 text-muted-foreground">
@@ -719,7 +719,7 @@ const PrivacyPolicyPage = () => {
             <div className="flex items-start gap-3">
               <FileText className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p><strong className="text-foreground">Documento:</strong> Política de Privacidade — Cheetah Solutions Network</p>
+                <p><strong className="text-foreground">Documento:</strong> Política de Privacidade  -  Cheetah Solutions Network</p>
                 <p><strong className="text-foreground">Versão:</strong> 3.0</p>
                 <p><strong className="text-foreground">Data de Publicação:</strong> 01 de maio de 2026</p>
                 <p><strong className="text-foreground">Próxima Revisão Programada:</strong> Novembro de 2026</p>
