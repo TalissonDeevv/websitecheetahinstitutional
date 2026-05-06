@@ -113,6 +113,7 @@ const App = () => (
             <Route path="/diretrizes" element={<GuidelinesPage />} />
             <Route path="/diretrizes/privacidade" element={<PrivacyPolicyPage />} />
             <Route path="/diretrizes/termos-uso" element={<TermsOfUse />} />
+            <Route path="/diretrizes/seguranca" element={<SecurityPolicy />} />
             <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
 
             {/* Redirects for legacy routes */}
