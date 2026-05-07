@@ -8,7 +8,6 @@ import MobileNav from "./header/MobileNav";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Close menu on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isMenuOpen) {
@@ -19,7 +18,6 @@ const Header = () => {
     return () => document.removeEventListener("keydown", handleEscape);
   }, [isMenuOpen]);
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -31,7 +29,6 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
-  // Close menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024 && isMenuOpen) {
@@ -52,16 +49,15 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm transition-all duration-300 safe-top h-16 sm:h-[68px] border-b border-border/50">
-        <div className="container mx-auto px-4 h-full flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 safe-top h-16 sm:h-[68px] flex items-center justify-center">
+        <div className="mx-4 mt-2 w-full max-w-6xl bg-background/80 backdrop-blur-md border border-border/40 rounded-2xl px-5 h-12 sm:h-14 flex items-center justify-between shadow-lg shadow-black/5 dark:shadow-black/20">
           <Logo />
           <DesktopNav />
 
-          {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden relative text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200 min-h-[48px] min-w-[48px] touch-manipulation"
+            className="lg:hidden relative text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200 min-h-[44px] min-w-[44px] touch-manipulation"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isMenuOpen}
@@ -84,7 +80,6 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-40 bg-background/80 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
           isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -93,7 +88,6 @@ const Header = () => {
         aria-hidden="true"
       />
 
-      {/* Mobile Menu Panel */}
       <div
         id="mobile-menu"
         className={`fixed top-16 sm:top-[68px] left-0 right-0 bottom-0 z-40 lg:hidden bg-background/98 backdrop-blur-md overflow-y-auto transition-all duration-300 ease-out ${
