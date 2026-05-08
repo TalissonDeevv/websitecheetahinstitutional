@@ -44,7 +44,7 @@ const RefundPolicy = () => {
               <li>• <strong>Processamento:</strong> Até 10 dias úteis após aprovação</li>
               <li>• <strong>Método:</strong> Mesmo meio de pagamento original</li>
             </ul>
-            <p className="text-muted-foreground mt-8"><strong>Solicitações:</strong> financeiro@cheetahnetwork.com.br</p>
+            <p className="text-muted-foreground mt-8"><strong>Solicitações:</strong> contatocheetahsolutions@gmail.com</p>
           </AnimatedSection>
         </div>
       </section>

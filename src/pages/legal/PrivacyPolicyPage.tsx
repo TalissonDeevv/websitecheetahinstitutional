@@ -115,7 +115,7 @@ const PrivacyPolicyPage = () => {
             </p>
             <div className="p-5 bg-card/50 rounded-lg border border-border/50 space-y-2">
               <p><strong className="text-foreground">Encarregado (DPO):</strong> Departamento de Proteção de Dados</p>
-              <p><strong className="text-foreground">E-mail:</strong> dpo@cheetahnetwork.com.br</p>
+              <p><strong className="text-foreground">E-mail:</strong> contatocheetahsolutions@gmail.com</p>
               <p><strong className="text-foreground">Prazo de Resposta:</strong> Até 15 (quinze) dias úteis, prorrogáveis por igual período mediante justificativa fundamentada</p>
               <p><strong className="text-foreground">Horário de Atendimento:</strong> Segunda a sexta-feira, das 09h às 18h (horário de Brasília)</p>
             </div>
@@ -703,7 +703,7 @@ const PrivacyPolicyPage = () => {
             </p>
             <div className="p-5 bg-card/50 rounded-lg border border-border/50 space-y-3">
               <p><strong className="text-foreground">Encarregado de Proteção de Dados (DPO)</strong></p>
-              <p>E-mail: <a href="mailto:dpo@cheetahnetwork.com.br" className="text-primary hover:underline">dpo@cheetahnetwork.com.br</a></p>
+              <p>E-mail: <a href="mailto:contatocheetahsolutions@gmail.com" className="text-primary hover:underline">contatocheetahsolutions@gmail.com</a></p>
               <p>E-mail Institucional: <a href="mailto:contatocheetahsolutions@gmail.com" className="text-primary hover:underline">contatocheetahsolutions@gmail.com</a></p>
               <p>Prazo de resposta: até 15 (quinze) dias úteis, prorrogáveis por igual período</p>
               <p>Horário de atendimento: segunda a sexta-feira, das 09h às 18h (horário de Brasília)</p>

@@ -369,7 +369,7 @@ const IntellectualPropertyPolicy = () => {
                 Para reportar violações de propriedade intelectual envolvendo a Cheetah Solutions Network:
               </p>
               <ul className="text-muted-foreground space-y-2">
-                <li><strong>E-mail:</strong> legal@cheetahnetwork.com.br</li>
+                <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
                 <li><strong>Assunto:</strong> [PI] Denúncia de Violação</li>
                 <li>Inclua evidências e informações de contato</li>
               </ul>
@@ -392,7 +392,7 @@ const IntellectualPropertyPolicy = () => {
                       Para esclarecimentos sobre direitos de propriedade intelectual em projetos:
                     </p>
                     <ul className="text-muted-foreground space-y-2">
-                      <li><strong>E-mail:</strong> legal@cheetahnetwork.com.br</li>
+                      <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
                       <li><strong>Resposta:</strong> Até 5 dias úteis</li>
                       <li><strong>Documentação:</strong> Disponível mediante solicitação</li>
                     </ul>

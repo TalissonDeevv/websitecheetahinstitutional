@@ -381,8 +381,8 @@ const LiabilityPolicy = () => {
                       Para esclarecimentos sobre esta política ou questões contratuais:
                     </p>
                     <ul className="text-muted-foreground space-y-2">
-                      <li><strong>E-mail:</strong> juridico@cheetahnetwork.com.br</li>
-                      <li><strong>Comercial:</strong> comercial@cheetahnetwork.com.br</li>
+                      <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
+                      <li><strong>Comercial:</strong> contatocheetahsolutions@gmail.com</li>
                       <li><strong>Prazo de resposta:</strong> Até 5 dias úteis</li>
                     </ul>
                   </div>

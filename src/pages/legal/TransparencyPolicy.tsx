@@ -341,9 +341,9 @@ const TransparencyPolicy = () => {
                 Valorizamos o feedback de nossos stakeholders e mantemos canais abertos para:
               </p>
               <ul className="text-muted-foreground space-y-2">
-                <li>• Sugestões de melhoria: sugestoes@cheetahnetwork.com.br</li>
-                <li>• Reclamações formais: ouvidoria@cheetahnetwork.com.br</li>
-                <li>• Denúncias: denuncia@cheetahnetwork.com.br</li>
+                <li>• Sugestões de melhoria: contatocheetahsolutions@gmail.com</li>
+                <li>• Reclamações formais: contatocheetahsolutions@gmail.com</li>
+                <li>• Denúncias: contatocheetahsolutions@gmail.com</li>
               </ul>
             </div>
           </AnimatedSection>
@@ -365,7 +365,7 @@ const TransparencyPolicy = () => {
                       nossas práticas de transparência:
                     </p>
                     <ul className="text-muted-foreground space-y-2">
-                      <li><strong>E-mail:</strong> transparencia@cheetahnetwork.com.br</li>
+                      <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
                       <li><strong>Prazo de resposta:</strong> Até 5 dias úteis</li>
                       <li><strong>Relatórios:</strong> Disponíveis mediante solicitação</li>
                     </ul>
