@@ -32,6 +32,7 @@ import PrivacyPolicyPage from "./pages/legal/PrivacyPolicyPage";
 import TermsOfUse from "./pages/legal/TermsOfUse";
 import SecurityPolicy from "./pages/legal/SecurityPolicy";
 import AcceptableUsePolicy from "./pages/legal/AcceptableUsePolicy";
+import BackupPolicy from "./pages/legal/BackupPolicy";
 import Comunidade from "./pages/Comunidade";
 
 import ApprovedProjects from "./pages/ApprovedProjects";
