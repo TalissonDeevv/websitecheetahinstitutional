@@ -235,8 +235,8 @@ const GuidelinesHub = () => {
                       <p>
                         Em caso de dúvidas sobre qualquer disposição contida nestes documentos, entre em 
                         contato com nossa equipe através do e-mail{" "}
-                        <a href="mailto:juridico@cheetahnetwork.com.br" className="text-primary hover:underline">
-                          juridico@cheetahnetwork.com.br
+                        <a href="mailto:contatocheetahsolutions@gmail.com" className="text-primary hover:underline">
+                          contatocheetahsolutions@gmail.com
                         </a>.
                       </p>
                       <p className="pt-2 text-xs border-t border-border/50">
@@ -268,7 +268,7 @@ const GuidelinesHub = () => {
                 Falar com a Equipe
               </Link>
               <a 
-                href="mailto:juridico@cheetahnetwork.com.br"
+                href="mailto:contatocheetahsolutions@gmail.com"
                 className="inline-flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 py-3 rounded-lg font-medium transition-colors"
               >
                 <FileText className="w-5 h-5" />

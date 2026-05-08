@@ -471,9 +471,9 @@ const UpdatePolicy = () => {
                       Se identificar problemas após uma atualização, entre em contato imediatamente:
                     </p>
                     <ul className="text-muted-foreground space-y-2">
-                      <li><strong>Suporte Técnico:</strong> suporte@cheetahnetwork.com.br</li>
+                      <li><strong>Suporte Técnico:</strong> contatocheetahsolutions@gmail.com</li>
                       <li><strong>Emergências:</strong> +55 (XX) XXXXX-XXXX (24/7)</li>
-                      <li><strong>Status Page:</strong> status.cheetahnetwork.com.br</li>
+                      <li><strong>Status Page:</strong> status.cheetahsolutions.com.br</li>
                     </ul>
                   </div>
                 </div>

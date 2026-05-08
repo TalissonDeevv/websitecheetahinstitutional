@@ -90,10 +90,10 @@ const ServicePolicy = () => {
                     necessitam de registro.
                   </p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• <strong>Suporte Geral:</strong> suporte@cheetahnetwork.com.br</li>
-                    <li>• <strong>Comercial:</strong> comercial@cheetahnetwork.com.br</li>
-                    <li>• <strong>Financeiro:</strong> financeiro@cheetahnetwork.com.br</li>
-                    <li>• <strong>Jurídico:</strong> juridico@cheetahnetwork.com.br</li>
+                    <li>• <strong>Suporte Geral:</strong> contatocheetahsolutions@gmail.com</li>
+                    <li>• <strong>Comercial:</strong> contatocheetahsolutions@gmail.com</li>
+                    <li>• <strong>Financeiro:</strong> contatocheetahsolutions@gmail.com</li>
+                    <li>• <strong>Jurídico:</strong> contatocheetahsolutions@gmail.com</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -364,7 +364,7 @@ const ServicePolicy = () => {
 
               <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Como Solicitar Escalação</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Para solicitar escalação, o cliente deve enviar e-mail para escalacao@cheetahnetwork.com.br 
+                Para solicitar escalação, o cliente deve enviar e-mail para contatocheetahsolutions@gmail.com 
                 informando o número do chamado original, descrição do problema e motivo da insatisfação. 
                 A equipe de qualidade analisará o caso e providenciará o encaminhamento adequado.
               </p>
@@ -474,7 +474,7 @@ const ServicePolicy = () => {
               <h3 className="text-xl font-semibold mt-8 mb-4">7.3. Contato</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Para dúvidas sobre esta política, entre em contato através do e-mail 
-                atendimento@cheetahnetwork.com.br ou através dos demais canais oficiais de atendimento.
+                contatocheetahsolutions@gmail.com ou através dos demais canais oficiais de atendimento.
               </p>
             </div>
           </AnimatedSection>

@@ -319,7 +319,7 @@ const TransparencyPolicy = () => {
             <div className="prose prose-invert max-w-none space-y-6">
               <h3 className="text-xl font-semibold mb-4">Status de Serviços</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Mantemos uma página de status pública (status.cheetahnetwork.com.br) com 
+                Mantemos uma página de status pública (status.cheetahsolutions.com.br) com 
                 informações em tempo real sobre a disponibilidade de nossos serviços, 
                 incidentes em andamento e histórico de eventos.
               </p>
@@ -341,9 +341,9 @@ const TransparencyPolicy = () => {
                 Valorizamos o feedback de nossos stakeholders e mantemos canais abertos para:
               </p>
               <ul className="text-muted-foreground space-y-2">
-                <li>• Sugestões de melhoria: sugestoes@cheetahnetwork.com.br</li>
-                <li>• Reclamações formais: ouvidoria@cheetahnetwork.com.br</li>
-                <li>• Denúncias: denuncia@cheetahnetwork.com.br</li>
+                <li>• Sugestões de melhoria: contatocheetahsolutions@gmail.com</li>
+                <li>• Reclamações formais: contatocheetahsolutions@gmail.com</li>
+                <li>• Denúncias: contatocheetahsolutions@gmail.com</li>
               </ul>
             </div>
           </AnimatedSection>
@@ -365,7 +365,7 @@ const TransparencyPolicy = () => {
                       nossas práticas de transparência:
                     </p>
                     <ul className="text-muted-foreground space-y-2">
-                      <li><strong>E-mail:</strong> transparencia@cheetahnetwork.com.br</li>
+                      <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
                       <li><strong>Prazo de resposta:</strong> Até 5 dias úteis</li>
                       <li><strong>Relatórios:</strong> Disponíveis mediante solicitação</li>
                     </ul>

@@ -575,7 +575,7 @@ const TermsOfUse = () => {
             </p>
             <div className="p-5 bg-card/50 rounded-lg border border-border/50 space-y-3">
               <p><strong className="text-foreground">Cheetah Solutions Network</strong></p>
-              <p>E-mail Jurídico: <a href="mailto:juridico@cheetahnetwork.com.br" className="text-primary hover:underline">juridico@cheetahnetwork.com.br</a></p>
+              <p>E-mail Jurídico: <a href="mailto:contatocheetahsolutions@gmail.com" className="text-primary hover:underline">contatocheetahsolutions@gmail.com</a></p>
               <p>E-mail Institucional: <a href="mailto:contatocheetahsolutions@gmail.com" className="text-primary hover:underline">contatocheetahsolutions@gmail.com</a></p>
               <p>Sede Operacional: Recife, Pernambuco  -  Brasil</p>
               <p>Prazo de resposta: até 10 (dez) dias úteis</p>

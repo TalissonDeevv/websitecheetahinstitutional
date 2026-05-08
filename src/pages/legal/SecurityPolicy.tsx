@@ -888,10 +888,10 @@ const SecurityPolicy = () => {
             <div className="p-5 bg-card/50 rounded-lg border border-border/50 space-y-2">
               <p><strong className="text-foreground">Cheetah Solutions Network</strong></p>
               <p>Sede Operacional: Recife, Pernambuco - Brasil</p>
-              <p><strong className="text-foreground">E-mail de Segurança:</strong> security@cheetahnetwork.com.br</p>
+              <p><strong className="text-foreground">E-mail de Segurança:</strong> contatocheetahsolutions@gmail.com</p>
               <p><strong className="text-foreground">E-mail Institucional:</strong> contatocheetahsolutions@gmail.com</p>
-              <p><strong className="text-foreground">DPO:</strong> dpo@cheetahnetwork.com.br</p>
-              <p><strong className="text-foreground">Website:</strong> https://cheetahnetwork.com.br</p>
+              <p><strong className="text-foreground">DPO:</strong> contatocheetahsolutions@gmail.com</p>
+              <p><strong className="text-foreground">Website:</strong> https://cheetahsolutions.com.br</p>
             </div>
           </div>
 

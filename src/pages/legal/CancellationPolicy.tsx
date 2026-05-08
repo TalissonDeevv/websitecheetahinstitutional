@@ -150,7 +150,7 @@ const CancellationPolicy = () => {
               <h3 className="text-xl font-semibold mb-4">Solicitação Formal</h3>
               <p className="text-muted-foreground leading-relaxed">
                 O cancelamento deve ser solicitado formalmente através de e-mail para 
-                cancelamento@cheetahnetwork.com.br, contendo as seguintes informações:
+                contatocheetahsolutions@gmail.com, contendo as seguintes informações:
               </p>
               <ul className="text-muted-foreground space-y-2">
                 <li>• Identificação completa do contratante (razão social/nome, CNPJ/CPF)</li>
@@ -379,7 +379,7 @@ const CancellationPolicy = () => {
                       Para iniciar o processo de cancelamento ou esclarecer dúvidas sobre esta política:
                     </p>
                     <ul className="text-muted-foreground space-y-2">
-                      <li><strong>E-mail:</strong> cancelamento@cheetahnetwork.com.br</li>
+                      <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
                       <li><strong>WhatsApp:</strong> +55 (XX) XXXXX-XXXX</li>
                       <li><strong>Horário:</strong> Segunda a Sexta, 9h às 18h</li>
                     </ul>

@@ -32,6 +32,7 @@ import PrivacyPolicyPage from "./pages/legal/PrivacyPolicyPage";
 import TermsOfUse from "./pages/legal/TermsOfUse";
 import SecurityPolicy from "./pages/legal/SecurityPolicy";
 import AcceptableUsePolicy from "./pages/legal/AcceptableUsePolicy";
+import BackupPolicy from "./pages/legal/BackupPolicy";
 import Comunidade from "./pages/Comunidade";
 
 import ApprovedProjects from "./pages/ApprovedProjects";
@@ -116,6 +117,7 @@ const App = () => (
             <Route path="/diretrizes/termos-uso" element={<TermsOfUse />} />
             <Route path="/diretrizes/seguranca" element={<SecurityPolicy />} />
             <Route path="/diretrizes/uso-aceitavel" element={<AcceptableUsePolicy />} />
+            <Route path="/diretrizes/backup" element={<BackupPolicy />} />
             <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
 
             {/* Redirects for legacy routes */}
