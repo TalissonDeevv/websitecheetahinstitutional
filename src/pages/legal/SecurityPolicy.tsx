@@ -891,7 +891,7 @@ const SecurityPolicy = () => {
               <p><strong className="text-foreground">E-mail de Segurança:</strong> contatocheetahsolutions@gmail.com</p>
               <p><strong className="text-foreground">E-mail Institucional:</strong> contatocheetahsolutions@gmail.com</p>
               <p><strong className="text-foreground">DPO:</strong> contatocheetahsolutions@gmail.com</p>
-              <p><strong className="text-foreground">Website:</strong> https://cheetahnetwork.com.br</p>
+              <p><strong className="text-foreground">Website:</strong> https://cheetahsolutions.com.br</p>
             </div>
           </div>
 

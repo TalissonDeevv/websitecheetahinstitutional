@@ -319,7 +319,7 @@ const TransparencyPolicy = () => {
             <div className="prose prose-invert max-w-none space-y-6">
               <h3 className="text-xl font-semibold mb-4">Status de Serviços</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Mantemos uma página de status pública (status.cheetahnetwork.com.br) com 
+                Mantemos uma página de status pública (status.cheetahsolutions.com.br) com 
                 informações em tempo real sobre a disponibilidade de nossos serviços, 
                 incidentes em andamento e histórico de eventos.
               </p>

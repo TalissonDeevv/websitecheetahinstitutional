@@ -95,7 +95,7 @@ const PrivacyPolicyPage = () => {
               <p><strong className="text-foreground">Razão Social:</strong> Cheetah Solutions Network</p>
               <p><strong className="text-foreground">Sede Operacional:</strong> Recife, Pernambuco  -  Brasil</p>
               <p><strong className="text-foreground">E-mail Institucional:</strong> contatocheetahsolutions@gmail.com</p>
-              <p><strong className="text-foreground">Website:</strong> https://cheetahnetwork.com.br</p>
+              <p><strong className="text-foreground">Website:</strong> https://cheetahsolutions.com.br</p>
             </div>
           </div>
 
