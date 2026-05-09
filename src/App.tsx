@@ -33,6 +33,10 @@ import TermsOfUse from "./pages/legal/TermsOfUse";
 import SecurityPolicy from "./pages/legal/SecurityPolicy";
 import AcceptableUsePolicy from "./pages/legal/AcceptableUsePolicy";
 import BackupPolicy from "./pages/legal/BackupPolicy";
+import ServicePolicy from "./pages/legal/ServicePolicy";
+import UpdatePolicy from "./pages/legal/UpdatePolicy";
+import TransparencyPolicy from "./pages/legal/TransparencyPolicy";
+import IntellectualPropertyPolicy from "./pages/legal/IntellectualPropertyPolicy";
 import Comunidade from "./pages/Comunidade";
 
 import ApprovedProjects from "./pages/ApprovedProjects";
