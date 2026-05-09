@@ -1,488 +1,182 @@
-import { MessageSquare, Clock, Phone, Mail, CheckCircle, AlertCircle, Users, Headphones, FileText, Shield } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Headphones, Clock, Mail, CheckCircle, AlertTriangle, Users, FileText, Scale, Shield, Layers, BarChart3, Settings } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PolicyLayout from "@/components/legal/PolicyLayout";
+import SEO from "@/components/SEO";
 
 const ServicePolicy = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
-              <Headphones className="w-4 h-4 text-primary" />
-              <span className="text-sm text-primary font-medium">Política Corporativa</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Política de <span className="text-primary">Atendimento</span>
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Nosso compromisso com a excelência no atendimento ao cliente, estabelecendo padrões claros 
-              de comunicação, prazos e qualidade em todas as interações.
-            </p>
-            <p className="text-sm text-muted-foreground mt-4">
-              Última atualização: Dezembro de 2024 | Versão 2.0
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
+    <PolicyLayout title="Política de Atendimento e Suporte Técnico" lastUpdated="Maio de 2026">
+      <SEO
+        title="Política de Atendimento - Cheetah Solutions Network"
+        description="Política de Atendimento e Suporte Técnico da Cheetah Solutions Network. Canais oficiais, SLAs, priorização e escalonamento."
+        canonical="/diretrizes/atendimento"
+      />
 
-      {/* Section 1: Princípios do Atendimento */}
-      <section className="py-16 px-4 border-t border-border/50">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">1. Princípios Fundamentais do Atendimento</h2>
-            
-            <div className="prose prose-invert max-w-none space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
-                A Cheetah Solutions Network fundamenta seu atendimento em princípios que garantem a satisfação 
-                do cliente e a manutenção de relacionamentos comerciais duradouros e produtivos.
-              </p>
+      <AnimatedSection>
+        <section className="mb-12">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
+            <CheckCircle className="w-4 h-4 text-green-500" />
+            <span className="text-sm text-green-500 font-medium">Documento Vigente</span>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Compromisso com a Qualidade</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Todos os colaboradores da Cheetah Solutions Network são treinados para oferecer atendimento 
-                de alta qualidade, com foco na resolução efetiva de problemas e na comunicação clara e objetiva. 
-                Nossa equipe passa por treinamentos contínuos para garantir atualização técnica e aprimoramento 
-                das habilidades de atendimento.
-              </p>
-
-              <h3 className="text-xl font-semibold mt-8 mb-4">Respeito e Profissionalismo</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                O tratamento respeitoso e profissional é obrigatório em todas as interações. Esperamos que 
-                nossos clientes também mantenham conduta adequada durante o atendimento. Casos de desrespeito, 
-                assédio ou comportamento inadequado serão documentados e podem resultar em suspensão do atendimento, 
-                conforme previsto em nossa Política de Uso Aceitável.
-              </p>
-
-              <h3 className="text-xl font-semibold mt-8 mb-4">Transparência nas Informações</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Comprometemo-nos a fornecer informações precisas e completas sobre nossos serviços, prazos, 
-                custos e limitações. Em caso de impossibilidade técnica ou limitação de escopo, o cliente 
-                será informado de forma clara e antecipada, com apresentação de alternativas quando possível.
-              </p>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Section 2: Canais de Atendimento */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">2. Canais de Atendimento</h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-primary/10 rounded-lg p-2">
-                      <Mail className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="text-lg font-semibold">E-mail</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    Canal principal para solicitações formais, documentação de projetos e comunicações que 
-                    necessitam de registro.
-                  </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• <strong>Suporte Geral:</strong> contatocheetahsolutions@gmail.com</li>
-                    <li>• <strong>Comercial:</strong> contatocheetahsolutions@gmail.com</li>
-                    <li>• <strong>Financeiro:</strong> contatocheetahsolutions@gmail.com</li>
-                    <li>• <strong>Jurídico:</strong> contatocheetahsolutions@gmail.com</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-green-500/10 rounded-lg p-2">
-                      <Phone className="w-5 h-5 text-green-500" />
-                    </div>
-                    <h3 className="text-lg font-semibold">WhatsApp Business</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    Canal para comunicação rápida, acompanhamento de projetos e suporte em tempo real 
-                    durante horário comercial.
-                  </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• <strong>Número:</strong> +55 (XX) XXXXX-XXXX</li>
-                    <li>• <strong>Horário:</strong> Segunda a Sexta, 9h às 18h</li>
-                    <li>• <strong>Tempo médio de resposta:</strong> Até 2 horas</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-purple-500/10 rounded-lg p-2">
-                      <MessageSquare className="w-5 h-5 text-purple-500" />
-                    </div>
-                    <h3 className="text-lg font-semibold">Discord</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    Comunidade oficial para clientes, com canais dedicados por tipo de serviço e 
-                    suporte técnico especializado.
-                  </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• <strong>Acesso:</strong> Mediante convite para clientes ativos</li>
-                    <li>• <strong>Canais:</strong> Suporte, Desenvolvimento, Comunidade</li>
-                    <li>• <strong>Moderação:</strong> Equipe dedicada</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-orange-500/10 rounded-lg p-2">
-                      <FileText className="w-5 h-5 text-orange-500" />
-                    </div>
-                    <h3 className="text-lg font-semibold">Sistema de Tickets</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    Plataforma oficial para abertura e acompanhamento de chamados técnicos, com 
-                    histórico completo e SLA definido.
-                  </p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• <strong>Acesso:</strong> Portal do cliente</li>
-                    <li>• <strong>Rastreamento:</strong> Número único por chamado</li>
-                    <li>• <strong>Priorização:</strong> Automática por tipo e urgência</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Section 3: Tempos de Resposta */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">3. Tempos de Resposta (SLA)</h2>
-
-            <div className="prose prose-invert max-w-none space-y-6 mb-8">
-              <p className="text-muted-foreground leading-relaxed">
-                Os tempos de resposta abaixo são aplicáveis durante o horário comercial (segunda a sexta-feira, 
-                das 9h às 18h, horário de Brasília), exceto feriados nacionais. Solicitações recebidas fora 
-                deste horário serão processadas no próximo dia útil.
-              </p>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="text-left py-4 px-4 font-semibold">Prioridade</th>
-                    <th className="text-left py-4 px-4 font-semibold">Primeira Resposta</th>
-                    <th className="text-left py-4 px-4 font-semibold">Resolução</th>
-                    <th className="text-left py-4 px-4 font-semibold">Exemplos</th>
-                  </tr>
-                </thead>
-                <tbody className="text-muted-foreground">
-                  <tr className="border-b border-border/50">
-                    <td className="py-4 px-4">
-                      <span className="bg-red-500/20 text-red-400 px-2 py-1 rounded text-sm font-medium">Crítica</span>
-                    </td>
-                    <td className="py-4 px-4">Até 1 hora</td>
-                    <td className="py-4 px-4">Até 4 horas</td>
-                    <td className="py-4 px-4 text-sm">Sistema fora do ar, falha de segurança</td>
-                  </tr>
-                  <tr className="border-b border-border/50">
-                    <td className="py-4 px-4">
-                      <span className="bg-orange-500/20 text-orange-400 px-2 py-1 rounded text-sm font-medium">Alta</span>
-                    </td>
-                    <td className="py-4 px-4">Até 4 horas</td>
-                    <td className="py-4 px-4">Até 24 horas</td>
-                    <td className="py-4 px-4 text-sm">Funcionalidade crítica com erro</td>
-                  </tr>
-                  <tr className="border-b border-border/50">
-                    <td className="py-4 px-4">
-                      <span className="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-sm font-medium">Média</span>
-                    </td>
-                    <td className="py-4 px-4">Até 8 horas</td>
-                    <td className="py-4 px-4">Até 72 horas</td>
-                    <td className="py-4 px-4 text-sm">Bug não crítico, ajustes menores</td>
-                  </tr>
-                  <tr className="border-b border-border/50">
-                    <td className="py-4 px-4">
-                      <span className="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-sm font-medium">Baixa</span>
-                    </td>
-                    <td className="py-4 px-4">Até 24 horas</td>
-                    <td className="py-4 px-4">Até 5 dias úteis</td>
-                    <td className="py-4 px-4 text-sm">Dúvidas, sugestões, melhorias</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-xl">
-              <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-2">Observações sobre SLA</h4>
-                  <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• Os tempos de resolução podem variar dependendo da complexidade técnica do problema</li>
-                    <li>• Clientes com contratos de suporte premium possuem SLAs diferenciados</li>
-                    <li>• O tempo de resolução é pausado quando aguardamos informações do cliente</li>
-                    <li>• Relatórios de cumprimento de SLA estão disponíveis mediante solicitação</li>
-                  </ul>
-                </div>
+          <div className="p-6 bg-card/30 rounded-lg border border-border/50 mb-8">
+            <div className="flex items-start gap-3">
+              <Scale className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><strong className="text-foreground">Fundamentos Legais e Normativos:</strong> Lei n. 8.078/1990 (Código de Defesa do Consumidor) · Lei n. 13.709/2018 (LGPD) · Lei n. 12.965/2014 (Marco Civil da Internet) · Decreto n. 7.962/2013 (Comércio Eletrônico) · Norma ABNT NBR ISO/IEC 20000-1:2020 (Gestão de Serviços de TI) · ITIL 4 Foundation · ISO/IEC 27001:2022.</p>
+                <p><strong className="text-foreground">Versão:</strong> 4.0 · <strong className="text-foreground">Vigência:</strong> A partir de 01 de maio de 2026 · <strong className="text-foreground">Revisão programada:</strong> Semestral.</p>
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
 
-      {/* Section 4: Processo de Atendimento */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">4. Processo de Atendimento</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo I - Disposições Preliminares</h2>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  1
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Abertura do Chamado</h3>
-                  <p className="text-muted-foreground">
-                    O cliente registra sua solicitação através de um dos canais oficiais, fornecendo 
-                    informações detalhadas sobre o problema ou necessidade. Um número de protocolo 
-                    é gerado automaticamente para rastreamento.
-                  </p>
-                </div>
-              </div>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 1 - Objeto e Finalidade</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>1.1. Esta Política de Atendimento e Suporte Técnico estabelece as diretrizes, canais oficiais, prazos e procedimentos adotados pela Cheetah Solutions Network para o atendimento de clientes ativos, parceiros e usuários de seus serviços.</p>
+            <p>1.2. O atendimento técnico é destinado exclusivamente a clientes com contratos vigentes ou projetos ativos junto à Cheetah Solutions Network. Solicitações comerciais e novos orçamentos devem ser direcionados aos canais comerciais correspondentes.</p>
+          </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  2
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Triagem e Classificação</h3>
-                  <p className="text-muted-foreground">
-                    Nossa equipe de suporte analisa a solicitação, classifica a prioridade e 
-                    direciona para o especialista adequado. O cliente recebe confirmação do 
-                    recebimento com prazo estimado de atendimento.
-                  </p>
-                </div>
-              </div>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 2 - Definições</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-border/50 text-sm">
+              <thead>
+                <tr className="bg-card/50">
+                  <th className="border border-border/50 p-3 text-left font-semibold">Termo</th>
+                  <th className="border border-border/50 p-3 text-left font-semibold">Definição</th>
+                </tr>
+              </thead>
+              <tbody className="text-muted-foreground">
+                <tr><td className="border border-border/50 p-3 font-medium">SLA</td><td className="border border-border/50 p-3">Service Level Agreement: acordo formal de nível de serviço com prazos máximos de resposta e resolução</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Tempo de Resposta</td><td className="border border-border/50 p-3">Intervalo entre a abertura do chamado e a primeira manifestação técnica oficial</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Tempo de Resolução</td><td className="border border-border/50 p-3">Intervalo entre a abertura do chamado e a entrega da solução definitiva ou contorno aprovado</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Severidade</td><td className="border border-border/50 p-3">Classificação do impacto técnico e operacional do incidente reportado</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Escalonamento</td><td className="border border-border/50 p-3">Procedimento de elevação hierárquica de um chamado por descumprimento de SLA ou complexidade técnica</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </AnimatedSection>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  3
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Análise e Diagnóstico</h3>
-                  <p className="text-muted-foreground">
-                    O especialista designado realiza análise detalhada do problema, podendo 
-                    solicitar informações adicionais ao cliente quando necessário. O diagnóstico 
-                    é documentado no sistema.
-                  </p>
-                </div>
-              </div>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo II - Canais Oficiais de Atendimento</h2>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  4
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Resolução e Validação</h3>
-                  <p className="text-muted-foreground">
-                    A solução é implementada e o cliente é notificado para validação. O chamado 
-                    só é encerrado após confirmação de que o problema foi resolvido satisfatoriamente.
-                  </p>
-                </div>
-              </div>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 3 - Canais Reconhecidos</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>3.1. São considerados canais oficiais de atendimento da Cheetah Solutions Network, com validade técnica e contratual:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) <strong className="text-foreground">E-mail institucional:</strong> contatocheetahsolutions@gmail.com, utilizado como canal primário e meio de registro formal de demandas;</li>
+              <li>b) <strong className="text-foreground">Portal do Cliente:</strong> ambiente autenticado para abertura, acompanhamento e histórico de chamados;</li>
+              <li>c) <strong className="text-foreground">Canais privados de projeto:</strong> servidores ou grupos dedicados estabelecidos contratualmente com cada cliente.</li>
+            </ul>
+            <p>3.2. Solicitações realizadas por meios não oficiais (redes sociais públicas, mensagens diretas a colaboradores, comentários em postagens) não geram obrigação de atendimento e não são contabilizadas para fins de SLA.</p>
+          </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  5
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Feedback e Melhoria Contínua</h3>
-                  <p className="text-muted-foreground">
-                    Após o encerramento, o cliente é convidado a avaliar o atendimento. 
-                    Os feedbacks são analisados para identificação de oportunidades de melhoria 
-                    em nossos processos.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 4 - Horário de Funcionamento</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>4.1. O atendimento padrão funciona de segunda a sexta-feira, das 9h00 às 18h00 (horário de Brasília, UTC-3), excetuando-se feriados nacionais oficiais.</p>
+            <p>4.2. Demandas registradas fora do horário comercial são protocoladas automaticamente e iniciam o cômputo de SLA no próximo dia útil, salvo nos casos de Severidade Crítica (Cláusula 6), que possuem regime de plantão técnico.</p>
+          </div>
+        </section>
+      </AnimatedSection>
 
-      {/* Section 5: Escalação */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">5. Escalação</h2>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo III - Classificação e SLA</h2>
 
-            <div className="prose prose-invert max-w-none space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
-                Caso o cliente não esteja satisfeito com o atendimento recebido ou o problema não 
-                seja resolvido dentro do SLA estabelecido, existe um processo formal de escalação:
-              </p>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 5 - Matriz de Severidade</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-border/50 text-sm">
+              <thead>
+                <tr className="bg-card/50">
+                  <th className="border border-border/50 p-3 text-left font-semibold">Nível</th>
+                  <th className="border border-border/50 p-3 text-left font-semibold">Descrição</th>
+                  <th className="border border-border/50 p-3 text-left font-semibold">Resposta</th>
+                  <th className="border border-border/50 p-3 text-left font-semibold">Resolução</th>
+                </tr>
+              </thead>
+              <tbody className="text-muted-foreground">
+                <tr><td className="border border-border/50 p-3 font-medium">S1 - Crítica</td><td className="border border-border/50 p-3">Sistema produtivo indisponível ou comprometimento de segurança</td><td className="border border-border/50 p-3">Até 1h</td><td className="border border-border/50 p-3">Até 8h</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">S2 - Alta</td><td className="border border-border/50 p-3">Funcionalidade essencial indisponível, sem contorno viável</td><td className="border border-border/50 p-3">Até 4h úteis</td><td className="border border-border/50 p-3">Até 24h úteis</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">S3 - Média</td><td className="border border-border/50 p-3">Falha pontual com contorno operacional disponível</td><td className="border border-border/50 p-3">Até 8h úteis</td><td className="border border-border/50 p-3">Até 5 dias úteis</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">S4 - Baixa</td><td className="border border-border/50 p-3">Dúvidas, melhorias e ajustes não críticos</td><td className="border border-border/50 p-3">Até 24h úteis</td><td className="border border-border/50 p-3">Conforme planejamento</td></tr>
+              </tbody>
+            </table>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Níveis de Escalação</h3>
-              
-              <div className="space-y-4">
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold text-foreground">Nível 1 - Supervisão de Suporte</h4>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Primeiro nível de escalação. Prazo de resposta: 4 horas úteis.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold text-foreground">Nível 2 - Coordenação Técnica</h4>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Problemas não resolvidos no Nível 1. Prazo de resposta: 8 horas úteis.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold text-foreground">Nível 3 - Diretoria</h4>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Casos excepcionais e reclamações formais. Prazo de resposta: 24 horas úteis.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 6 - Plantão de Severidade Crítica</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>6.1. Clientes com contratos que prevejam suporte estendido podem acionar plantão técnico para incidentes de Severidade S1 fora do horário comercial, mediante uso do canal de emergência designado contratualmente.</p>
+            <p>6.2. O acionamento indevido do plantão (incidentes que não se enquadrem em S1) poderá ensejar reclassificação do chamado e cobrança adicional conforme tabela vigente.</p>
+          </div>
+        </section>
+      </AnimatedSection>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Como Solicitar Escalação</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Para solicitar escalação, o cliente deve enviar e-mail para contatocheetahsolutions@gmail.com 
-                informando o número do chamado original, descrição do problema e motivo da insatisfação. 
-                A equipe de qualidade analisará o caso e providenciará o encaminhamento adequado.
-              </p>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IV - Procedimentos e Escalonamento</h2>
 
-      {/* Section 6: Direitos e Deveres */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">6. Direitos e Deveres</h2>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 7 - Abertura de Chamado</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>7.1. Para abertura formal de chamado, o cliente deverá fornecer:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) Identificação do projeto ou ambiente afetado;</li>
+              <li>b) Descrição objetiva do comportamento observado e do comportamento esperado;</li>
+              <li>c) Passos para reprodução, quando aplicável;</li>
+              <li>d) Evidências (logs, capturas de tela, horários e usuários afetados);</li>
+              <li>e) Indicação de severidade percebida.</li>
+            </ul>
+            <p>7.2. A Cheetah Solutions Network reserva-se o direito de reclassificar a severidade do chamado mediante análise técnica fundamentada.</p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  Direitos do Cliente
-                </h3>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Receber atendimento respeitoso e profissional
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Ser informado sobre prazos e status das solicitações
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Solicitar escalação em caso de insatisfação
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Acessar histórico completo de atendimentos
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Receber comunicações claras e objetivas
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Avaliar a qualidade do atendimento recebido
-                  </li>
-                </ul>
-              </div>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 8 - Escalonamento</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>8.1. O cliente poderá solicitar escalonamento nas seguintes hipóteses:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) Descumprimento de SLA de resposta ou resolução;</li>
+              <li>b) Insatisfação fundamentada com a condução técnica do chamado;</li>
+              <li>c) Necessidade de revisão de prioridade por evento superveniente.</li>
+            </ul>
+            <p>8.2. O escalonamento é processado em até 1 dia útil pela liderança técnica, com retorno formal sobre o plano de ação adotado.</p>
+          </div>
 
-              <div>
-                <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                  <Users className="w-5 h-5 text-primary" />
-                  Deveres do Cliente
-                </h3>
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Fornecer informações precisas e completas
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Manter conduta respeitosa durante o atendimento
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Responder solicitações de informações adicionais
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Validar soluções implementadas em tempo hábil
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Utilizar os canais oficiais de atendimento
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    Manter dados de contato atualizados
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 9 - Encerramento e Reabertura</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>9.1. O chamado será encerrado mediante confirmação expressa do cliente ou após 5 dias úteis de inatividade do solicitante, contados da última manifestação técnica.</p>
+            <p>9.2. Chamados encerrados podem ser reabertos em até 15 dias corridos, desde que relacionados ao mesmo escopo originário.</p>
+          </div>
+        </section>
+      </AnimatedSection>
 
-      {/* Section 7: Disposições Finais */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">7. Disposições Finais</h2>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo V - Disposições Finais</h2>
 
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">7.1. Vigência</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Esta política entra em vigor na data de sua publicação e permanece válida por tempo 
-                indeterminado, podendo ser atualizada a qualquer momento mediante comunicação prévia 
-                aos clientes.
-              </p>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 10 - Limitações de Atendimento</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>10.1. O suporte técnico não contempla, salvo previsão contratual específica:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) Treinamento contínuo de usuários finais;</li>
+              <li>b) Manutenção corretiva de alterações realizadas pelo cliente fora do escopo entregue;</li>
+              <li>c) Integrações com sistemas de terceiros não previstas no projeto;</li>
+              <li>d) Recuperação de dados de ambientes não geridos pela Cheetah.</li>
+            </ul>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">7.2. Alterações</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                A Cheetah Solutions Network reserva-se o direito de alterar esta política a qualquer 
-                momento. Alterações significativas serão comunicadas com antecedência mínima de 15 dias 
-                através dos canais oficiais de comunicação.
-              </p>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 11 - Confidencialidade</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>11.1. Todas as informações compartilhadas durante o atendimento são tratadas em regime de confidencialidade, observados os termos da Política de Privacidade e da Política de Segurança da Informação.</p>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">7.3. Contato</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Para dúvidas sobre esta política, entre em contato através do e-mail 
-                contatocheetahsolutions@gmail.com ou através dos demais canais oficiais de atendimento.
-              </p>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 12 - Vigência e Atualização</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>12.1. Esta Política entra em vigor na data de sua publicação e poderá ser revisada semestralmente ou mediante alteração relevante nos serviços prestados.</p>
+            <p>12.2. Dúvidas sobre esta Política devem ser encaminhadas a <strong className="text-foreground">contatocheetahsolutions@gmail.com</strong>. Informações institucionais permanecem disponíveis em <strong className="text-foreground">https://cheetahsolutions.com.br</strong>.</p>
+          </div>
+        </section>
+      </AnimatedSection>
+    </PolicyLayout>
   );
 };
 
