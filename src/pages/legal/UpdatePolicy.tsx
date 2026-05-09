@@ -1,490 +1,154 @@
-import { RefreshCw, Clock, Bell, CheckCircle, AlertTriangle, Calendar, Server, FileText, Shield } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { RefreshCw, CheckCircle, Scale, Bell, Calendar, Shield, AlertTriangle, GitBranch } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PolicyLayout from "@/components/legal/PolicyLayout";
+import SEO from "@/components/SEO";
 
 const UpdatePolicy = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
-              <RefreshCw className="w-4 h-4 text-primary" />
-              <span className="text-sm text-primary font-medium">Política Técnica</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Política de <span className="text-primary">Atualização</span>
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Procedimentos para atualizações de sistemas, manutenções programadas, 
-              comunicação prévia e garantia de continuidade dos serviços.
-            </p>
-            <p className="text-sm text-muted-foreground mt-4">
-              Última atualização: Dezembro de 2024 | Versão 2.0
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
+    <PolicyLayout title="Política de Atualização e Gestão de Mudanças" lastUpdated="Maio de 2026">
+      <SEO
+        title="Política de Atualização - Cheetah Solutions Network"
+        description="Política de Atualização e Gestão de Mudanças da Cheetah Solutions Network. Versionamento, janelas de manutenção, comunicação e rollback."
+        canonical="/diretrizes/atualizacao"
+      />
 
-      {/* Section 1: Tipos de Atualização */}
-      <section className="py-16 px-4 border-t border-border/50">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">1. Tipos de Atualização</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-green-500/10 rounded-lg p-2">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                    </div>
-                    <h3 className="text-lg font-semibold">Atualizações de Segurança</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Correções críticas de vulnerabilidades que podem comprometer a 
-                    segurança dos sistemas e dados.
-                  </p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Prioridade: Crítica</li>
-                    <li>• Aviso prévio: 24 horas (quando possível)</li>
-                    <li>• Janela: Imediata em casos críticos</li>
-                  </ul>
-                </CardContent>
-              </Card>
+      <AnimatedSection>
+        <section className="mb-12">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
+            <CheckCircle className="w-4 h-4 text-green-500" />
+            <span className="text-sm text-green-500 font-medium">Documento Vigente</span>
+          </div>
 
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-blue-500/10 rounded-lg p-2">
-                      <RefreshCw className="w-5 h-5 text-blue-500" />
-                    </div>
-                    <h3 className="text-lg font-semibold">Atualizações de Funcionalidade</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Novas funcionalidades, melhorias de performance e otimizações 
-                    que agregam valor ao produto.
-                  </p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Prioridade: Normal</li>
-                    <li>• Aviso prévio: 7 dias</li>
-                    <li>• Janela: Horário programado</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-orange-500/10 rounded-lg p-2">
-                      <Server className="w-5 h-5 text-orange-500" />
-                    </div>
-                    <h3 className="text-lg font-semibold">Manutenção de Infraestrutura</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Atualizações de servidores, rede, storage e outros componentes 
-                    de infraestrutura.
-                  </p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Prioridade: Variável</li>
-                    <li>• Aviso prévio: 14 dias</li>
-                    <li>• Janela: Madrugada/final de semana</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-purple-500/10 rounded-lg p-2">
-                      <FileText className="w-5 h-5 text-purple-500" />
-                    </div>
-                    <h3 className="text-lg font-semibold">Atualizações de Política</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    Alterações em termos de uso, políticas de privacidade e 
-                    outros documentos legais.
-                  </p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Prioridade: Normal</li>
-                    <li>• Aviso prévio: 30 dias</li>
-                    <li>• Vigência: Após período de aviso</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Section 2: Janelas de Manutenção */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">2. Janelas de Manutenção</h2>
-
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">Horários Padrão</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                As manutenções programadas são realizadas preferencialmente em horários de 
-                menor impacto:
-              </p>
-
-              <div className="overflow-x-auto my-6">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-border">
-                      <th className="text-left py-3 px-4 font-semibold">Tipo</th>
-                      <th className="text-left py-3 px-4 font-semibold">Dia</th>
-                      <th className="text-left py-3 px-4 font-semibold">Horário</th>
-                      <th className="text-left py-3 px-4 font-semibold">Duração Máx.</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-muted-foreground">
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Manutenção Regular</td>
-                      <td className="py-3 px-4">Terças e Quintas</td>
-                      <td className="py-3 px-4">02:00 - 06:00</td>
-                      <td className="py-3 px-4">4 horas</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Manutenção Extensa</td>
-                      <td className="py-3 px-4">Domingos</td>
-                      <td className="py-3 px-4">00:00 - 06:00</td>
-                      <td className="py-3 px-4">6 horas</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Emergencial</td>
-                      <td className="py-3 px-4">Qualquer dia</td>
-                      <td className="py-3 px-4">Qualquer horário</td>
-                      <td className="py-3 px-4">Variável</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <p className="text-sm text-muted-foreground">
-                * Todos os horários são em horário de Brasília (BRT/BRST).
-              </p>
-
-              <h3 className="text-xl font-semibold mt-8 mb-4">Impacto nos Serviços</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Classificamos o impacto das manutenções da seguinte forma:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li><strong>Sem impacto:</strong> Atualizações em background, sem interrupção perceptível</li>
-                <li><strong>Impacto mínimo:</strong> Degradação temporária de performance (até 30%)</li>
-                <li><strong>Impacto parcial:</strong> Algumas funcionalidades indisponíveis temporariamente</li>
-                <li><strong>Indisponibilidade:</strong> Sistema completamente indisponível durante a janela</li>
-              </ul>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Section 3: Comunicação */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">3. Comunicação de Atualizações</h2>
-
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">Canais de Notificação</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-3 mb-2">
-                      <Bell className="w-5 h-5 text-primary" />
-                      <span className="font-semibold">E-mail</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Notificação principal para todos os contatos cadastrados
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-3 mb-2">
-                      <Calendar className="w-5 h-5 text-primary" />
-                      <span className="font-semibold">Status Page</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Calendário público de manutenções programadas
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <h3 className="text-xl font-semibold mt-8 mb-4">Cronograma de Avisos</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-border">
-                      <th className="text-left py-3 px-4 font-semibold">Tipo de Manutenção</th>
-                      <th className="text-left py-3 px-4 font-semibold">Aviso Inicial</th>
-                      <th className="text-left py-3 px-4 font-semibold">Lembrete</th>
-                      <th className="text-left py-3 px-4 font-semibold">Aviso Final</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-muted-foreground">
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Emergencial/Segurança</td>
-                      <td className="py-3 px-4">Imediato</td>
-                      <td className="py-3 px-4">-</td>
-                      <td className="py-3 px-4">Início da manutenção</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Regular</td>
-                      <td className="py-3 px-4">7 dias</td>
-                      <td className="py-3 px-4">24 horas</td>
-                      <td className="py-3 px-4">1 hora</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Extensa/Infraestrutura</td>
-                      <td className="py-3 px-4">14 dias</td>
-                      <td className="py-3 px-4">7 dias / 24 horas</td>
-                      <td className="py-3 px-4">1 hora</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Políticas/Termos</td>
-                      <td className="py-3 px-4">30 dias</td>
-                      <td className="py-3 px-4">15 dias / 7 dias</td>
-                      <td className="py-3 px-4">1 dia</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <h3 className="text-xl font-semibold mt-8 mb-4">Conteúdo das Notificações</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Todas as notificações de manutenção incluem:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Data e horário da manutenção</li>
-                <li>• Duração estimada</li>
-                <li>• Sistemas e serviços afetados</li>
-                <li>• Nível de impacto esperado</li>
-                <li>• Ações necessárias por parte do cliente (se aplicável)</li>
-                <li>• Contato para dúvidas ou emergências</li>
-              </ul>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Section 4: Processo de Atualização */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">4. Processo de Atualização</h2>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4 p-4 bg-card/50 rounded-lg border border-border/50">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  1
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Planejamento</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Definição do escopo, análise de riscos, preparação de rollback e validação em ambiente de testes
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-card/50 rounded-lg border border-border/50">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  2
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Comunicação</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Envio de notificações conforme cronograma, atualização do status page
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-card/50 rounded-lg border border-border/50">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  3
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Execução</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Aplicação das atualizações seguindo procedimentos documentados e checklist de validação
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-card/50 rounded-lg border border-border/50">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  4
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Validação</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Testes de funcionalidade, monitoramento intensivo nas primeiras horas
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 p-4 bg-card/50 rounded-lg border border-border/50">
-                <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                  5
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Conclusão</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Atualização do status page, comunicação de conclusão, documentação das alterações
-                  </p>
-                </div>
+          <div className="p-6 bg-card/30 rounded-lg border border-border/50 mb-8">
+            <div className="flex items-start gap-3">
+              <Scale className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><strong className="text-foreground">Fundamentos Legais e Normativos:</strong> Lei n. 13.709/2018 (LGPD) · Lei n. 12.965/2014 (Marco Civil da Internet) · ISO/IEC 20000-1:2020 · ISO/IEC 27001:2022 (A.8.32 Gestão de Mudanças) · ITIL 4 (Change Enablement) · NIST SP 800-128 (Security-Focused Configuration Management) · Semantic Versioning 2.0.0.</p>
+                <p><strong className="text-foreground">Versão:</strong> 4.0 · <strong className="text-foreground">Vigência:</strong> A partir de 01 de maio de 2026 · <strong className="text-foreground">Revisão programada:</strong> Semestral.</p>
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
 
-      {/* Section 5: Rollback */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">5. Procedimentos de Rollback</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo I - Disposições Preliminares</h2>
 
-            <div className="prose prose-invert max-w-none space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
-                Em caso de problemas durante ou após uma atualização, mantemos procedimentos 
-                de rollback para restaurar o estado anterior:
-              </p>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 1 - Objeto</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>1.1. Esta Política de Atualização e Gestão de Mudanças estabelece os critérios, classificações, prazos de comunicação e procedimentos operacionais aplicáveis à evolução dos sistemas, plataformas e serviços mantidos pela Cheetah Solutions Network.</p>
+            <p>1.2. A presente Política integra o Sistema de Gestão de Segurança da Informação (SGSI) e o Plano de Continuidade de Negócios, devendo ser interpretada conjuntamente com a Política de Segurança, Política de Backup e Política de Atendimento.</p>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.1. Critérios para Rollback</h3>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Falha crítica que impacta a disponibilidade do serviço</li>
-                <li>• Bugs graves que comprometem funcionalidades essenciais</li>
-                <li>• Problemas de segurança introduzidos pela atualização</li>
-                <li>• Degradação significativa de performance (&gt; 50%)</li>
-                <li>• Perda de dados ou corrupção de informações</li>
-              </ul>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 2 - Princípios Norteadores</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <ul className="space-y-2 ml-4">
+              <li>a) <strong className="text-foreground">Previsibilidade:</strong> mudanças planejadas são comunicadas com antecedência razoável;</li>
+              <li>b) <strong className="text-foreground">Reversibilidade:</strong> toda alteração relevante deve possuir plano de rollback documentado;</li>
+              <li>c) <strong className="text-foreground">Mínimo impacto:</strong> janelas de manutenção priorizam horários de baixa utilização;</li>
+              <li>d) <strong className="text-foreground">Auditabilidade:</strong> registros de mudança preservados para fins de rastreabilidade.</li>
+            </ul>
+          </div>
+        </section>
+      </AnimatedSection>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">5.2. Tempo de Rollback</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-border">
-                      <th className="text-left py-3 px-4 font-semibold">Tipo de Sistema</th>
-                      <th className="text-left py-3 px-4 font-semibold">Tempo Máximo</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-muted-foreground">
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Aplicações Web</td>
-                      <td className="py-3 px-4">15 minutos</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Bancos de Dados</td>
-                      <td className="py-3 px-4">30 minutos</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Infraestrutura</td>
-                      <td className="py-3 px-4">1 hora</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo II - Classificação das Atualizações</h2>
 
-              <div className="p-6 bg-primary/5 border border-primary/20 rounded-xl mt-8">
-                <div className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold mb-2">Garantia de Continuidade</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Todas as atualizações são precedidas por backup completo e validação 
-                      do procedimento de rollback. Em caso de necessidade, a restauração 
-                      é prioridade máxima.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 3 - Tipologia</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-border/50 text-sm">
+              <thead>
+                <tr className="bg-card/50">
+                  <th className="border border-border/50 p-3 text-left font-semibold">Tipo</th>
+                  <th className="border border-border/50 p-3 text-left font-semibold">Descrição</th>
+                  <th className="border border-border/50 p-3 text-left font-semibold">Aviso Prévio</th>
+                </tr>
+              </thead>
+              <tbody className="text-muted-foreground">
+                <tr><td className="border border-border/50 p-3 font-medium">Emergencial</td><td className="border border-border/50 p-3">Correção crítica de segurança ou indisponibilidade ativa</td><td className="border border-border/50 p-3">Sem aviso prévio obrigatório</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Corretiva</td><td className="border border-border/50 p-3">Correção de bugs sem impacto funcional relevante</td><td className="border border-border/50 p-3">24 a 72 horas</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Evolutiva</td><td className="border border-border/50 p-3">Novas funcionalidades, melhorias e otimizações</td><td className="border border-border/50 p-3">7 dias corridos</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Estrutural</td><td className="border border-border/50 p-3">Mudanças de arquitetura, migração de infraestrutura ou breaking changes</td><td className="border border-border/50 p-3">15 a 30 dias corridos</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Depreciação</td><td className="border border-border/50 p-3">Remoção planejada de funcionalidade ou versão</td><td className="border border-border/50 p-3">Mínimo 60 dias</td></tr>
+              </tbody>
+            </table>
+          </div>
 
-      {/* Section 6: Versionamento */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">6. Versionamento e Changelog</h2>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 4 - Versionamento Semântico</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>4.1. As releases obedecem ao padrão MAJOR.MINOR.PATCH, conforme Semantic Versioning 2.0.0:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) <strong className="text-foreground">MAJOR:</strong> alterações incompatíveis com a versão anterior;</li>
+              <li>b) <strong className="text-foreground">MINOR:</strong> adição de funcionalidades preservando compatibilidade;</li>
+              <li>c) <strong className="text-foreground">PATCH:</strong> correções de defeitos sem alteração funcional.</li>
+            </ul>
+          </div>
+        </section>
+      </AnimatedSection>
 
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">6.1. Padrão de Versionamento</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Utilizamos o padrão Semantic Versioning (SemVer) para identificar versões:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li><strong>MAJOR (X.0.0):</strong> Mudanças incompatíveis com versões anteriores</li>
-                <li><strong>MINOR (0.X.0):</strong> Novas funcionalidades compatíveis</li>
-                <li><strong>PATCH (0.0.X):</strong> Correções de bugs e patches de segurança</li>
-              </ul>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo III - Janelas de Manutenção</h2>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.2. Changelog</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Mantemos um registro detalhado de todas as alterações:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Descrição das alterações implementadas</li>
-                <li>• Bugs corrigidos com referência ao ticket</li>
-                <li>• Novas funcionalidades adicionadas</li>
-                <li>• Breaking changes e instruções de migração</li>
-                <li>• Contribuidores e responsáveis</li>
-              </ul>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 5 - Janela Padrão</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>5.1. Manutenções planejadas são realizadas preferencialmente entre 02h00 e 06h00 (horário de Brasília), em dias úteis ou finais de semana, conforme a natureza da intervenção.</p>
+            <p>5.2. Para mudanças com impacto potencial em ambientes produtivos críticos, a Cheetah pode adotar estratégias de zero-downtime, blue-green deployment ou canary release.</p>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.3. Suporte a Versões Anteriores</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Para versões MAJOR, mantemos suporte limitado por período determinado:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Suporte total: 6 meses após lançamento da nova versão</li>
-                <li>• Suporte de segurança: 12 meses adicionais (apenas patches críticos)</li>
-                <li>• Fim de vida: Após 18 meses, sem suporte ou atualizações</li>
-              </ul>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 6 - Comunicação</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>6.1. As comunicações de atualização são realizadas por:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) E-mail institucional aos responsáveis técnicos cadastrados;</li>
+              <li>b) Avisos no Portal do Cliente;</li>
+              <li>c) Status page para serviços com SLA contratado;</li>
+              <li>d) Canais privados de projeto, quando aplicável.</li>
+            </ul>
+          </div>
+        </section>
+      </AnimatedSection>
 
-      {/* Contact Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <AlertTriangle className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-4">Problemas com Atualizações?</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Se identificar problemas após uma atualização, entre em contato imediatamente:
-                    </p>
-                    <ul className="text-muted-foreground space-y-2">
-                      <li><strong>Suporte Técnico:</strong> contatocheetahsolutions@gmail.com</li>
-                      <li><strong>Emergências:</strong> +55 (XX) XXXXX-XXXX (24/7)</li>
-                      <li><strong>Status Page:</strong> status.cheetahsolutions.com.br</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
-        </div>
-      </section>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IV - Procedimentos Operacionais</h2>
 
-      <Footer />
-    </div>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 7 - Ciclo de Vida da Mudança</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>7.1. Toda mudança classificada percorre as fases de: solicitação, análise de impacto, aprovação, planejamento, implementação, validação pós-implantação e encerramento.</p>
+            <p>7.2. Mudanças de classificação Estrutural são submetidas a CAB (Change Advisory Board) interno antes da execução.</p>
+          </div>
+
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 8 - Rollback e Contingência</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>8.1. Toda mudança em ambiente produtivo deve possuir plano de reversão pré-validado, com critérios objetivos de acionamento.</p>
+            <p>8.2. Em caso de falha durante a execução, o rollback é prioritário sobre a tentativa de correção em produção.</p>
+          </div>
+
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 9 - Validação Pós-Implantação</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>9.1. Após cada implantação, são executados testes de fumaça, verificações de integridade e monitoramento intensivo durante o período de hypercare definido por classificação da mudança.</p>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo V - Disposições Finais</h2>
+
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 10 - Atualizações de Segurança</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>10.1. Correções de vulnerabilidades classificadas como Críticas ou Altas pelo CVSS v3.1 são tratadas em regime emergencial, podendo ser aplicadas a qualquer tempo.</p>
+            <p>10.2. A não aplicação de patches recomendados por solicitação do cliente exonera a Cheetah de responsabilidade por incidentes decorrentes da vulnerabilidade não corrigida.</p>
+          </div>
+
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 11 - Vigência</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>11.1. Esta Política entra em vigor na data de publicação e será revisada semestralmente.</p>
+            <p>11.2. Solicitações relacionadas a esta Política devem ser encaminhadas a <strong className="text-foreground">contatocheetahsolutions@gmail.com</strong>. Informações institucionais permanecem disponíveis em <strong className="text-foreground">https://cheetahsolutions.com.br</strong>.</p>
+          </div>
+        </section>
+      </AnimatedSection>
+    </PolicyLayout>
   );
 };
 
