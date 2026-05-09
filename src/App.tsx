@@ -122,6 +122,10 @@ const App = () => (
             <Route path="/diretrizes/seguranca" element={<SecurityPolicy />} />
             <Route path="/diretrizes/uso-aceitavel" element={<AcceptableUsePolicy />} />
             <Route path="/diretrizes/backup" element={<BackupPolicy />} />
+            <Route path="/diretrizes/atendimento" element={<ServicePolicy />} />
+            <Route path="/diretrizes/atualizacao" element={<UpdatePolicy />} />
+            <Route path="/diretrizes/transparencia" element={<TransparencyPolicy />} />
+            <Route path="/diretrizes/propriedade-intelectual" element={<IntellectualPropertyPolicy />} />
             <Route path="/diretrizes/:policyId" element={<GuidelinesPage />} />
 
             {/* Redirects for legacy routes */}
