@@ -1,411 +1,169 @@
-import { Copyright, FileText, Code, Shield, Lock, AlertTriangle, Scale, CheckCircle, Users } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Copyright, CheckCircle, Scale, Code, Lock, FileText, AlertTriangle, Shield } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
+import PolicyLayout from "@/components/legal/PolicyLayout";
+import SEO from "@/components/SEO";
 
 const IntellectualPropertyPolicy = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
-              <Copyright className="w-4 h-4 text-primary" />
-              <span className="text-sm text-primary font-medium">Política Legal</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-primary">Propriedade</span> Intelectual
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Direitos autorais, marcas registradas, licenciamento de software e proteção 
-              de ativos intelectuais desenvolvidos e utilizados em nossos projetos.
-            </p>
-            <p className="text-sm text-muted-foreground mt-4">
-              Última atualização: Dezembro de 2024 | Versão 2.0
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
+    <PolicyLayout title="Política de Propriedade Intelectual" lastUpdated="Maio de 2026">
+      <SEO
+        title="Política de Propriedade Intelectual - Cheetah Solutions Network"
+        description="Política de Propriedade Intelectual da Cheetah Solutions Network. Titularidade, licenciamento, código-fonte, marcas e responsabilidades."
+        canonical="/diretrizes/propriedade-intelectual"
+      />
 
-      {/* Section 1: Definições */}
-      <section className="py-16 px-4 border-t border-border/50">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">1. Definições</h2>
-            
-            <div className="prose prose-invert max-w-none space-y-6">
-              <p className="text-muted-foreground leading-relaxed">
-                Para fins desta política, consideram-se as seguintes definições:
-              </p>
+      <AnimatedSection>
+        <section className="mb-12">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
+            <CheckCircle className="w-4 h-4 text-green-500" />
+            <span className="text-sm text-green-500 font-medium">Documento Vigente</span>
+          </div>
 
-              <div className="grid grid-cols-1 gap-4 my-6">
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold mb-2">Propriedade Intelectual (PI)</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Conjunto de direitos sobre criações do intelecto humano, incluindo invenções, 
-                      obras literárias e artísticas, designs, símbolos, nomes e imagens utilizados 
-                      no comércio.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold mb-2">Código-Fonte</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Conjunto de instruções escritas em linguagem de programação que compõem 
-                      um software, incluindo comentários, documentação inline e estrutura de arquivos.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold mb-2">Trabalho Derivado</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Obra baseada em trabalho preexistente, como tradução, adaptação, arranjo, 
-                      modificação ou qualquer outra forma de transformação.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-card/50 border-border/50">
-                  <CardContent className="p-4">
-                    <h4 className="font-semibold mb-2">Licença</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Autorização formal concedida pelo titular de direitos para uso, modificação 
-                      ou distribuição de sua propriedade intelectual sob termos específicos.
-                    </p>
-                  </CardContent>
-                </Card>
+          <div className="p-6 bg-card/30 rounded-lg border border-border/50 mb-8">
+            <div className="flex items-start gap-3">
+              <Scale className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p><strong className="text-foreground">Fundamentos Legais e Normativos:</strong> Lei n. 9.610/1998 (Lei de Direitos Autorais) · Lei n. 9.609/1998 (Lei do Software) · Lei n. 9.279/1996 (Lei da Propriedade Industrial) · Lei n. 13.709/2018 (LGPD) · Lei n. 12.965/2014 (Marco Civil da Internet) · Convenção de Berna · Acordo TRIPS/OMC · WIPO Copyright Treaty.</p>
+                <p><strong className="text-foreground">Versão:</strong> 4.0 · <strong className="text-foreground">Vigência:</strong> A partir de 01 de maio de 2026 · <strong className="text-foreground">Revisão programada:</strong> Anual.</p>
               </div>
             </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          </div>
 
-      {/* Section 2: Propriedade do Código */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">2. Propriedade do Código Desenvolvido</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo I - Disposições Preliminares</h2>
 
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">Código Desenvolvido sob Contrato</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Salvo disposição contratual em contrário, os direitos sobre código desenvolvido 
-                especificamente para um cliente são definidos da seguinte forma:
-              </p>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 1 - Objeto</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>1.1. Esta Política de Propriedade Intelectual disciplina a titularidade, licenciamento, uso e proteção dos ativos intelectuais desenvolvidos, utilizados ou licenciados pela Cheetah Solutions Network no contexto de suas atividades comerciais e operacionais.</p>
+            <p>1.2. As disposições desta Política aplicam-se cumulativamente aos contratos celebrados entre a Cheetah e seus clientes, parceiros e colaboradores, prevalecendo as disposições contratuais específicas em caso de divergência expressa.</p>
+          </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                <Card className="bg-card/50 border-green-500/30">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                      <h4 className="font-semibold">Direitos do Cliente</h4>
-                    </div>
-                    <ul className="text-sm text-muted-foreground space-y-2">
-                      <li>• Uso irrestrito do software desenvolvido</li>
-                      <li>• Modificação do código para uso próprio</li>
-                      <li>• Acesso completo ao código-fonte</li>
-                      <li>• Contratação de terceiros para manutenção</li>
-                      <li>• Propriedade das regras de negócio implementadas</li>
-                    </ul>
-                  </CardContent>
-                </Card>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 2 - Definições</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-border/50 text-sm">
+              <thead>
+                <tr className="bg-card/50">
+                  <th className="border border-border/50 p-3 text-left font-semibold">Termo</th>
+                  <th className="border border-border/50 p-3 text-left font-semibold">Definição</th>
+                </tr>
+              </thead>
+              <tbody className="text-muted-foreground">
+                <tr><td className="border border-border/50 p-3 font-medium">Obra Sob Encomenda</td><td className="border border-border/50 p-3">Software ou solução desenvolvida especificamente para um cliente mediante contrato de prestação de serviços</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Componente Pré-Existente</td><td className="border border-border/50 p-3">Frameworks, bibliotecas, módulos e metodologias desenvolvidos pela Cheetah anteriormente ou independentemente do projeto</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Software de Terceiros</td><td className="border border-border/50 p-3">Componentes licenciados por terceiros, incluindo software livre, open source ou comercial</td></tr>
+                <tr><td className="border border-border/50 p-3 font-medium">Marca</td><td className="border border-border/50 p-3">Sinais distintivos, logotipos, nomes comerciais e identidade visual da Cheetah Solutions Network</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </AnimatedSection>
 
-                <Card className="bg-card/50 border-primary/30">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Shield className="w-5 h-5 text-primary" />
-                      <h4 className="font-semibold">Direitos Retidos pela Cheetah</h4>
-                    </div>
-                    <ul className="text-sm text-muted-foreground space-y-2">
-                      <li>• Bibliotecas e frameworks proprietários</li>
-                      <li>• Componentes reutilizáveis genéricos</li>
-                      <li>• Metodologias e processos de desenvolvimento</li>
-                      <li>• Conhecimento técnico adquirido</li>
-                      <li>• Direito de uso em portfólio</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo II - Titularidade</h2>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Transferência de Propriedade</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                A transferência completa de propriedade intelectual (work-for-hire) pode ser 
-                acordada mediante contrato específico, com as seguintes condições:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Cláusula expressa no contrato de prestação de serviços</li>
-                <li>• Definição clara do escopo da transferência</li>
-                <li>• Possível ajuste no valor do contrato</li>
-                <li>• Exclusão de bibliotecas de terceiros licenciadas</li>
-              </ul>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 3 - Obras Sob Encomenda</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>3.1. Salvo disposição contratual em contrário, os códigos-fonte, sistemas e soluções desenvolvidos especificamente para um cliente são transferidos à titularidade do cliente após a quitação integral dos valores pactuados.</p>
+            <p>3.2. A transferência de titularidade abrange a obra final entregue, não se estendendo a Componentes Pré-Existentes nem a metodologias internas da Cheetah utilizadas em sua produção.</p>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Código Proprietário da Cheetah</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Determinados componentes desenvolvidos pela Cheetah Solutions Network são 
-                propriedade exclusiva da empresa e licenciados para uso nos projetos:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Frameworks internos de desenvolvimento</li>
-                <li>• Bibliotecas de componentes UI</li>
-                <li>• Ferramentas de automação e DevOps</li>
-                <li>• Integrações padronizadas com serviços de terceiros</li>
-              </ul>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 4 - Componentes Pré-Existentes</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>4.1. Frameworks, bibliotecas, componentes reutilizáveis e metodologias desenvolvidos pela Cheetah Solutions Network anteriormente ou independentemente do projeto permanecem de titularidade exclusiva da empresa.</p>
+            <p>4.2. O uso de Componentes Pré-Existentes em projetos de clientes é concedido mediante licença de uso não-exclusiva, perpétua, intransferível e limitada ao escopo do projeto contratado.</p>
+            <p>4.3. Melhorias, otimizações ou correções aplicadas a Componentes Pré-Existentes durante a execução de um projeto permanecem de titularidade da Cheetah, podendo ser incorporadas a outros projetos.</p>
+          </div>
 
-      {/* Section 3: Licenciamento */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">3. Licenciamento de Software</h2>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 5 - Marcas e Identidade Visual</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>5.1. As marcas, logotipos, nomes comerciais e elementos de identidade visual da Cheetah Solutions Network são protegidos pela Lei n. 9.279/1996 e seu uso é vedado sem autorização expressa por escrito.</p>
+            <p>5.2. É permitida a menção nominal à Cheetah Solutions Network em contextos jornalísticos, acadêmicos ou de portfólio de cliente, vedada qualquer utilização que sugira parceria, endosso ou vínculo não existentes.</p>
+          </div>
+        </section>
+      </AnimatedSection>
 
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">Uso de Software de Terceiros</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Os projetos desenvolvidos podem utilizar bibliotecas e frameworks de terceiros, 
-                sujeitos às suas respectivas licenças. A Cheetah Solutions Network:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Mantém inventário de dependências e suas licenças</li>
-                <li>• Verifica compatibilidade de licenças antes da adoção</li>
-                <li>• Documenta atribuições necessárias</li>
-                <li>• Cumpre obrigações de licenças copyleft quando aplicável</li>
-                <li>• Fornece lista de dependências ao cliente mediante solicitação</li>
-              </ul>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo III - Licenciamento</h2>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Tipos de Licença Utilizadas</h3>
-              <div className="overflow-x-auto my-6">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-border">
-                      <th className="text-left py-3 px-4 font-semibold">Tipo</th>
-                      <th className="text-left py-3 px-4 font-semibold">Exemplos</th>
-                      <th className="text-left py-3 px-4 font-semibold">Implicações</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-muted-foreground">
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Permissivas</td>
-                      <td className="py-3 px-4">MIT, Apache 2.0, BSD</td>
-                      <td className="py-3 px-4 text-sm">Uso livre, manter atribuição</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Copyleft Fraco</td>
-                      <td className="py-3 px-4">LGPL, MPL</td>
-                      <td className="py-3 px-4 text-sm">Modificações devem ser abertas</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Copyleft Forte</td>
-                      <td className="py-3 px-4">GPL, AGPL</td>
-                      <td className="py-3 px-4 text-sm">Projeto derivado deve ser GPL</td>
-                    </tr>
-                    <tr className="border-b border-border/50">
-                      <td className="py-3 px-4">Proprietárias</td>
-                      <td className="py-3 px-4">Comerciais</td>
-                      <td className="py-3 px-4 text-sm">Conforme termos específicos</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 6 - Regime Geral de Licenciamento</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>6.1. O uso de software, plataformas e serviços da Cheetah é concedido mediante licença não-exclusiva, intransferível e revogável, observados os termos contratuais específicos e os limites desta Política.</p>
+            <p>6.2. A licença não implica transferência de propriedade nem autorização para sublicenciamento, salvo estipulação contratual expressa.</p>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Licença de Uso para Clientes</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Quando não há transferência de propriedade, o cliente recebe licença de uso 
-                com as seguintes características:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li><strong>Perpétua:</strong> Sem prazo de expiração após pagamento integral</li>
-                <li><strong>Não-exclusiva:</strong> Não impede uso de tecnologias similares em outros projetos</li>
-                <li><strong>Intransferível:</strong> Não pode ser cedida a terceiros sem autorização</li>
-                <li><strong>Uso comercial:</strong> Permitido para fins comerciais do cliente</li>
-              </ul>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 7 - Software de Terceiros</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>7.1. Soluções entregues podem incorporar componentes de terceiros sujeitos a licenças próprias (MIT, Apache 2.0, GPL, BSD, comerciais, entre outras), cujos termos devem ser observados pelo cliente.</p>
+            <p>7.2. A Cheetah disponibiliza, mediante solicitação formal, a relação de componentes de terceiros utilizados em cada entrega e suas respectivas licenças.</p>
+          </div>
 
-      {/* Section 4: Marcas e Identidade */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">4. Marcas e Identidade Visual</h2>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 8 - Vedações</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>8.1. É vedado ao licenciado, salvo autorização expressa:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) Realizar engenharia reversa, descompilação ou desmontagem;</li>
+              <li>b) Remover, alterar ou ocultar avisos de copyright e atribuição;</li>
+              <li>c) Sublicenciar, ceder ou transferir a licença a terceiros;</li>
+              <li>d) Utilizar a solução em finalidade diversa da contratada.</li>
+            </ul>
+          </div>
+        </section>
+      </AnimatedSection>
 
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">Marcas da Cheetah Solutions Network</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Os seguintes elementos são marcas registradas ou em processo de registro:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Nome "Cheetah Solutions Network" e variações</li>
-                <li>• Logotipo e símbolos gráficos da empresa</li>
-                <li>• Nomes de produtos e serviços</li>
-                <li>• Slogans e taglines</li>
-              </ul>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo IV - Conteúdo do Cliente e Terceiros</h2>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Uso das Marcas</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                O uso de nossas marcas por terceiros requer autorização prévia e deve seguir 
-                as diretrizes de identidade visual. Usos permitidos incluem:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Referência ao nome da empresa em contexto editorial</li>
-                <li>• Menção em portfólio de clientes (com aprovação)</li>
-                <li>• Uso do selo "Desenvolvido por Cheetah Solutions" quando acordado</li>
-              </ul>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 9 - Garantia de Titularidade pelo Cliente</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>9.1. O cliente declara e garante ser titular ou legítimo licenciado de todo conteúdo (textos, imagens, vídeos, marcas, dados) fornecido à Cheetah para integração em projetos.</p>
+            <p>9.2. O cliente isenta a Cheetah de qualquer responsabilidade decorrente de violação de direitos de terceiros relativa a conteúdo por ele fornecido, respondendo integralmente pelos prejuízos eventualmente causados.</p>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Marca d'Água e Créditos</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Por padrão, não inserimos marcas d'água ou créditos visíveis nos produtos 
-                desenvolvidos para clientes, exceto quando:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Acordado contratualmente</li>
-                <li>• Exigido por licenças de terceiros utilizadas</li>
-                <li>• Solicitado pelo cliente</li>
-              </ul>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 10 - Notificação de Violações (Notice and Takedown)</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>10.1. Suposta violação de direitos de propriedade intelectual em ativos da Cheetah deve ser notificada formalmente, contendo:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) Identificação completa do titular do direito alegadamente violado;</li>
+              <li>b) Descrição da obra protegida e prova de titularidade;</li>
+              <li>c) Indicação precisa do conteúdo objeto da reclamação;</li>
+              <li>d) Declaração de boa-fé e veracidade das informações.</li>
+            </ul>
+            <p>10.2. Notificações fundamentadas são analisadas no prazo de 10 dias úteis, observado o contraditório com o suposto infrator quando aplicável.</p>
+          </div>
+        </section>
+      </AnimatedSection>
 
-      {/* Section 5: Confidencialidade */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">5. Confidencialidade e Segredos Comerciais</h2>
+      <AnimatedSection>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-foreground">Capítulo V - Penalidades e Disposições Finais</h2>
 
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">Informações Confidenciais</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Consideram-se informações confidenciais:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Código-fonte proprietário e algoritmos</li>
-                <li>• Metodologias e processos internos</li>
-                <li>• Dados de clientes e projetos</li>
-                <li>• Estratégias comerciais e roadmaps</li>
-                <li>• Informações financeiras e contratuais</li>
-              </ul>
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Cláusula 11 - Consequências da Violação</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>11.1. A violação a esta Política ou a direitos de propriedade intelectual da Cheetah pode ensejar, isolada ou cumulativamente:</p>
+            <ul className="space-y-2 ml-4">
+              <li>a) Suspensão imediata da licença de uso;</li>
+              <li>b) Rescisão contratual motivada;</li>
+              <li>c) Notificação extrajudicial e judicial;</li>
+              <li>d) Reparação por perdas e danos, inclusive morais e lucros cessantes;</li>
+              <li>e) Adoção das medidas penais cabíveis nos termos das Leis n. 9.279/1996, 9.609/1998 e 9.610/1998.</li>
+            </ul>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Acordo de Confidencialidade (NDA)</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Projetos que envolvam informações sensíveis são protegidos por NDA específico, 
-                que estabelece:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Definição precisa das informações protegidas</li>
-                <li>• Obrigações de sigilo das partes</li>
-                <li>• Período de confidencialidade (geralmente 5 anos)</li>
-                <li>• Exceções e exclusões aplicáveis</li>
-                <li>• Penalidades por descumprimento</li>
-              </ul>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 12 - Foro</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>12.1. Controvérsias decorrentes desta Política serão dirimidas no foro estabelecido nos contratos específicos celebrados, prevalecendo o foro do domicílio da Cheetah Solutions Network na ausência de previsão contratual.</p>
+          </div>
 
-              <h3 className="text-xl font-semibold mt-8 mb-4">Proteção de Segredos Comerciais</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Implementamos medidas técnicas e organizacionais para proteção:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Controle de acesso baseado em necessidade (need-to-know)</li>
-                <li>• Criptografia de dados sensíveis</li>
-                <li>• Acordos de confidencialidade com colaboradores</li>
-                <li>• Monitoramento de acessos e vazamentos</li>
-              </ul>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Section 6: Violações */}
-      <section className="py-16 px-4 bg-card/30">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <h2 className="text-3xl font-bold mb-8">6. Violações e Medidas Legais</h2>
-
-            <div className="p-6 bg-destructive/10 border border-destructive/20 rounded-xl mb-8">
-              <div className="flex items-start gap-3">
-                <AlertTriangle className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-2">Aviso Legal</h4>
-                  <p className="text-muted-foreground">
-                    A violação de direitos de propriedade intelectual é passível de ação judicial, 
-                    incluindo pedido de indenização por danos materiais e morais, além de medidas 
-                    criminais quando aplicável.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="prose prose-invert max-w-none space-y-6">
-              <h3 className="text-xl font-semibold mb-4">6.1. Tipos de Violação</h3>
-              <ul className="text-muted-foreground space-y-2">
-                <li>• Reprodução não autorizada de software</li>
-                <li>• Uso indevido de marcas registradas</li>
-                <li>• Divulgação de informações confidenciais</li>
-                <li>• Apropriação de código-fonte sem licença</li>
-                <li>• Engenharia reversa não autorizada</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.2. Procedimentos</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Em caso de identificação de violação:
-              </p>
-              <ol className="text-muted-foreground space-y-2">
-                <li>1. Documentação da violação e coleta de evidências</li>
-                <li>2. Notificação extrajudicial solicitando cessação</li>
-                <li>3. Negociação de acordo, se aplicável</li>
-                <li>4. Ação judicial para proteção de direitos</li>
-              </ol>
-
-              <h3 className="text-xl font-semibold mt-8 mb-4">6.3. Denúncia de Violações</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Para reportar violações de propriedade intelectual envolvendo a Cheetah Solutions Network:
-              </p>
-              <ul className="text-muted-foreground space-y-2">
-                <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
-                <li><strong>Assunto:</strong> [PI] Denúncia de Violação</li>
-                <li>Inclua evidências e informações de contato</li>
-              </ul>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <AnimatedSection>
-            <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <Scale className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl font-bold mb-4">Questões sobre Propriedade Intelectual</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Para esclarecimentos sobre direitos de propriedade intelectual em projetos:
-                    </p>
-                    <ul className="text-muted-foreground space-y-2">
-                      <li><strong>E-mail:</strong> contatocheetahsolutions@gmail.com</li>
-                      <li><strong>Resposta:</strong> Até 5 dias úteis</li>
-                      <li><strong>Documentação:</strong> Disponível mediante solicitação</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+          <h3 className="text-xl font-semibold mt-8 mb-4 text-foreground">Cláusula 13 - Vigência e Atualização</h3>
+          <div className="space-y-4 text-muted-foreground">
+            <p>13.1. Esta Política entra em vigor na data de sua publicação e será revisada anualmente.</p>
+            <p>13.2. Notificações, autorizações e solicitações relacionadas a esta Política devem ser encaminhadas a <strong className="text-foreground">contatocheetahsolutions@gmail.com</strong>. Informações institucionais permanecem disponíveis em <strong className="text-foreground">https://cheetahsolutions.com.br</strong>.</p>
+          </div>
+        </section>
+      </AnimatedSection>
+    </PolicyLayout>
   );
 };
 
